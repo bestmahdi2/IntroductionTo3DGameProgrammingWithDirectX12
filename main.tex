@@ -2,33 +2,35 @@
 \usepackage{geometry}
 \geometry{a4paper, margin=1in}
 
-\usepackage{fontspec}
-\setmainfont{Arial}
-
-\def \CourseName {مقدمه ای بر برنامه نویسی بازی های سه بعدی با\\\lr{Direct3D 12}}
+\def \CourseName {مقدمه ای بر برنامه نویسی بازی های سه بعدی با \\ \lr{Direct3D 12}}
+\def \CourseNameEng {\lr{Introdution To 3D Game Programming Wwith DirectX 12}}
 \def \Instructor {دکتر رضا روحانی}
 \def \Translator {علی بدیعی}
 \def \Semester {نیم‌سال اول\\سال تحصیلی 1402-1403}
 
-\input{packages}
-\input{commands}
-\input{1.firstpage}
+\input{BookFiles/0.packages}
+\input{BookFiles/0.commands}
+%\includepdf[pages={1}]{myfile.pdf}
+\input{BookFiles/1.firstpage}
 
 \begin{document}
+%    \setmainfont{Arial}
+
     \pagenumbering{gobble}
     \pagestyle{headings}
     \maketitle
     \newpage
-    \input{2.beforeIntro.tex}
-    \input{3.Introduction.tex}
+    \input{BookFiles/2.beforeIntro}
+    \input{BookFiles/3.Introduction}
+%    \input{test.tex}
 
     \pagenumbering{arabic}
 
-    \input{session.tex}
-
-    \begin{latin}
-        \bibliography{references}
-        \bibliographystyle{ieeetr}
-    \end{latin}
+%    \input{Sessions/session}
+%
+%    \begin{latin}
+%        \bibliography{references}
+%        \bibliographystyle{ieeetr}
+%    \end{latin}
 
 \end{document}
