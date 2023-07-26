@@ -1,33 +1,44 @@
-\documentclass[oneside]{book}
-\usepackage{geometry}
-\geometry{a4paper, margin=1in}
+% ----- Document Class ----- %
+\documentclass{book}
 
+% ----- Defines ----- %
 \def \CourseName {مقدمه ای بر برنامه نویسی بازی های سه بعدی با \\ \lr{Direct3D 12}}
-\def \CourseNameEng {\lr{Introdution To 3D Game Programming Wwith DirectX 12}}
+\def \CourseNameEng {\lr{Introdution To 3D Game Programming With DirectX 12}}
 \def \Instructor {دکتر رضا روحانی}
 \def \Translator {علی بدیعی}
-\def \Semester {نیم‌سال اول\\سال تحصیلی 1402-1403}
+\def \Semester {تابستان 1402}
 
 \input{BookFiles/0.packages}
 \input{BookFiles/0.commands}
-%\includepdf[pages={1}]{myfile.pdf}
-\input{BookFiles/1.firstpage}
+\includepdf[pages=-]{BookFiles/BookCover.pdf}
 
 \begin{document}
+% ----- Document Settings ----- %
+    \frontmatter
+    \input{BookFiles/1.firstpage}
+    \maketitle
+
 %    \setmainfont{Arial}
 
-    \pagenumbering{gobble}
-    \pagestyle{headings}
-    \maketitle
-    \newpage
+    \pagestyle{fancy}
+    \fancyhead{} % clear all header fields
+    \fancyhead[RO,LE]{مقدمه ای بر برنامه نویسی بازی های سه بعدی با \lr{Direct3D 12}}
+    \fancyhead[RE,LO]{\thepage}
+    \fancyfoot{}
+
+%    \pagenumbering{roman}
+
+% ----- Includes ----- %
+%    \pagenumbering{arabic}
     \input{BookFiles/2.beforeIntro}
     \input{BookFiles/3.Introduction}
-%    \input{test.tex}
 
-    \pagenumbering{arabic}
+% ----- Sessions ----- %
 
 %    \input{Sessions/session}
-%
+
+% ----- Bibliography ----- %
+
 %    \begin{latin}
 %        \bibliography{references}
 %        \bibliographystyle{ieeetr}

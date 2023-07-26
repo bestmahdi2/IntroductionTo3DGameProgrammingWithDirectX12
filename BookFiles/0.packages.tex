@@ -1,7 +1,11 @@
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{fancyhdr}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{emptypage}
 \usepackage[]{algorithm2e}
 \usepackage{cite}
 \usepackage{calc}
-\usepackage{fancyhdr}
 \usepackage{lipsum}
 \usepackage{color}
 \usepackage{ragged2e}
@@ -19,16 +23,57 @@
 \usepackage{textcomp}
 \usepackage{etoolbox}
 \usepackage{xpatch}
+\usepackage{pdfpages}
 \usepackage{xepersian}
 
-%\settextfont[Path=./Fonts/,
-%BoldFont={XB Yas Bd},
-%ItalicFont={XB Yas It},
-%BoldItalicFont={XB Yas BdIt},
-%Extension = .ttf]{XB Yas}
-
 \settextfont[Path=./Fonts/,
-BoldFont={Arial},
-ItalicFont={Arial},
-BoldItalicFont={Arial},
-Extension = .ttf]{Arial}
+    BoldFont={XB Yas Bd},
+    ItalicFont={XB Yas It},
+    BoldItalicFont={XB Yas BdIt},
+    Extension = .ttf]{XB Yas}
+
+% ----- Theo ----- %
+
+\newcounter{theo}[section]\setcounter{theo}{0}
+\renewcommand{\thetheo}{\arabic{section}.\arabic{theo}}
+\newenvironment{name}[args]{begin_def}{end_def}
+
+\newenvironment{theo}[2][]{%
+    \refstepcounter{theo}
+
+% Code for box design goes here.
+
+    \begin{mdframed}[]
+        \relax}{%
+    \end{mdframed}
+}
+
+\ifstrempty{#1}%
+% if condition (without title)
+{\mdfsetup{%
+    frametitle={%
+    \tikz[baseline=(current bounding box.east),outer sep=0pt]
+    \node[anchor=east,rectangle,fill=blue!20]
+    %{\strut نکته~\thetheo};}
+    {\strut نکته~};}
+}%
+% else condition (with title)
+}{\mdfsetup{%
+    frametitle={%
+    \tikz[baseline=(current bounding box.east),outer sep=0pt]
+    \node[anchor=east,rectangle,fill=blue!20]
+    {\strut نکته~\thetheo:~#1};}%
+}%
+}%
+% Both conditions
+\mdfsetup{%
+    innertopmargin=3pt,linecolor=blue!20,%
+    linewidth=2pt,topline=true,%
+    frametitleaboveskip=\dimexpr-\ht\strutbox\relax%
+}
+
+%\settextfont[Path=./Fonts/,
+%BoldFont={B Mitra Bold_0},
+%ItalicFont={B Mitra_0},
+%BoldItalicFont={B Mitra_0},
+%Extension = .ttf]{B Mitra_0}
