@@ -62,7 +62,9 @@
     frametitle={%
     \tikz[baseline=(current bounding box.east),outer sep=0pt]
     \node[anchor=east,rectangle,fill=blue!20]
-    {\strut نکته~\thetheo:~#1};}%
+%    {\strut نکته~\thetheo:~#1};}%
+    {\large \strut ~نکته~};}
+%    {\strut ~نکته~};}%
 }%
 }%
 % Both conditions
@@ -77,3 +79,11 @@
 %ItalicFont={B Mitra_0},
 %BoldItalicFont={B Mitra_0},
 %Extension = .ttf]{B Mitra_0}
+
+
+%\newcommand*{\fontTitr}{\fontfamily{cmr}\selectfont}
+%\DeclareTextFontCommand{\fontBTitr}{\fontTitr}
+\defpersianfont\BTitr[Path=./Fonts/, Extension = .ttf]{BTitr}
+\defpersianfont\BNazanin[Path=./Fonts/, Extension = .ttf]{BNAZANIN}
+\newcommand*\rullCenterTextWithLine[1]{\par\noindent\raisebox{.8ex}{\makebox[\linewidth]{\hrulefill\hspace{1ex}\raisebox{-.8ex}{#1}\hspace{1ex}\hrulefill}}}
+\newcommand{\rullFillWithLine}[2][0em]{\leaders\hbox{\rule[#1]{1pt}{#2}}\hfill}
