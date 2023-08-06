@@ -11,6 +11,8 @@
 *.cb
 *.cb2
 .*.lb
+main1.pdf
+main2.pdf
 
 ## Intermediate documents:
 *.dvi
