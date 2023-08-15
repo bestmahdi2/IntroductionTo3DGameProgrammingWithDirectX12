@@ -344,3 +344,188 @@
 
     \end{spacing}
 }
+
+{
+    \textbf{\BTitr ضرب داخلی}
+
+    \Large
+    \begin{spacing}{1.5}
+        ضرب نقطه ای (داخلی) شکلی از ضرب برداری است که منجر به یک مقدار اسکالر می شود.
+        به همین دلیل، گاهی اوقات از آن به عنوان یک ضرب اسکالر یاد می شود.
+        فرض کنید $\textbf{u}=(u_{x},u_{y},u_{z})$ و  $\textbf{v}=(v_{x},v_{y},v_{z})$،
+        پس حاصل ضرب داخلی به صورت زیر تعریف می‌شود:
+
+        \begin{center}
+            $\textbf{u}\cdot\textbf{v}=u_{x}v_{x}+u_{y}v_{y}+u_{z}v_{z}$
+        \end{center}
+
+        به عبارت دیگر ، ضرب داخلی مجموع ضرب های اجزای مربوطه ست.
+
+        همچنین تعریف ضرب داخلی معنای هندسی آشکاری ارائه نمی دهد.
+        با استفاده از قانون کسینوس (به تمرین ***** مراجعه کنید)، می توانیم رابطه ای را پیدا کنیم که در آن $\theta$ زاویه بین بردارهای $\textbf{u}$ و $\textbf{v}$ است به طوری که $0\leq\theta\leq\pi$؛ شکل ****** را ببینید.
+
+        \begin{center}
+            $\textbf{u}\cdot\textbf{v}=\norm{\textbf{u}}\norm{\textbf{v}}\cos\theta$
+        \end{center}
+
+        بنابراین، معادله ***** می گوید که حاصلضرب نقطه ای بین دو بردار، کسینوس زاویه بین آنها است که با بزرگی بردارها ضرب شده است.
+        به خصوص، اگر هر دو بردار $\textbf{u}$ و $\textbf{v}$ بردار واحد باشند،
+        آنگاه $\textbf{u}\cdot\textbf{v}$ کسینوس زاویه بین آنهاست (یعنی $\textbf{u}\cdot\textbf{v}=\cos\theta$).
+        معادله ***** برخی از ویژگی های هندسی مفید ضرب داخلی را در اختیار ما قرار می دهد:
+
+        \begin{figure}[H]
+            \centering
+            \setlength{\belowcaptionskip}{-10pt}
+            \includegraphics[width=0.5\textwidth]{Images/4/4.Session.1.1.9}
+            \caption{در شکل سمت چپ، زاویه $\theta$ بین $\textbf{u}$ و $\textbf{v}$ یک زاویه تند است.
+            در شکل سمت راست، زاویه $\theta$ بین $\textbf{u}$ و $\textbf{v}$ یک زاویه منفرجه (باز) است.
+            وقتی به زاویه بین دو بردار اشاره می کنیم، همیشه منظورمان کوچکترین زاویه است،
+            یعنی زاویه $\theta$ به طوری که $0\leq\theta\leq\pi$.}
+            \label{fig:4.Session.1.1.9}
+        \end{figure}
+
+        \begin{enumerate}
+            \item {اگر $\textbf{u}\cdot\textbf{v}=0$، در نتیجه (یعنی بردار ها بر هم عمودند).}
+            \item {اگر $\textbf{u}\cdot\textbf{v}>0$، در نتیجه زاویه ی بین \theta و دو بردار کمتر از 90 درجه ست (یعنی بردار ها با هم زاویه ی تند میسازند).}
+            \item {اگر $\textbf{u}\cdot\textbf{v}<0$، در نتیجه زاویه ی بین \theta و دو بردار بیشتر از 90 درجه ست (یعنی بردار ها با هم زاویه ی منفرجه میسازند).}
+        \end{enumerate}
+
+        مثال***
+        فرض کنید $\textbf{u}=(1,2,3)$ و $\textbf{v}=(-4,0,-1)$ باشند. زوایه ی بین $\textbf{u}$ و $\textbf{v}$ را پیدا کنید.
+        ابتدا موارد زیر را محاسبه میکنیم:
+
+        \begin{center}
+            $\textbf{u}\cdot\textbf{v}=(1,2,3)\cdot(-4,0,-1)=-4-3=-7$
+
+            $\norm{\textbf{u}}=\sqrt{\displaystyle 1^2+2^2+3^2}=\sqrt{\displaystyle 14}$
+
+            $\norm{\textbf{v}}=\sqrt{\displaystyle (-4)^2+0^2+(-1)^2}=\sqrt{\displaystyle 17}$
+        \end{center}
+
+        حالا ، قضیه ی ***** را برای حل \theta اعمال میکنیم:
+
+        \begin{center}
+            $\cos\theta=\frac{\displaystyle\textbf{u}\cdot\textbf{v}}{\displaystyle\norm{\textbf{v}}\norm{\textbf{u}}}=\frac{\displaystyle -7}{\displaystyle \sqrt{\displaystyle 14}\sqrt{\displaystyle 17}}$
+
+            $\theta=\cos^-1\frac{\displaystyle -7}{\displaystyle \sqrt{\displaystyle 14}\sqrt{\displaystyle 17}}\thickapprox117^\circ$
+        \end{center}
+
+
+        مثال***
+
+        شکل ***** را در نظر بگیرید.
+        با توجه به $\textbf{v}$ و بردار واحد $\textbf{n}$، فرمولی برای $\textbf{p}$ بر حسب $\textbf{v}$ و $\textbf{n}$ با استفاده از ضرب داخلی پیدا کنید.
+        ابتدا، از شکل مشاهده کنید که عدد اسکالر $\textbf{k}$ وجود دارد
+        که $\textbf{p}=k\textbf{n}$؛ علاوه بر این، از آنجایی که ما $\norm{\textbf{u}}=1$ فرض کردیم،
+        داریم $\norm{\textbf{p}}=\norm{k\textbf{n}}=\abs{k}\norm{\textbf{n}}=\abs{k}$.
+        (توجه داشته باشید که $k$ ممکن است منفی باشد اگر و تنها اگر $\textbf{p}$ و $\textbf{n}$ در جهت مخالف قرار گیرند.)
+        با استفاده از مثلثات، داریم که $k=\norm{\textbf{v}}\cos\theta$؛
+        بنابراین، $\textbf{p}=k\textbf{n}=(\norm{\textbf{v}}\cos\theta)\textbf{n}$.
+        با این حال، از آنجایی که \textbf{n} یک بردار واحد است، می توانیم این را به روش دیگری بگوییم:
+
+        \begin{center}
+            $\textbf{p}=(\norm{\textbf{v}}\cos\theta)\textbf{n}=(\norm{\textbf{v}}\cdot 1\cos\theta)\textbf{n}=(\norm{\textbf{v}}\norm{\textbf{n}}\cos\theta)\textbf{n}=(\textbf{v}\cdot\textbf{n})\textbf{n}$
+        \end{center}
+
+        به طور خاص، این $k=\textbf{v}\cdot\textbf{n}$ را نشان می دهد که تفسیر هندسی $\textbf{v}\cdot\textbf{n}$ را هنگامی که $\textbf{n}$ یک بردار واحد است، نشان می دهد. ما $\textbf{p}$ را تصویر متعامد/قائم (\lr{orthogonal projection}) $\textbf{v}$ روی $\textbf{n}$ می نامیم و معمولاً به شکل زیر نشان داده می شود:
+
+        \begin{center}
+            $\textbf{p}=proj_{n}(\textbf{v})$
+        \end{center}
+
+        اگر $\textbf{v}$ را به عنوان نیرو تعبیر کنیم، $\textbf{p}$ را می توان به عنوان بخشی از نیروی $\textbf{v}$ در نظر گرفت که در جهت $\textbf{n}$ عمل می کند.
+        به همین ترتیب، بردار $\textbf{w}=perp_{n}(\textbf{v})=\textbf{v}-\textbf{p}$ بخشی از نیروی $\textbf{v}$ است که در جهت $\textbf{n}$ متعامد عمل می کند
+        (به همین دلیل است که آن را با $perp_{n}(\textbf{v})$ برای عمود نشان می دهیم).
+        مشاهده کنید که $\textbf{v}=\textbf{p}+\textbf{w}=proj_{n}(\textbf{v})+perp_{n}(\textbf{v})$ که می گوییم بردار $\textbf{v}$ را به مجموع دو بردار متعامد $\textbf{p}$ و $\textbf{w}$ تجزیه کرده ایم.
+
+        اگر $\textbf{n}$ طول واحد نباشد، همیشه می‌توانیم ابتدا آن را نرمال کنیم تا طول آن را واحد کنیم.
+        جایگزینی $\textbf{n}$ با بردار واحد $\frac{\displaystyle\textbf{n}}{\norm{\textbf{n}}}$ فرمول تصویر کلی تری را به ما می دهد:
+
+        \begin{center}
+            $\textbf{p}=proj_{n}(\textbf{v})=\left( \textbf{v}\cdot\frac{\displaystyle\textbf{n}}{\norm{\textbf{n}}} \right)\frac{\displaystyle\textbf{n}}{\norm{\textbf{n}}}=\frac{\displaystyle(\textbf{v}\cdot\textbf{n})}{\norm{\textbf{n}}^2}\textbf{n}$
+        \end{center}
+
+        \begin{figure}[H]
+            \centering
+            \setlength{\belowcaptionskip}{-10pt}
+            \includegraphics[width=0.5\textwidth]{Images/4/4.Session.1.1.10}
+            \caption{تصویر متعامد/قائم $\textbf{v}$ روی $\textbf{n}$.}
+            \label{fig:4.Session.1.1.10}
+        \end{figure}
+    \end{spacing}
+}
+
+{
+    \textbf{\BTitr متعامد سازی}
+
+    \Large
+    \begin{spacing}{1.5}
+        مجموعه ای از بردارها ${\textbf{v}_{0},...,\textbf{v}_{n-1}}$ متعامد نامیده می شود که بردارها همگی متعامد (هر بردار در مجموعه نسبت به هر بردار دیگری در مجموعه متعامد باشد) و طول واحد باشند.
+        گاهی اوقات ما مجموعه ای از بردارها را داریم که تقریباً متعارف هستند، اما نه کاملاً.
+        یک کار متداول این است که مجموعه را متعامد سازی کنید تا یک مجموعه ی متعامد شود.
+        در گرافیک کامپیوتری سه بعدی ممکن است با یک مجموعه متعارف شروع کنیم، اما به دلیل مسائل مربوط به دقت عددی، مجموعه به تدریج غیرمتعارف شود.
+        ما عمدتاً با موارد دو بعدی و سه بعدی این مشکل (یعنی مجموعه هایی که به ترتیب شامل دو و سه بردار هستند) سروکار داریم.
+
+        ابتدا مورد دو بعدی ساده تر را بررسی می کنیم.
+        فرض کنید مجموعه بردارهای ${\textbf{v}_{0},\textbf{v}_{1}}$ را داریم که می‌خواهیم آن‌ها را به یک مجموعه متعامد ${\textbf{w}_{0},\textbf{w}_{1}}$ تبدیل کنیم،
+        همانطور که در شکل ***** نشان داده شده است.
+        ما با $\textbf{w}_{0}=\textbf{v}_{0}$ شروع کرده و $\textbf{v}_{1}$ را تغییر میدهیم تا آن را به $\textbf{w}_{0}$ متعامد کنیم.
+        این کار با تفریق کردن بخشی از $\textbf{v}_{1}$ که در جهت $\textbf{w}_{0}$  عمل می کند، انجام می شود:
+
+        \begin{center}
+            $\textbf{w}_{1}=\textbf{v}_{1}-proj_{\textbf{w}_{0}}(\textbf{v}_{1})$
+        \end{center}
+
+        \begin{figure}[H]
+            \centering
+            \setlength{\belowcaptionskip}{-10pt}
+            \includegraphics[width=0.5\textwidth]{Images/4/4.Session.1.1.11}
+            \caption{متعامد سازی دو بعدی}
+            \label{fig:4.Session.1.1.11}
+        \end{figure}
+
+        اکنون مجموعه ای متعامد از بردارها داریم ${\textbf{w}_{0},\textbf{w}_{1}}$.
+        آخرین مرحله برای ساخت مجموعه متعارف نرمال کردن $\textbf{w}_{0}$ و $\textbf{w}_{1}$ برای ایجاد طول واحد است.
+
+        حالت سه بعدی به همان شکل مورد دو بعدی اما با مراحل بیشتر است.
+        فرض کنید مجموعه بردارهای ${\textbf{v}_{0},\textbf{v}_{1},\textbf{v}_{2}}$ را داریم که می‌خواهیم آنها را یک مجموعه متعامد ${\textbf{w}_{0},\textbf{w}_{1},\textbf{w}_{2}}$ کنیم، مطابق شکل *****.
+        ما با $\textbf{w}_{0}=\textbf{v}_{0}$ شروع می کنیم و $\textbf{v}_{1}$ را تغییر می دهیم تا به $\textbf{w}_{0}$ متعامد شود.
+        این کار با کم کردن بخشی از $\textbf{v}_{1}$ که در جهت $\textbf{w}_{0}$ عمل می کند انجام می شود:
+
+        \begin{center}
+            $\textbf{w}_{1}=\textbf{v}_{1}-proj_{\textbf{w}_{0}}(\textbf{v}_{1})$
+        \end{center}
+
+        \begin{figure}[H]
+            \centering
+            \setlength{\belowcaptionskip}{-10pt}
+            \includegraphics[width=0.5\textwidth]{Images/4/4.Session.1.1.12}
+            \caption{متعامد سازی سه بعدی}
+            \label{fig:4.Session.1.1.12}
+        \end{figure}
+
+        در مرحله بعد، $\textbf{v}_{2}$ را تغییر می دهیم تا آن را متعامد به $\textbf{w}_{0}$ و $\textbf{w}_{1}$ کنیم.
+        این کار با تفریق کردن بخشی از $\textbf{v}_{2}$ که در جهت $\textbf{w}_{0}$ عمل می کند و بخشی از $\textbf{v}_{2}$ که در جهت $\textbf{w}_{1}$ عمل می کند، انجام می شود:
+
+        \begin{center}
+            $\textbf{w}_{2}=\textbf{v}_{2}-proj_{\textbf{w}_{0}}(\textbf{v}_{2})-proj_{\textbf{w}_{1}}(\textbf{v}_{2})$
+        \end{center}
+
+        اکنون یک مجموعه متعامد از بردارها داریم ${\textbf{w}_{0},\textbf{w}_{1},\textbf{w}_{2}}$.
+        آخرین مرحله برای ساخت مجموعه متعامد نرمال کردن $\textbf{w}_{0}$، $\textbf{w}_{1}$ و $\textbf{w}_{2}$ است تا طول آنها را واحد کنیم.
+
+        برای حالت کلی $\textbf{n}$ بردار ${\textbf{v}_{0},...,\textbf{v}_{n-1}}$ که می‌خواهیم آنها را به یک مجموعه متعامد تبدیل کنیم { w0، ...، wn1}، ما روال زیر را داریم که معمولاً فرآیند متعامدسازی گرام اشمیت (\lr{Gram-Schmidt}) نامیده می شود:
+
+        \begin{center}
+            گام پایه: $\textbf{w}_{0}=\textbf{v}_{0}$ قرار میدهیم
+
+            به ازای $1\leq i\leq n-1$ ، $\textbf{w}_{i}=\textbf{v}_{i}-\sum_{j=1}^{i-1}proj_{\textbf{w}_{j}}(\textbf{v}_{i})$ قرار میدهیم
+
+            گام نرمال سازی: $\textbf{w}_{i}=\frac{\displaystyle\textbf{w}_{i}}{\displaystyle\norm{\textbf{w}_{i}}}$ قرار میدهیم
+        \end{center}
+
+        دوباره، ایده شهودی این است که وقتی یک بردار $\textbf{v}_{i}$ را از مجموعه ورودی انتخاب می کنیم تا به مجموعه متعارف اضافه کنیم،
+        باید اجزای $\textbf{v}_{i}$ را که در جهت بردارهای دیگر عمل کرده و از قبل در مجموعه متعامد قرار دارند ($\textbf{w}_{0},\textbf{w}_{1},...,\textbf{w}_{i-1}$) را کم کنیم.
+        این کار باعث اطمینان حاصل از این که بردار جدید اضافه شده با سایر بردارهای موجود در مجموعه متعامد، متعامد باشد، میشود.
+    \end{spacing}
+}
