@@ -11,14 +11,14 @@
 \defpersianfont\BTitr[Path=./Fonts/, Extension = .ttf]{BTitr}
 \defpersianfont\BNazanin[Path=./Fonts/, Extension = .ttf]{BNAZANIN}
 
-% ----- Theo ----- %
+% ----- Points ----- %
 
-\newcounter{theo}[section]\setcounter{theo}{0}
-\renewcommand{\thetheo}{\arabic{section}.\arabic{theo}}
+\newcounter{point}[chapter]\setcounter{point}{0}
+\renewcommand{\thetheo}{\arabic{chapter}.\arabic{point}}
 \newenvironment{name}[args]{begin_def}{end_def}
 
-\newenvironment{theo}[2][]{
-    \refstepcounter{theo}
+\newenvironment{point}[2][]{
+    \refstepcounter{point}
 
 % Code for box design goes here. %
     \begin{mdframed}[]
@@ -31,7 +31,7 @@
 {\mdfsetup{
     frametitle={
         \tikz[baseline=(current bounding box.east),outer sep=0pt]
-        \node[anchor=east,rectangle,fill=blue!20]
+        \node[anchor=east,rectangle,fill=blue!30]
         %{\strut نکته~\thetheo};}
         {\strut نکته~};}
 }
@@ -39,7 +39,7 @@
 }{\mdfsetup{
     frametitle={
         \tikz[baseline=(current bounding box.east),outer sep=0pt]
-        \node[anchor=east,rectangle,fill=blue!20]
+        \node[anchor=east,rectangle,fill=blue!30]
 %    {\strut نکته~\thetheo:~#1};}%
         {\large \strut ~نکته~};}
 %    {\strut ~نکته~};}%
@@ -47,10 +47,110 @@
 }
 % Both conditions %
 \mdfsetup{
-    innertopmargin=3pt,linecolor=blue!20,
+    innertopmargin=3pt,linecolor=blue!30,
     linewidth=2pt,topline=true,
     frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 }
+
+% ----- Equation ----- %
+
+\newcounter{eqtn}[chapter]\setcounter{eqtn}{0}
+\renewcommand{\thelem}{\arabic{eqtn}.\arabic{chapter}}
+
+\newenvironment{eqtn}[2][]{
+    \refstepcounter{eqtn}
+    \ifstrempty{#1}
+    {\mdfsetup{
+        frametitle={
+            \tikz[baseline=(current bounding box.east),outer sep=0pt]
+            \node[anchor=east,rectangle,fill=green!40]
+            {\strut معادله~\thelem};
+        }
+    }
+    }
+    {\mdfsetup{
+        frametitle={
+            \tikz[baseline=(current bounding box.east),outer sep=0pt]
+            \node[anchor=east,rectangle,fill=green!40]
+            {\strut معادله~\thetheo:~#1};
+        }
+    }
+    }
+    \mdfsetup{innertopmargin=10pt,linecolor=green!40,
+        linewidth=2pt,topline=true,
+        frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+    }
+    \begin{mdframed}[]
+        \relax
+        \label{#2}}{
+    \end{mdframed}
+}
+
+% ----- Examples ----- %
+
+\newcounter{example}[chapter]\setcounter{example}{0}
+\renewcommand{\theprf}{\arabic{example}.\arabic{chapter}}
+
+\newenvironment{example}[2][]{
+    \refstepcounter{example}
+    \ifstrempty{#1}
+    {\mdfsetup{
+        frametitle={
+            \tikz[baseline=(current bounding box.east),outer sep=0pt]
+            \node[anchor=east,rectangle,fill=red!30]
+            {\strut مثال~\theprf};
+        }
+    }
+    }
+    {\mdfsetup{
+        frametitle={
+            \tikz[baseline=(current bounding box.east),outer sep=0pt]
+            \node[anchor=east,rectangle,fill=red!30]
+            {\strut مثال~\thetheo:~#1};
+        }
+    }
+    }
+    \mdfsetup{innertopmargin=10pt,linecolor=red!30,
+        linewidth=2pt,topline=true,
+        frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+    }
+    \begin{mdframed}[]
+        \relax
+        \label{#2}}{
+    \end{mdframed}}
+
+% ----- Codes ----- %
+
+\newcounter{code}[chapter]\setcounter{code}{0}
+\renewcommand{\theprf}{\arabic{code}.\arabic{chapter}}
+
+\newenvironment{code}[2][]{
+    \refstepcounter{code}
+    \ifstrempty{#1}
+    {\mdfsetup{
+        frametitle={
+            \tikz[baseline=(current bounding box.east),outer sep=0pt]
+            \node[anchor=east,rectangle,fill=black!30]
+            {\strut نمونه کد~\theprf};
+        }
+    }
+    }
+    {\mdfsetup{
+        frametitle={
+            \tikz[baseline=(current bounding box.east),outer sep=0pt]
+            \node[anchor=east,rectangle,fill=black!30]
+            {\strut نمونه کد~\thetheo:~#1};
+        }
+    }
+    }
+    \mdfsetup{innertopmargin=10pt,linecolor=black!30,
+        linewidth=2pt,topline=true,
+        frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+    }
+    \begin{mdframed}[]
+        \relax
+        \label{#2}}{
+    \end{mdframed}}
 
 % ----- Costume Title ----- %
 
@@ -66,6 +166,7 @@
 \definecolor{mygray}{rgb}{0.9,0.9,0.9}
 \definecolor{myCyan}{rgb}{0,1,1}
 \definecolor{navyBlue}{HTML}{0a065d}
+\definecolor{myGreen}{HTML}{A7F432}
 \definecolor{aliceblue}{rgb}{0.94, 0.97, 1.0}
 
 % ----- Other Commands ----- %
@@ -84,7 +185,7 @@
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
-    filecolor=magenta,      
+    filecolor=magenta,
     urlcolor=blue,
 }
 \setlist[enumerate]{itemsep=-3mm}
@@ -99,15 +200,55 @@
 \newcommand{\grayBox}[1]{\colorbox{gray!10}{\lr{\texttt{#1}}}}
 \newcommand{\grayLBox}[1]{\fbox{\grayBox{\parbox{11.8 cm}{#1}}}}
 
-%\AtBeginEnvironment{minted}{\setlength{\parskip}{-20pt}}
-%\xpretocmd{\inputminted}{\par\vspace{-10pt}}{}{}
-%\xapptocmd{\inputminted}{\par\vspace{-20pt}}{}{}
+\AtBeginEnvironment{minted}{\setlength{\parskip}{-20pt}}
+\xpretocmd{\inputminted}{\par\vspace{-10pt}}{}{}
+\xapptocmd{\inputminted}{\par\vspace{-20pt}}{}{}
 
-%\makeatletter
-%\newcommand{\chapterauthor}[1]{%
-%    {\parindent0pt\vspace*{-25pt}%
-%        \linespread{1.1}\large\scshape#1%
-%        \par\nobreak\vspace*{35pt}}
-%    \@afterheading%
-%}
-%\makeatother
+\makeatletter
+\newcommand{\chapterauthor}[1]{%
+        {\parindent0pt\vspace*{-25pt}%
+    \linespread{1.1}\large\scshape#1%
+    \par\nobreak\vspace*{35pt}}
+    \@afterheading%
+}
+\makeatother
+
+
+%---- Programs ----%
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\normalsize\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\normalsize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    captiondirection=RTL,
+    fontadjust=true
+}
+
+\lstset{columns=fullflexible, xleftmargin=0.5cm, frame=tlbr, framesep=4pt, framerule=0pt}
+\lstset{style=mystyle}
+
+% ---- Else ---- %
+
+\def\lstlistingname{Code}
+
+\renewcommand{\thefigure}{\arabic{figure}.\arabic{chapter}}
+\renewcommand{\thesection}{\arabic{section}.\arabic{chapter}}
+\renewcommand{\thesubsection}{\arabic{subsection}.\arabic{section}.\arabic{chapter}}

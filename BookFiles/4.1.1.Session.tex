@@ -17,7 +17,7 @@
         این کتاب به هیچ وجه راه حل جامعی برای ریاضیات بازی های ویدیویی نیست.
 
         \textbf{\vspace{20pt}}
-        \begin{theo}{thm:pythagoras}
+        \begin{point}{pnt:1}
             \Large
             برای خوانندگانی که مایل به ارجاع کامل تر به ریاضیات بازی های ویدیویی هستند، کتاب های زیر را توصیه می کنیم.
             \lr{
@@ -26,7 +26,7 @@
                     \item {Mathematics for 3D Game Programming and Computer Graphics (Lengyel02)}
                 \end{enumerate}
             }
-        \end{theo}
+        \end{point}
         \textbf{\vspace{40pt}}
 
         \textbf{فصل 1، جبر برداری:} بردارها اساسی ترین اشیاء ریاضی مورد استفاده در بازی های کامپیوتری هستند.
@@ -45,17 +45,19 @@
 \setcounter{chapter}{1}
 
 \textbf{\vspace{80pt}}
+
+
 \chapter{\textbf{جبر برداری}}
 \textbf{\vspace{70pt}}
 {
     \Large
     \begin{spacing}{1.5}
         بردارها نقش مهمی در گرافیک کامپیوتری، تشخیص برخورد و شبیه سازی فیزیکی ایفا می کنند که همگی اجزای رایج در بازی های ویدئویی مدرن هستند.
-        رویکرد ما در اینجا غیر تخصصی و عملی است به همین دلیل پیشنهاد ما کتاب \lr{Verth04} (در نکته ی قبل ذکر شده است) است که کتابی اختصاصی برای ریاضیات بازی های سه بعدی/گرافیک است.
+        رویکرد ما در اینجا غیر تخصصی و عملی است به همین دلیل پیشنهاد ما کتاب \lr{Verth04} (نکته \ref{pnt:1}) است که کتابی اختصاصی برای ریاضیات بازی های سه بعدی/گرافیک است.
         ما بر اهمیت بردارها بسیار تأکید داریم زیرا در بیشتر برنامه های آزمایشی این کتاب استفاده شده اند.
 
         \textbf{\vspace{20pt}}
-        \textbf{\hspace{-40pt}\LARGE اهداف:}
+        \textbf{\hspace{-40pt}اهداف:}
 
         \begin{enumerate}
             \item {یادگیری نحوه نمایش بردارها به صورت هندسی و عددی}
@@ -67,10 +69,7 @@
 %-----------------------------------------------------------------------------------------------------------%
 \newpage
 
-\section{
-    \huge
-    \textbf{بردار ها}
-}
+\section{\textbf{بردار ها}}
 {
     \Large
     \begin{spacing}{1.4}
@@ -107,7 +106,7 @@
     \end{spacing}
 }
 
-\subsection{\textbf{\LARGE بردارها و سیستم های مختصات}}
+\subsection{\textbf{بردارها و سیستم های مختصات}}
 {
     \Large
     \begin{spacing}{1.5}
@@ -127,11 +126,11 @@
         سپس می‌توانیم یک بردار را با تعیین مختصات سر آن شناسایی کنیم و مانند شکل \ref{fig:4.Session.1.1.3}، \lr{v = (x, y, z)} را بنویسیم.
         اکنون می توانیم یک بردار را با سه \lr{float} در یک برنامه کامپیوتری نشان دهیم.
 
-        \begin{theo}{thm:pythagoras}
+        \begin{point}{pnt:2}
             \Large
-            اگر به صورت دو بعدی کار کنیم، فقط از یک سیستم مختصات دو بعدی استفاده می کنیم و بردار فقط دو مختصات دارد:
-            \lr{v = (x, y)} و می توانیم یک بردار را با دو \lr{float} در یک برنامه کامپیوتری نشان دهیم.
-        \end{theo}
+            اگر کار به صورت \lr{2D} باشد، فقط از یک سیستم مختصات \lr{2D} استفاده می کنیم و بردار فقط دو مختصات دارد:
+            \lr{v = (x, y)} و یک بردار را با دو \lr{float} در یک برنامه نشان میدهیم.
+        \end{point}
 
         \begin{figure}[H]
             \centering
@@ -162,11 +161,11 @@
         اغلب در گرافیک های کامپیوتری سه بعدی، از بیش از یک سیستم مختصات استفاده می کنیم و بنابراین، باید شناسایی کنیم که مختصات یک بردار نسبت به کدام سیستم مختصات است.
         علاوه بر این، ما باید بدانیم که چگونه مختصات برداری را از یک سیستم مختصات به سیستم مختصات دیگر تبدیل کنیم.
         \textbf{\vspace{-10pt}}
-        \begin{theo}{thm:pythagoras}
+        \begin{point}{pnt:3}
             \Large
             مشاهده میکنیم که بردارها و نقاط را می توان با مختصات (\lr{x, y, z}) نسبت به یک سیستم مختصات توصیف کرد.
             با این حال، بردارها و نقاط یکسان نیستند؛ یک نقطه نشان دهنده یک مکان در 3 فاصله است، در حالی که یک بردار نشان دهنده یک اندازه و جهت است.
-        \end{theo}
+        \end{point}
         \textbf{\vspace{-50pt}}
     \end{spacing}
 
@@ -179,7 +178,7 @@
     \end{figure}
 }
 
-\subsection{\textbf{\LARGE سیستم های مختصات چپگرد در مقابل راستگرد}}
+\subsection{\textbf{سیستم های مختصات چپگرد در مقابل راستگرد}}
 {
     \Large
     \begin{spacing}{1.5}
@@ -191,7 +190,7 @@
     \end{spacing}
 }
 
-\subsection{\textbf{\LARGE عملیات بردار پایه}}
+\subsection{\textbf{عملیات بردار پایه}}
 {
     \Large
     \begin{spacing}{1.5}
@@ -209,1254 +208,1011 @@
             یعنی $\textbf{u}-\textbf{v}=\textbf{u}+(-1\cdot\textbf{v})=\textbf{u}+(-\textbf{v})=(u_{x}-v_{x},u_{y}-v_{y},u_{z}-v_{z})$}
         \end{enumerate}
 
-        مثال***
-        فرض کنید $\textbf{u}=(1,2,3), \textbf{v}=(1,2,3), \textbf{w}=(3,0,-2), k=2$
-        \lr{
+        \textbf{\vspace{-6pt}}
+        \begin{example}{exp:1}
+            \Large
+            فرض کنید $\textbf{u}=(1,2,3), \textbf{v}=(1,2,3), \textbf{w}=(3,0,-2), k=2$
+            \lr{
+                \begin{enumerate}
+                    \item {$\textbf{u}+\textbf{w}=(1,2,3)+(3,0,-2)=(4,2,1)$}
+                    \item {$\textbf{u}=\textbf{v}$}
+                    \item {$\textbf{u}-\textbf{v}=\textbf{u}+(-\textbf{v})=(1,2,3)+(-1,-2,-3)=(0,0,0)=\textbf{0}$}
+                    \item {$k\textbf{w}=2(3,0,-2)=(6,0,-4)$}
+                \end{enumerate}
+            }
+            تفاوتی که در مورد سوم هست ، یک بردار خاص به نام بردار صفر را نشان می دهد که همه اجزای آن صفر است و با \lr{\textbf{0}} نشان داده می شود.
+        \end{example}
+
+        \textbf{\vspace{-6pt}}
+        \begin{example}{exp:2}
+            \Large
+            ما این مثال را با بردارهای دوبعدی برای ساده‌تر کردن کار توضیح می‌دهیم. ایده ها مانند فضای سه بعدی هستند، فقط با یک جزء کمتر ، به صورت دو بعدی کار می کنیم.\\
             \begin{enumerate}
-                \item {$\textbf{u}+\textbf{w}=(1,2,3)+(3,0,-2)=(4,2,1)$;}
-                \item {$\textbf{u}=\textbf{v}$}
-                \item {$\textbf{u}-\textbf{v}=\textbf{u}+(-\textbf{v})=(1,2,3)+(-1,-2,-3)=(0,0,0)=\textbf{0}$;}
-                \item {$k\textbf{w}=2(3,0,-2)=(6,0,-4)$}
+                \item {فرض کنید $\textbf{v}=(2,1)$، $\textbf{v}$ و $-\frac{\displaystyle 1}{\displaystyle 2}\textbf{v}$ چگونه از نظر هندسی با هم مقایسه می شوند؟
+                توجه داریم که $-\frac{\displaystyle 1}{\displaystyle 2}\textbf{v}=(-1,-\frac{\displaystyle 1}{\displaystyle 2})$.
+                با ترسیم نمودار $\textbf{v}$ و $-\frac{\displaystyle 1}{\displaystyle 2}\textbf{v}$ (قسمت آ شکل \ref{fig:4.Session.1.1.6})،
+                متوجه می‌شویم که $-\frac{\displaystyle 1}{\displaystyle 2}\textbf{v}$ در جهت مخالف $\textbf{v}$ است و طول آن $\frac{\displaystyle 1}{\displaystyle 2}\textbf{v}$ است.
+                بنابراین، از نظر هندسی، منفی کردن یک بردار را می‌توان به صورت "برگرداندن" جهت آن،
+                و ضرب اسکالر را می توان به عنوان مقیاس بندی طول یک بردار در نظر گرفت.}\\
+
+                \item {فرض کنید $\textbf{u}=(2,\frac{\displaystyle 1}{\displaystyle 2})$ و $\textbf{v}=(1,2)$. پس $\textbf{u}+\textbf{v}=(3,\frac{\displaystyle 5}{\displaystyle 2})$ .
+                قسمت ب شکل \ref{fig:4.Session.1.1.6} نشان می‌دهد که جمع بردار از نظر هندسی به چه معناست:
+                ما $\textbf{u}$ را به‌طور موازی انتقال میدهیم تا دم آن با سر $\textbf{v}$ منطبق شود.
+                پس بردار مجموع ، برداری است که از دم $\textbf{v}$ شروع شده و با سر $\textbf{u}$ منتقل شده ختم می‌شود.
+                    (اگر $\textbf{u}$ را ثابت نگه داریم و $\textbf{v}$ را طوری انتقال دهیم که دم آن با سر $\textbf{u}$ منطبق شود، همین نتیجه را می گیریم.
+                    در این حالت، $\textbf{u}+\textbf{v}$ برداری خواهد بود که از دم $\textbf{u}$ شروع شده و با سر $\textbf{v}$ منتقل شده ختم میشود.)
+                    توجه داشته باشید که قوانین جمع بردار در زمانی که نیروها را با هم جمع می کنیم تا نیروی برآیند را به وجود بیاوریم، با انتظار ما مطابقت دارد:
+                    اگر دو نیرو (بردار) را در یک راستا اضافه کنیم، نیروی برآیند قوی تری (بردار طولانی تر) در آن جهت دریافت می کنیم.
+                    اگر دو نیرو (بردار) مخالف یکدیگر را بهم اضافه کنیم، نیروی برآیند ضعیف تری (بردار کوتاه تر) به دست می آید.
+                    شکل \ref{fig:4.Session.1.1.7} این ایده ها را نشان می دهد.}\\
+
+                \item {فرض کنید $\textbf{v}=(2,1)$، $\textbf{v}$ و $\textbf{v}-\textbf{u}=(-1,\frac{\displaystyle 3}{\displaystyle 2})$. پس
+                قسمت پ شکل \ref{fig:4.Session.1.1.6} نشان می دهد که تفریق برداری از نظر هندسی به چه معناست.
+                    $\textbf{v}-\textbf{u}$ به ما یک بردار با از سر $\textbf{u}$ تا سر $\textbf{v}$ می دهد.
+                    اگر در عوض u و v را به عنوان نقاط تفسیر کنیم، آنگاه $\textbf{v}-\textbf{u}$ برداری را با هدف از نقطه $\textbf{u}$ تا نقطه $\textbf{v}$ به ما می دهد.
+                    این تفسیر مهم است زیرا ما اغلب می خواهیم که بردار از یک نقطه به نقطه دیگر برود.
+                    همچنین طول $\textbf{v}-\textbf{u}$ فاصله $\textbf{u}$ تا $\textbf{v}$ است، وقتی که $\textbf{u}$ و $\textbf{v}$ را به عنوان نقطه در نظر بگیریم.}
             \end{enumerate}
-        }
-        تفاوتی که در مورد سوم هست ، یک بردار خاص به نام بردار صفر را نشان می دهد که همه اجزای آن صفر است و با \lr{\textbf{0}} نشان داده می شود.
+
+            \begin{figure}[H]
+                \centering
+                \setlength{\belowcaptionskip}{-10pt}
+                \includegraphics[width=\textwidth]{Images/4/4.Session.1.1.6}
+                \caption{(آ) تفسیر هندسی ضرب اسکالر. (ب) تفسیر هندسی جمع بردار. ج) تفسیر هندسی تفریق بردار.}
+                \label{fig:4.Session.1.1.6}
+            \end{figure}
+
+            \begin{figure}[H]
+                \centering
+                \setlength{\belowcaptionskip}{-10pt}
+                \includegraphics[width=\textwidth]{Images/4/4.Session.1.1.7}
+                \caption{نیروهای اعمال شده به یک توپ. نیروها با استفاده از جمع بردار ترکیب می شوند تا نیروی برآیند به دست آید. \textbf{\vspace{10pt}}}
+                \label{fig:4.Session.1.1.7}
+            \end{figure}
+        \end{example}
+    \end{spacing}
+}
 
 
-        مثال***
-        ما این مثال را با بردارهای دوبعدی برای ساده‌تر کردن کار توضیح می‌دهیم. ایده ها مانند فضای سه بعدی هستند، فقط با یک جزء کمتر ، به صورت دو بعدی کار می کنیم.
-
-        \begin{enumerate}
-            \item {فرض کنید $\textbf{v}=(2,1)$، $\textbf{v}$ و $-\frac{1}{2}\textbf{v}$ چگونه از نظر هندسی با هم مقایسه می شوند؟
-            توجه داریم که $-\frac{1}{2}\textbf{v}=(-1,-\frac{1}{2})$.
-            با ترسیم نمودار $\textbf{v}$ و $-\frac{1}{2}\textbf{v}$ (قسمت آ شکل \ref{fig:4.Session.1.1.6})،
-            متوجه می‌شویم که $-\frac{1}{2}\textbf{v}$ در جهت مخالف $\textbf{v}$ است و طول آن $\frac{1}{2}\textbf{v}$ است.
-            بنابراین، از نظر هندسی، منفی کردن یک بردار را می‌توان به صورت "برگرداندن" جهت آن،
-            و ضرب اسکالر را می توان به عنوان مقیاس بندی طول یک بردار در نظر گرفت.}
-
-            \item {فرض کنید $\textbf{u}=(2,\frac{1}{2})$ و $\textbf{v}=(1,2)$. پس $\textbf{u}+\textbf{v}=(3,\frac{5}{2})$ .
-            قسمت ب شکل \ref{fig:4.Session.1.1.6} نشان می‌دهد که جمع بردار از نظر هندسی به چه معناست:
-            ما $\textbf{u}$ را به‌طور موازی انتقال میدهیم تا دم آن با سر $\textbf{v}$ منطبق شود.
-            پس بردار مجموع ، برداری است که از دم $\textbf{v}$ شروع شده و با سر $\textbf{u}$ منتقل شده ختم می‌شود.
-                (اگر $\textbf{u}$ را ثابت نگه داریم و $\textbf{v}$ را طوری انتقال دهیم که دم آن با سر $\textbf{u}$ منطبق شود، همین نتیجه را می گیریم.
-                در این حالت، $\textbf{u}+\textbf{v}$ برداری خواهد بود که از دم $\textbf{u}$ شروع شده و با سر $\textbf{v}$ منتقل شده ختم میشود.)
-                توجه داشته باشید که قوانین جمع بردار در زمانی که نیروها را با هم جمع می کنیم تا نیروی برآیند را به وجود بیاوریم، با انتظار ما مطابقت دارد:
-                اگر دو نیرو (بردار) را در یک راستا اضافه کنیم، نیروی برآیند قوی تری (بردار طولانی تر) در آن جهت دریافت می کنیم.
-                اگر دو نیرو (بردار) مخالف یکدیگر را بهم اضافه کنیم، نیروی برآیند ضعیف تری (بردار کوتاه تر) به دست می آید.
-                شکل \ref{fig:4.Session.1.1.7} این ایده ها را نشان می دهد.}
-
-            \item {فرض کنید $\textbf{v}=(2,1)$، $\textbf{v}$ و $\textbf{v}-\textbf{u}=(-1,\frac{3}{2})$. پس
-            قسمت پ شکل \ref{fig:4.Session.1.1.6} نشان می دهد که تفریق برداری از نظر هندسی به چه معناست.
-                $\textbf{v}-\textbf{u}$ به ما یک بردار با از سر $\textbf{u}$ تا سر $\textbf{v}$ می دهد.
-                اگر در عوض u و v را به عنوان نقاط تفسیر کنیم، آنگاه $\textbf{v}-\textbf{u}$ برداری را با هدف از نقطه $\textbf{u}$ تا نقطه $\textbf{v}$ به ما می دهد.
-                این تفسیر مهم است زیرا ما اغلب می خواهیم که بردار از یک نقطه به نقطه دیگر برود.
-                همچنین طول $\textbf{v}-\textbf{u}$ فاصله $\textbf{u}$ تا $\textbf{v}$ است، وقتی که $\textbf{u}$ و $\textbf{v}$ را به عنوان نقطه در نظر بگیریم.}
-        \end{enumerate}
+\section{\textbf{بردارهای طول و واحد}}
+{
+    \Large
+    \begin{spacing}{1.5}
+        از نظر هندسی اندازه ی یک بردار، طول پاره خطی جهت دار است.
+        اندازه ی یک بردار را با خط های عمودی دوتایی نشان می دهیم
+        (به عنوان مثال، $\norm{u}$ اندازه ی $\textbf{u}$ را نشان می دهد).
+        حالا با توجه به بردار $\textbf{u}=(x,y,z)$، می‌خواهیم بزرگی آن را به صورت جبری محاسبه کنیم.
+        اندازه ی یک بردار سه بعدی را می توان با دو بار اعمال قضیه فیثاغورث محاسبه کرد.
+        شکل \ref{fig:4.Session.1.1.8} را ببینید. ابتدا، ما به مثلث در صفحه xz با اضلاع x، z و وتر a نگاه می کنیم.
 
         \begin{figure}[H]
             \centering
             \setlength{\belowcaptionskip}{-10pt}
-            \includegraphics[width=\textwidth]{Images/4/4.Session.1.1.6}
-            \caption{(آ) تفسیر هندسی ضرب اسکالر. (ب) تفسیر هندسی جمع بردار. ج) تفسیر هندسی تفریق بردار.}
-            \label{fig:4.Session.1.1.6}
+            \includegraphics[width=0.5\textwidth]{Images/4/4.Session.1.1.8}
+            \caption{طول سه بعدی یک بردار را می توان با دو بار اعمال قضیه فیثاغورث محاسبه کرد.}
+            \label{fig:4.Session.1.1.8}
         \end{figure}
 
+        از قضیه فیثاغورث، $a=\sqrt{\displaystyle x^2+z^2}$ داریم.
+        حالا به مثلث با ضلع های \lr{a}، \lr{y} و وتر $\norm{u}$ نگاه کنید از قضیه فیثاغورث دوباره به فرمول اندازه ی زیر می رسیم:
+
+        \begin{eqtn}{eqtn:1}
+            \centering
+            $\norm{\textbf{u}}=\sqrt{\displaystyle y^2+a^2}=\sqrt{\displaystyle y^2+(\sqrt{\displaystyle x^2+z^2})^2}=\sqrt{\displaystyle x^2+y^2+z^2}$
+        \end{eqtn}
+
+        برای برخی از استفاده ها، ما به طول یک بردار اهمیتی نمی دهیم زیرا می خواهیم از بردار برای نمایش یک جهت خالص استفاده کنیم.
+        می خواهیم طول چنین بردارهایی با فقط یک جهت دقیقاً 1 باشد.
+        وقتی طول واحد برداری را می سازیم، می گوییم که بردار را نرمال کرده ایم.
+        می توانیم یک بردار را با تقسیم هر یک از اجزای بر بزرگی آن ، نرمال کنیم:
+
+        \begin{eqtn}{eqtn:2}
+            \centering
+            $\hat{\textbf{u}}=\frac{\displaystyle\textbf{u}}{\displaystyle\norm{\textbf{u}}}=\left(\frac{\displaystyle x}{\displaystyle\norm{\textbf{u}}},
+            \frac{\displaystyle y}{\displaystyle\norm{\textbf{u}}}, \frac{\displaystyle z}{\displaystyle\norm{\textbf{u}}}\right)$
+        \end{eqtn}
+
+        برای تأیید صحت این فرمول، می توانیم طول $\hat{\textbf{u}}$ را محاسبه کنیم
+
+        \begin{center}
+            $\norm{\hat{\textbf{u}}}=\sqrt{\displaystyle \left(\frac{\displaystyle x}{\displaystyle\norm{\textbf{u}}}\right)^2,
+                \left(\frac{\displaystyle y}{\displaystyle\norm{\textbf{u}}}\right)^2,
+                \left(\frac{\displaystyle z}{\displaystyle\norm{\textbf{u}}}\right)^2}=\frac{\displaystyle x^2+y^2+z^2}{\displaystyle\sqrt{\displaystyle \norm{\textbf{u}}^2}}
+            =\frac{\displaystyle\norm{\textbf{u}}}{\displaystyle\norm{\textbf{u}}}=1$
+        \end{center}
+
+        پس \hat{\textbf{u}} در واقع یک بردار واحد است.
+
+        \begin{example}{exp:3}
+            بردار $\textbf{v}=(-1,3,4)$ را نرمال کنید. داریم $\norm{\textbf{v}}=\sqrt{\displaystyle (-1)^2+3^2+4^2}=\sqrt{\displaystyle 26}$. پس:
+
+            \begin{center}
+                $\hat{\textbf{v}}=\frac{\displaystyle\textbf{v}}{\displaystyle\norm{\textbf{v}}}=\left(-\frac{\displaystyle 1}{\displaystyle\sqrt{\displaystyle 26}},
+                \frac{\displaystyle 3}{\displaystyle\sqrt{\displaystyle 26}}, \frac{\displaystyle 4}{\displaystyle\sqrt{\displaystyle 26}}\right)$
+            \end{center}
+
+            برای تأیید اینکه $\hat{\textbf{v}}$ واقعاً یک بردار واحد است، طول آن را محاسبه می کنیم:
+
+            \begin{center}
+                $\norm{\hat{\textbf{v}}}=\sqrt{\displaystyle \left(-\frac{\displaystyle 1}{\displaystyle\sqrt{\displaystyle 26}}\right)^2,
+                    \left(\frac{\displaystyle 3}{\displaystyle\sqrt{\displaystyle 26}}\right)^2, \left(\frac{\displaystyle 4}{\displaystyle\sqrt{\displaystyle 26}}\right)^2}=
+                \sqrt{\displaystyle\frac{\displaystyle 1}{\displaystyle 26}+\frac{\displaystyle 9}{\displaystyle 26}+\frac{\displaystyle 16}{\displaystyle 26}}=\sqrt{\displaystyle 1}=1$
+            \end{center}
+        \end{example}
+    \end{spacing}
+}
+
+
+\section{\textbf{ضرب داخلی}}
+\label{sec:3}
+{
+    \Large
+    \begin{spacing}{1.5}
+        ضرب نقطه ای (داخلی) شکلی از ضرب برداری است که منجر به یک مقدار اسکالر می شود.
+        به همین دلیل، گاهی اوقات از آن به عنوان یک ضرب اسکالر یاد می شود.
+        فرض کنید $\textbf{u}=(u_{x},u_{y},u_{z})$ و  $\textbf{v}=(v_{x},v_{y},v_{z})$،
+        پس حاصل ضرب داخلی به صورت زیر تعریف می‌شود:
+
+        \begin{eqtn}{eqtn:3}
+            \centering
+            \LARGE
+            $\textbf{u}\cdot\textbf{v}=u_{x}v_{x}+u_{y}v_{y}+u_{z}v_{z}$
+        \end{eqtn}
+
+        به عبارت دیگر ، ضرب داخلی مجموع ضرب های اجزای مربوطه ست.
+
+        همچنین تعریف ضرب داخلی معنای هندسی آشکاری ارائه نمی دهد.
+        با استفاده از قانون کسینوس (به تمرین ***** مراجعه کنید)، می توانیم رابطه ای را پیدا کنیم که در آن $\theta$ زاویه بین بردارهای $\textbf{u}$ و $\textbf{v}$ است به طوری که $0\leq\theta\leq\pi$؛ شکل \ref{fig:4.Session.1.1.9} را ببینید.
+
+        \begin{eqtn}{eqtn:4}
+            \centering
+            \LARGE
+            $\textbf{u}\cdot\textbf{v}=\norm{\textbf{u}}\norm{\textbf{v}}\cos\theta$
+        \end{eqtn}
+
+        بنابراین، معادله \ref{eqtn:4} می گوید که حاصلضرب نقطه ای بین دو بردار، کسینوس زاویه بین آنها است که با بزرگی بردارها ضرب شده است.
+        به خصوص، اگر هر دو بردار $\textbf{u}$ و $\textbf{v}$ بردار واحد باشند،
+        آنگاه $\textbf{u}\cdot\textbf{v}$ کسینوس زاویه بین آنهاست (یعنی $\textbf{u}\cdot\textbf{v}=\cos\theta$).
+        معادله \ref{eqtn:4} برخی از ویژگی های هندسی مفید ضرب داخلی را در اختیار ما قرار می دهد:
+
         \begin{figure}[H]
             \centering
             \setlength{\belowcaptionskip}{-10pt}
-            \includegraphics[width=\textwidth]{Images/4/4.Session.1.1.7}
-            \caption{نیروهای اعمال شده به یک توپ. نیروها با استفاده از جمع بردار ترکیب می شوند تا نیروی برآیند به دست آید.}
-            \label{fig:4.Session.1.1.7}
+            \includegraphics[width=0.8\textwidth]{Images/4/4.Session.1.1.9}
+            \caption{در شکل سمت چپ، زاویه $\theta$ بین $\textbf{u}$ و $\textbf{v}$ یک زاویه تند است.
+            در شکل سمت راست، زاویه $\theta$ بین $\textbf{u}$ و $\textbf{v}$ یک زاویه منفرجه (باز) است.
+            وقتی به زاویه بین دو بردار اشاره می کنیم، همیشه منظورمان کوچکترین زاویه است،
+            یعنی زاویه $\theta$ به طوری که $0\leq\theta\leq\pi$.}
+            \label{fig:4.Session.1.1.9}
+        \end{figure}
+
+        \begin{enumerate}
+            \item {اگر $\textbf{u}\cdot\textbf{v}=0$، در نتیجه $\textbf{u}\perp\textbf{v}$ (یعنی بردار ها بر هم عمودند).}
+            \item {اگر $\textbf{u}\cdot\textbf{v}>0$، در نتیجه زاویه ی بین $\theta$ و دو بردار کمتر از 90 درجه ست (یعنی بردار ها با هم زاویه ی تند میسازند).}
+            \item {اگر $\textbf{u}\cdot\textbf{v}<0$، در نتیجه زاویه ی بین $\theta$ و دو بردار بیشتر از 90 درجه ست (یعنی بردار ها با هم زاویه ی منفرجه میسازند).}
+        \end{enumerate} \\
+
+        \begin{example}{exp:4}
+            فرض کنید $\textbf{u}=(1,2,3)$ و $\textbf{v}=(-4,0,-1)$ باشند. زوایه ی بین $\textbf{u}$ و $\textbf{v}$ را پیدا کنید. \\
+            ابتدا موارد زیر را محاسبه میکنیم:
+
+            \begin{center}
+                $\textbf{u}\cdot\textbf{v}=(1,2,3)\cdot(-4,0,-1)=-4-3=-7$
+
+                $\norm{\textbf{u}}=\sqrt{\displaystyle 1^2+2^2+3^2}=\sqrt{\displaystyle 14}$
+
+                $\norm{\textbf{v}}=\sqrt{\displaystyle (-4)^2+0^2+(-1)^2}=\sqrt{\displaystyle 17}$
+            \end{center}
+
+            حالا ، معادله ی \ref{eqtn:4} را برای حل $\theta$ اعمال میکنیم:
+
+            \begin{center}
+                $\cos\theta=\frac{\displaystyle\textbf{u}\cdot\textbf{v}}{\displaystyle\norm{\textbf{v}}\norm{\textbf{u}}}=\frac{\displaystyle -7}{\displaystyle \sqrt{\displaystyle 14}\sqrt{\displaystyle 17}}$
+
+                $\theta=\cos^-1\frac{\displaystyle -7}{\displaystyle \sqrt{\displaystyle 14}\sqrt{\displaystyle 17}}\thickapprox117^\circ$
+            \end{center}
+        \end{example}
+
+        \textbf{\vspace{-6pt}}
+        \begin{example}{exp:5}
+            شکل \ref{fig:4.Session.1.1.10} را در نظر بگیرید.
+            با توجه به $\textbf{v}$ و بردار واحد $\textbf{n}$، فرمولی برای $\textbf{p}$ بر حسب $\textbf{v}$ و $\textbf{n}$ با استفاده از ضرب داخلی پیدا کنید. \\
+            ابتدا، از شکل مشاهده کنید که عدد اسکالر $\textbf{k}$ وجود دارد
+            که $\textbf{p}=k\textbf{n}$؛ علاوه بر این، از آنجایی که ما $\norm{\textbf{u}}=1$ فرض کردیم،
+            داریم $\norm{\textbf{p}}=\norm{k\textbf{n}}=\abs{k}\norm{\textbf{n}}=\abs{k}$.
+            (توجه داشته باشید که $k$ ممکن است منفی باشد اگر و تنها اگر $\textbf{p}$ و $\textbf{n}$ در جهت مخالف قرار گیرند.)
+            با استفاده از مثلثات، داریم که $k=\norm{\textbf{v}}\cos\theta$؛
+            بنابراین، $\textbf{p}=k\textbf{n}=(\norm{\textbf{v}}\cos\theta)\textbf{n}$.
+            با این حال، از آنجایی که \textbf{n} یک بردار واحد است، می توانیم این را به روش دیگری بگوییم:
+
+            \begin{center}
+                $\textbf{p}=(\norm{\textbf{v}}\cos\theta)\textbf{n}=(\norm{\textbf{v}}\cdot 1\cos\theta)\textbf{n}=(\norm{\textbf{v}}\norm{\textbf{n}}\cos\theta)\textbf{n}=(\textbf{v}\cdot\textbf{n})\textbf{n}$
+            \end{center}
+
+            به طور خاص، این $k=\textbf{v}\cdot\textbf{n}$ را نشان می دهد که تفسیر هندسی $\textbf{v}\cdot\textbf{n}$ را هنگامی که $\textbf{n}$ یک بردار واحد است، نشان می دهد. ما $\textbf{p}$ را تصویر متعامد/قائم (\lr{orthogonal projection}) $\textbf{v}$ روی $\textbf{n}$ می نامیم و معمولاً به شکل زیر نشان داده می شود:
+
+            \begin{center}
+                $\textbf{p}=proj_{n}(\textbf{v})$
+            \end{center}
+
+            اگر $\textbf{v}$ را به عنوان نیرو تعبیر کنیم، $\textbf{p}$ را می توان به عنوان بخشی از نیروی $\textbf{v}$ در نظر گرفت که در جهت $\textbf{n}$ عمل می کند.
+            به همین ترتیب، بردار $\textbf{w}=perp_{n}(\textbf{v})=\textbf{v}-\textbf{p}$ بخشی از نیروی $\textbf{v}$ است که در جهت $\textbf{n}$ متعامد عمل می کند
+            (به همین دلیل است که آن را با $perp_{n}(\textbf{v})$ برای عمود نشان می دهیم).
+            مشاهده کنید که $\textbf{v}=\textbf{p}+\textbf{w}=proj_{n}(\textbf{v})+perp_{n}(\textbf{v})$ که می گوییم بردار $\textbf{v}$ را به مجموع دو بردار متعامد $\textbf{p}$ و $\textbf{w}$ تجزیه کرده ایم.
+
+            اگر $\textbf{n}$ طول واحد نباشد، همیشه می‌توانیم ابتدا آن را نرمال کنیم تا طول آن را واحد کنیم.
+            جایگزینی $\textbf{n}$ با بردار واحد $\frac{\displaystyle\textbf{n}}{\norm{\textbf{n}}}$ فرمول تصویر کلی تری را به ما می دهد:
+
+            \begin{center}
+                $\textbf{p}=proj_{n}(\textbf{v})=\left( \textbf{v}\cdot\frac{\displaystyle\textbf{n}}{\norm{\textbf{n}}} \right)\frac{\displaystyle\textbf{n}}{\norm{\textbf{n}}}=\frac{\displaystyle(\textbf{v}\cdot\textbf{n})}{\norm{\textbf{n}}^2}\textbf{n}$
+            \end{center}
+
+            \begin{figure}[H]
+                \centering
+                \setlength{\belowcaptionskip}{-10pt}
+                \includegraphics[width=0.5\textwidth]{Images/4/4.Session.1.1.10}
+                \caption{تصویر متعامد/قائم $\textbf{v}$ روی $\textbf{n}$. \textbf{\vspace{10pt}}}
+                \label{fig:4.Session.1.1.10}
+            \end{figure}
+        \end{example}
+    \end{spacing}
+}
+
+\textbf{\vspace{-10pt}}
+
+\subsection{\textbf{متعامد سازی}}
+\label{sec:3.1}
+{
+    \Large
+    \begin{spacing}{1.5}
+        مجموعه ای از بردارها $\{\textbf{v}_{0},...,\textbf{v}_{n-1}\}$ متعامد نامیده می شود که بردارها همگی متعامد (هر بردار در مجموعه نسبت به هر بردار دیگری در مجموعه متعامد باشد) و طول واحد باشند.
+        گاهی اوقات ما مجموعه ای از بردارها را داریم که تقریباً متعارف هستند، اما نه کاملاً.
+        یک کار متداول این است که مجموعه را متعامد سازی کنید تا یک مجموعه ی متعامد شود.
+        در گرافیک کامپیوتری سه بعدی ممکن است با یک مجموعه متعارف شروع کنیم، اما به دلیل مسائل مربوط به دقت عددی، مجموعه به تدریج غیرمتعارف شود.
+        ما عمدتاً با موارد دو بعدی و سه بعدی این مشکل (یعنی مجموعه هایی که به ترتیب شامل دو و سه بردار هستند) سروکار داریم.
+
+        ابتدا مورد دو بعدی ساده تر را بررسی می کنیم.
+        فرض کنید مجموعه بردارهای $\{\textbf{v}_{0},\textbf{v}_{1}\}$ را داریم که می‌خواهیم آن‌ها را به یک مجموعه متعامد $\{\textbf{w}_{0},\textbf{w}_{1}\}$ تبدیل کنیم،
+        همانطور که در شکل \ref{fig:4.Session.1.1.11} نشان داده شده است.
+        ما با $\textbf{w}_{0}=\textbf{v}_{0}$ شروع کرده و $\textbf{v}_{1}$ را تغییر میدهیم تا آن را به $\textbf{w}_{0}$ متعامد کنیم.
+        این کار با تفریق کردن بخشی از $\textbf{v}_{1}$ که در جهت $\textbf{w}_{0}$  عمل می کند، انجام می شود:
+
+        \begin{center}
+            $\textbf{w}_{1}=\textbf{v}_{1}-proj_{\textbf{w}_{0}}(\textbf{v}_{1})$
+        \end{center}
+
+        اکنون مجموعه ای متعامد از بردارها داریم $\{\textbf{w}_{0},\textbf{w}_{1}\}$.
+        آخرین مرحله برای ساخت مجموعه متعارف نرمال کردن $\textbf{w}_{0}$ و $\textbf{w}_{1}$ برای ایجاد طول واحد است.
+
+        \begin{figure}[H]
+            \centering
+            \setlength{\belowcaptionskip}{-10pt}
+            \includegraphics[width=0.5\textwidth]{Images/4/4.Session.1.1.11}
+            \caption{متعامد سازی دو بعدی}
+            \label{fig:4.Session.1.1.11}
+        \end{figure}
+
+        حالت سه بعدی به همان شکل مورد دو بعدی اما با مراحل بیشتر است.
+        فرض کنید مجموعه بردارهای $\{\textbf{v}_{0},\textbf{v}_{1},\textbf{v}_{2}\}$ را داریم که می‌خواهیم آنها را یک مجموعه متعامد $\{\textbf{w}_{0},\textbf{w}_{1},\textbf{w}_{2}\}$ کنیم، مطابق شکل \ref{fig:4.Session.1.1.12}.
+        ما با $\textbf{w}_{0}=\textbf{v}_{0}$ شروع می کنیم و $\textbf{v}_{1}$ را تغییر می دهیم تا به $\textbf{w}_{0}$ متعامد شود.
+        این کار با کم کردن بخشی از $\textbf{v}_{1}$ که در جهت $\textbf{w}_{0}$ عمل می کند انجام می شود:
+
+        \begin{center}
+            $\textbf{w}_{1}=\textbf{v}_{1}-proj_{\textbf{w}_{0}}(\textbf{v}_{1})$
+        \end{center}
+
+        \begin{figure}[H]
+            \centering
+            \setlength{\belowcaptionskip}{-10pt}
+            \includegraphics[width=0.35\textwidth]{Images/4/4.Session.1.1.12}
+            \caption{متعامد سازی سه بعدی}
+            \label{fig:4.Session.1.1.12}
+        \end{figure}
+
+        در مرحله بعد، $\textbf{v}_{2}$ را تغییر می دهیم تا آن را متعامد به $\textbf{w}_{0}$ و $\textbf{w}_{1}$ کنیم.
+        این کار با تفریق کردن بخشی از $\textbf{v}_{2}$ که در جهت $\textbf{w}_{0}$ عمل می کند و بخشی از $\textbf{v}_{2}$ که در جهت $\textbf{w}_{1}$ عمل می کند، انجام می شود:
+
+        \begin{center}
+            $\textbf{w}_{2}=\textbf{v}_{2}-proj_{\textbf{w}_{0}}(\textbf{v}_{2})-proj_{\textbf{w}_{1}}(\textbf{v}_{2})$
+        \end{center}
+
+        اکنون یک مجموعه متعامد از بردارها داریم $\{\textbf{w}_{0},\textbf{w}_{1},\textbf{w}_{2}\}$.
+        آخرین مرحله برای ساخت مجموعه متعامد نرمال کردن $\textbf{w}_{0}$، $\textbf{w}_{1}$ و $\textbf{w}_{2}$ است تا طول آنها را واحد کنیم.
+
+        برای حالت کلی $\textbf{n}$ بردار $\{\textbf{v}_{0},...,\textbf{v}_{n-1}\}$ که می‌خواهیم آنها را به یک مجموعه متعامد تبدیل کنیم $\{\textbf{w}_{0},...,\textbf{w}_{n-1}\}$، ما روال زیر را داریم که معمولاً فرآیند متعامدسازی گرام اشمیت (\lr{Gram-Schmidt}) نامیده می شود:
+
+        \begin{center}
+            گام پایه: $\textbf{w}_{0}=\textbf{v}_{0}$ قرار میدهیم
+
+            به ازای $1\leq i\leq n-1$ ، \\ $\textbf{w}_{i}=\textbf{v}_{i}-\sum_{j=1}^{i-1}proj_{\textbf{w}_{j}}(\textbf{v}_{i})$ قرار میدهیم
+
+            گام نرمال سازی: $\textbf{w}_{i}=\frac{\displaystyle\textbf{w}_{i}}{\displaystyle\norm{\textbf{w}_{i}}}$ قرار میدهیم
+        \end{center}
+
+        دوباره، ایده شهودی این است که وقتی یک بردار $\textbf{v}_{i}$ را از مجموعه ورودی انتخاب می کنیم تا به مجموعه متعارف اضافه کنیم،
+        باید اجزای $\textbf{v}_{i}$ را که در جهت بردارهای دیگر عمل کرده و از قبل در مجموعه متعامد قرار دارند ($\textbf{w}_{0},\textbf{w}_{1},...,\textbf{w}_{i-1}$) را کم کنیم.
+        این کار باعث اطمینان حاصل از این که بردار جدید اضافه شده با سایر بردارهای موجود در مجموعه متعامد، متعامد باشد، میشود.
+    \end{spacing}
+}
+
+
+\section{\textbf{ضرب خارجی}}
+{
+    \Large
+    \begin{spacing}{1.5}
+        شکل دوم بردار ضرب ریاضی، ضرب خارجی است.
+        بر خلاف ضرب داخلی که به یک اسکالر ختم می‌شود، ضرب خارجی به یک بردار دیگر ختم می‌شود.
+        علاوه بر این، ضرب خارجی فقط برای بردارهای سه بعدی تعریف شده است (در واقع ضرب خارجی دو بعدی وجود ندارد).
+        با ضرب خارجی دو بردار سه بعدی u و v، بردار دیگری به دست می‌آید،که w متعامد به u و v است.
+        شکل \ref{fig:4.Session.1.1.13} را ببینید.
+        اگر $\textbf{u}=(u_{x},u_{y},u_{z})$ و  $\textbf{v}=(v_{x},v_{y},v_{z})$ باشد، آنگاه ضرب خارجی به این صورت محاسبه می‌شود:
+
+        \begin{eqtn}{eqtn:5}
+            \centering
+            $\textbf{w}=\textbf{u}\times\textbf{v}=(u_{y}v_{z}-u_{z}v_{y}, u_{z}v_{x}-u_{x}v_{z}, u_{x}v_{y}-u_{y}v_{z})$
+        \end{eqtn}
+
+        \begin{point}{pnt:4}
+            \Large
+            اگر در سیستم مختصات راستگرد کار می کنید، پس از قانون شست دست راست استفاده می کنید:
+            اگر دست راست خود را طوری بگیرید که انگشتان در جهت بردار اول u باشد و سپس انگشتان خود را به سمت v با زاویه ی $0\leq\theata\leq \pi$ خم کنید، انگشت شست شما در جهت $\textbf{w}=\textbf{u}\times\textbf{v}$ قرار می گیرد.
+        \end{point}
+
+        \begin{figure}[H]
+            \centering
+            \setlength{\belowcaptionskip}{-10pt}
+            \includegraphics[width=0.35\textwidth]{Images/4/4.Session.1.1.13}
+            \caption{ضرب خارجی دو بردار سه بعدی $\textbf{u}$ و $\textbf{v}$ بردار دیگر $\textbf{w}$ را به دست می آورد که متعامد با $\textbf{u}$ و $\textbf{v}$ است.
+            اگر دست چپ خود را طوری بگیرید که انگشتان در جهت بردار اول u باشد و سپس انگشتان خود را به سمت v با زاویه ی $0\leq\theata\leq \pi$ خم کنید، انگشت شست شما در جهت $\textbf{w}=\textbf{u}\times\textbf{v}$ قرار می گیرد. به این قانون شست چپ می گویند.}
+            {متعامد سازی سه بعدی}
+            \label{fig:4.Session.1.1.13}
+        \end{figure}
+
+        \begin{example}{exp:6}
+            فرض کنید $\textbf{u}=(1,2,3)$ و $\textbf{v}=(1,2,3)$ باشد. سپس $\textbf{w}=\textbf{u}\times\textbf{v}$ و $\textbf{z}=\textbf{v}\times\textbf{z}$ را محاسبه کنید. معادله ی \ref{eqtn:5} را اعمال میکنیم: \\
+            \begin{equation*}
+                \centering
+                \begin{split}
+                    \textbf{w}&=\textbf{u}\times\textbf{v}\\
+                    &=(2,1,3)\times(2,0,0)\\
+                    &=(1\cdot 0-3\cdot 0, 3\cdot 2-2\cdot 0, 2\cdot 0-1\cdot 2)\\
+                    &=(0,6,-2)
+                \end{split}
+            \end{equation*}
+            و
+            \begin{equation*}
+                \centering
+                \begin{split}
+                    \textbf{z}&=\textbf{v}\times\textbf{u}\\
+                    &=(2,0,0)\times(2,1,3)\\
+                    &=(0\cdot 3-0\cdot 1, 0\cdot 2-2\cdot 3, 2\cdot 1-0\cdot 2)\\
+                    &=(0,6,-2)
+                \end{split}
+            \end{equation*}
+
+            این نتیجه یک چیز را روشن می کند، به طور کلی $\textbf{u}\times\textbf{v}\neq\textbf{v}\times\textbf{u}$. بنابراین، می گوییم که ضرب خارجی خاصیت جابجایی ندارد.
+            در واقع می توان نشان داد که $\textbf{u}\times\textbf{v}=-\textbf{v}\times\textbf{u}$. شما می توانید بردار به دست آمده از ضرب خارجی را با قانون انگشت شست چپ تعیین کنید.
+            اگر ابتدا انگشتان خود را در جهت بردار اول نشانه بگیرید و سپس انگشتان خود را به سمت بردار دوم خم کنید (همیشه مسیر را با کوچکترین زاویه انتخاب کنید)، همانطور که در شکل \ref{fig:4.Session.1.1.11} نشان داده شده است، انگشت شست شما در جهت بردار حاصل قرار می گیرد.
+
+            برای نشان دادن اینکه $\textbf{w}$ متعامد به $\textbf{u}$ و $\textbf{w}$ متعامد بر $\textbf{v}$ است،
+            از بخش \ref{sec:3} یادآوری می کنیم که اگر$\textbf{u}\times\textbf{v}=0$ باشد،
+            آنگاه $\textbf{u}\perp\textbf{v}$ است (یعنی بردارها متعامد هستند). زیرا
+
+            \begin{center}
+                $\textbf{w}\times\textbf{u}=(0,6,-2)\cdot(2,1,3)=0\cdot 2+6\cdot 1+(-2)\cdot 3=0$
+
+                و
+
+                $\textbf{w}\times\textbf{v}=(0,6,-2)\cdot(2,0,0)=0\cdot 2+6\cdot 0+(-2)\cdot 0=0$
+            \end{center}
+
+            نتیجه می گیریم که $\textbf{w}$ متعامد به $\textbf{u}$ و $\textbf{w}$ متعامد بر $\textbf{v}$ است.
+        \end{example}
+    \end{spacing}
+}
+
+\subsection{\textbf{ضرب خارجی شبه دو بعدی}}
+{
+    \Large
+    \begin{spacing}{1.5}
+        ضرب خارجی به ما امکان می دهد یک بردار متعامد به دو بردار سه بعدی داده شده را پیدا کنیم.
+        در دوبعدی وضعیت مشابهی نداریم،
+        اما با توجه به بردار دوبعدی $\textbf{u}=u_{x},u_{y}$ پیدا کردن بردار $\textbf{v}$ متعامد به $\textbf{u}$ می‌تواند مفید باشد.
+        شکل \ref{fig:4.Session.1.1.14} شکل هندسی ای را نشان می دهد که از آن $\textbf{v}=-u_{y},u_{x}$ پیدا میشود.
+        اثبات آن ساده است:
+
+        \begin{center}
+            $\textbf{u}\cdot\textbf{v}=(u_{x},u_{y})\cdot(-u_{y},u_{x})=-u_{x}u_{y}+u_{y}u_{x}=0$
+        \end{center}
+
+        بنابراین $\textbf{u}\perp\textbf{v}$.
+        مشاهده کنید که $\textbf{u}\cdot-\textbf{v}=u_{x}u_{y}+u_{y}(-u_{x})=0$، بنابراین $\textbf{u}\perp-\textbf{v}$ را نیز داریم.
+
+        \begin{figure}[H]
+            \centering
+            \setlength{\belowcaptionskip}{-10pt}
+            \includegraphics[width=0.5\textwidth]{Images/4/4.Session.1.1.14}
+            \caption{ضرب خارجی شبه دوبعدی یک بردار $\textbf{u}$ به بردار متعامد $\textbf{v}$ ختم می شود.}
+            \label{fig:4.Session.1.1.14}
         \end{figure}
     \end{spacing}
 }
 
-%\section{
-%    \huge
-%
-%    \textbf{بردارهای طول و واحد}
-%}
-%\textbf{\vspace{7pt}}
-%{
-%    \Large
-%    \begin{spacing}{1.5}
-%        از نظر هندسی اندازه ی یک بردار، طول پاره خطی جهت دار است.
-%        اندازه ی یک بردار را با خط های عمودی دوتایی نشان می دهیم
-%        (به عنوان مثال، $\norm{u}$ اندازه ی $\textbf{u}$ را نشان می دهد).
-%        حالا با توجه به بردار $\textbf{u}=(x,y,z)$، می‌خواهیم بزرگی آن را به صورت جبری محاسبه کنیم.
-%        اندازه ی یک بردار سه بعدی را می توان با دو بار اعمال قضیه فیثاغورث محاسبه کرد.
-%        شکل \ref{fig:4.Session.1.1.8} را ببینید. ابتدا، ما به مثلث در صفحه xz با اضلاع x، z و وتر a نگاه می کنیم.
-%
-%        \begin{figure}[H]
-%            \centering
-%            \setlength{\belowcaptionskip}{-10pt}
-%            \includegraphics[width=0.5\textwidth]{Images/4/4.Session.1.1.8}
-%            \caption{طول سه بعدی یک بردار را می توان با دو بار اعمال قضیه فیثاغورث محاسبه کرد.}
-%            \label{fig:4.Session.1.1.8}
-%        \end{figure}
-%
-%        از قضیه فیثاغورث، $a=\sqrt{\displaystyle x^2+z^2}$ داریم.
-%        حالا به مثلث با ضلع های \lr{a}، \lr{y} و وتر $\norm{u}$ نگاه کنید از قضیه فیثاغورث دوباره به فرمول اندازه ی زیر می رسیم:
-%
-%        قضیه*****
-%
-%        \begin{center}
-%            $\norm{\textbf{u}}=\sqrt{\displaystyle y^2+a^2}=\sqrt{\displaystyle y^2+(\sqrt{\displaystyle x^2+z^2})^2}=\sqrt{\displaystyle x^2+y^2+z^2}$
-%        \end{center}
-%
-%        برای برخی از استفاده ها، ما به طول یک بردار اهمیتی نمی دهیم زیرا می خواهیم از بردار برای نمایش یک جهت خالص استفاده کنیم.
-%        می خواهیم طول چنین بردارهایی با فقط یک جهت دقیقاً 1 باشد.
-%        وقتی طول واحد برداری را می سازیم، می گوییم که بردار را نرمال کرده ایم.
-%        می توانیم یک بردار را با تقسیم هر یک از اجزای بر بزرگی آن ، نرمال کنیم:
-%
-%        قضیه*****
-%
-%        \begin{center}
-%            $\hat{\textbf{u}}=\frac{\displaystyle\textbf{u}}{\displaystyle\norm{\textbf{u}}}=\left(\frac{\displaystyle x}{\displaystyle\norm{\textbf{u}}},
-%            \frac{\displaystyle y}{\displaystyle\norm{\textbf{u}}}, \frac{\displaystyle z}{\displaystyle\norm{\textbf{u}}}\right)$
-%        \end{center}
-%
-%        برای تأیید صحت این فرمول، می توانیم طول $\hat{\textbf{u}}$ را محاسبه کنیم
-%
-%        \begin{center}
-%            $\norm{\hat{\textbf{u}}}=\sqrt{\left(\frac{\displaystyle x}{\displaystyle\norm{\textbf{u}}}\right)^2,
-%                \left(\frac{\displaystyle y}{\displaystyle\norm{\textbf{u}}}\right)^2,
-%                \left(\frac{\displaystyle z}{\displaystyle\norm{\textbf{u}}}\right)^2}=\frac{\displaystyle x^2+y^2+z^2}{\displaystyle\sqrt{\norm{\textbf{u}}^2}}
-%            =\frac{\displaystyle\norm{\textbf{u}}}{\displaystyle\norm{\textbf{u}}}=1$
-%        \end{center}
-%
-%
-%        پس \hat{\textbf{u}} در واقع یک بردار واحد است.
-%
-%        مثال***
-%
-%        بردار $\textbf{v}=(-1,3,4)$ را نرمال کنید. داریم $\norm{\textbf{v}}=\sqrt{\displaystyle (-1)^2+3^2+4^2}=\sqrt{26}$. پس:
-%
-%        \begin{center}
-%            $\hat{\textbf{v}}=\frac{\displaystyle\textbf{v}}{\displaystyle\norm{\textbf{v}}}=\left(-\frac{\displaystyle 1}{\displaystyle\sqrt{26}},
-%            \frac{\displaystyle 3}{\displaystyle\sqrt{26}}, \frac{\displaystyle 4}{\displaystyle\sqrt{26}}\right)$
-%        \end{center}
-%
-%        برای تأیید اینکه $\hat{\textbf{v}}$ واقعاً یک بردار واحد است، طول آن را محاسبه می کنیم:
-%
-%        \begin{center}
-%            $\norm{\hat{\textbf{v}}}=\sqrt{\left(-\frac{\displaystyle 1}{\displaystyle\sqrt{26}}\right)^2,
-%                \left(\frac{\displaystyle 3}{\displaystyle\sqrt{26}}\right)^2, \left(\frac{\displaystyle 4}{\displaystyle\sqrt{26}}\right)^2}=
-%            \sqrt{\displaystyle\frac{\displaystyle 1}{\displaystyle 26}+\frac{\displaystyle 9}{\displaystyle 26}+\frac{\displaystyle 16}{\displaystyle 26}}=\sqrt{\displaystyle 1}=1$
-%        \end{center}
-%
-%    \end{spacing}
-%}
-%
-%\section{
-%    \huge
-%
-%    \textbf{ضرب داخلی}
-%}
-%\textbf{\vspace{7pt}}
-%{
-%    \Large
-%    \begin{spacing}{1.5}
-%        ضرب نقطه ای (داخلی) شکلی از ضرب برداری است که منجر به یک مقدار اسکالر می شود.
-%        به همین دلیل، گاهی اوقات از آن به عنوان یک ضرب اسکالر یاد می شود.
-%        فرض کنید $\textbf{u}=(u_{x},u_{y},u_{z})$ و  $\textbf{v}=(v_{x},v_{y},v_{z})$،
-%        پس حاصل ضرب داخلی به صورت زیر تعریف می‌شود:
-%
-%        \begin{center}
-%            $\textbf{u}\cdot\textbf{v}=u_{x}v_{x}+u_{y}v_{y}+u_{z}v_{z}$
-%        \end{center}
-%
-%        به عبارت دیگر ، ضرب داخلی مجموع ضرب های اجزای مربوطه ست.
-%
-%        همچنین تعریف ضرب داخلی معنای هندسی آشکاری ارائه نمی دهد.
-%        با استفاده از قانون کسینوس (به تمرین ***** مراجعه کنید)، می توانیم رابطه ای را پیدا کنیم که در آن $\theta$ زاویه بین بردارهای $\textbf{u}$ و $\textbf{v}$ است به طوری که $0\leq\theta\leq\pi$؛ شکل ****** را ببینید.
-%
-%        \begin{center}
-%            $\textbf{u}\cdot\textbf{v}=\norm{\textbf{u}}\norm{\textbf{v}}\cos\theta$
-%        \end{center}
-%
-%        بنابراین، معادله ***** می گوید که حاصلضرب نقطه ای بین دو بردار، کسینوس زاویه بین آنها است که با بزرگی بردارها ضرب شده است.
-%        به خصوص، اگر هر دو بردار $\textbf{u}$ و $\textbf{v}$ بردار واحد باشند،
-%        آنگاه $\textbf{u}\cdot\textbf{v}$ کسینوس زاویه بین آنهاست (یعنی $\textbf{u}\cdot\textbf{v}=\cos\theta$).
-%        معادله ***** برخی از ویژگی های هندسی مفید ضرب داخلی را در اختیار ما قرار می دهد:
-%
-%        \begin{figure}[H]
-%            \centering
-%            \setlength{\belowcaptionskip}{-10pt}
-%            \includegraphics[width=0.5\textwidth]{Images/4/4.Session.1.1.9}
-%            \caption{در شکل سمت چپ، زاویه $\theta$ بین $\textbf{u}$ و $\textbf{v}$ یک زاویه تند است.
-%            در شکل سمت راست، زاویه $\theta$ بین $\textbf{u}$ و $\textbf{v}$ یک زاویه منفرجه (باز) است.
-%            وقتی به زاویه بین دو بردار اشاره می کنیم، همیشه منظورمان کوچکترین زاویه است،
-%            یعنی زاویه $\theta$ به طوری که $0\leq\theta\leq\pi$.}
-%            \label{fig:4.Session.1.1.9}
-%        \end{figure}
-%
-%        \begin{enumerate}
-%            \item {اگر $\textbf{u}\cdot\textbf{v}=0$، در نتیجه $\textbf{u}\perp\textbf{v}$ (یعنی بردار ها بر هم عمودند).}
-%            \item {اگر $\textbf{u}\cdot\textbf{v}>0$، در نتیجه زاویه ی بین \theta و دو بردار کمتر از 90 درجه ست (یعنی بردار ها با هم زاویه ی تند میسازند).}
-%            \item {اگر $\textbf{u}\cdot\textbf{v}<0$، در نتیجه زاویه ی بین \theta و دو بردار بیشتر از 90 درجه ست (یعنی بردار ها با هم زاویه ی منفرجه میسازند).}
-%        \end{enumerate}
-%
-%        مثال***
-%        فرض کنید $\textbf{u}=(1,2,3)$ و $\textbf{v}=(-4,0,-1)$ باشند. زوایه ی بین $\textbf{u}$ و $\textbf{v}$ را پیدا کنید.
-%        ابتدا موارد زیر را محاسبه میکنیم:
-%
-%        \begin{center}
-%            $\textbf{u}\cdot\textbf{v}=(1,2,3)\cdot(-4,0,-1)=-4-3=-7$
-%
-%            $\norm{\textbf{u}}=\sqrt{\displaystyle 1^2+2^2+3^2}=\sqrt{\displaystyle 14}$
-%
-%            $\norm{\textbf{v}}=\sqrt{\displaystyle (-4)^2+0^2+(-1)^2}=\sqrt{\displaystyle 17}$
-%        \end{center}
-%
-%        حالا ، قضیه ی ***** را برای حل \theta اعمال میکنیم:
-%
-%        \begin{center}
-%            $\cos\theta=\frac{\displaystyle\textbf{u}\cdot\textbf{v}}{\displaystyle\norm{\textbf{v}}\norm{\textbf{u}}}=\frac{\displaystyle -7}{\displaystyle \sqrt{\displaystyle 14}\sqrt{\displaystyle 17}}$
-%
-%            $\theta=\cos^-1\frac{\displaystyle -7}{\displaystyle \sqrt{\displaystyle 14}\sqrt{\displaystyle 17}}\thickapprox117^\circ$
-%        \end{center}
-%
-%
-%        مثال***
-%
-%        شکل ***** را در نظر بگیرید.
-%        با توجه به $\textbf{v}$ و بردار واحد $\textbf{n}$، فرمولی برای $\textbf{p}$ بر حسب $\textbf{v}$ و $\textbf{n}$ با استفاده از ضرب داخلی پیدا کنید.
-%        ابتدا، از شکل مشاهده کنید که عدد اسکالر $\textbf{k}$ وجود دارد
-%        که $\textbf{p}=k\textbf{n}$؛ علاوه بر این، از آنجایی که ما $\norm{\textbf{u}}=1$ فرض کردیم،
-%        داریم $\norm{\textbf{p}}=\norm{k\textbf{n}}=\abs{k}\norm{\textbf{n}}=\abs{k}$.
-%        (توجه داشته باشید که $k$ ممکن است منفی باشد اگر و تنها اگر $\textbf{p}$ و $\textbf{n}$ در جهت مخالف قرار گیرند.)
-%        با استفاده از مثلثات، داریم که $k=\norm{\textbf{v}}\cos\theta$؛
-%        بنابراین، $\textbf{p}=k\textbf{n}=(\norm{\textbf{v}}\cos\theta)\textbf{n}$.
-%        با این حال، از آنجایی که \textbf{n} یک بردار واحد است، می توانیم این را به روش دیگری بگوییم:
-%
-%        \begin{center}
-%            $\textbf{p}=(\norm{\textbf{v}}\cos\theta)\textbf{n}=(\norm{\textbf{v}}\cdot 1\cos\theta)\textbf{n}=(\norm{\textbf{v}}\norm{\textbf{n}}\cos\theta)\textbf{n}=(\textbf{v}\cdot\textbf{n})\textbf{n}$
-%        \end{center}
-%
-%        به طور خاص، این $k=\textbf{v}\cdot\textbf{n}$ را نشان می دهد که تفسیر هندسی $\textbf{v}\cdot\textbf{n}$ را هنگامی که $\textbf{n}$ یک بردار واحد است، نشان می دهد. ما $\textbf{p}$ را تصویر متعامد/قائم (\lr{orthogonal projection}) $\textbf{v}$ روی $\textbf{n}$ می نامیم و معمولاً به شکل زیر نشان داده می شود:
-%
-%        \begin{center}
-%            $\textbf{p}=proj_{n}(\textbf{v})$
-%        \end{center}
-%
-%        اگر $\textbf{v}$ را به عنوان نیرو تعبیر کنیم، $\textbf{p}$ را می توان به عنوان بخشی از نیروی $\textbf{v}$ در نظر گرفت که در جهت $\textbf{n}$ عمل می کند.
-%        به همین ترتیب، بردار $\textbf{w}=perp_{n}(\textbf{v})=\textbf{v}-\textbf{p}$ بخشی از نیروی $\textbf{v}$ است که در جهت $\textbf{n}$ متعامد عمل می کند
-%        (به همین دلیل است که آن را با $perp_{n}(\textbf{v})$ برای عمود نشان می دهیم).
-%        مشاهده کنید که $\textbf{v}=\textbf{p}+\textbf{w}=proj_{n}(\textbf{v})+perp_{n}(\textbf{v})$ که می گوییم بردار $\textbf{v}$ را به مجموع دو بردار متعامد $\textbf{p}$ و $\textbf{w}$ تجزیه کرده ایم.
-%
-%        اگر $\textbf{n}$ طول واحد نباشد، همیشه می‌توانیم ابتدا آن را نرمال کنیم تا طول آن را واحد کنیم.
-%        جایگزینی $\textbf{n}$ با بردار واحد $\frac{\displaystyle\textbf{n}}{\norm{\textbf{n}}}$ فرمول تصویر کلی تری را به ما می دهد:
-%
-%        \begin{center}
-%            $\textbf{p}=proj_{n}(\textbf{v})=\left( \textbf{v}\cdot\frac{\displaystyle\textbf{n}}{\norm{\textbf{n}}} \right)\frac{\displaystyle\textbf{n}}{\norm{\textbf{n}}}=\frac{\displaystyle(\textbf{v}\cdot\textbf{n})}{\norm{\textbf{n}}^2}\textbf{n}$
-%        \end{center}
-%
-%        \begin{figure}[H]
-%            \centering
-%            \setlength{\belowcaptionskip}{-10pt}
-%            \includegraphics[width=0.5\textwidth]{Images/4/4.Session.1.1.10}
-%            \caption{تصویر متعامد/قائم $\textbf{v}$ روی $\textbf{n}$.}
-%            \label{fig:4.Session.1.1.10}
-%        \end{figure}
-%    \end{spacing}
-%}
-%
-%\subsection{\textbf{\LARGE متعامد سازی}}
-%{
-%    \Large
-%    \begin{spacing}{1.5}
-%        مجموعه ای از بردارها ${\textbf{v}_{0},...,\textbf{v}_{n-1}}$ متعامد نامیده می شود که بردارها همگی متعامد (هر بردار در مجموعه نسبت به هر بردار دیگری در مجموعه متعامد باشد) و طول واحد باشند.
-%        گاهی اوقات ما مجموعه ای از بردارها را داریم که تقریباً متعارف هستند، اما نه کاملاً.
-%        یک کار متداول این است که مجموعه را متعامد سازی کنید تا یک مجموعه ی متعامد شود.
-%        در گرافیک کامپیوتری سه بعدی ممکن است با یک مجموعه متعارف شروع کنیم، اما به دلیل مسائل مربوط به دقت عددی، مجموعه به تدریج غیرمتعارف شود.
-%        ما عمدتاً با موارد دو بعدی و سه بعدی این مشکل (یعنی مجموعه هایی که به ترتیب شامل دو و سه بردار هستند) سروکار داریم.
-%
-%        ابتدا مورد دو بعدی ساده تر را بررسی می کنیم.
-%        فرض کنید مجموعه بردارهای ${\textbf{v}_{0},\textbf{v}_{1}}$ را داریم که می‌خواهیم آن‌ها را به یک مجموعه متعامد ${\textbf{w}_{0},\textbf{w}_{1}}$ تبدیل کنیم،
-%        همانطور که در شکل ***** نشان داده شده است.
-%        ما با $\textbf{w}_{0}=\textbf{v}_{0}$ شروع کرده و $\textbf{v}_{1}$ را تغییر میدهیم تا آن را به $\textbf{w}_{0}$ متعامد کنیم.
-%        این کار با تفریق کردن بخشی از $\textbf{v}_{1}$ که در جهت $\textbf{w}_{0}$  عمل می کند، انجام می شود:
-%
-%        \begin{center}
-%            $\textbf{w}_{1}=\textbf{v}_{1}-proj_{\textbf{w}_{0}}(\textbf{v}_{1})$
-%        \end{center}
-%
-%        \begin{figure}[H]
-%            \centering
-%            \setlength{\belowcaptionskip}{-10pt}
-%            \includegraphics[width=0.5\textwidth]{Images/4/4.Session.1.1.11}
-%            \caption{متعامد سازی دو بعدی}
-%            \label{fig:4.Session.1.1.11}
-%        \end{figure}
-%
-%        اکنون مجموعه ای متعامد از بردارها داریم ${\textbf{w}_{0},\textbf{w}_{1}}$.
-%        آخرین مرحله برای ساخت مجموعه متعارف نرمال کردن $\textbf{w}_{0}$ و $\textbf{w}_{1}$ برای ایجاد طول واحد است.
-%
-%        حالت سه بعدی به همان شکل مورد دو بعدی اما با مراحل بیشتر است.
-%        فرض کنید مجموعه بردارهای ${\textbf{v}_{0},\textbf{v}_{1},\textbf{v}_{2}}$ را داریم که می‌خواهیم آنها را یک مجموعه متعامد ${\textbf{w}_{0},\textbf{w}_{1},\textbf{w}_{2}}$ کنیم، مطابق شکل *****.
-%        ما با $\textbf{w}_{0}=\textbf{v}_{0}$ شروع می کنیم و $\textbf{v}_{1}$ را تغییر می دهیم تا به $\textbf{w}_{0}$ متعامد شود.
-%        این کار با کم کردن بخشی از $\textbf{v}_{1}$ که در جهت $\textbf{w}_{0}$ عمل می کند انجام می شود:
-%
-%        \begin{center}
-%            $\textbf{w}_{1}=\textbf{v}_{1}-proj_{\textbf{w}_{0}}(\textbf{v}_{1})$
-%        \end{center}
-%
-%        \begin{figure}[H]
-%            \centering
-%            \setlength{\belowcaptionskip}{-10pt}
-%            \includegraphics[width=0.5\textwidth]{Images/4/4.Session.1.1.12}
-%            \caption{متعامد سازی سه بعدی}
-%            \label{fig:4.Session.1.1.12}
-%        \end{figure}
-%
-%        در مرحله بعد، $\textbf{v}_{2}$ را تغییر می دهیم تا آن را متعامد به $\textbf{w}_{0}$ و $\textbf{w}_{1}$ کنیم.
-%        این کار با تفریق کردن بخشی از $\textbf{v}_{2}$ که در جهت $\textbf{w}_{0}$ عمل می کند و بخشی از $\textbf{v}_{2}$ که در جهت $\textbf{w}_{1}$ عمل می کند، انجام می شود:
-%
-%        \begin{center}
-%            $\textbf{w}_{2}=\textbf{v}_{2}-proj_{\textbf{w}_{0}}(\textbf{v}_{2})-proj_{\textbf{w}_{1}}(\textbf{v}_{2})$
-%        \end{center}
-%
-%        اکنون یک مجموعه متعامد از بردارها داریم ${\textbf{w}_{0},\textbf{w}_{1},\textbf{w}_{2}}$.
-%        آخرین مرحله برای ساخت مجموعه متعامد نرمال کردن $\textbf{w}_{0}$، $\textbf{w}_{1}$ و $\textbf{w}_{2}$ است تا طول آنها را واحد کنیم.
-%
-%        برای حالت کلی $\textbf{n}$ بردار ${\textbf{v}_{0},...,\textbf{v}_{n-1}}$ که می‌خواهیم آنها را به یک مجموعه متعامد تبدیل کنیم { w0، ...، wn1}، ما روال زیر را داریم که معمولاً فرآیند متعامدسازی گرام اشمیت (\lr{Gram-Schmidt}) نامیده می شود:
-%
-%        \begin{center}
-%            گام پایه: $\textbf{w}_{0}=\textbf{v}_{0}$ قرار میدهیم
-%
-%            به ازای $1\leq i\leq n-1$ ، $\textbf{w}_{i}=\textbf{v}_{i}-\sum_{j=1}^{i-1}proj_{\textbf{w}_{j}}(\textbf{v}_{i})$ قرار میدهیم
-%
-%            گام نرمال سازی: $\textbf{w}_{i}=\frac{\displaystyle\textbf{w}_{i}}{\displaystyle\norm{\textbf{w}_{i}}}$ قرار میدهیم
-%        \end{center}
-%
-%        دوباره، ایده شهودی این است که وقتی یک بردار $\textbf{v}_{i}$ را از مجموعه ورودی انتخاب می کنیم تا به مجموعه متعارف اضافه کنیم،
-%        باید اجزای $\textbf{v}_{i}$ را که در جهت بردارهای دیگر عمل کرده و از قبل در مجموعه متعامد قرار دارند ($\textbf{w}_{0},\textbf{w}_{1},...,\textbf{w}_{i-1}$) را کم کنیم.
-%        این کار باعث اطمینان حاصل از این که بردار جدید اضافه شده با سایر بردارهای موجود در مجموعه متعامد، متعامد باشد، میشود.
-%    \end{spacing}
-%}
-%
-%\section{
-%    \huge
-%
-%    \textbf{ضرب خارجی}
-%}
-%\textbf{\vspace{7pt}}
-%{
-%    \Large
-%    \begin{spacing}{1.5}
-%        شکل دوم بردار ضرب ریاضی، ضرب خارجی است.
-%        بر خلاف ضرب داخلی که به یک اسکالر ختم می‌شود، ضرب خارجی به یک بردار دیگر ختم می‌شود.
-%        علاوه بر این، ضرب خارجی فقط برای بردارهای سه بعدی تعریف شده است (در واقع ضرب خارجی دو بعدی وجود ندارد).
-%        با ضرب خارجی دو بردار سه بعدی u و v، بردار دیگری به دست می‌آید،که w متعامد به u و v است.
-%        شکل ***** را ببینید.
-%        اگر $\textbf{u}=(u_{x},u_{y},u_{z})$ و  $\textbf{v}=(v_{x},v_{y},v_{z})$ باشد، آنگاه ضرب خارجی به این صورت محاسبه می‌شود:
-%
-%        \begin{center}
-%            $\textbf{w}=\textbf{u}\times\textbf{v}=(u_{y}v_{z}-u_{z}v_{y}, u_{z}v_{x}-u_{x}v_{z}, u_{x}v_{y}-u_{y}v_{z})$
-%        \end{center}
-%
-%        \begin{theo}{thm:pythagoras}
-%            \Large
-%            اگر در سیستم مختصات راستگرد کار می کنید، پس از قانون شست دست راست استفاده می کنید:
-%            اگر دست راست خود را طوری بگیرید که انگشتان در جهت بردار اول u باشد و سپس انگشتان خود را به سمت v با زاویه ی $0\leq\theata\leq \pi$ خم کنید، انگشت شست شما در جهت $\textbf{w}=\textbf{u}\times\textbf{v}$ قرار می گیرد.
-%        \end{theo}
-%
-%        \begin{figure}[H]
-%            \centering
-%            \setlength{\belowcaptionskip}{-10pt}
-%            \includegraphics[width=0.5\textwidth]{Images/4/4.Session.1.1.13}
-%            \caption{ضرب خارجی دو بردار سه بعدی $\textbf{u}$ و $\textbf{v}$ بردار دیگر $\textbf{w}$ را به دست می آورد که متعامد با $\textbf{u}$ و $\textbf{v}$ است.
-%            اگر دست چپ خود را طوری بگیرید که انگشتان در جهت بردار اول u باشد و سپس انگشتان خود را به سمت v با زاویه ی $0\leq\theata\leq \pi$ خم کنید، انگشت شست شما در جهت $\textbf{w}=\textbf{u}\times\textbf{v}$ قرار می گیرد. به این قانون شست چپ می گویند.}
-%            {متعامد سازی سه بعدی}
-%            \label{Images/4/4.Session.1.1.13}
-%        \end{figure}
-%
-%        مثال***
-%
-%        فرض کنید $\textbf{u}=(1,2,3)$ و $\textbf{v}=(1,2,3)$ باشد. سپس $\textbf{w}=\textbf{u}\times\textbf{v}$ و $\textbf{z}=\textbf{v}\times\textbf{z}$ را محاسبه کنید. قضیه ی ***** را اعمال میکنیم:
-%
-%        \begin{center}
-%            \begin{split}
-%                $\textbf{w}&=\textbf{u}\times\textbf{v}\\
-%                &=(2,1,3)\times(2,0,0)\\
-%                &=(1\cdot 0-3\cdot 0, 3\cdot 2-2\cdot 0, 2\cdot 0-1\cdot 2)\\
-%                &=(0,6,-2)$
-%            \end{split}
-%        \end{center}
-%
-%        و
-%
-%        \begin{center}
-%            \begin{split}
-%                $\textbf{z}&=\textbf{v}\times\textbf{u}\\
-%                &=(2,0,0)\times(2,1,3)\\
-%                &=(0\cdot 3-0\cdot 1, 0\cdot 2-2\cdot 3, 2\cdot 1-0\cdot 2)\\
-%                &=(0,6,-2)$
-%            \end{split}
-%        \end{center}
-%
-%        این نتیجه یک چیز را روشن می کند، به طور کلی $\textbf{u}\times\textbf{v}\neq\textbf{v}\times\textbf{u}$. بنابراین، می گوییم که ضرب خارجی خاصیت جابجایی ندارد.
-%        در واقع می توان نشان داد که $\textbf{u}\times\textbf{v}=-\textbf{v}\times\textbf{u}$. شما می توانید بردار به دست آمده از ضرب خارجی را با قانون انگشت شست چپ تعیین کنید.
-%        اگر ابتدا انگشتان خود را در جهت بردار اول نشانه بگیرید و سپس انگشتان خود را به سمت بردار دوم خم کنید (همیشه مسیر را با کوچکترین زاویه انتخاب کنید)، همانطور که در شکل ***** نشان داده شده است، انگشت شست شما در جهت بردار حاصل قرار می گیرد.
-%
-%        برای نشان دادن اینکه $\textbf{w}$ متعامد به $\textbf{u}$ و $\textbf{w}$ متعامد بر $\textbf{v}$ است،
-%        از ***** یادآوری می کنیم که اگر$\textbf{u}\times\textbf{v}=0$ باشد،
-%        آنگاه $\textbf{u}\perp\textbf{v}$ است (یعنی بردارها متعامد هستند). زیرا
-%
-%        \begin{center}
-%            $\textbf{w}\times\textbf{u}=(0,6,-2)\cdot(2,1,3)=0\cdot 2+6\cdot 1+(-2)\cdot 3=0$
-%
-%            و
-%
-%            $\textbf{w}\times\textbf{v}=(0,6,-2)\cdot(2,0,0)=0\cdot 2+6\cdot 0+(-2)\cdot 0=0$
-%        \end{center}
-%
-%        نتیجه می گیریم که $\textbf{w}$ متعامد به $\textbf{u}$ و $\textbf{w}$ متعامد بر $\textbf{v}$ است.
-%    \end{spacing}
-%}
-%
-%\subsection{\textbf{\LARGE ضرب خارجی شبه دو بعدی}}
-%{
-%    \Large
-%    \begin{spacing}{1.5}
-%        ضرب خارجی به ما امکان می دهد یک بردار متعامد به دو بردار سه بعدی داده شده را پیدا کنیم.
-%        در دوبعدی وضعیت مشابهی نداریم،
-%        اما با توجه به بردار دوبعدی $\textbf{u}=u_{x},u_{y}$ پیدا کردن بردار $\textbf{v}$ متعامد به $\textbf{u}$ می‌تواند مفید باشد.
-%        شکل ****** شکل هندسی ای را نشان می دهد که از آن $\textbf{v}=-u_{y},u_{x}$ پیدا میشود.
-%        اثبات آن ساده است:
-%
-%        \begin{center}
-%            $\textbf{u}\cdot\textbf{v}=(u_{x},u_{y})\cdot(-u_{y},u_{x})=-u_{x}u_{y}+u_{y}u_{x}=0$
-%        \end{center}
-%
-%        بنابراین $\textbf{u}\perp\textbf{v}$.
-%        مشاهده کنید که $\textbf{u}\cdot-\textbf{v}=u_{x}u_{y}+u_{y}(-u_{x})=0$، بنابراین $\textbf{u}\perp-\textbf{v}$ را نیز داریم.
-%
-%        \begin{figure}[H]
-%            \centering
-%            \setlength{\belowcaptionskip}{-10pt}
-%            \includegraphics[width=0.5\textwidth]{Images/4/4.Session.1.1.14}
-%            \caption{ضرب خارجی شبه دوبعدی یک بردار $\textbf{u}$ به بردار متعامد $\textbf{v}$ ختم می شود.}
-%            \label{Images/4/4.Session.1.1.14}
-%        \end{figure}
-%    \end{spacing}
-%}
-%
-%\subsection{\textbf{\LARGE متعامد سازی با ضرب خارجی}}
-%{
-%    \Large
-%    \begin{spacing}{1.5}
-%        در ******، ما روشی برای متعامد کردن مجموعه ای از بردارها با استفاده از فرآیند گرام اشمیت را مشاهده کردیم.
-%        برای سه بعدی، استراتژی دیگری برای متعامد کردن مجموعه ای از بردارها $\textbf{v}_{0},\textbf{v}_{1},\textbf{v}_{2}$ وجود دارد که متعارف هستند،
-%        اما ممکن است به دلیل خطاهای انباشته شده در دقت عددی با استفاده از ضرب خارجی، غیرمتعارف شوند.
-%        برای شکل هندسی این فرآیند به شکل ****** مراجعه کنید:
-%
-%        \begin{enumerate}
-%            \item {$\textbf{w}_{0}=\frac{\displaystyle\textbf{v}_{0}}{\displaystyle\norm{\textbf{v}_{0}}}$ قرار میدهیم}
-%            \item {$\textbf{w}_{2}=\frac{\displaystyle\textbf{w}_{0}\times\textbf{v}_{1}}{\displaystyle\norm{\textbf{w}_{0}\times\textbf{v}_{1}}}$ قرار میدهیم}
-%            \item {با قرار دادن $\textbf{w}_{1}=\textbf{w}_{2}\times\textbf{w}_{0}$ توسط تمرین ******، $\norm{\textbf{w}_{2}\times\textbf{w}_{0}}=1$ زیرا $\textbf{w}_{2}\perp\textbf{w}_{0}$ و $\norm{\textbf{w}_{2}}=\norm{\textbf{w}_{0}}=1$،
-%            بنابراین در این مرحله آخر نیازی به نرمال سازی نداریم.}
-%        \end{enumerate}
-%
-%        در این مرحله، مجموعه بردارهای ${\textbf{w}_{0},\textbf{w}_{1},\textbf{w}_{2}}$ متعامد است.
-%
-%        \begin{figure}[H]
-%            \centering
-%            \setlength{\belowcaptionskip}{-10pt}
-%            \includegraphics[width=0.5\textwidth]{Images/4/4.Session.1.1.15}
-%            \caption {متعامد سازی سه بعدی با ضرب خارجی}
-%            \label{Images/4/4.Session.1.1.15}
-%        \end{figure}
-%
-%        \begin{theo}{thm:pythagoras}
-%            \Large
-%            در مثال بالا، ما با 00$\textbf{w}_{0}=\frac{\displaystyle\textbf{v}_{0}}{\displaystyle\norm{\textbf{v}_{0}}}$ شروع کردیم، به این معنی که هنگام رفتن از $\textbf{v}_{0}$ به $\textbf{w}_{0}$ جهت را تغییر ندادیم،
-%            ما فقط طول را تغییر دادیم.
-%            با این حال، جهت های $\textbf{w}_{1}$ و $\textbf{w}_{2}$ می تواند به ترتیب با $\textbf{v}_{1}$ و $\textbf{v}_{2}$ متفاوت باشد.
-%            بسته به کاربرد خاص، برداری که شما انتخاب میکنید تغییر جهت ندهد ممکن است مهم باشد.
-%            به عنوان مثال، در ادامه این کتاب، جهت دوربین را با سه بردار متعامد ${\textbf{v}_{0},\textbf{v}_{1},\textbf{v}_{2}}$ نشان می‌دهیم که بردار سوم $\textbf{v}_{2}$ جهتی را که دوربین به آن نگاه می‌کند، تعریف میکند.
-%            هنگامی که این بردارها را متعامد می کنیم، اغلب نمی خواهیم جهت مورد نظر خود را تغییر دهیم،
-%            بنابراین الگوریتم فوق را با $\textbf{v}_{2}$ شروع می کنیم و $\textbf{v}_{0}$ و $\textbf{v}_{1}$ را تغییر می دهیم تا بردارها متعامد شوند.
-%        \end{theo}
-%    \end{spacing}
-%}
-%
-%\section{
-%    \huge
-%
-%    \textbf{نقاط}
-%}
-%\textbf{\vspace{7pt}}
-%{
-%    \Large
-%    \begin{spacing}{1.5}
-%        تاکنون در مورد بردارها بحث کرده ایم که موقعیت ها را توصیف نمی کنند.
-%        با این حال، ما همچنین باید موقعیت هایی را در برنامه های سه بعدی خود مشخص کنیم،
-%        به عنوان مثال، موقعیت هندسی سه بعدی و موقعیت دوربین مجازی سه بعدی.
-%        نسبت به یک سیستم مختصات، می‌توانیم از یک بردار در موقعیت استاندارد (شکل *****) برای نمایش یک موقعیت سه بعدی در فضا استفاده کنیم.
-%        ما این بردار را بردار موقعیت می نامیم.
-%        در این حالت، محل نوک بردار مشخصه مورد نظر است، نه جهت یا بزرگی.
-%        ما از عبارات "بردار موقعیت" و "نقطه" به جای یکدیگر استفاده خواهیم کرد زیرا بردار موقعیت برای شناسایی یک نقطه کافی است.
-%
-%        \begin{figure}[H]
-%            \centering
-%            \setlength{\belowcaptionskip}{-10pt}
-%            \includegraphics[width=0.5\textwidth]{Images/4/4.Session.1.1.16}
-%            \caption {بردار موقعیت، که از مبدا تا نقطه کشیده میشود، به طور کامل محل قرارگیری نقطه را نسبت به سیستم مختصات توصیف می کند.}
-%            \label{Images/4/4.Session.1.1.16}
-%        \end{figure}
-%
-%        یکی از مزایای استفاده از بردارها برای نشان دادن نقاط، به ویژه در کد، این است که می‌توانیم عملیات های بردار را انجام دهیم که برای نقاط معنی ندارد.
-%        به عنوان مثال، از نظر هندسی، مجموع دو نقطه باید به چه معنا باشد؟
-%        از سوی دیگر، برخی از عملیات را می توان به نقاط گسترش داد.
-%        به عنوان مثال، ما فاصله ی دو نقطه $\textbf{q}-\textbf{p}$ را برداری از $\textbf{p}$ به $\textbf{q}$ تعریف می کنیم. همچنین، ما یک نقطه $\textbf{p}$ به اضافه بردار $\textbf{v}$ را نقطه ی $\textbf{q}$ تعریف میکنیم که با جابجایی p با بردار v به دست می آید.
-%        به راحتی، از آنجایی که ما از بردارها برای نشان دادن نقاط نسبت به یک سیستم مختصات استفاده می‌کنیم، نیازی به کار اضافی برای عملیات نقطه‌ای که قبلاً در مورد آن بحث شد، نیست، زیرا چارچوب جبر برداری از قبل آنها را آماده می‌کند. شکل ***** را ببینید.
-%
-%        \begin{figure}[H]
-%            \centering
-%            \setlength{\belowcaptionskip}{-10pt}
-%            \includegraphics[width=0.5\textwidth]{Images/4/4.Session.1.1.17}
-%            \caption {(آ) فاصله ی دو نقطه $\textbf{q}-\textbf{p}$ برداری از $\textbf{p}$ به $\textbf{q}$ تعریف میشود. (ب) یک نقطه $\textbf{p}$ به اضافه بردار $\textbf{v}$ را نقطه ی $\textbf{q}$ تعریف میکنیم که با جابجایی p با بردار v به دست می آید.}
-%            \label{Images/4/4.Session.1.1.17}
-%        \end{figure}
-%
-%        \begin{theo}{thm:pythagoras}
-%            \Large
-%            در واقع یک روش هندسی معنادار برای تعریف یک مجموع ویژه از نقاط وجود دارد که به آن ترکیب وابسته می گویند، که مانند میانگین وزنی نقاط است.
-%        \end{theo}
-%    \end{spacing}
-%}
-%
-%\section{
-%    \huge
-%
-%    \textbf{بردار های ریاضی \lr{DirectX}}
-%}
-%{
-%    \Large
-%    \begin{spacing}{1.5}
-%        در ویندوز 8 و بالاتر، \lr{DirectX Math} یک کتابخانه ریاضی سه بعدی برای برنامه \lr{Direct3D} است که بخشی از \lr{Windows SDK} است.
-%        این کتابخانه از مجموعه دستورالعمل \lr{SSE2} (\lr{Streaming SIMD Extensions 2}) استفاده می کند.
-%        با رجیسترهای \lr{SIMD} گسترده \lr{128} بیتی (داده‌های چندگانه تک دستورالعمل)، دستورالعمل‌های \lr{SIMD} می‌توانند روی چهار عدد \lr{int} یا عدد \lr{float} \lr{32} بیتی با یک دستورالعمل کار کنند.
-%        این برای محاسبات برداری بسیار مفید است. برای مثال، اگر به جمع برداری نگاه کنید:
-%
-%        \begin{center}
-%            $\textbf{u}+\textbf{v}=(u_{x}+v_{x},u_{y}+v_{y},u_{z}+v_{z})$
-%        \end{center}
-%
-%        می بینیم که ما فقط اجزای مربوطه را اضافه می کنیم.
-%        با استفاده از \lr{SIMD} می‌توانیم به جای چهار دستور اسکالر، جمع بردار چهار بعدی را با یک دستور \lr{SIMD} انجام دهیم.
-%        اگر ما فقط به سه مختصات برای کار سه بعدی نیاز داشته باشیم، همچنان می توانیم از \lr{SIMD} استفاده کنیم، اما مختصات چهارم را نادیده می گیریم.
-%        به همین ترتیب، برای دو بعدی، مختصات سوم و چهارم را نادیده می گیریم.
-%
-%        پوشش ما از کتابخانه ریاضی \lr{DirectX} جامع نیست و ما فقط بخش های کلیدی مورد نیاز برای این کتاب را پوشش می دهیم.
-%        برای تمام جزئیات، ما مستندات آنلاین [\lr{DirectXMath}] را توصیه می کنیم.
-%        برای خوانندگانی که مایلند بدانند چگونه یک کتابخانه برداری \lr{SIMD} ممکن است به طور بهینه توسعه یابد، و شاید درک کنند که چرا کتابخانه ریاضی \lr{DirectX} برخی از تصمیمات طراحی را اتخاذ کرده است،
-%        مقاله \lr{Designing Fast Cross-Platform SIMD Vector Libraries [by Oliveira2010]} را توصیه می کنیم.
-%
-%        برای استفاده از کتابخانه ریاضی \lr{DirectX}، باید \texttt{#include <DirectXMath.h>} و برای برخی از انواع داده های اضافی \texttt{#include <DirectXPackedVector.h>} را وارد کنید.
-%        هیچ فایل کتابخانه ای اضافی وجود ندارد، زیرا تمام کدها به صورت درون خطی در فایل هدر پیاده سازی می شوند.
-%        کد \lr{DirectXMath.h} در فضای نام \texttt{DirectX} و کد \lr{DirectXPackedVector.h} در فضای نام \texttt{DirectX::PackedVector} وجود دارد.
-%        علاوه بر این، برای پلتفرم \lr{x86} باید \lr{SSE2} را فعال کنید:
-%
-%        (\textbf{Project Properties > Configuration Properties > C/C++ > Code Generation > Enable Enhanced Instruction Set})
-%
-%        و برای همه پلتفرم‌ها باید مدل ممیز شناور سریع \lr{/fp:fast} را فعال کنید:
-%
-%        (\textbf{Project Properties > Configuration Properties > C/C++ > Code Generation > Floating Point Model})
-%
-%        شما نیازی به فعال کردن \lr{SSE2} برای پلتفرم \lr{x64} ندارید زیرا تمام پردازنده‌های \lr{x64} از \lr{SSE2} (\url{http://en.wikipedia.org/wiki/SSE2}) پشتیبانی می‌کنند.
-%    \end{spacing}
-%}
-%
-%\subsection{\textbf{\LARGE انواع بردارها}}
-%{
-%    \Large
-%    \begin{spacing}{1.5}
-%        در \lr{DirectX Math}، نوع بردار هسته \texttt{XMVECTOR} است که به رجیسترهای سخت افزاری \lr{SIMD} نگاشت می شود.
-%        این یک نوع \lr{128} بیتی است که می تواند چهار \lr{float} \lr{32} بیتی را با یک دستورالعمل \lr{SIMD} پردازش کند.
-%        وقتی \lr{SSE2} در دسترس باشد، برای پلتفرم‌های \lr{x86} و \lr{x64} به این صورت تعریف می‌شود که \lr{__m128} یک نوع \lr{SIMD} خاص است.:
-%
-%        \texttt{typedef __m128 XMVECTOR;}
-%
-%        هنگام انجام محاسبات، بردارها باید از این نوع باشند تا از \lr{SIMD} استفاده کنند.
-%        همانطور که قبلا ذکر شد، ما همچنان از این نوع برای بردارهای دو بعدی و سه بعدی استفاده می کنیم تا از مزایای \lr{SIMD} استفاده کنیم،
-%        اما فقط اجزای استفاده نشده را صفر کرده و آنها را نادیده می گیریم.
-%
-%        \texttt{XMVECTOR} باید \lr{16} بایت تراز شود و این به طور خودکار برای متغیرهای محلی و سراسری انجام می شود.
-%        برای اعضای داده کلاس، توصیه می شود به جای آن از \texttt{XMFLOAT2} (\lr{2D})، \texttt{XMFLOAT3} (\lr{3D}) و \texttt{XMFLOAT4} (\lr{4D}) استفاده کنید. این ساختارها در زیر تعریف می شوند:
-%
-%        \texttt
-%        {
-%            struct XMFLOAT2
-%                {
-%                float x;
-%                float y;
-%                XMFLOAT2() {}
-%                XMFLOAT2(float _x, float _y) : x(_x), y(_y) {}
-%                explicit XMFLOAT2(_In_reads_(2) const float *pArray) :
-%                x(pArray[0]), y(pArray[1]) {}
-%                XMFLOAT2& operator= (const XMFLOAT2& Float2)
-%                    { x = Float2.x; y = Float2.y; return *this; }
-%            };
-%        struct XMFLOAT3
-%                {
-%                float x;
-%                float y;
-%                float z;
-%                XMFLOAT3() {}
-%                XMFLOAT3(float _x, float _y, float _z) : x(_x), y(_y), z(_z) {}
-%                explicit XMFLOAT3(_In_reads_(3) const float *pArray) :
-%                x(pArray[0]), y(pArray[1]), z(pArray[2]) {}
-%                XMFLOAT3& operator= (const XMFLOAT3& Float3)
-%                    { x = Float3.x; y = Float3.y; z = Float3.z; return *this; }
-%            };
-%        struct XMFLOAT4
-%                {
-%                float x;
-%                float y;
-%                float z;
-%                float w;
-%                XMFLOAT4() {}
-%                XMFLOAT4(float _x, float _y, float _z, float _w) :
-%                x(_x), y(_y), z(_z), w(_w) {}
-%                explicit XMFLOAT4(_In_reads_(4) const float *pArray) :
-%                x(pArray[0]), y(pArray[1]), z(pArray[2]), w(pArray[3]) {}
-%                XMFLOAT4& operator= (const XMFLOAT4& Float4)
-%                    { x = Float4.x; y = Float4.y; z = Float4.z; w = Float4.w; return
-%                *this; }
-%            };
-%        }
-%
-%        اما اگر مستقیماً از این انواع برای محاسبات استفاده کنیم، از \lr{SIMD} استفاده نخواهیم کرد.
-%        برای استفاده از \lr{SIMD} باید نمونه هایی از این نوع را به نوع \texttt{XMVECTOR} تبدیل کنیم.
-%        این کار با توابع بارگیری ریاضی \lr{DirectX} انجام می شود.
-%        برعکس، \lr{DirectX} توابع ذخیره سازی را فراهم می کند که برای تبدیل داده ها از \texttt{XMVECTOR} به انواع \texttt{XMFLOATn} در بالا استفاده می شود.
-%
-%        به طور خلاصه،
-%
-%        \begin{enumerate}
-%            \item {از \texttt{XMVECTOR} برای متغیرهای محلی یا سراسری استفاده کنید.}
-%            \item {از \texttt{XMFLOAT2}، \texttt{XMFLOAT3} و \texttt{XMFLOAT4} برای اعضای داده کلاس استفاده کنید.}
-%            \item {قبل از انجام محاسبات از توابع بارگذاری برای تبدیل از \texttt{XMFLOATn} به \texttt{XMVECTOR} استفاده کنید.}
-%            \item {محاسبات را با نمونه های \texttt{XMVECTOR} انجام دهید.}
-%            \item {از توابع ذخیره سازی برای تبدیل از \texttt{XMVECTOR} به \texttt{XMFLOATn} استفاده کنید.}
-%        \end{enumerate}
-%
-%    \end{spacing}
-%}
-%
-%\subsection{\textbf{\LARGE روش های بارگیری و ذخیره سازی}}
-%{
-%    \Large
-%    \begin{spacing}{1.5}
-%        ما از روش های زیر برای بارگذاری داده ها از \texttt{XMFLOATn} در \texttt{XMVECTOR} استفاده می کنیم:
-%
-%        \texttt
-%        {
-%            // Loads XMFLOAT2 into XMVECTOR
-%            XMVECTOR XM_CALLCONV XMLoadFloat2(const XMFLOAT2 *pSource);
-%
-%        // Loads XMFLOAT3 into XMVECTOR
-%        XMVECTOR XM_CALLCONV XMLoadFloat3(const XMFLOAT3 *pSource);
-%
-%        // Loads XMFLOAT4 into XMVECTOR
-%        XMVECTOR XM_CALLCONV XMLoadFloat4(const XMFLOAT4 *pSource);
-%        }
-%
-%        ما از روش های زیر برای ذخیره داده ها از \texttt{XMVECTOR} در \texttt{XMFLOATn} استفاده می کنیم:
-%
-%        \texttt
-%        {
-%            // Loads XMVECTOR into XMFLOAT2
-%            void XM_CALLCONV XMStoreFloat2(XMFLOAT2 *pDestination, FXMVECTOR V);
-%
-%        // Loads XMVECTOR into XMFLOAT3
-%        void XM_CALLCONV XMStoreFloat3(XMFLOAT3 *pDestination, FXMVECTOR V);
-%
-%        // Loads XMVECTOR into XMFLOAT4
-%        void XM_CALLCONV XMStoreFloat4(XMFLOAT4 *pDestination, FXMVECTOR V);
-%        }
-%
-%        گاهی اوقات ما فقط می خواهیم یک جزء \texttt{XMVECTOR} را دریافت یا تنظیم کنیم. توابع \lr{getter} و \lr{setter} زیر این امر را تسهیل می کنند:
-%
-%        \texttt
-%        {
-%            float XM_CALLCONV XMVectorGetX(FXMVECTOR V);
-%        float XM_CALLCONV XMVectorGetY(FXMVECTOR V);
-%        float XM_CALLCONV XMVectorGetZ(FXMVECTOR V);
-%        float XM_CALLCONV XMVectorGetW(FXMVECTOR V);
-%        XMVECTOR XM_CALLCONV XMVectorSetX(FXMVECTOR V, float x);
-%        XMVECTOR XM_CALLCONV XMVectorSetY(FXMVECTOR V, float y);
-%        XMVECTOR XM_CALLCONV XMVectorSetZ(FXMVECTOR V, float z);
-%        XMVECTOR XM_CALLCONV XMVectorSetW(FXMVECTOR V, float w);
-%        }
-%    \end{spacing}
-%}
-%
-%\subsection{\textbf{\LARGE ارسال پارامتر}}
-%{
-%    \Large
-%    \begin{spacing}{1.5}
-%        برای اهداف کارایی، مقادیر \texttt{XMVECTOR} را می توان به عنوان آرگومان به توابع در ثبات های \lr{SSE/SSE2} به جای روی پشته ارسال کرد.
-%        تعداد آرگومان هایی که می توان از این طریق عبور داد به پلتفرم (به عنوان مثال ویندوز \lr{32} بیتی، ویندوز \lr{64} بیتی و ویندوز \lr{RT}) و کامپایلر بستگی دارد.
-%        بنابراین، برای مستقل بودن از پلتفرم/کامپایلر، از انواع \texttt{FXMVECTOR}، \texttt{GXMVECTOR}، \texttt{HXMVECTOR} و \texttt{CXMVECTOR} برای عبور پارامترهای \lr{XMVECTOR} استفاده می‌کنیم.
-%        اینها بر اساس پلتفرم و کامپایلر به نوع مناسبی تعریف می شوند.
-%        علاوه بر این، حاشیه نویسی کنوانسیون فراخوانی \texttt{XM_CALLCONV} باید قبل از نام تابع مشخص شود تا از قرارداد فراخوانی مناسب استفاده شود،
-%        که باز هم به نسخه کامپایلر بستگی دارد.
-%
-%        قوانین عبور پارامترهای \texttt{XMVECTOR} به شرح زیر است:
-%
-%        \begin{enumerate}
-%            \item {سه پارامتر اول \texttt{XMVECTOR} باید از نوع \texttt{FXMVECTOR} باشند.}
-%            \item {\texttt{XMVECTOR} چهارم باید از نوع \texttt{GXMVECTOR} باشد.}
-%            \item {پنجمین و ششمین پارامتر \texttt{XMVECTOR} باید از نوع \texttt{HXMVECTOR} باشد.}
-%            \item {هر پارامتر اضافی \texttt{XMVECTOR} باید از نوع \texttt{CXMVECTOR} باشد.}
-%        \end{enumerate}
-%
-%        نحوه تعریف این انواع در ویندوز \lr{32} بیتی را با کامپایلری که از قرارداد \texttt{__fastcall} پشتیبانی می کند و
-%        کامپایلری که از قرارداد فراخوانی \texttt{__vectorcall} جدیدتر پشتیبانی می کند، توضیح می دهیم:
-%
-%        \texttt
-%        {
-%            // 32-bit Windows __fastcall passes first 3 XMVECTOR arguments
-%            // via registers, the remaining on the stack.
-%        typedef const XMVECTOR FXMVECTOR;
-%        typedef const XMVECTOR& GXMVECTOR;
-%        typedef const XMVECTOR& HXMVECTOR;
-%        typedef const XMVECTOR& CXMVECTOR;
-%
-%        // 32-bit Windows __vectorcall passes first 6 XMVECTOR arguments
-%        // via registers, the remaining on the stack.
-%        typedef const XMVECTOR FXMVECTOR;
-%        typedef const XMVECTOR GXMVECTOR;
-%        typedef const XMVECTOR HXMVECTOR;
-%        typedef const XMVECTOR& CXMVECTOR;
-%        }
-%
-%        برای جزئیات نحوه تعریف این انواع برای سایر پلتفرم‌ها، به \lr{«Calling Conventions»} در بخش \lr{«Internals Library»} در مستندات \lr{DirectX Math} مراجعه کنید.
-%        استثنای این قوانین مربوط به متدهای سازنده است. [\lr{DirectXMath}] توصیه می کند هنگام نوشتن سازنده ای که پارامترهای \texttt{XMVECTOR} را می گیرد،
-%        از \texttt{FXMVECTOR} برای سه پارامتر اول \texttt{XMVECTOR} و \texttt{CXMVECTOR} برای بقیه استفاده کنید.
-%        علاوه بر این، از حاشیه نویسی \texttt{XM_CALLCONV} برای سازنده ها استفاده نکنید
-%
-%        در اینجا یک مثال از کتابخانه \lr{DirectXMath} آورده شده است:
-%
-%        \texttt
-%        {
-%            inline XMMATRIX XM_CALLCONV XMMatrixTransformation(
-%            FXMVECTOR ScalingOrigin,
-%            FXMVECTOR ScalingOrientationQuaternion,
-%            FXMVECTOR Scaling,
-%            GXMVECTOR RotationOrigin,
-%            HXMVECTOR RotationQuaternion,
-%            HXMVECTOR Translation);
-%        }
-%
-%        این تابع 6 پارامتر \texttt{XMVECTOR} را می گیرد، اما با رعایت قوانین عبور پارامتر، از \texttt{FXMVECTOR} برای سه پارامتر اول، \texttt{GXMVECTOR} برای چهارمین و \texttt{HXMVECTOR} برای پنجم و ششم استفاده می کند.
-%        شما می توانید پارامترهای غیر \texttt{XMVECTOR} را بین پارامترهای XMVECTOR داشته باشید.
-%        قوانین مشابهی اعمال می شود و پارامترهای \texttt{XMVECTOR} به گونه ای شمارش می شوند که گویی پارامترهای غیر \texttt{XMVECTOR} وجود ندارند.
-%        برای مثال، در تابع زیر، اولین سه پارامتر \texttt{XMVECTOR} از نوع \texttt{FXMVECTOR} as و چهارمین پارامتر \texttt{XMVECTOR} از نوع \texttt{GXMVECTOR} است.
-%
-%        \texttt
-%        {
-%            inline XMMATRIX XM_CALLCONV XMMatrixTransformation2D(
-%            FXMVECTOR ScalingOrigin,
-%            float ScalingOrientation,
-%            FXMVECTOR Scaling,
-%            FXMVECTOR RotationOrigin,
-%            float Rotation,
-%            GXMVECTOR Translation);
-%        }
-%
-%        قوانین ارسال پارامترهای \texttt{XMVECTOR} برای پارامترهای "ورودی" اعمال می شود.
-%        پارامترهای "خروجی" \texttt{XMVECTOR} (\texttt{XMVECTOR}& یا \texttt{XMVECTOR}*) از ثبات های \lr{SSE/SSE2} استفاده نمی کنند و بنابراین مانند پارامترهای غیر \texttt{XMVECTOR} رفتار می شوند.
-%    \end{spacing}
-%}
-%
-%\subsection{\textbf{\LARGE بردارهای ثابت}}
-%{
-%    \Large
-%    \begin{spacing}{1.5}
-%        نمونه های ثابت \texttt{XMVECTOR} باید از نوع \texttt{XMVECTORF32} استفاده کنند. در اینجا چند نمونه از نمونه \lr{CascadedShadowMaps11 DirectX SDK} آورده شده است:
-%
-%        \texttt
-%        {
-%            static const XMVECTORF32 g_vHalfVector = { 0.5f, 0.5f, 0.5f, 0.5f };
-%        static const XMVECTORF32 g_vZero = { 0.0f, 0.0f, 0.0f, 0.0f };
-%        XMVECTORF32 vRightTop = {
-%            vViewFrust.RightSlope,
-%            vViewFrust.TopSlope,
-%            1.0f,1.0f
-%        };
-%        XMVECTORF32 vLeftBottom = {
-%            vViewFrust.LeftSlope,
-%            vViewFrust.BottomSlope,
-%            1.0f,1.0f
-%        };
-%        }
-%
-%        اساساً هر زمان که بخواهیم از دستور اولیه استفاده کنیم از \texttt{XMVECTORF32} استفاده می کنیم.
-%        \texttt{XMVECTORF32} یک ساختار تراز شده \lr{16} بایتی با یک عملگر تبدیل \texttt{XMVECTOR} است.
-%        به صورت زیر تعریف می شود:
-%
-%        \texttt
-%        {
-%            // Conversion types for constants
-%            __declspec(align(16)) struct XMVECTORF32
-%                {
-%                union
-%                    {
-%                    float f[4];
-%                    XMVECTOR v;
-%                };
-%                inline operator XMVECTOR() const { return v; }
-%                inline operator const float*() const { return f; }
-%                #if !defined(_XM_NO_INTRINSICS_) && defined(_XM_SSE_INTRINSICS_)
-%                inline operator __m128i() const { return _mm_castps_si128(v); }
-%                inline operator __m128d() const { return _mm_castps_pd(v); }
-%                #endif
-%            };
-%        }
-%
-%        همچنین می توانید با استفاده از \texttt{XMVECTORU32} یک \texttt{XMVECTOR} ثابت از داده های عدد صحیح ایجاد کنید:
-%
-%        \texttt
-%        {
-%            static const XMVECTORU32 vGrabY = {
-%                0x00000000,0xFFFFFFFF,0x00000000,0x00000000
-%            };
-%        }
-%    \end{spacing}
-%}
-%
-%\subsection{\textbf{\LARGE اپراتورهای سر بارگذاری شده}}
-%{
-%    \Large
-%    \begin{spacing}{1.5}
-%        \texttt{XMVECTOR} چندین عملگر اضافه بار برای انجام جمع برداری، تفریق و ضرب اسکالر دارد.
-%
-%        \texttt
-%        {
-%            XMVECTOR XM_CALLCONV operator+ (FXMVECTOR V);
-%        XMVECTOR XM_CALLCONV operator- (FXMVECTOR V);
-%        XMVECTOR& XM_CALLCONV operator+= (XMVECTOR& V1, FXMVECTOR V2);
-%        XMVECTOR& XM_CALLCONV operator-= (XMVECTOR& V1, FXMVECTOR V2);
-%        XMVECTOR& XM_CALLCONV operator*= (XMVECTOR& V1, FXMVECTOR V2);
-%        XMVECTOR& XM_CALLCONV operator/= (XMVECTOR& V1, FXMVECTOR V2);
-%        XMVECTOR& operator*= (XMVECTOR& V, float S);
-%        XMVECTOR& operator/= (XMVECTOR& V, float S);
-%        XMVECTOR XM_CALLCONV operator+ (FXMVECTOR V1, FXMVECTOR V2);
-%        XMVECTOR XM_CALLCONV operator- (FXMVECTOR V1, FXMVECTOR V2);
-%        XMVECTOR XM_CALLCONV operator* (FXMVECTOR V1, FXMVECTOR V2);
-%        XMVECTOR XM_CALLCONV operator/ (FXMVECTOR V1, FXMVECTOR V2);
-%        XMVECTOR XM_CALLCONV operator* (FXMVECTOR V, float S);
-%        XMVECTOR XM_CALLCONV operator* (float S, FXMVECTOR V);
-%        XMVECTOR XM_CALLCONV operator/ (FXMVECTOR V, float S);
-%        }
-%    \end{spacing}
-%}
-%
-%\subsection{\textbf{\LARGE متفرغه}}
-%{
-%    \Large
-%    \begin{spacing}{1.5}
-%        کتابخانه ریاضی \lr{DirectX} ثابت های زیر را برای تقریب عبارات مختلف شامل $\pi$ تعریف کرده است:
-%
-%        \texttt
-%        {
-%            const float XM_PI = 3.141592654f;
-%        const float XM_2PI = 6.283185307f;
-%        const float XM_1DIVPI = 0.318309886f;
-%        const float XM_1DIV2PI = 0.159154943f;
-%        const float XM_PIDIV2 = 1.570796327f;
-%        const float XM_PIDIV4 = 0.785398163f;
-%        }
-%
-%        علاوه بر این، توابع درون خطی زیر را برای تبدیل بین رادیان و درجه تعریف می کند:
-%
-%        \texttt
-%        {
-%            inline float XMConvertToRadians(float fDegrees)
-%                { return fDegrees * (XM_PI / 180.0f); }
-%            inline float XMConvertToDegrees(float fRadians)
-%                { return fRadians * (180.0f / XM_PI); }
-%        }
-%
-%        همچنین توابع \lr{min/max} را تعریف می کند:
-%
-%        \texttt
-%        {
-%            template<class T> inline T XMMin(T a, T b) { return (a < b) ? a : b; }
-%            template<class T> inline T XMMax(T a, T b) { return (a > b) ? a : b; }
-%        }
-%    \end{spacing}
-%}
-%
-%\subsection{\textbf{\LARGE توابع setter}}
-%{
-%    \Large
-%    \begin{spacing}{1.5}
-%        \lr{DirectX Math} توابع زیر را برای تنظیم محتویات یک \texttt{XMVECTOR} فراهم می کند:
-%
-%        ******
-%
-%        // Returns the zero vector 0
-%        XMVECTOR XM_CALLCONV XMVectorZero();
-%        // Returns the vector (1, 1, 1, 1)
-%        XMVECTOR XM_CALLCONV XMVectorSplatOne();
-%        // Returns the vector (x, y, z, w)
-%        XMVECTOR XM_CALLCONV XMVectorSet(float x, float y, float z, float w);
-%        // Returns the vector (s, s, s, s)
-%        XMVECTOR XM_CALLCONV XMVectorReplicate(float Value);
-%        // Returns the vector (vx,vx, vx,vx)
-%        XMVECTOR XM_CALLCONV XMVectorSplatX(FXMVECTOR V);
-%        // Returns the vector (vy,vy, vy,vy)
-%        XMVECTOR XM_CALLCONV XMVectorSplatY(FXMVECTOR V);
-%        // Returns the vector (vz, vz, vz, vz)
-%        XMVECTOR XM_CALLCONV XMVectorSplatZ(FXMVECTOR V);
-%
-%        برنامه زیر بیشتر این توابع را نشان می دهد:
-%
-%        \texttt
-%        {
-%            #include <windows.h> // for XMVerifyCPUSupport
-%        #include <DirectXMath.h>
-%            #include <DirectXPackedVector.h>
-%            #include <iostream>
-%            using namespace std;
-%            using namespace DirectX;
-%            using namespace DirectX::PackedVector;
-%            // Overload the "<<" operators so that we can use cout to
-%        // output XMVECTOR objects.
-%        ostream& XM_CALLCONV operator<<(ostream& os, FXMVECTOR v)
-%                {
-%                XMFLOAT3 dest;
-%                XMStoreFloat3(&dest, v);
-%                os << "(" << dest.x << ", " << dest.y << ", " << dest.z << ")";
-%                return os;
-%            }
-%            int main()
-%                {
-%                cout.setf(ios_base::boolalpha);
-%                // Check support for SSE2 (Pentium4, AMD K8, and above).
-%                if (!XMVerifyCPUSupport())
-%                    {
-%                    cout << "directx math not supported" << endl;
-%                    return 0;
-%                }
-%                XMVECTOR p = XMVectorZero();
-%                XMVECTOR q = XMVectorSplatOne();
-%                XMVECTOR u = XMVectorSet(1.0f, 2.0f, 3.0f, 0.0f);
-%                XMVECTOR v = XMVectorReplicate(-2.0f);
-%                XMVECTOR w = XMVectorSplatZ(u);
-%                cout << "p = " << p << endl;
-%                cout << "q = " << q << endl;
-%                cout << "u = " << u << endl;
-%                cout << "v = " << v << endl;
-%                cout << "w = " << w << endl;
-%                return 0;
-%            }
-%        }
-%
-%        *******
-%        \begin{figure}[H]
-%            \centering
-%            \setlength{\belowcaptionskip}{-10pt}
-%            \includegraphics[width=\textwidth]{Images/4/4.Session.1.1.1}
-%            \caption{(الف) بردار هایی که روی صفحه ی دوبعدی کشیده شده اند.
-%                (ب) بردار هایی که مورچه ها را برای حرکت 10 متر در جهت شمال راهنمایی میکنند.}
-%            \label{fig:4.Session.1.1.1}
-%        \end{figure}
-%
-%    \end{spacing}
-%}
-%
-%\subsection{\textbf{\LARGE توابع بردار}}
-%{
-%    \Large
-%    \begin{spacing}{1.5}
-%        \lr{DirectX Math} توابع زیر را برای انجام عملیات برداری مختلف ارائه می دهد.
-%        ما با نسخه‌های سه‌بعدی نشان می‌دهیم، اما نسخه‌های مشابهی برای دو بعدی و چهار بعدی وجود دارد.
-%        نسخه های دو بعدی و چهار بعدی همان نام های نسخه های سه بعدی را دارند، به استثنای 2 و 4 که به ترتیب جایگزین 3 شده اند.
-%
-%        *******
-%        \texttt
-%        {
-%            XMVECTOR XM_CALLCONV XMVector3Length( // Returns ||v||
-%        FXMVECTOR V); // Input v
-%        XMVECTOR XM_CALLCONV XMVector3LengthSq( // Returns ||v||2
-%        FXMVECTOR V); // Input v
-%        XMVECTOR XM_CALLCONV XMVector3Dot( // Returns v1v2
-%        FXMVECTOR V1, // Input v1
-%        FXMVECTOR V2); // Input v2
-%        XMVECTOR XM_CALLCONV XMVector3Cross( // Returns v1 × v2
-%        FXMVECTOR V1, // Input v1
-%        FXMVECTOR V2); // Input v2
-%        XMVECTOR XM_CALLCONV XMVector3Normalize( // Returns v/||v||
-%        FXMVECTOR V); // Input v
-%        XMVECTOR XM_CALLCONV XMVector3Orthogonal(// Returns a vector orthogonal to v
-%        FXMVECTOR V); // Input v
-%        XMVECTOR XM_CALLCONV
-%        XMVector3AngleBetweenVectors( // Returns the angle between v1 and v2
-%        FXMVECTOR V1, // Input v1
-%        FXMVECTOR V2); // Input v2
-%        void XM_CALLCONV XMVector3ComponentsFromNormal(
-%            XMVECTOR* pParallel, // Returns projn(v)
-%            XMVECTOR* pPerpendicular, // Returns perpn(v)
-%            FXMVECTOR V, // Input v
-%        FXMVECTOR Normal); // Input n
-%        bool XM_CALLCONV XMVector3Equal( // Returns v1 = v2
-%        FXMVECTOR V1, // Input v1
-%        FXMVECTOR V2); // Input v2
-%        bool XM_CALLCONV XMVector3NotEqual( // Returns v1  v2
-%        FXMVECTOR V1, // Input v1
-%        FXMVECTOR V2); // Input v2
-%        }
-%
-%        *****
-%        \begin{theo}{thm:pythagoras}
-%            \Large
-%            توجه کنید که این توابع حتی برای عملیاتی که از نظر ریاضی یک اسکالر را برمی‌گردانند، XMVECTOR برمی‌گردانند (مثلاً حاصل ضرب نقطه‌ای k =v1 v2). نتیجه اسکالر در هر جزء از XMVECTOR تکرار می شود. به عنوان مثال، برای حاصل ضرب نقطه، بردار برگشتی (v1 v2, v1 v2,v1v2,v1 v2) خواهد بود. یکی از دلایل این امر به حداقل رساندن اختلاط عملیات بردار اسکالر و SIMD است. کارآمدتر است که همه چیز SIMD را تا زمانی که محاسبات خود را تمام کنید حفظ کنید.
-%        \end{theo}
-%
-%        برنامه آزمایشی زیر نحوه استفاده از اکثر این توابع و همچنین برخی از اپراتورهای بارگذاری شده را نشان می دهد:
-%
-%        \texttt
-%        {
-%            #include <windows.h> // for XMVerifyCPUSupport
-%        #include <DirectXMath.h>
-%            #include <DirectXPackedVector.h>
-%            #include <iostream>
-%            using namespace std;
-%            using namespace DirectX;
-%            using namespace DirectX::PackedVector;
-%            // Overload the "<<" operators so that we can use cout to
-%        // output XMVECTOR objects.
-%        ostream& XM_CALLCONV operator<<(ostream& os, FXMVECTOR v)
-%                {
-%                XMFLOAT3 dest;
-%                XMStoreFloat3(&dest, v);
-%                os << "(" << dest.x << ", " << dest.y << ", " << dest.z << ")";
-%                return os;
-%            }
-%            int main()
-%                {
-%                cout.setf(ios_base::boolalpha);
-%                // Check support for SSE2 (Pentium4, AMD K8, and above).
-%                if (!XMVerifyCPUSupport())
-%                    {
-%                    cout << "directx math not supported" << endl;
-%                    return 0;
-%                }
-%                XMVECTOR n = XMVectorSet(1.0f, 0.0f, 0.0f, 0.0f);
-%                XMVECTOR u = XMVectorSet(1.0f, 2.0f, 3.0f, 0.0f);
-%                XMVECTOR v = XMVectorSet(-2.0f, 1.0f, -3.0f, 0.0f);
-%                XMVECTOR w = XMVectorSet(0.707f, 0.707f, 0.0f, 0.0f);
-%                // Vector addition: XMVECTOR operator 
-%                XMVECTOR a = u  v;
-%                // Vector subtraction: XMVECTOR operator -
-%                XMVECTOR b = u - v;
-%                // Scalar multiplication: XMVECTOR operator *
-%                XMVECTOR c = 10.0f*u;
-%                // ||u||
-%                XMVECTOR L = XMVector3Length(u);
-%                // d = u / ||u||
-%                XMVECTOR d = XMVector3Normalize(u);
-%                // s = u dot v
-%                XMVECTOR s = XMVector3Dot(u, v);
-%                // e = u x v
-%                XMVECTOR e = XMVector3Cross(u, v);
-%                // Find proj_n(w) and perp_n(w)
-%                XMVECTOR projW;
-%                XMVECTOR perpW;
-%                XMVector3ComponentsFromNormal(&projW, &perpW, w, n);
-%                // Does projW  perpW  w?
-%                bool equal = XMVector3Equal(projW  perpW, w) != 0;
-%                bool notEqual = XMVector3NotEqual(projW  perpW, w) != 0;
-%                // The angle between projW and perpW should be 90 degrees.
-%                XMVECTOR angleVec = XMVector3AngleBetweenVectors(projW, perpW);
-%                float angleRadians = XMVectorGetX(angleVec);
-%                float angleDegrees = XMConvertToDegrees(angleRadians);
-%                cout << "u = " << u << endl;
-%                cout << "v = " << v << endl;
-%                cout << "w = " << w << endl;
-%                cout << "n = " << n << endl;
-%                cout << "a = u  v = " << a << endl;
-%                cout << "b = u - v = " << b << endl;
-%                cout << "c = 10 * u = " << c << endl;
-%                cout << "d = u / ||u|| = " << d << endl;
-%                cout << "e = u x v = " << e << endl;
-%                cout << "L = ||u|| = " << L << endl;
-%                cout << "s = u.v = " << s << endl;
-%                cout << "projW = " << projW << endl;
-%                cout << "perpW = " << perpW << endl;
-%                cout << "projW  perpW  w = " << equal << endl;
-%                cout << "projW  perpW != w = " << notEqual << endl;
-%                cout << "angle = " << angleDegrees << endl;
-%                return 0;
-%            }
-%        }
-%
-%        *******
-%        \begin{figure}[H]
-%            \centering
-%            \setlength{\belowcaptionskip}{-10pt}
-%            \includegraphics[width=\textwidth]{Images/4/4.Session.1.1.1}
-%            \caption{(الف) بردار هایی که روی صفحه ی دوبعدی کشیده شده اند.
-%                (ب) بردار هایی که مورچه ها را برای حرکت 10 متر در جهت شمال راهنمایی میکنند.}
-%            \label{fig:4.Session.1.1.1}
-%        \end{figure}
-%
-%        theo{
-%            کتابخانه ریاضی DirectX همچنین شامل برخی از روش‌های تخمینی می‌شود که دقت کمتری دارند اما محاسبه آن سریع‌تر است.
-%            اگر مایلید مقداری دقت را فدای سرعت کنید، از روش های برآورد استفاده کنید. در اینجا دو نمونه از توابع برآورد آورده شده است:
-%
-%            XMVECTOR XM_CALLCONV XMVector3LengthEst( // Returns estimated ||v||
-%            FXMVECTOR V); // Input v
-%            XMVECTOR XM_CALLCONV XMVector3NormalizeEst( // Returns estimated v/||v||
-%            FXMVECTOR V); // Input v
-%        }
-%
-%
-%    \end{spacing}
-%}
-%
-%\subsection{\textbf{\LARGE خطای ممیز شناور}}
-%{
-%    \Large
-%    \begin{spacing}{1.5}
-%        در مورد کار با بردارها در کامپیوتر باید به موارد زیر توجه داشته باشیم.
-%        هنگام مقایسه اعداد ممیز شناور، به دلیل عدم دقت ممیز شناور باید مراقب بود.
-%        دو عدد ممیز شناور که انتظار داریم برابر باشند ممکن است کمی متفاوت باشند.
-%        برای مثال، از نظر ریاضی، انتظار داریم که یک بردار نرمال شده دارای طول 1 باشد، اما در یک برنامه کامپیوتری، طول آن تقریباً 1 خواهد بود.
-%        علاوه بر این، از نظر ریاضی، 1p= 1 برای هر عدد واقعی p، اما زمانی که ما فقط یک تقریب عددی برای 1 داشته باشید، می بینیم که تقریب افزایش یافته به توان pth باعث افزایش خطا می شود.
-%        بنابراین، خطای عددی نیز جمع می شود. برنامه کوتاه زیر این ایده ها را نشان می دهد:
-%
-%        \texttt
-%        {
-%            #include <windows.h> // for XMVerifyCPUSupport
-%        #include <DirectXMath.h>
-%            #include <DirectXPackedVector.h>
-%            #include <iostream>
-%            using namespace std;
-%            using namespace DirectX;
-%            using namespace DirectX::PackedVector;
-%            int main()
-%                {
-%                cout.precision(8);
-%                // Check support for SSE2 (Pentium4, AMD K8, and above).
-%                if (!XMVerifyCPUSupport())
-%                    {
-%                    cout << "directx math not supported" << endl;
-%                    return 0;
-%                }
-%                XMVECTOR u = XMVectorSet(1.0f, 1.0f, 1.0f, 0.0f);
-%                XMVECTOR n = XMVector3Normalize(u);
-%                float LU = XMVectorGetX(XMVector3Length(n));
-%                // Mathematically, the length should be 1. Is it numerically?
-%                cout << LU << endl;
-%                if (LU  1.0f)
-%                cout << "Length 1" << endl;
-%                else
-%                cout << "Length not 1" << endl;
-%                // Raising 1 to any power should still be 1. Is it?
-%                float powLU = powf(LU, 1.0e6f);
-%                cout << "LU^(10^6) = " << powLU << endl;
-%            }
-%        }
-%
-%        *******
-%        \begin{figure}[H]
-%            \centering
-%            \setlength{\belowcaptionskip}{-10pt}
-%            \includegraphics[width=\textwidth]{Images/4/4.Session.1.1.1}
-%            \caption{(الف) بردار هایی که روی صفحه ی دوبعدی کشیده شده اند.
-%                (ب) بردار هایی که مورچه ها را برای حرکت 10 متر در جهت شمال راهنمایی میکنند.}
-%            \label{fig:4.Session.1.1.1}
-%        \end{figure}
-%
-%        برای جبران عدم دقت نقطه فلور، آزمایش می کنیم که آیا دو عدد نقطه فلور تقریباً برابر هستند یا خیر
-%        ما این کار را با تعریف یک ثابت اپسیلون انجام می دهیم، که مقدار بسیار کوچکی است که ما به عنوان بافر استفاده می کنیم.
-%        می گوییم دو مقدار تقریباً برابر هستند اگر فاصله آنها از اپسیلون کمتر باشد.
-%        به عبارت دیگر، اپسیلون مقداری تحمل برای fl به ما می دهد.
-%        عملکرد زیر نشان می دهد که چگونه می توان از اپسیلون برای آزمایش مساوی بودن دو مقدار نقطه فلور استفاده کرد:
-%
-%        const float Epsilon = 0.001f;
-%        bool Equals(float lhs, float rhs)
-%            {
-%            // Is the distance between lhs and rhs less than EPSILON?
-%            return fabs(lhs - rhs) < Epsilon ? true : false;
-%        }
-%
-%        کتابخانه ریاضی DirectX تابع XMVector3NearEqual را هنگام آزمایش برابری بردارها با پارامتر اپسیلون تحمل مجاز ارائه می دهد:
-%
-%        // Returns
-%        // abs(U.x – V.x) <= Epsilon.x &&
-%        // abs(U.y – V.y) <= Epsilon.y &&
-%        // abs(U.z – V.z) <= Epsilon.z
-%        XMFINLINE bool XM_CALLCONV XMVector3NearEqual(
-%        FXMVECTOR U,
-%        FXMVECTOR V,
-%        FXMVECTOR Epsilon);
-%    \end{spacing}
-%}
-%
-%\section{
-%    \huge
-%
-%    \textbf{خلاصه}
-%}
-%{
-%    \Large
-%    \begin{spacing}{1.5}
-%        \begin{enumerate}
-%            \item {بردارها برای مدل‌سازی کمیت‌های فیزیکی استفاده می‌شوند که هم قدر و هم جهت دارند.
-%            از نظر هندسی، بردار را با یک پاره خط جهت نشان می دهیم.
-%            زمانی که یک بردار به موازات خودش ترجمه شود به طوری که دنباله آن با مبدأ سیستم مختصات منطبق باشد در موقعیت استاندارد قرار دارد.
-%            یک بردار در موقعیت استاندارد را می توان با تعیین مختصات سر آن نسبت به یک سیستم مختصات به صورت عددی توصیف کرد.}
-%
-%            \item {اگر $\textbf{u}=(u_{x},u_{y},u_{z})$ و  $\textbf{v}=(v_{x},v_{y},v_{z})$ باشد، عملیات های برداری زیر را داریم:}
-%
-%            \begin{itemize}
-%                \item {جمع: $\textbf{u}+\textbf{v}=(u_{x}+v_{x},u_{y}+v_{y},u_{z}+v_{z})$}
-%                \item {تفریق: $\textbf{u}-\textbf{v}=(u_{x}-v_{x},u_{y}-v_{y},u_{z}-v_{z})$}
-%                \item {ضرب اسکالر: $k\textbf{u}=(ku_{x},ku_{y},ku_{z})$}
-%                \item {طول: $\norm{\textbf{u}}=\sqrt{\displaystyle x^2+y^2+z^2}$}
-%                \item {نرمال کردن: $\hat{\textbf{u}}=\frac{\displaystyle\textbf{u}}{\displaystyle\norm{\textbf{u}}}=\left(\frac{\displaystyle x}{\displaystyle\norm{\textbf{u}}},
-%                \frac{\displaystyle y}{\displaystyle\norm{\textbf{u}}}, \frac{\displaystyle z}{\displaystyle\norm{\textbf{u}}}\right)$}
-%                \item {ضرب داخلی: $\textbf{u}\cdot\textbf{v}=u_{x}v_{x}+u_{y}v_{y}+u_{z}v_{z}$}
-%                \item {ضرب خارجی: $\textbf{w}=\textbf{u}\times\textbf{v}=(u_{y}v_{z}-u_{z}v_{y}, u_{z}v_{x}-u_{x}v_{z}, u_{x}v_{y}-u_{y}v_{z})$}
-%            \end{itemize}
-%
-%            \item {ما از نوع \lr{DirectX Math XMVECTOR} برای توصیف موثر بردارها در کد با استفاده از عملیات \lr{SIMD} استفاده می کنیم.
-%            برای اعضای داده کلاس، از کلاس‌های \texttt{XMFLOAT2}، \texttt{XMFLOAT3} و \texttt{XMFLOAT4} استفاده می‌کنیم و
-%            سپس از روش‌های بارگذاری و ذخیره‌سازی برای تبدیل بین \texttt{XMVECTOR} و \texttt{XMFLOATn} به عقب و جلو استفاده می‌کنیم.
-%            بردارهای ثابتی که به نحو اولیه نیاز دارند باید از نوع \texttt{XMVECTORF32} استفاده کنند.}
-%
-%            \item {برای اهداف کارایی، مقادیر \texttt{XMVECTOR} را می توان به عنوان آرگومان به توابع در ثبات های \lr{SSE/SSE2} به جای روی پشته ارسال کرد.
-%            برای انجام این کار به صورت مستقل از پلتفرم، از انواع \texttt{FXMVECTOR}، \texttt{GXMVECTOR}، \texttt{HXMVECTOR} و \texttt{CXMVECTOR} برای عبور پارامترهای \texttt{XMVECTOR} استفاده می کنیم.
-%            سپس قانون عبور پارامترهای \texttt{XMVECTOR} این است که سه پارامتر اول \texttt{XMVECTOR} باید از نوع \texttt{FXMVECTOR} باشند. \texttt{XMVECTOR} چهارم باید از نوع \texttt{GXMVECTOR} باشد.
-%            پنجمین و ششمین پارامتر \texttt{XMVECTOR} باید از نوع \texttt{HXMVECTOR} باشد. و هر پارامتر اضافی \texttt{XMVECTOR} باید از نوع \texttt{CXMVECTOR} باشد.}
-%
-%            \item {کلاس \texttt{XMVECTOR} عملگرهای حسابی را برای انجام جمع برداری، تفریق و ضرب اسکالر بارگذاری می کند.
-%            علاوه بر این، کتابخانه ریاضی \lr{DirectX} توابع مفید زیر را برای محاسبه طول یک بردار، مجذور طول یک بردار، محاسبه حاصل ضرب نقطه‌ای دو بردار، محاسبه حاصل ضرب متقاطع دو بردار و نرمال کردن یک بردار ارائه می‌کند:}
-%            \begin{description}
-%                XMVECTOR XM_CALLCONV XMVector3Length(FXMVECTOR V);
-%                XMVECTOR XM_CALLCONV XMVector3LengthSq(FXMVECTOR V);
-%                XMVECTOR XM_CALLCONV XMVector3Dot(FXMVECTOR V1, FXMVECTOR V2);
-%                XMVECTOR XM_CALLCONV XMVector3Cross(FXMVECTOR V1, FXMVECTOR V2);
-%                XMVECTOR XM_CALLCONV XMVector3Normalize(FXMVECTOR V);
-%            \end{description}
-%        \end{enumerate}
-%    \end{spacing}
-%}
-%
-%\section{
-%    \huge
-%
-%    \textbf{تمارین}
-%}
-%\textbf{\vspace{7pt}}
-%{
-%
-%}
+\subsection{\textbf{متعامد سازی با ضرب خارجی}}
+{
+    \Large
+    \begin{spacing}{1.5}
+        در بخش \ref{sec:3.1}، ما روشی برای متعامد کردن مجموعه ای از بردارها با استفاده از فرآیند گرام اشمیت را مشاهده کردیم.
+        برای سه بعدی، استراتژی دیگری برای متعامد کردن مجموعه ای از بردارها $\textbf{v}_{0},\textbf{v}_{1},\textbf{v}_{2}$ وجود دارد که متعارف هستند،
+        اما ممکن است به دلیل خطاهای انباشته شده در دقت عددی با استفاده از ضرب خارجی، غیرمتعارف شوند.
+        برای شکل هندسی این فرآیند به شکل \ref{fig:4.Session.1.1.15} مراجعه کنید:
+
+        \begin{enumerate}
+            \item {$\textbf{w}_{0}=\frac{\displaystyle\textbf{v}_{0}}{\displaystyle\norm{\textbf{v}_{0}}}$ قرار میدهیم}
+            \item {$\textbf{w}_{2}=\frac{\displaystyle\textbf{w}_{0}\times\textbf{v}_{1}}{\displaystyle\norm{\textbf{w}_{0}\times\textbf{v}_{1}}}$ قرار میدهیم}
+            \item {با قرار دادن $\textbf{w}_{1}=\textbf{w}_{2}\times\textbf{w}_{0}$ توسط تمرین ******، $\norm{\textbf{w}_{2}\times\textbf{w}_{0}}=1$ زیرا $\textbf{w}_{2}\perp\textbf{w}_{0}$ و $\norm{\textbf{w}_{2}}=\norm{\textbf{w}_{0}}=1$،
+            بنابراین در این مرحله آخر نیازی به نرمال سازی نداریم.}
+        \end{enumerate}
+
+        در این مرحله، مجموعه بردارهای $\{\textbf{w}_{0},\textbf{w}_{1},\textbf{w}_{2}\}$ متعامد است.
+
+        \begin{figure}[H]
+            \centering
+            \setlength{\belowcaptionskip}{-10pt}
+            \includegraphics[width=0.5\textwidth]{Images/4/4.Session.1.1.15}
+            \caption {متعامد سازی سه بعدی با ضرب خارجی}
+            \label{fig:4.Session.1.1.15}
+        \end{figure}
+
+        \begin{point}{pnt:5}
+            \Large
+            در مثال بالا، ما با $\textbf{w}_{0}=\frac{\displaystyle\textbf{v}_{0}}{\displaystyle\norm{\textbf{v}_{0}}}$ شروع کردیم، به این معنی که هنگام رفتن از $\textbf{v}_{0}$ به $\textbf{w}_{0}$ جهت را تغییر ندادیم،
+            ما فقط طول را تغییر دادیم.
+            با این حال، جهت های $\textbf{w}_{1}$ و $\textbf{w}_{2}$ می تواند به ترتیب با $\textbf{v}_{1}$ و $\textbf{v}_{2}$ متفاوت باشد.
+            بسته به کاربرد خاص، برداری که شما انتخاب میکنید تغییر جهت ندهد ممکن است مهم باشد.
+            به عنوان مثال، در ادامه این کتاب، جهت دوربین را با سه بردار متعامد $\{\textbf{v}_{0},\textbf{v}_{1},\textbf{v}_{2}\}$ نشان می‌دهیم که بردار سوم $\textbf{v}_{2}$ جهتی را که دوربین به آن نگاه می‌کند، تعریف میکند.
+            هنگامی که این بردارها را متعامد می کنیم، اغلب نمی خواهیم جهت مورد نظر خود را تغییر دهیم،
+            بنابراین الگوریتم فوق را با $\textbf{v}_{2}$ شروع می کنیم و $\textbf{v}_{0}$ و $\textbf{v}_{1}$ را تغییر می دهیم تا بردارها متعامد شوند.
+        \end{point}
+    \end{spacing}
+}
+
+\section{\textbf{نقاط}}
+{
+    \Large
+    \begin{spacing}{1.5}
+        تاکنون در مورد بردارها بحث کرده ایم که موقعیت ها را توصیف نمی کنند.
+        با این حال، ما همچنین باید موقعیت هایی را در برنامه های سه بعدی خود مشخص کنیم،
+        به عنوان مثال، موقعیت هندسی سه بعدی و موقعیت دوربین مجازی سه بعدی.
+        نسبت به یک سیستم مختصات، می‌توانیم از یک بردار در موقعیت استاندارد (شکل \ref{fig:4.Session.1.1.16}) برای نمایش یک موقعیت سه بعدی در فضا استفاده کنیم.
+        ما این بردار را بردار موقعیت می نامیم.
+        در این حالت، محل نوک بردار مشخصه مورد نظر است، نه جهت یا بزرگی.
+        ما از عبارات "بردار موقعیت" و "نقطه" به جای یکدیگر استفاده خواهیم کرد زیرا بردار موقعیت برای شناسایی یک نقطه کافی است.
+
+        \begin{figure}[H]
+            \centering
+            \setlength{\belowcaptionskip}{-10pt}
+            \includegraphics[width=0.5\textwidth]{Images/4/4.Session.1.1.16}
+            \caption {بردار موقعیت، که از مبدا تا نقطه کشیده میشود، به طور کامل محل قرارگیری نقطه را نسبت به سیستم مختصات توصیف می کند.}
+            \label{fig:4.Session.1.1.16}
+        \end{figure}
+
+        یکی از مزایای استفاده از بردارها برای نشان دادن نقاط، به ویژه در کد، این است که می‌توانیم عملیات های بردار را انجام دهیم که برای نقاط معنی ندارد.
+        به عنوان مثال، از نظر هندسی، مجموع دو نقطه باید به چه معنا باشد؟
+        از سوی دیگر، برخی از عملیات را می توان به نقاط گسترش داد.
+        به عنوان مثال، ما فاصله ی دو نقطه $\textbf{q}-\textbf{p}$ را برداری از $\textbf{p}$ به $\textbf{q}$ تعریف می کنیم. همچنین، ما یک نقطه $\textbf{p}$ به اضافه بردار $\textbf{v}$ را نقطه ی $\textbf{q}$ تعریف میکنیم که با جابجایی p با بردار v به دست می آید.
+        به راحتی، از آنجایی که ما از بردارها برای نشان دادن نقاط نسبت به یک سیستم مختصات استفاده می‌کنیم، نیازی به کار اضافی برای عملیات نقطه‌ای که قبلاً در مورد آن بحث شد، نیست، زیرا چارچوب جبر برداری از قبل آنها را آماده می‌کند. شکل \ref{fig:4.Session.1.1.16} را ببینید.
+
+        \begin{figure}[H]
+            \centering
+            \setlength{\belowcaptionskip}{-10pt}
+            \includegraphics[width=0.5\textwidth]{Images/4/4.Session.1.1.17}
+            \caption {(آ) فاصله ی دو نقطه $\textbf{q}-\textbf{p}$ برداری از $\textbf{p}$ به $\textbf{q}$ تعریف میشود. (ب) یک نقطه $\textbf{p}$ به اضافه بردار $\textbf{v}$ را نقطه ی $\textbf{q}$ تعریف میکنیم که با جابجایی p با بردار v به دست می آید.}
+            \label{fig:4.Session.1.1.17}
+        \end{figure}
+
+        \begin{point}{pnt:6}
+            \Large
+            در واقع یک روش هندسی معنادار برای تعریف یک مجموع ویژه از نقاط وجود دارد که به آن ترکیب وابسته می گویند، که مانند میانگین وزنی نقاط است.
+        \end{point}
+    \end{spacing}
+}
+
+\section{\textbf{بردار های ریاضی \lr{DirectX}}}
+{
+    \Large
+    \begin{spacing}{1.5}
+        در ویندوز 8 و بالاتر، \lr{DirectX Math} یک کتابخانه ریاضی سه بعدی برای برنامه \lr{Direct3D} است که بخشی از \lr{Windows SDK} است.
+        این کتابخانه از مجموعه دستورالعمل \lr{SSE2} (\lr{Streaming SIMD Extensions 2}) استفاده می کند.
+        با رجیسترهای \lr{SIMD} گسترده \lr{128} بیتی (داده‌های چندگانه تک دستورالعمل)، دستورالعمل‌های \lr{SIMD} می‌توانند روی چهار عدد \lr{int} یا عدد \lr{float} \lr{32} بیتی با یک دستورالعمل کار کنند.
+        این برای محاسبات برداری بسیار مفید است. برای مثال، اگر به جمع برداری نگاه کنید:
+
+        \begin{center}
+            $\textbf{u}+\textbf{v}=(u_{x}+v_{x},u_{y}+v_{y},u_{z}+v_{z})$
+        \end{center}
+
+        می بینیم که ما فقط اجزای مربوطه را اضافه می کنیم.
+        با استفاده از \lr{SIMD} می‌توانیم به جای چهار دستور اسکالر، جمع بردار چهار بعدی را با یک دستور \lr{SIMD} انجام دهیم.
+        اگر ما فقط به سه مختصات برای کار سه بعدی نیاز داشته باشیم، همچنان می توانیم از \lr{SIMD} استفاده کنیم، اما مختصات چهارم را نادیده می گیریم.
+        به همین ترتیب، برای دو بعدی، مختصات سوم و چهارم را نادیده می گیریم.
+
+        پوشش ما از کتابخانه ریاضی \lr{DirectX} جامع نیست و ما فقط بخش های کلیدی مورد نیاز برای این کتاب را پوشش می دهیم.
+        برای تمام جزئیات، ما مستندات آنلاین [\lr{DirectXMath}] را توصیه می کنیم.
+        برای خوانندگانی که مایلند بدانند چگونه یک کتابخانه برداری \lr{SIMD} ممکن است به طور بهینه توسعه یابد، و شاید درک کنند که چرا کتابخانه ریاضی \lr{DirectX} برخی از تصمیمات طراحی را اتخاذ کرده است،
+        مقاله \lr{Designing Fast Cross-Platform SIMD Vector Libraries [by Oliveira2010]} را توصیه می کنیم.
+
+        برای استفاده از کتابخانه ریاضی \lr{DirectX}، باید \lr{\texttt{\#include <DirectXMath.h>}} و برای برخی از انواع داده های اضافی \lr{\texttt{\#include <DirectXPackedVector.h>}} را وارد کنید.
+        هیچ فایل کتابخانه ای اضافی وجود ندارد، زیرا تمام کدها به صورت درون خطی در فایل هدر پیاده سازی می شوند.
+        کد \lr{DirectXMath.h} در فضای نام \texttt{DirectX} و کد \lr{DirectXPackedVector.h} در فضای نام \texttt{DirectX::PackedVector} وجود دارد.
+        علاوه بر این، برای پلتفرم \lr{x86} باید \lr{SSE2} را فعال کنید:
+
+        \begin{flushleft}
+            \lr{\textbf{Project Properties > Configuration Properties > C/C++ > Code Generation > Enable Enhanced Instruction Set}}
+        \end{flushleft}
+
+        و برای همه پلتفرم‌ها باید مدل ممیز شناور سریع \lr{/fp:fast} را فعال کنید:
+
+        \begin{flushleft}
+            \lr{\textbf{Project Properties > Configuration Properties > C/C++ > Code Generation > Floating Point Model}}
+        \end{flushleft}
+
+        شما نیازی به فعال کردن \lr{SSE2} برای پلتفرم \lr{x64} ندارید زیرا تمام پردازنده‌های \lr{x64} از \lr{SSE2} (\url{http://en.wikipedia.org/wiki/SSE2}) پشتیبانی می‌کنند.
+    \end{spacing}
+}
+
+\subsection{\textbf{انواع بردارها}}
+{
+    \Large
+    \begin{spacing}{1.5}
+        در \lr{DirectX Math}، نوع بردار هسته \texttt{XMVECTOR} است که به رجیسترهای سخت افزاری \lr{SIMD} نگاشت می شود.
+        این یک نوع \lr{128} بیتی است که می تواند چهار \lr{float} \lr{32} بیتی را با یک دستورالعمل \lr{SIMD} پردازش کند.
+        وقتی \lr{SSE2} در دسترس باشد، برای پلتفرم‌های \lr{x86} و \lr{x64} به این صورت تعریف می‌شود که \lr{\_\_m128} یک نوع \lr{SIMD} خاص است.:
+
+        \begin{flushleft}
+            \lr{\texttt{typedef \_\_m128 XMVECTOR;}}
+        \end{flushleft}
+
+        هنگام انجام محاسبات، بردارها باید از این نوع باشند تا از \lr{SIMD} استفاده کنند.
+        همانطور که قبلا ذکر شد، ما همچنان از این نوع برای بردارهای دو بعدی و سه بعدی استفاده می کنیم تا از مزایای \lr{SIMD} استفاده کنیم،
+        اما فقط اجزای استفاده نشده را صفر کرده و آنها را نادیده می گیریم.
+
+        \texttt{XMVECTOR} باید \lr{16} بایت تراز شود و این به طور خودکار برای متغیرهای محلی و سراسری انجام می شود.
+        برای اعضای داده کلاس، توصیه می شود به جای آن از \texttt{XMFLOAT2} (\lr{2D})، \texttt{XMFLOAT3} (\lr{3D}) و \texttt{XMFLOAT4} (\lr{4D}) استفاده کنید. این ساختارها در زیر تعریف می شوند:
+        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++, caption=\rl{انواع بردار ها}, firstline=0, lastline=51]{Codes/main.c}}
+        \textbf{\vspace{6pt}}
+        اما اگر مستقیماً از این انواع برای محاسبات استفاده کنیم، از \lr{SIMD} استفاده نخواهیم کرد.
+        برای استفاده از \lr{SIMD} باید نمونه هایی از این نوع را به نوع \texttt{XMVECTOR} تبدیل کنیم.
+        این کار با توابع بارگیری ریاضی \lr{DirectX} انجام می شود.
+        برعکس، \lr{DirectX} توابع ذخیره سازی را فراهم می کند که برای تبدیل داده ها از \texttt{XMVECTOR} به انواع \texttt{XMFLOATn} در بالا استفاده می شود.
+
+        به طور خلاصه،
+
+        \begin{enumerate}
+            \item {از \texttt{XMVECTOR} برای متغیرهای محلی یا سراسری استفاده کنید.}
+            \item {از \texttt{XMFLOAT2}، \texttt{XMFLOAT3} و \texttt{XMFLOAT4} برای اعضای داده کلاس استفاده کنید.}
+            \item {قبل از انجام محاسبات از توابع بارگذاری برای تبدیل از \texttt{XMFLOATn} به \texttt{XMVECTOR} استفاده کنید.}
+            \item {محاسبات را با نمونه های \texttt{XMVECTOR} انجام دهید.}
+            \item {از توابع ذخیره سازی برای تبدیل از \texttt{XMVECTOR} به \texttt{XMFLOATn} استفاده کنید.}
+        \end{enumerate}
+    \end{spacing}
+}
+
+\subsection{\textbf{روش های بارگیری و ذخیره سازی}}
+{
+    \Large
+    \begin{spacing}{1.5}
+        ما از روش های زیر برای بارگذاری داده ها از \texttt{XMFLOATn} در \texttt{XMVECTOR} استفاده می کنیم:
+        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++, caption=\rl{بارگیری}, firstline=54, lastline=62]{Codes/main.c}}
+        \textbf{\vspace{6pt}}
+        ما از روش های زیر برای ذخیره داده ها از \texttt{XMVECTOR} در \texttt{XMFLOATn} استفاده می کنیم:
+        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++, caption=\rl{ذخیره سازی}, firstline=65, lastline=73]{Codes/main.c}}
+        \textbf{\vspace{6pt}}
+        گاهی اوقات ما فقط می خواهیم یک جزء \texttt{XMVECTOR} را دریافت یا تنظیم کنیم. توابع \lr{getter} و \lr{setter} زیر این امر را تسهیل می کنند:
+        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++, caption={Setter \& Getter}, firstline=76, lastline=84]{Codes/main.c}}
+        \textbf{\vspace{6pt}}
+    \end{spacing}
+}
+
+\subsection{\textbf{ارسال پارامتر}}
+{
+    \Large
+    \begin{spacing}{1.5}
+        برای اهداف کارایی، مقادیر \texttt{XMVECTOR} را می توان به عنوان آرگومان به توابع در ثبات های \lr{SSE/SSE2} به جای روی پشته ارسال کرد.
+        تعداد آرگومان هایی که می توان از این طریق عبور داد به پلتفرم (به عنوان مثال ویندوز \lr{32} بیتی، ویندوز \lr{64} بیتی و ویندوز \lr{RT}) و کامپایلر بستگی دارد.
+        بنابراین، برای مستقل بودن از پلتفرم/کامپایلر، از انواع \texttt{FXMVECTOR}، \texttt{GXMVECTOR}، \texttt{HXMVECTOR} و \texttt{CXMVECTOR} برای عبور پارامترهای \lr{XMVECTOR} استفاده می‌کنیم.
+        اینها بر اساس پلتفرم و کامپایلر به نوع مناسبی تعریف می شوند.
+        علاوه بر این، حاشیه نویسی کنوانسیون فراخوانی \texttt{XM_CALLCONV} باید قبل از نام تابع مشخص شود تا از قرارداد فراخوانی مناسب استفاده شود،
+        که باز هم به نسخه کامپایلر بستگی دارد.
+
+        قوانین عبور پارامترهای \texttt{XMVECTOR} به شرح زیر است:
+        \begin{enumerate}
+            \item {سه پارامتر اول \texttt{XMVECTOR} باید از نوع \texttt{FXMVECTOR} باشند.}
+            \item {\texttt{XMVECTOR} چهارم باید از نوع \texttt{GXMVECTOR} باشد.}
+            \item {پنجمین و ششمین پارامتر \texttt{XMVECTOR} باید از نوع \texttt{HXMVECTOR} باشد.}
+            \item {هر پارامتر اضافی \texttt{XMVECTOR} باید از نوع \texttt{CXMVECTOR} باشد.}
+        \end{enumerate}
+
+        نحوه تعریف این انواع در ویندوز \lr{32} بیتی را با کامپایلری که از قرارداد \texttt{__fastcall} پشتیبانی می کند و
+        کامپایلری که از قرارداد فراخوانی \texttt{__vectorcall} جدیدتر پشتیبانی می کند، توضیح می دهیم:
+
+        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++, firstline=87, lastline=100]{Codes/main.c}}
+        \textbf{\vspace{6pt}}
+
+        برای جزئیات نحوه تعریف این انواع برای سایر پلتفرم‌ها، به \lr{«Calling Conventions»} در بخش \lr{«Internals Library»} در مستندات \lr{DirectX Math} مراجعه کنید.
+        استثنای این قوانین مربوط به متدهای سازنده است. [\lr{DirectXMath}] توصیه می کند هنگام نوشتن سازنده ای که پارامترهای \texttt{XMVECTOR} را می گیرد،
+        از \texttt{FXMVECTOR} برای سه پارامتر اول \texttt{XMVECTOR} و \texttt{CXMVECTOR} برای بقیه استفاده کنید.
+        علاوه بر این، از حاشیه نویسی \texttt{XM_CALLCONV} برای سازنده ها استفاده نکنید
+
+        در اینجا یک مثال از کتابخانه \lr{DirectXMath} آورده شده است:
+
+        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++, caption={Parameter Passing}, firstline=103, lastline=110]{Codes/main.c}}
+        \textbf{\vspace{6pt}}
+
+       این تابع 6 پارامتر \texttt{XMVECTOR} را می گیرد، اما با رعایت قوانین عبور پارامتر، از \texttt{FXMVECTOR} برای سه پارامتر اول، \texttt{GXMVECTOR} برای چهارمین و \texttt{HXMVECTOR} برای پنجم و ششم استفاده می کند.
+        شما می توانید پارامترهای غیر \texttt{XMVECTOR} را بین پارامترهای XMVECTOR داشته باشید.
+        قوانین مشابهی اعمال می شود و پارامترهای \texttt{XMVECTOR} به گونه ای شمارش می شوند که گویی پارامترهای غیر \texttt{XMVECTOR} وجود ندارند.
+        برای مثال، در تابع زیر، اولین سه پارامتر \texttt{XMVECTOR} از نوع \texttt{FXMVECTOR} as و چهارمین پارامتر \texttt{XMVECTOR} از نوع \texttt{GXMVECTOR} است.
+
+        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++, caption={Parameter Passing}, firstline=113, lastline=120]{Codes/main.c}}
+        \textbf{\vspace{6pt}}
+
+        قوانین ارسال پارامترهای \texttt{XMVECTOR} برای پارامترهای "ورودی" اعمال می شود.
+        پارامترهای "خروجی" \texttt{XMVECTOR} (\texttt{XMVECTOR}& یا \texttt{XMVECTOR}*) از ثبات های \lr{SSE/SSE2} استفاده نمی کنند و بنابراین مانند پارامترهای غیر \texttt{XMVECTOR} رفتار می شوند.
+    \end{spacing}
+}
+
+\subsection{\textbf{بردارهای ثابت}}
+{
+    \Large
+    \begin{spacing}{1.5}
+        نمونه های ثابت \texttt{XMVECTOR} باید از نوع \texttt{XMVECTORF32} استفاده کنند. در اینجا چند نمونه از نمونه \lr{CascadedShadowMaps11 DirectX SDK} آورده شده است:
+        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++, firstline=123, lastline=137]{Codes/main.c}}
+        \textbf{\vspace{6pt}}
+        اساساً هر زمان که بخواهیم از دستور اولیه استفاده کنیم از \texttt{XMVECTORF32} استفاده می کنیم.
+        \texttt{XMVECTORF32} یک ساختار تراز شده \lr{16} بایتی با یک عملگر تبدیل \texttt{XMVECTOR} است.
+        به صورت زیر تعریف می شود:
+        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++, firstline=140, lastline=155]{Codes/main.c}}
+        \textbf{\vspace{6pt}}
+        همچنین می توانید با استفاده از \texttt{XMVECTORU32} یک \texttt{XMVECTOR} ثابت از داده های عدد صحیح ایجاد کنید:
+        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++, firstline=158, lastline=161]{Codes/main.c}}
+        \textbf{\vspace{6pt}}
+    \end{spacing}
+}
+
+\subsection{\textbf{اپراتورهای سر بارگذاری شده}}
+{
+    \Large
+    \begin{spacing}{1.5}
+        \texttt{XMVECTOR} چندین عملگر اضافه بار برای انجام جمع برداری، تفریق و ضرب اسکالر دارد.
+        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++, caption={Operatings Overloading}, firstline=164, lastline=179]{Codes/main.c}}
+        \textbf{\vspace{6pt}}
+    \end{spacing}
+}
+
+\subsection{\textbf{متفرغه}}
+{
+    \Large
+    \begin{spacing}{1.5}
+        کتابخانه ریاضی \lr{DirectX} ثابت های زیر را برای تقریب عبارات مختلف شامل $\pi$ تعریف کرده است:
+        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++, caption={Constants}, firstline=182, lastline=188]{Codes/main.c}}
+        \textbf{\vspace{6pt}}
+        علاوه بر این، توابع درون خطی زیر را برای تبدیل بین رادیان و درجه تعریف می کند:
+        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++,  firstline=191, lastline=198]{Codes/main.c}}
+        \textbf{\vspace{6pt}}
+        همچنین توابع \lr{min/max} را تعریف می کند:
+        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++,  firstline=201, lastline=203]{Codes/main.c}}
+        \textbf{\vspace{6pt}}
+    \end{spacing}
+}
+
+\subsection{\textbf{توابع setter}}
+{
+    \Large
+    \begin{spacing}{1.5}
+        \lr{DirectX Math} توابع زیر را برای تنظیم محتویات یک \texttt{XMVECTOR} فراهم می کند:
+        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++,  firstline=206, lastline=220]{Codes/main.c}}
+        \textbf{\vspace{6pt}}
+        برنامه زیر بیشتر این توابع را نشان می دهد:
+        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++,  firstline=223, lastline=263]{Codes/main.c}}
+        \textbf{\vspace{6pt}}
+
+        *******
+    \end{spacing}
+}
+
+\subsection{\textbf{توابع بردار}}
+{
+    \Large
+    \begin{spacing}{1.5}
+        \lr{DirectX Math} توابع زیر را برای انجام عملیات برداری مختلف ارائه می دهد.
+        ما با نسخه‌های سه‌بعدی نشان می‌دهیم، اما نسخه‌های مشابهی برای دو بعدی و چهار بعدی وجود دارد.
+        نسخه های دو بعدی و چهار بعدی همان نام های نسخه های سه بعدی را دارند، به استثنای 2 و 4 که به ترتیب جایگزین 3 شده اند.
+
+        *******
+        \texttt
+        {
+            XMVECTOR XM_CALLCONV XMVector3Length( // Returns ||v||
+        FXMVECTOR V); // Input v
+        XMVECTOR XM_CALLCONV XMVector3LengthSq( // Returns ||v||2
+        FXMVECTOR V); // Input v
+        XMVECTOR XM_CALLCONV XMVector3Dot( // Returns v1v2
+        FXMVECTOR V1, // Input v1
+        FXMVECTOR V2); // Input v2
+        XMVECTOR XM_CALLCONV XMVector3Cross( // Returns v1 × v2
+        FXMVECTOR V1, // Input v1
+        FXMVECTOR V2); // Input v2
+        XMVECTOR XM_CALLCONV XMVector3Normalize( // Returns v/||v||
+        FXMVECTOR V); // Input v
+        XMVECTOR XM_CALLCONV XMVector3Orthogonal(// Returns a vector orthogonal to v
+        FXMVECTOR V); // Input v
+        XMVECTOR XM_CALLCONV
+        XMVector3AngleBetweenVectors( // Returns the angle between v1 and v2
+        FXMVECTOR V1, // Input v1
+        FXMVECTOR V2); // Input v2
+        void XM_CALLCONV XMVector3ComponentsFromNormal(
+            XMVECTOR* pParallel, // Returns projn(v)
+            XMVECTOR* pPerpendicular, // Returns perpn(v)
+            FXMVECTOR V, // Input v
+        FXMVECTOR Normal); // Input n
+        bool XM_CALLCONV XMVector3Equal( // Returns v1 = v2
+        FXMVECTOR V1, // Input v1
+        FXMVECTOR V2); // Input v2
+        bool XM_CALLCONV XMVector3NotEqual( // Returns v1  v2
+        FXMVECTOR V1, // Input v1
+        FXMVECTOR V2); // Input v2
+        }
+
+        *****
+        \begin{point}{pnt:7}
+            \Large
+            توجه کنید که این توابع حتی برای عملیاتی که از نظر ریاضی یک اسکالر را برمی‌گردانند، XMVECTOR برمی‌گردانند (مثلاً حاصل ضرب نقطه‌ای k =v1 v2). نتیجه اسکالر در هر جزء از XMVECTOR تکرار می شود. به عنوان مثال، برای حاصل ضرب نقطه، بردار برگشتی (v1 v2, v1 v2,v1v2,v1 v2) خواهد بود. یکی از دلایل این امر به حداقل رساندن اختلاط عملیات بردار اسکالر و SIMD است. کارآمدتر است که همه چیز SIMD را تا زمانی که محاسبات خود را تمام کنید حفظ کنید.
+        \end{point}
+
+        برنامه آزمایشی زیر نحوه استفاده از اکثر این توابع و همچنین برخی از اپراتورهای بارگذاری شده را نشان می دهد:
+
+        \texttt
+        {
+            #include <windows.h> // for XMVerifyCPUSupport
+        #include <DirectXMath.h>
+            #include <DirectXPackedVector.h>
+            #include <iostream>
+            using namespace std;
+            using namespace DirectX;
+            using namespace DirectX::PackedVector;
+            // Overload the "<<" operators so that we can use cout to
+        // output XMVECTOR objects.
+        ostream& XM_CALLCONV operator<<(ostream& os, FXMVECTOR v)
+                {
+                XMFLOAT3 dest;
+                XMStoreFloat3(&dest, v);
+                os << "(" << dest.x << ", " << dest.y << ", " << dest.z << ")";
+                return os;
+            }
+            int main()
+                {
+                cout.setf(ios_base::boolalpha);
+                // Check support for SSE2 (Pentium4, AMD K8, and above).
+                if (!XMVerifyCPUSupport())
+                    {
+                    cout << "directx math not supported" << endl;
+                    return 0;
+                }
+                XMVECTOR n = XMVectorSet(1.0f, 0.0f, 0.0f, 0.0f);
+                XMVECTOR u = XMVectorSet(1.0f, 2.0f, 3.0f, 0.0f);
+                XMVECTOR v = XMVectorSet(-2.0f, 1.0f, -3.0f, 0.0f);
+                XMVECTOR w = XMVectorSet(0.707f, 0.707f, 0.0f, 0.0f);
+                // Vector addition: XMVECTOR operator 
+                XMVECTOR a = u  v;
+                // Vector subtraction: XMVECTOR operator -
+                XMVECTOR b = u - v;
+                // Scalar multiplication: XMVECTOR operator *
+                XMVECTOR c = 10.0f*u;
+                // ||u||
+                XMVECTOR L = XMVector3Length(u);
+                // d = u / ||u||
+                XMVECTOR d = XMVector3Normalize(u);
+                // s = u dot v
+                XMVECTOR s = XMVector3Dot(u, v);
+                // e = u x v
+                XMVECTOR e = XMVector3Cross(u, v);
+                // Find proj_n(w) and perp_n(w)
+                XMVECTOR projW;
+                XMVECTOR perpW;
+                XMVector3ComponentsFromNormal(&projW, &perpW, w, n);
+                // Does projW  perpW  w?
+                bool equal = XMVector3Equal(projW  perpW, w) != 0;
+                bool notEqual = XMVector3NotEqual(projW  perpW, w) != 0;
+                // The angle between projW and perpW should be 90 degrees.
+                XMVECTOR angleVec = XMVector3AngleBetweenVectors(projW, perpW);
+                float angleRadians = XMVectorGetX(angleVec);
+                float angleDegrees = XMConvertToDegrees(angleRadians);
+                cout << "u = " << u << endl;
+                cout << "v = " << v << endl;
+                cout << "w = " << w << endl;
+                cout << "n = " << n << endl;
+                cout << "a = u  v = " << a << endl;
+                cout << "b = u - v = " << b << endl;
+                cout << "c = 10 * u = " << c << endl;
+                cout << "d = u / ||u|| = " << d << endl;
+                cout << "e = u x v = " << e << endl;
+                cout << "L = ||u|| = " << L << endl;
+                cout << "s = u.v = " << s << endl;
+                cout << "projW = " << projW << endl;
+                cout << "perpW = " << perpW << endl;
+                cout << "projW  perpW  w = " << equal << endl;
+                cout << "projW  perpW != w = " << notEqual << endl;
+                cout << "angle = " << angleDegrees << endl;
+                return 0;
+            }
+        }
+
+        *******
+        \begin{figure}[H]
+            \centering
+            \setlength{\belowcaptionskip}{-10pt}
+            \includegraphics[width=\textwidth]{Images/4/4.Session.1.1.1}
+            \caption{(الف) بردار هایی که روی صفحه ی دوبعدی کشیده شده اند.
+                (ب) بردار هایی که مورچه ها را برای حرکت 10 متر در جهت شمال راهنمایی میکنند.}
+            \label{fig:4.Session.1.1.1}
+        \end{figure}
+
+        point{
+            کتابخانه ریاضی DirectX همچنین شامل برخی از روش‌های تخمینی می‌شود که دقت کمتری دارند اما محاسبه آن سریع‌تر است.
+            اگر مایلید مقداری دقت را فدای سرعت کنید، از روش های برآورد استفاده کنید. در اینجا دو نمونه از توابع برآورد آورده شده است:
+
+            XMVECTOR XM_CALLCONV XMVector3LengthEst( // Returns estimated ||v||
+            FXMVECTOR V); // Input v
+            XMVECTOR XM_CALLCONV XMVector3NormalizeEst( // Returns estimated v/||v||
+            FXMVECTOR V); // Input v
+        }
+
+
+    \end{spacing}
+}
+
+\subsection{\textbf{خطای ممیز شناور}}
+{
+    \Large
+    \begin{spacing}{1.5}
+        در مورد کار با بردارها در کامپیوتر باید به موارد زیر توجه داشته باشیم.
+        هنگام مقایسه اعداد ممیز شناور، به دلیل عدم دقت ممیز شناور باید مراقب بود.
+        دو عدد ممیز شناور که انتظار داریم برابر باشند ممکن است کمی متفاوت باشند.
+        برای مثال، از نظر ریاضی، انتظار داریم که یک بردار نرمال شده دارای طول 1 باشد، اما در یک برنامه کامپیوتری، طول آن تقریباً 1 خواهد بود.
+        علاوه بر این، از نظر ریاضی، 1p= 1 برای هر عدد واقعی p، اما زمانی که ما فقط یک تقریب عددی برای 1 داشته باشید، می بینیم که تقریب افزایش یافته به توان pth باعث افزایش خطا می شود.
+        بنابراین، خطای عددی نیز جمع می شود. برنامه کوتاه زیر این ایده ها را نشان می دهد:
+
+        \texttt
+        {
+            #include <windows.h> // for XMVerifyCPUSupport
+        #include <DirectXMath.h>
+            #include <DirectXPackedVector.h>
+            #include <iostream>
+            using namespace std;
+            using namespace DirectX;
+            using namespace DirectX::PackedVector;
+            int main()
+                {
+                cout.precision(8);
+                // Check support for SSE2 (Pentium4, AMD K8, and above).
+                if (!XMVerifyCPUSupport())
+                    {
+                    cout << "directx math not supported" << endl;
+                    return 0;
+                }
+                XMVECTOR u = XMVectorSet(1.0f, 1.0f, 1.0f, 0.0f);
+                XMVECTOR n = XMVector3Normalize(u);
+                float LU = XMVectorGetX(XMVector3Length(n));
+                // Mathematically, the length should be 1. Is it numerically?
+                cout << LU << endl;
+                if (LU  1.0f)
+                cout << "Length 1" << endl;
+                else
+                cout << "Length not 1" << endl;
+                // Raising 1 to any power should still be 1. Is it?
+                float powLU = powf(LU, 1.0e6f);
+                cout << "LU^(10^6) = " << powLU << endl;
+            }
+        }
+
+        *******
+        \begin{figure}[H]
+            \centering
+            \setlength{\belowcaptionskip}{-10pt}
+            \includegraphics[width=\textwidth]{Images/4/4.Session.1.1.1}
+            \caption{(الف) بردار هایی که روی صفحه ی دوبعدی کشیده شده اند.
+                (ب) بردار هایی که مورچه ها را برای حرکت 10 متر در جهت شمال راهنمایی میکنند.}
+            \label{fig:4.Session.1.1.1}
+        \end{figure}
+
+        برای جبران عدم دقت نقطه فلور، آزمایش می کنیم که آیا دو عدد نقطه فلور تقریباً برابر هستند یا خیر
+        ما این کار را با تعریف یک ثابت اپسیلون انجام می دهیم، که مقدار بسیار کوچکی است که ما به عنوان بافر استفاده می کنیم.
+        می گوییم دو مقدار تقریباً برابر هستند اگر فاصله آنها از اپسیلون کمتر باشد.
+        به عبارت دیگر، اپسیلون مقداری تحمل برای fl به ما می دهد.
+        عملکرد زیر نشان می دهد که چگونه می توان از اپسیلون برای آزمایش مساوی بودن دو مقدار نقطه فلور استفاده کرد:
+
+        const float Epsilon = 0.001f;
+        bool Equals(float lhs, float rhs)
+            {
+            // Is the distance between lhs and rhs less than EPSILON?
+            return fabs(lhs - rhs) < Epsilon ? true : false;
+        }
+
+        کتابخانه ریاضی DirectX تابع XMVector3NearEqual را هنگام آزمایش برابری بردارها با پارامتر اپسیلون تحمل مجاز ارائه می دهد:
+
+        // Returns
+        // abs(U.x – V.x) <= Epsilon.x &&
+        // abs(U.y – V.y) <= Epsilon.y &&
+        // abs(U.z – V.z) <= Epsilon.z
+        XMFINLINE bool XM_CALLCONV XMVector3NearEqual(
+        FXMVECTOR U,
+        FXMVECTOR V,
+        FXMVECTOR Epsilon);
+    \end{spacing}
+}
+
+\section{\textbf{خلاصه}}
+{
+    \Large
+    \begin{spacing}{1.5}
+        \begin{enumerate}
+            \item {بردارها برای مدل‌سازی کمیت‌های فیزیکی استفاده می‌شوند که هم قدر و هم جهت دارند.
+            از نظر هندسی، بردار را با یک پاره خط جهت نشان می دهیم.
+            زمانی که یک بردار به موازات خودش ترجمه شود به طوری که دنباله آن با مبدأ سیستم مختصات منطبق باشد در موقعیت استاندارد قرار دارد.
+            یک بردار در موقعیت استاندارد را می توان با تعیین مختصات سر آن نسبت به یک سیستم مختصات به صورت عددی توصیف کرد.}
+
+            \item {اگر $\textbf{u}=(u_{x},u_{y},u_{z})$ و  $\textbf{v}=(v_{x},v_{y},v_{z})$ باشد، عملیات های برداری زیر را داریم:}
+
+            \begin{itemize}
+                \item {جمع: $\textbf{u}+\textbf{v}=(u_{x}+v_{x},u_{y}+v_{y},u_{z}+v_{z})$}
+                \item {تفریق: $\textbf{u}-\textbf{v}=(u_{x}-v_{x},u_{y}-v_{y},u_{z}-v_{z})$}
+                \item {ضرب اسکالر: $k\textbf{u}=(ku_{x},ku_{y},ku_{z})$}
+                \item {طول: $\norm{\textbf{u}}=\sqrt{\displaystyle x^2+y^2+z^2}$}
+                \item {نرمال کردن: $\hat{\textbf{u}}=\frac{\displaystyle\textbf{u}}{\displaystyle\norm{\textbf{u}}}=\left(\frac{\displaystyle x}{\displaystyle\norm{\textbf{u}}},
+                \frac{\displaystyle y}{\displaystyle\norm{\textbf{u}}}, \frac{\displaystyle z}{\displaystyle\norm{\textbf{u}}}\right)$}
+                \item {ضرب داخلی: $\textbf{u}\cdot\textbf{v}=u_{x}v_{x}+u_{y}v_{y}+u_{z}v_{z}$}
+                \item {ضرب خارجی: $\textbf{w}=\textbf{u}\times\textbf{v}=(u_{y}v_{z}-u_{z}v_{y}, u_{z}v_{x}-u_{x}v_{z}, u_{x}v_{y}-u_{y}v_{z})$}
+            \end{itemize}
+
+            \item {ما از نوع \lr{DirectX Math XMVECTOR} برای توصیف موثر بردارها در کد با استفاده از عملیات \lr{SIMD} استفاده می کنیم.
+            برای اعضای داده کلاس، از کلاس‌های \texttt{XMFLOAT2}، \texttt{XMFLOAT3} و \texttt{XMFLOAT4} استفاده می‌کنیم و
+            سپس از روش‌های بارگذاری و ذخیره‌سازی برای تبدیل بین \texttt{XMVECTOR} و \texttt{XMFLOATn} به عقب و جلو استفاده می‌کنیم.
+            بردارهای ثابتی که به نحو اولیه نیاز دارند باید از نوع \texttt{XMVECTORF32} استفاده کنند.}
+
+            \item {برای اهداف کارایی، مقادیر \texttt{XMVECTOR} را می توان به عنوان آرگومان به توابع در ثبات های \lr{SSE/SSE2} به جای روی پشته ارسال کرد.
+            برای انجام این کار به صورت مستقل از پلتفرم، از انواع \texttt{FXMVECTOR}، \texttt{GXMVECTOR}، \texttt{HXMVECTOR} و \texttt{CXMVECTOR} برای عبور پارامترهای \texttt{XMVECTOR} استفاده می کنیم.
+            سپس قانون عبور پارامترهای \texttt{XMVECTOR} این است که سه پارامتر اول \texttt{XMVECTOR} باید از نوع \texttt{FXMVECTOR} باشند. \texttt{XMVECTOR} چهارم باید از نوع \texttt{GXMVECTOR} باشد.
+            پنجمین و ششمین پارامتر \texttt{XMVECTOR} باید از نوع \texttt{HXMVECTOR} باشد. و هر پارامتر اضافی \texttt{XMVECTOR} باید از نوع \texttt{CXMVECTOR} باشد.}
+
+            \item {کلاس \texttt{XMVECTOR} عملگرهای حسابی را برای انجام جمع برداری، تفریق و ضرب اسکالر بارگذاری می کند.
+            علاوه بر این، کتابخانه ریاضی \lr{DirectX} توابع مفید زیر را برای محاسبه طول یک بردار، مجذور طول یک بردار، محاسبه حاصل ضرب نقطه‌ای دو بردار، محاسبه حاصل ضرب متقاطع دو بردار و نرمال کردن یک بردار ارائه می‌کند:}
+            \begin{description}
+                XMVECTOR XM_CALLCONV XMVector3Length(FXMVECTOR V);
+                XMVECTOR XM_CALLCONV XMVector3LengthSq(FXMVECTOR V);
+                XMVECTOR XM_CALLCONV XMVector3Dot(FXMVECTOR V1, FXMVECTOR V2);
+                XMVECTOR XM_CALLCONV XMVector3Cross(FXMVECTOR V1, FXMVECTOR V2);
+                XMVECTOR XM_CALLCONV XMVector3Normalize(FXMVECTOR V);
+            \end{description}
+        \end{enumerate}
+    \end{spacing}
+}
+
+\section{\textbf{تمارین}}
+{
+
+}
