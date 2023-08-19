@@ -79,7 +79,7 @@
 % ----- Equation ----- %
 
 \newcounter{eqtn}[chapter]\setcounter{eqtn}{0}
-\renewcommand{\thelem}{\arabic{eqtn}.\arabic{chapter}}
+\renewcommand{\theequ}{\arabic{eqtn}.\arabic{chapter}}
 
 \newenvironment{eqtn}[2][]{
     \refstepcounter{eqtn}
@@ -88,7 +88,7 @@
         frametitle={
             \tikz[baseline=(current bounding box.east),outer sep=0pt]
             \node[anchor=east,rectangle,fill=green!40]
-            {\strut معادله~\thelem};
+            {\strut معادله~\theequ};
         }
     }
     }
@@ -96,7 +96,7 @@
         frametitle={
             \tikz[baseline=(current bounding box.east),outer sep=0pt]
             \node[anchor=east,rectangle,fill=green!40]
-            {\strut معادله~\thetheo:~#1};
+            {\strut معادله~\theequ:~#1};
         }
     }
     }
@@ -130,7 +130,7 @@
         frametitle={
             \tikz[baseline=(current bounding box.east),outer sep=0pt]
             \node[anchor=east,rectangle,fill=red!30]
-            {\strut مثال~\thetheo:~#1};
+            {\strut مثال~\theprf:~#1};
         }
     }
     }
@@ -146,7 +146,7 @@
 % ----- Hints ----- %
 
 \newcounter{hint}[chapter]\setcounter{hint}{0}
-\renewcommand{\theprf}{\arabic{hint}.\arabic{chapter}}
+\renewcommand{\thehnt}{\arabic{hint}.\arabic{chapter}}
 
 \newenvironment{hint}[2][]{
     \refstepcounter{hint}
@@ -276,3 +276,6 @@
 \renewcommand{\thefigure}{\arabic{figure}.\arabic{chapter}}
 \renewcommand{\thesection}{\arabic{section}.\arabic{chapter}}
 \renewcommand{\thesubsection}{\arabic{subsection}.\arabic{section}.\arabic{chapter}}
+
+\newcounter{quest}[chapter]\setcounter{quest}{0}
+\renewcommand{\thequest}{\arabic{quest}.\arabic{chapter}}

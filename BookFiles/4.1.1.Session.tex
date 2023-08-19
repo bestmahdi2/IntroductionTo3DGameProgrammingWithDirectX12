@@ -25,11 +25,11 @@
         توجه داشته باشید که موضوعاتی که در اینجا مورد بررسی قرار می‌گیرند، تنها مواردی هستند که برای درک ادامه ی این کتاب ضروری اند.
         این کتاب به هیچ وجه راه حل جامعی برای ریاضیات بازی های ویدیویی نیست.
 
-        \begin{point}{point:first}
+        \begin{point}{pnt:1}
             \Large
             برای خوانندگانی که مایل به ارجاع کامل تر به ریاضیات بازی های ویدیویی هستند، کتاب های زیر را توصیه می کنیم.
             \lr{
-                \begin{enumerate}
+                \begin{enumerate}[label=\textbf{\arabic*}.]
                     \item {Essential Mathematics for Games and Interactive Applications: A Programmer's Guide (Verth04)}
                     \item {Mathematics for 3D Game Programming and Computer Graphics (Lengyel02)}
                 \end{enumerate}
@@ -56,18 +56,20 @@
 
 
 %\chapter{{\Large فصل 1}\Huge\\\textbf{\vspace{20pt}}1\textbf{جبر برداری}}
+
+
 \chapter{\textbf{1 جبر برداری}}
 \textbf{\vspace{70pt}}
 {
     \Large
     \begin{spacing}{1.5}
         بردارها نقش مهمی در گرافیک کامپیوتری، تشخیص برخورد و شبیه سازی فیزیکی ایفا می کنند که همگی اجزای رایج در بازی های ویدئویی مدرن هستند.
-        رویکرد ما در اینجا غیر تخصصی و عملی است به همین دلیل پیشنهاد ما کتاب \lr{Verth04} (نکته \ref{point:first}) است که کتابی اختصاصی برای ریاضیات بازی های سه بعدی/گرافیک است.
+        رویکرد ما در اینجا غیر تخصصی و عملی است به همین دلیل پیشنهاد ما کتاب \lr{Verth04} (نکته \ref{pnt:1}) است که کتابی اختصاصی برای ریاضیات بازی های سه بعدی/گرافیک است.
         ما بر اهمیت بردارها بسیار تأکید داریم زیرا در بیشتر برنامه های آزمایشی این کتاب استفاده شده اند.
         \\
 
         \textbf{\LARGE \hspace{-40pt}اهداف:}
-        \begin{enumerate}
+        \begin{enumerate}[label=\textbf{\arabic*}.]
             \item {یادگیری نحوه نمایش بردارها به صورت هندسی و عددی}
             \item {یادگیری عملیات تعریف شده بر روی بردارها و کاربردهای هندسی آنها}
             \item {آشنایی با توابع برداری و کلاس های کتابخانه \lr{DirectXMath}}
@@ -93,9 +95,9 @@
         اولین مرحله در توصیف ریاضی بردار ، توصیف هندسی آن است: ما به صورت گرافیکی یک بردار را با یک پاره خط جهت دار مشخص می کنیم (شکل \ref{fig:4.Session.1.1.1})، که در آن طول نشان دهنده بزرگی بردار و سر کمان نشان دهنده جهت بردار است.
         به این نکته باید توجه کنید که مکانی که در آن یک بردار رسم می‌کنیم بی‌اهمیت است، زیرا تغییر مکان، بزرگی یا جهت را تغییر نمی‌دهد (دو ویژگی ای که بردار دارد).
         بنابراین می گوییم دو بردار برابر هستند اگر و تنها اگر طول یکسانی داشته و در یک جهت باشند.
-        بنابراین، بردارهای \lr{u} و \lr{v} ترسیم شده در قسمت آ شکل \ref{fig:4.Session.1.1.1} در واقع برابر اند زیرا طول و جهت یکسانی دارند.
-        در واقع، چون مکان برای بردارها اهمیتی ندارد، ما می‌توانیم یک بردار را بدون تغییر هویت آن ، انتقال دهیم (زیرا انتقال نه طول و نه جهت را تغییر می‌دهد).
-        توجه داشته باشید که ما می‌توانیم \lr{u} را طوری انتقال دهیم که کاملاً بر \lr{v} همپوشانی داشته باشد (و بالعکس) و در نتیجه آنها را غیرقابل تشخیص کنیم. این نیز دلیلی برای برابری آنهاست.
+        بنابراین، بردارهای \textbf{u} و \textbf{v} ترسیم شده در قسمت آ شکل \ref{fig:4.Session.1.1.1} در واقع برابر اند زیرا طول و جهت یکسانی دارند.
+        در واقع، چون مکان برای بردارها اهمیتی ندارد، ما می‌توانیم یک بردار را بدون تغییر ماهیت آن ، انتقال دهیم (زیرا انتقال نه طول و نه جهت را تغییر می‌دهد).
+        توجه داشته باشید که ما می‌توانیم \textbf{u} را طوری انتقال دهیم که کاملاً بر \textbf{v} همپوشانی داشته باشد (و بالعکس) و در نتیجه آنها را غیرقابل تشخیص کنیم. این نیز دلیلی برای برابری آنهاست.
 
         \begin{figure}[H]
             \centering
@@ -106,8 +108,8 @@
             \label{fig:4.Session.1.1.1}
         \end{figure}
 
-        به عنوان یک مثال فیزیکی، بردارهای \lr{u} و \lr{v} در قسمت ب شکل \ref{fig:4.Session.1.1.1} هر دو به مورچه ها میگویند در دو نقطه مختلف \lr{A} و \lr{B} ده متر به سمت شمال حرکت کنند.
-        دوباره \lr{u = v} را داریم.
+        به عنوان یک مثال فیزیکی، بردارهای \textbf{u} و \textbf{v} در قسمت ب شکل \ref{fig:4.Session.1.1.1} هر دو به مورچه ها میگویند در دو نقطه مختلف \lr{A} و \lr{B} ده متر به سمت شمال حرکت کنند.
+        دوباره \lr{\textbf{u} = \textbf{v}} را داریم.
         بردارها خود مستقل از موقعیت هستند و
         آنها به سادگی به مورچه ها آموزش می دهند که چگونه از جایی که هستند، ده متر (طول) به سمت شمال (جهت) حرکت کنند.
 
@@ -131,13 +133,13 @@
             \label{fig:4.Session.1.1.2}
         \end{figure}
 
-        سپس می‌توانیم یک بردار را با تعیین مختصات سر آن شناسایی کنیم و مانند شکل \ref{fig:4.Session.1.1.3}، \lr{v = (x, y, z)} را بنویسیم.
-        اکنون می توانیم یک بردار را با سه \lr{float} در یک برنامه کامپیوتری نشان دهیم.
-
+        سپس می‌توانیم یک بردار را با تعیین مختصات سر آن شناسایی کنیم و مانند شکل \ref{fig:4.Session.1.1.3}، \lr{\textbf{v} = (x, y, z)} را بنویسیم.
+        اکنون می توانیم یک بردار را با سه \textbf{float} در یک برنامه کامپیوتری نشان دهیم.
+        \textbf{\vspace{-10pt}}
         \begin{point}{pnt:2}
             \Large
             اگر کار به صورت \lr{2D} باشد، فقط از یک سیستم مختصات \lr{2D} استفاده می کنیم و بردار فقط دو مختصات دارد:
-            \lr{v = (x, y)} و یک بردار را با دو \lr{float} در یک برنامه نشان میدهیم.
+            \lr{\textbf{v} = (x, y)} و یک بردار را با دو \textbf{float} در یک برنامه نشان میدهیم.
         \end{point}
 
         \begin{figure}[H]
@@ -148,9 +150,9 @@
             \label{fig:4.Session.1.1.3}
         \end{figure}
 
-        شکل \ref{fig:4.Session.1.1.4} را در نظر بگیرید که یک بردار \lr{v} و دو فریم (\lr{frame}) در فضا را نشان می دهد. (توجه داشته باشید که ما از اصطلاحات فریم، فریم مرجع، فضا و سیستم مختصات استفاده می کنیم که همگی در این کتاب به یک معنا هستند.)
-        می توانیم \lr{v} را طوری انتقال دهیم که در هر یک از دو سیستم مختصات در موقعیت استاندارد قرار گیرد. با این حال، مشاهده کنید که مختصات بردار \lr{v} نسبت به سیستم مختصات \lr{A} با مختصات بردار \lr{v} نسبت به سیستم مختصات \lr{B} متفاوت است.
-        به عبارت دیگر، همان بردار \lr{v} نمایش مختصاتی متفاوتی برای سیستم مختصات های متمایز دارد.
+        شکل \ref{fig:4.Session.1.1.4} را در نظر بگیرید که یک بردار \textbf{v} و دو فریم (\lr{frame}) در فضا را نشان می دهد. (\textbf{توجه داشته باشید که ما از اصطلاحات فریم، فریم مرجع، فضا و سیستم مختصات استفاده می کنیم که همگی در این کتاب به یک معنا هستند.})
+        می توانیم \textbf{v} را طوری انتقال دهیم که در هر یک از دو سیستم مختصات در موقعیت استاندارد قرار گیرد. با این حال، مشاهده کنید که مختصات بردار \textbf{v} نسبت به سیستم مختصات \lr{A} با مختصات بردار \textbf{v} نسبت به سیستم مختصات \lr{B} متفاوت است.
+        به عبارت دیگر، همان بردار \textbf{v} نمایش مختصاتی متفاوتی برای سیستم مختصات های متمایز دارد.
 
         \begin{figure}[H]
             \centering
@@ -173,6 +175,7 @@
             \Large
             مشاهده میکنیم که بردارها و نقاط را می توان با مختصات (\lr{x, y, z}) نسبت به یک سیستم مختصات توصیف کرد.
             با این حال، بردارها و نقاط یکسان نیستند؛ یک نقطه نشان دهنده یک مکان در 3 فاصله است، در حالی که یک بردار نشان دهنده یک اندازه و جهت است.
+            در مورد نقاط در بخش \ref{sec:5} بیشتر حرف خواهیم زد.
         \end{point}
         \textbf{\vspace{-50pt}}
     \end{spacing}
@@ -205,7 +208,7 @@
         اکنون با استفاده از نمایش مختصاتی، تساوی، جمع، ضرب اسکالر و تفریق را بر روی بردارها تعریف می کنیم.
         برای این چهار تعریف، فرض میکنیم $\textbf{u}=(u_{x},u_{y},u_{z})$ و  $\textbf{v}=(v_{x},v_{y},v_{z})$.
 
-        \begin{enumerate}
+        \begin{enumerate}[label=\textbf{\arabic*}.]
             \item {دو بردار مساوی هستند اگر و تنها اگر اجزای متناظر آنها با هم برابر باشند.
             یعنی $\textbf{u}=\textbf{v}$ اگر و تنها اگر $u_{x}=v_{x}$ ، $u_{y}=v_{y}$ و $u_{z}=v_{z}$}
             \item {بردارها را به صورت جزء اضافه می کنیم: $\textbf{u}+\textbf{v}=(u_{x}+v_{x},u_{y}+v_{y},u_{z}+v_{z})$.
@@ -213,29 +216,29 @@
             \item {می توانیم یک اسکالر (یعنی یک عدد حقیقی) و یک بردار را ضرب کنیم و نتیجه یک بردار خواهد بود.
             فرض کنید k یک اسکالر باشد، پس $k\textbf{u}=(ku_{x},ku_{y},ku_{z})$. به این ضرب اسکالر می گویند.}
             \item {ما تفریق را بر حسب جمع بردار و ضرب اسکالر انجام می دهیم.
-            یعنی $\textbf{u}-\textbf{v}=\textbf{u}+(-1\cdot\textbf{v})=\textbf{u}+(-\textbf{v})=(u_{x}-v_{x},u_{y}-v_{y},u_{z}-v_{z})$}
+            یعنی\\$\textbf{u}\textbf{-v}=\textbf{u}+(-1\cdot\textbf{v})=\textbf{u}+(\textbf{-v})=(u_{x}-v_{x},u_{y}-v_{y},u_{z}-v_{z})$}
         \end{enumerate}
 
-        \textbf{\vspace{-6pt}}
+        \textbf{\vspace{-10pt}}
         \begin{example}{exp:1}
             \Large
             فرض کنید $\textbf{u}=(1,2,3), \textbf{v}=(1,2,3), \textbf{w}=(3,0,-2), k=2$
             \lr{
-                \begin{enumerate}
+                \begin{enumerate}[label=\textbf{\arabic*}.]
                     \item {$\textbf{u}+\textbf{w}=(1,2,3)+(3,0,-2)=(4,2,1)$}
                     \item {$\textbf{u}=\textbf{v}$}
-                    \item {$\textbf{u}-\textbf{v}=\textbf{u}+(-\textbf{v})=(1,2,3)+(-1,-2,-3)=(0,0,0)=\textbf{0}$}
+                    \item {$\textbf{u}-\textbf{v}=\textbf{u}+(\textbf{-v})=(1,2,3)+(-1,-2,-3)=(0,0,0)=\textbf{0}$}
                     \item {$k\textbf{w}=2(3,0,-2)=(6,0,-4)$}
                 \end{enumerate}
             }
             تفاوتی که در مورد سوم هست ، یک بردار خاص به نام بردار صفر را نشان می دهد که همه اجزای آن صفر است و با \lr{\textbf{0}} نشان داده می شود.
         \end{example}
 
-        \textbf{\vspace{-6pt}}
+        \textbf{\vspace{-20pt}}
         \begin{example}{exp:2}
             \Large
             ما این مثال را با بردارهای دوبعدی برای ساده‌تر کردن کار توضیح می‌دهیم. ایده ها مانند فضای سه بعدی هستند، فقط با یک جزء کمتر ، به صورت دو بعدی کار می کنیم.\\
-            \begin{enumerate}
+            \begin{enumerate}[label=\textbf{\arabic*}.]
                 \item {فرض کنید $\textbf{v}=(2,1)$، $\textbf{v}$ و $-\frac{\displaystyle 1}{\displaystyle 2}\textbf{v}$ چگونه از نظر هندسی با هم مقایسه می شوند؟
                 توجه داریم که $-\frac{\displaystyle 1}{\displaystyle 2}\textbf{v}=(-1,-\frac{\displaystyle 1}{\displaystyle 2})$.
                 با ترسیم نمودار $\textbf{v}$ و $-\frac{\displaystyle 1}{\displaystyle 2}\textbf{v}$ (قسمت آ شکل \ref{fig:4.Session.1.1.6})،
@@ -254,10 +257,10 @@
                     اگر دو نیرو (بردار) مخالف یکدیگر را بهم اضافه کنیم، نیروی برآیند ضعیف تری (بردار کوتاه تر) به دست می آید.
                     شکل \ref{fig:4.Session.1.1.7} این ایده ها را نشان می دهد.}\\
 
-                \item {فرض کنید $\textbf{v}=(2,1)$، $\textbf{v}$ و $\textbf{v}-\textbf{u}=(-1,\frac{\displaystyle 3}{\displaystyle 2})$. پس
+                \item {فرض کنید $\textbf{u}=(2,\frac{\displaystyle 1}{\displaystyle 2})$ و $\textbf{v}=(1,2)$. پس $\textbf{v}-\textbf{u}=(-1,\frac{\displaystyle 3}{\displaystyle 2})$.
                 قسمت پ شکل \ref{fig:4.Session.1.1.6} نشان می دهد که تفریق برداری از نظر هندسی به چه معناست.
                     $\textbf{v}-\textbf{u}$ به ما یک بردار با از سر $\textbf{u}$ تا سر $\textbf{v}$ می دهد.
-                    اگر در عوض u و v را به عنوان نقاط تفسیر کنیم، آنگاه $\textbf{v}-\textbf{u}$ برداری را با هدف از نقطه $\textbf{u}$ تا نقطه $\textbf{v}$ به ما می دهد.
+                    اگر در عوض $\textbf{u}$ و $\textbf{v}$ را به عنوان نقاط تفسیر کنیم، آنگاه $\textbf{v}-\textbf{u}$ برداری را با هدف از نقطه $\textbf{u}$ تا نقطه $\textbf{v}$ به ما می دهد.
                     این تفسیر مهم است زیرا ما اغلب می خواهیم که بردار از یک نقطه به نقطه دیگر برود.
                     همچنین طول $\textbf{v}-\textbf{u}$ فاصله $\textbf{u}$ تا $\textbf{v}$ است، وقتی که $\textbf{u}$ و $\textbf{v}$ را به عنوان نقطه در نظر بگیریم.}
             \end{enumerate}
@@ -291,7 +294,7 @@
         (به عنوان مثال، $\norm{u}$ اندازه ی $\textbf{u}$ را نشان می دهد).
         حالا با توجه به بردار $\textbf{u}=(x,y,z)$، می‌خواهیم بزرگی آن را به صورت جبری محاسبه کنیم.
         اندازه ی یک بردار سه بعدی را می توان با دو بار اعمال قضیه فیثاغورث محاسبه کرد.
-        شکل \ref{fig:4.Session.1.1.8} را ببینید. ابتدا، ما به مثلث در صفحه xz با اضلاع x، z و وتر a نگاه می کنیم.
+        شکل \ref{fig:4.Session.1.1.8} را ببینید. ابتدا، ما به مثلث در صفحه $xz$ با اضلاع $x$، $z$ و وتر $a$ نگاه می کنیم.
 
         \begin{figure}[H]
             \centering
@@ -320,7 +323,7 @@
             \frac{\displaystyle y}{\displaystyle\norm{\textbf{u}}}, \frac{\displaystyle z}{\displaystyle\norm{\textbf{u}}}\right)$
         \end{eqtn}
 
-        برای تأیید صحت این فرمول، می توانیم طول $\hat{\textbf{u}}$ را محاسبه کنیم
+        برای تأیید صحت این فرمول، می توانیم طول $\hat{\textbf{u}}$ را محاسبه کنیم:
 
         \begin{center}
             $\norm{\hat{\textbf{u}}}=\sqrt{\displaystyle \left(\frac{\displaystyle x}{\displaystyle\norm{\textbf{u}}}\right)^2,
@@ -359,7 +362,7 @@
         ضرب نقطه ای (داخلی) شکلی از ضرب برداری است که منجر به یک مقدار اسکالر می شود.
         به همین دلیل، گاهی اوقات از آن به عنوان یک ضرب اسکالر یاد می شود.
         فرض کنید $\textbf{u}=(u_{x},u_{y},u_{z})$ و  $\textbf{v}=(v_{x},v_{y},v_{z})$،
-        پس حاصل ضرب داخلی به صورت زیر تعریف می‌شود:
+        پس ضرب داخلی به صورت زیر تعریف می‌شود:
 
         \begin{eqtn}{eqtn:3}
             \centering
@@ -370,7 +373,7 @@
         به عبارت دیگر ، ضرب داخلی مجموع ضرب های اجزای مربوطه ست.
 
         همچنین تعریف ضرب داخلی معنای هندسی آشکاری ارائه نمی دهد.
-        با استفاده از قانون کسینوس (به تمرین ***** مراجعه کنید)، می توانیم رابطه ای را پیدا کنیم که در آن $\theta$ زاویه بین بردارهای $\textbf{u}$ و $\textbf{v}$ است به طوری که $0\leq\theta\leq\pi$؛ شکل \ref{fig:4.Session.1.1.9} را ببینید.
+        با استفاده از قانون کسینوس (به تمرین \ref{question10} مراجعه کنید)، می توانیم رابطه ای را پیدا کنیم که در آن $\theta$ زاویه بین بردارهای $\textbf{u}$ و $\textbf{v}$ است به طوری که $0\leq\theta\leq\pi$؛ شکل \ref{fig:4.Session.1.1.9} را ببینید.
 
         \begin{eqtn}{eqtn:4}
             \centering
@@ -386,7 +389,7 @@
         \begin{figure}[H]
             \centering
             \setlength{\belowcaptionskip}{-10pt}
-            \includegraphics[width=0.8\textwidth]{Images/4/4.Session.1.1.9}
+            \includegraphics[width=0.7\textwidth]{Images/4/4.Session.1.1.9}
             \caption{در شکل سمت چپ، زاویه $\theta$ بین $\textbf{u}$ و $\textbf{v}$ یک زاویه تند است.
             در شکل سمت راست، زاویه $\theta$ بین $\textbf{u}$ و $\textbf{v}$ یک زاویه منفرجه (باز) است.
             وقتی به زاویه بین دو بردار اشاره می کنیم، همیشه منظورمان کوچکترین زاویه است،
@@ -394,7 +397,7 @@
             \label{fig:4.Session.1.1.9}
         \end{figure}
 
-        \begin{enumerate}
+        \begin{enumerate}[label=\textbf{\arabic*}.]
             \item {اگر $\textbf{u}\cdot\textbf{v}=0$، در نتیجه $\textbf{u}\perp\textbf{v}$ (یعنی بردار ها بر هم عمودند).}
             \item {اگر $\textbf{u}\cdot\textbf{v}>0$، در نتیجه زاویه ی بین $\theta$ و دو بردار کمتر از 90 درجه ست (یعنی بردار ها با هم زاویه ی تند میسازند).}
             \item {اگر $\textbf{u}\cdot\textbf{v}<0$، در نتیجه زاویه ی بین $\theta$ و دو بردار بیشتر از 90 درجه ست (یعنی بردار ها با هم زاویه ی منفرجه میسازند).}
@@ -417,11 +420,11 @@
             \begin{center}
                 $\cos\theta=\frac{\displaystyle\textbf{u}\cdot\textbf{v}}{\displaystyle\norm{\textbf{v}}\norm{\textbf{u}}}=\frac{\displaystyle -7}{\displaystyle \sqrt{\displaystyle 14}\sqrt{\displaystyle 17}}$
 
-                $\theta=\cos^-1\frac{\displaystyle -7}{\displaystyle \sqrt{\displaystyle 14}\sqrt{\displaystyle 17}}\thickapprox117^\circ$
+                $\theta=\cos^{-1}\frac{\displaystyle -7}{\displaystyle \sqrt{\displaystyle 14}\sqrt{\displaystyle 17}}\thickapprox 117^\circ$
             \end{center}
         \end{example}
 
-        \textbf{\vspace{-6pt}}
+        \textbf{\vspace{-20pt}}
         \begin{example}{exp:5}
             شکل \ref{fig:4.Session.1.1.10} را در نظر بگیرید.
             با توجه به $\textbf{v}$ و بردار واحد $\textbf{n}$، فرمولی برای $\textbf{p}$ بر حسب $\textbf{v}$ و $\textbf{n}$ با استفاده از ضرب داخلی پیدا کنید. \\
@@ -458,7 +461,7 @@
             \begin{figure}[H]
                 \centering
                 \setlength{\belowcaptionskip}{-10pt}
-                \includegraphics[width=0.5\textwidth]{Images/4/4.Session.1.1.10}
+                \includegraphics[width=0.8\textwidth]{Images/4/4.Session.1.1.10}
                 \caption{تصویر متعامد/قائم $\textbf{v}$ روی $\textbf{n}$. \textbf{\vspace{10pt}}}
                 \label{fig:4.Session.1.1.10}
             \end{figure}
@@ -495,7 +498,7 @@
         \begin{figure}[H]
             \centering
             \setlength{\belowcaptionskip}{-10pt}
-            \includegraphics[width=0.5\textwidth]{Images/4/4.Session.1.1.11}
+            \includegraphics[width=0.45\textwidth]{Images/4/4.Session.1.1.11}
             \caption{متعامد سازی دو بعدی}
             \label{fig:4.Session.1.1.11}
         \end{figure}
@@ -512,7 +515,7 @@
         \begin{figure}[H]
             \centering
             \setlength{\belowcaptionskip}{-10pt}
-            \includegraphics[width=0.35\textwidth]{Images/4/4.Session.1.1.12}
+            \includegraphics[width=0.32\textwidth]{Images/4/4.Session.1.1.12}
             \caption{متعامد سازی سه بعدی}
             \label{fig:4.Session.1.1.12}
         \end{figure}
@@ -532,7 +535,7 @@
         \begin{center}
             گام پایه: $\textbf{w}_{0}=\textbf{v}_{0}$ قرار میدهیم
 
-            به ازای $1\leq i\leq n-1$ ، \\ $\textbf{w}_{i}=\textbf{v}_{i}-\sum_{j=1}^{i-1}proj_{\textbf{w}_{j}}(\textbf{v}_{i})$ قرار میدهیم
+            به ازای $1\leq i\leq n-1$ ، \\ $\textbf{w}_{i}=\textbf{v}_{i}-\sum\limits_{j=1}^{i-1}proj_{\textbf{w}_{j}}(\textbf{v}_{i})$ قرار میدهیم
 
             گام نرمال سازی: $\textbf{w}_{i}=\frac{\displaystyle\textbf{w}_{i}}{\displaystyle\norm{\textbf{w}_{i}}}$ قرار میدهیم
         \end{center}
@@ -557,13 +560,13 @@
 
         \begin{eqtn}{eqtn:5}
             \centering
-            $\textbf{w}=\textbf{u}\times\textbf{v}=(u_{y}v_{z}-u_{z}v_{y}, u_{z}v_{x}-u_{x}v_{z}, u_{x}v_{y}-u_{y}v_{z})$
+            $\textbf{w}=\textbf{u}\times\textbf{v}=(u_{y}v_{z}\textbf{-}u_{z}v_{y}, u_{z}v_{x}\textbf{-}u_{x}v_{z}, u_{x}v_{y}\textbf{-}u_{y}v_{z})$
         \end{eqtn}
 
         \begin{point}{pnt:4}
             \Large
             اگر در سیستم مختصات راستگرد کار می کنید، پس از قانون شست دست راست استفاده می کنید:
-            اگر دست راست خود را طوری بگیرید که انگشتان در جهت بردار اول u باشد و سپس انگشتان خود را به سمت v با زاویه ی $0\leq\theata\leq \pi$ خم کنید، انگشت شست شما در جهت $\textbf{w}=\textbf{u}\times\textbf{v}$ قرار می گیرد.
+            اگر دست راست خود را طوری بگیرید که انگشتان در جهت بردار اول u باشد و سپس انگشتان خود را به سمت v با زاویه ی $0\leq\theta\leq\pi$ خم کنید، انگشت شست شما در جهت $\textbf{w}=\textbf{u}\times\textbf{v}$ قرار می گیرد.
         \end{point}
 
         \begin{figure}[H]
@@ -571,13 +574,12 @@
             \setlength{\belowcaptionskip}{-10pt}
             \includegraphics[width=0.35\textwidth]{Images/4/4.Session.1.1.13}
             \caption{ضرب خارجی دو بردار سه بعدی $\textbf{u}$ و $\textbf{v}$ بردار دیگر $\textbf{w}$ را به دست می آورد که متعامد با $\textbf{u}$ و $\textbf{v}$ است.
-            اگر دست چپ خود را طوری بگیرید که انگشتان در جهت بردار اول u باشد و سپس انگشتان خود را به سمت v با زاویه ی $0\leq\theata\leq \pi$ خم کنید، انگشت شست شما در جهت $\textbf{w}=\textbf{u}\times\textbf{v}$ قرار می گیرد. به این قانون شست چپ می گویند.}
-            {متعامد سازی سه بعدی}
+            اگر دست چپ خود را طوری بگیرید که انگشتان در جهت بردار اول u باشد و سپس انگشتان خود را به سمت v با زاویه ی $0\leq\theta\leq\pi$ خم کنید، انگشت شست شما در جهت $\textbf{w}=\textbf{u}\times\textbf{v}$ قرار می گیرد. به این قانون شست چپ می گویند.}
             \label{fig:4.Session.1.1.13}
         \end{figure}
 
         \begin{example}{exp:6}
-            فرض کنید $\textbf{u}=(1,2,3)$ و $\textbf{v}=(1,2,3)$ باشد. سپس $\textbf{w}=\textbf{u}\times\textbf{v}$ و $\textbf{z}=\textbf{v}\times\textbf{z}$ را محاسبه کنید. معادله ی \ref{eqtn:5} را اعمال میکنیم: \\
+            فرض کنید $\textbf{u}=(2,1,3)$ و $\textbf{v}=(2,0,0)$ باشد. سپس $\textbf{w}=\textbf{u}\times\textbf{v}$ و $\textbf{z}=\textbf{v}\times\textbf{u}$ را محاسبه کنید و چک کنید که $\textbf{w}$ متعامد به $\textbf{u}$ و $\textbf{v}$ باشد. معادله ی \ref{eqtn:5} را اعمال میکنیم: \\
             \begin{equation*}
                 \centering
                 \begin{split}
@@ -600,18 +602,18 @@
 
             این نتیجه یک چیز را روشن می کند، به طور کلی $\textbf{u}\times\textbf{v}\neq\textbf{v}\times\textbf{u}$. بنابراین، می گوییم که ضرب خارجی خاصیت جابجایی ندارد.
             در واقع می توان نشان داد که $\textbf{u}\times\textbf{v}=-\textbf{v}\times\textbf{u}$. شما می توانید بردار به دست آمده از ضرب خارجی را با قانون انگشت شست چپ تعیین کنید.
-            اگر ابتدا انگشتان خود را در جهت بردار اول نشانه بگیرید و سپس انگشتان خود را به سمت بردار دوم خم کنید (همیشه مسیر را با کوچکترین زاویه انتخاب کنید)، همانطور که در شکل \ref{fig:4.Session.1.1.11} نشان داده شده است، انگشت شست شما در جهت بردار حاصل قرار می گیرد.
+            اگر ابتدا انگشتان خود را در جهت بردار اول بگیرید و سپس انگشتان خود را به سمت بردار دوم خم کنید (همیشه مسیر را با کوچکترین زاویه انتخاب کنید)، همانطور که در شکل \ref{fig:4.Session.1.1.11} نشان داده شده است، انگشت شست شما در جهت بردار حاصل قرار می گیرد.
 
             برای نشان دادن اینکه $\textbf{w}$ متعامد به $\textbf{u}$ و $\textbf{w}$ متعامد بر $\textbf{v}$ است،
-            از بخش \ref{sec:3} یادآوری می کنیم که اگر$\textbf{u}\times\textbf{v}=0$ باشد،
+            از بخش \ref{sec:3} یادآوری می کنیم که اگر $\textbf{u}\cdot\textbf{v}=0$ باشد،
             آنگاه $\textbf{u}\perp\textbf{v}$ است (یعنی بردارها متعامد هستند). زیرا
 
             \begin{center}
-                $\textbf{w}\times\textbf{u}=(0,6,-2)\cdot(2,1,3)=0\cdot 2+6\cdot 1+(-2)\cdot 3=0$
+                $\textbf{w}\cdot\textbf{u}=(0,6,-2)\cdot(2,1,3)=0\cdot 2+6\cdot 1+(-2)\cdot 3=0$
 
                 و
 
-                $\textbf{w}\times\textbf{v}=(0,6,-2)\cdot(2,0,0)=0\cdot 2+6\cdot 0+(-2)\cdot 0=0$
+                $\textbf{w}\cdot\textbf{v}=(0,6,-2)\cdot(2,0,0)=0\cdot 2+6\cdot 0+(-2)\cdot 0=0$
             \end{center}
 
             نتیجه می گیریم که $\textbf{w}$ متعامد به $\textbf{u}$ و $\textbf{w}$ متعامد بر $\textbf{v}$ است.
@@ -625,8 +627,8 @@
     \begin{spacing}{1.5}
         ضرب خارجی به ما امکان می دهد یک بردار متعامد به دو بردار سه بعدی داده شده را پیدا کنیم.
         در دوبعدی وضعیت مشابهی نداریم،
-        اما با توجه به بردار دوبعدی $\textbf{u}=u_{x},u_{y}$ پیدا کردن بردار $\textbf{v}$ متعامد به $\textbf{u}$ می‌تواند مفید باشد.
-        شکل \ref{fig:4.Session.1.1.14} شکل هندسی ای را نشان می دهد که از آن $\textbf{v}=-u_{y},u_{x}$ پیدا میشود.
+        اما با توجه به بردار دوبعدی $\textbf{u}=(u_{x},u_{y})$ پیدا کردن بردار $\textbf{v}$ متعامد به $\textbf{u}$ می‌تواند مفید باشد.
+        شکل \ref{fig:4.Session.1.1.14} شکل هندسی ای را نشان می دهد که از آن $\textbf{v}=(-u_{y},u_{x})$ پیدا میشود.
         اثبات آن ساده است:
 
         \begin{center}
@@ -634,7 +636,7 @@
         \end{center}
 
         بنابراین $\textbf{u}\perp\textbf{v}$.
-        مشاهده کنید که $\textbf{u}\cdot-\textbf{v}=u_{x}u_{y}+u_{y}(-u_{x})=0$، بنابراین $\textbf{u}\perp-\textbf{v}$ را نیز داریم.
+        مشاهده کنید که $\textbf{u}\cdot\textbf{-v}=u_{x}u_{y}+u_{y}(-u_{x})=0$، بنابراین $\textbf{u}\perp\textbf{-v}$ را نیز داریم.
 
         \begin{figure}[H]
             \centering
@@ -651,14 +653,14 @@
     \Large
     \begin{spacing}{1.5}
         در بخش \ref{sec:3.1}، ما روشی برای متعامد کردن مجموعه ای از بردارها با استفاده از فرآیند گرام اشمیت را مشاهده کردیم.
-        برای سه بعدی، استراتژی دیگری برای متعامد کردن مجموعه ای از بردارها $\textbf{v}_{0},\textbf{v}_{1},\textbf{v}_{2}$ وجود دارد که متعارف هستند،
+        برای سه بعدی، استراتژی دیگری برای متعامد کردن مجموعه ای از بردارها $\{\textbf{v}_{0},\textbf{v}_{1},\textbf{v}_{2}\}$ وجود دارد که متعارف هستند،
         اما ممکن است به دلیل خطاهای انباشته شده در دقت عددی با استفاده از ضرب خارجی، غیرمتعارف شوند.
         برای شکل هندسی این فرآیند به شکل \ref{fig:4.Session.1.1.15} مراجعه کنید:
 
-        \begin{enumerate}
+        \begin{enumerate}[label=\textbf{\arabic*}.]
             \item {$\textbf{w}_{0}=\frac{\displaystyle\textbf{v}_{0}}{\displaystyle\norm{\textbf{v}_{0}}}$ قرار میدهیم}
             \item {$\textbf{w}_{2}=\frac{\displaystyle\textbf{w}_{0}\times\textbf{v}_{1}}{\displaystyle\norm{\textbf{w}_{0}\times\textbf{v}_{1}}}$ قرار میدهیم}
-            \item {با قرار دادن $\textbf{w}_{1}=\textbf{w}_{2}\times\textbf{w}_{0}$ توسط تمرین ******، $\norm{\textbf{w}_{2}\times\textbf{w}_{0}}=1$ زیرا $\textbf{w}_{2}\perp\textbf{w}_{0}$ و $\norm{\textbf{w}_{2}}=\norm{\textbf{w}_{0}}=1$،
+            \item {با قرار دادن $\textbf{w}_{1}=\textbf{w}_{2}\times\textbf{w}_{0}$ توسط تمرین \ref{question14}، $\norm{\textbf{w}_{2}\times\textbf{w}_{0}}=1$ زیرا $\textbf{w}_{2}\perp\textbf{w}_{0}$ و $\norm{\textbf{w}_{2}}=\norm{\textbf{w}_{0}}=1$،
             بنابراین در این مرحله آخر نیازی به نرمال سازی نداریم.}
         \end{enumerate}
 
@@ -685,7 +687,9 @@
     \end{spacing}
 }
 
+
 \section{\textbf{نقاط}}
+\label{sec:5}
 {
     \Large
     \begin{spacing}{1.5}
@@ -708,8 +712,8 @@
         یکی از مزایای استفاده از بردارها برای نشان دادن نقاط، به ویژه در کد، این است که می‌توانیم عملیات های بردار را انجام دهیم که برای نقاط معنی ندارد.
         به عنوان مثال، از نظر هندسی، مجموع دو نقطه باید به چه معنا باشد؟
         از سوی دیگر، برخی از عملیات را می توان به نقاط گسترش داد.
-        به عنوان مثال، ما فاصله ی دو نقطه $\textbf{q}-\textbf{p}$ را برداری از $\textbf{p}$ به $\textbf{q}$ تعریف می کنیم. همچنین، ما یک نقطه $\textbf{p}$ به اضافه بردار $\textbf{v}$ را نقطه ی $\textbf{q}$ تعریف میکنیم که با جابجایی p با بردار v به دست می آید.
-        به راحتی، از آنجایی که ما از بردارها برای نشان دادن نقاط نسبت به یک سیستم مختصات استفاده می‌کنیم، نیازی به کار اضافی برای عملیات نقطه‌ای که قبلاً در مورد آن بحث شد، نیست، زیرا چارچوب جبر برداری از قبل آنها را آماده می‌کند. شکل \ref{fig:4.Session.1.1.16} را ببینید.
+        به عنوان مثال، ما فاصله ی دو نقطه $\textbf{q}\textbf{-p}$ را برداری از $\textbf{p}$ به $\textbf{q}$ تعریف می کنیم. همچنین، ما یک نقطه $\textbf{p}$ به اضافه بردار $\textbf{v}$ را نقطه ی $\textbf{q}$ تعریف میکنیم که با جابجایی $\textbf{p}$ با بردار $\textbf{v}$ به دست می آید.
+        به راحتی، از آنجایی که ما از بردارها برای نشان دادن نقاط نسبت به یک سیستم مختصات استفاده می‌کنیم، نیازی به کار اضافی برای عملیات نقطه‌ای که قبلاً در مورد آن بحث شد، نیست، زیرا چارچوب جبر برداری از قبل آنها را آماده می‌کند. شکل \ref{fig:4.Session.1.1.17} را ببینید.
 
         \begin{figure}[H]
             \centering
@@ -792,11 +796,11 @@
         اما اگر مستقیماً از این انواع برای محاسبات استفاده کنیم، از \lr{SIMD} استفاده نخواهیم کرد.
         برای استفاده از \lr{SIMD} باید نمونه هایی از این نوع را به نوع \texttt{XMVECTOR} تبدیل کنیم.
         این کار با توابع بارگیری ریاضی \lr{DirectX} انجام می شود.
-        برعکس، \lr{DirectX} توابع ذخیره سازی را فراهم می کند که برای تبدیل داده ها از \texttt{XMVECTOR} به انواع \texttt{XMFLOATn} در بالا استفاده می شود.
+        متقابلا، \lr{DirectX} توابع ذخیره سازی را فراهم می کند که برای تبدیل داده ها از \texttt{XMVECTOR} به انواع \texttt{XMFLOATn} در بالا استفاده می شود.
 
         به طور خلاصه،
 
-        \begin{enumerate}
+        \begin{enumerate}[label=\textbf{\arabic*}.]
             \item {از \texttt{XMVECTOR} برای متغیرهای محلی یا سراسری استفاده کنید.}
             \item {از \texttt{XMFLOAT2}، \texttt{XMFLOAT3} و \texttt{XMFLOAT4} برای اعضای داده کلاس استفاده کنید.}
             \item {قبل از انجام محاسبات از توابع بارگذاری برای تبدیل از \texttt{XMFLOATn} به \texttt{XMVECTOR} استفاده کنید.}
@@ -830,14 +834,14 @@
     \Large
     \begin{spacing}{1.5}
         برای اهداف کارایی، مقادیر \texttt{XMVECTOR} را می توان به عنوان آرگومان به توابع در ثبات های \lr{SSE/SSE2} به جای روی پشته ارسال کرد.
-        تعداد آرگومان هایی که می توان از این طریق عبور داد به پلتفرم (به عنوان مثال ویندوز \lr{32} بیتی، ویندوز \lr{64} بیتی و ویندوز \lr{RT}) و کامپایلر بستگی دارد.
-        بنابراین، برای مستقل بودن از پلتفرم/کامپایلر، از انواع \texttt{FXMVECTOR}، \texttt{GXMVECTOR}، \texttt{HXMVECTOR} و \texttt{CXMVECTOR} برای عبور پارامترهای \texttt{XMVECTOR} استفاده می‌کنیم.
+        تعداد آرگومان هایی که می توان از این طریق ارسال کرد به پلتفرم (به عنوان مثال ویندوز \lr{32} بیتی، ویندوز \lr{64} بیتی و ویندوز \lr{RT}) و کامپایلر بستگی دارد.
+        بنابراین، برای مستقل بودن از پلتفرم/کامپایلر، از انواع \texttt{FXMVECTOR}، \texttt{GXMVECTOR}، \texttt{HXMVECTOR} و \texttt{CXMVECTOR} برای ارسال پارامترهای \texttt{XMVECTOR} استفاده می‌کنیم.
         اینها بر اساس پلتفرم و کامپایلر به نوع مناسبی تعریف می شوند.
         علاوه بر این، حاشیه نویسی کنوانسیون فراخوانی \texttt{XM\_CALLCONV} باید قبل از نام تابع مشخص شود تا از قرارداد فراخوانی مناسب استفاده شود،
         که باز هم به نسخه کامپایلر بستگی دارد.
 
-        قوانین عبور پارامترهای \texttt{XMVECTOR} به شرح زیر است:
-        \begin{enumerate}
+        قوانین ارسال پارامترهای \texttt{XMVECTOR} به شرح زیر است:
+        \begin{enumerate}[label=\textbf{\arabic*}.]
             \item {سه پارامتر اول \texttt{XMVECTOR} باید از نوع \texttt{FXMVECTOR} باشند.}
             \item {\texttt{XMVECTOR} چهارم باید از نوع \texttt{GXMVECTOR} باشد.}
             \item {پنجمین و ششمین پارامتر \texttt{XMVECTOR} باید از نوع \texttt{HXMVECTOR} باشد.}
@@ -858,7 +862,7 @@
         \textbf{\vspace{6pt}}
         \lr{\lstinputlisting[language=C++, caption={Parameter Passing}, firstline=104, lastline=110]{Codes/main.c}}
         \textbf{\vspace{6pt}}
-        این تابع 6 پارامتر \texttt{XMVECTOR} را می گیرد، اما با رعایت قوانین عبور پارامتر، از \texttt{FXMVECTOR} برای سه پارامتر اول، \texttt{GXMVECTOR} برای چهارمین و \texttt{HXMVECTOR} برای پنجم و ششم استفاده می کند.
+        این تابع 6 پارامتر \texttt{XMVECTOR} را می گیرد، اما با رعایت قوانین ارسال پارامتر، از \texttt{FXMVECTOR} برای سه پارامتر اول، \texttt{GXMVECTOR} برای چهارمین و \texttt{HXMVECTOR} برای پنجم و ششم استفاده می کند.
         شما می توانید پارامترهای غیر \texttt{XMVECTOR} را بین پارامترهای XMVECTOR داشته باشید.
         قوانین مشابهی اعمال می شود و پارامترهای \texttt{XMVECTOR} به گونه ای شمارش می شوند که گویی پارامترهای غیر \texttt{XMVECTOR} وجود ندارند.
         برای مثال، در تابع زیر، اولین سه پارامتر \texttt{XMVECTOR} از نوع \texttt{FXMVECTOR} as و چهارمین پارامتر \texttt{XMVECTOR} از نوع \texttt{GXMVECTOR} است.
@@ -874,7 +878,7 @@
 {
     \Large
     \begin{spacing}{1.5}
-        نمونه های ثابت \texttt{XMVECTOR} باید از نوع \texttt{XMVECTORF32} استفاده کنند. در اینجا چند نمونه از نمونه \lr{CascadedShadowMaps11 DirectX SDK} آورده شده است:
+        نمونه های ثابت \texttt{XMVECTOR} باید از نوع \texttt{XMVECTORF32} استفاده کنند. در اینجا چند مثال از نمونه \lr{CascadedShadowMaps11 DirectX SDK} آورده شده است:
         \textbf{\vspace{6pt}}
         \lr{\lstinputlisting[language=C++, firstline=124, lastline=137]{Codes/main.c}}
         \textbf{\vspace{6pt}}
@@ -955,8 +959,8 @@
         \textbf{\vspace{-20pt}}
         \begin{point}{pnt:7}
             \Large
-            توجه کنید که این توابع حتی برای عملیاتی که از نظر ریاضی یک اسکالر را برمی‌گردانند، \texttt{XMVECTOR} برمی‌گردانند (مثلاً حاصل ضرب نقطه‌ای $k=\textbf{v}_{1}\cdot\textbf{v}_{2}$).
-            نتیجه اسکالر در هر جزء از \texttt{XMVECTOR} تکرار می شود. به عنوان مثال، برای حاصل ضرب نقطه، بردار برگشتی ($\textbf{v}_{1}\cdot\textbf{v}_{2},\textbf{v}_{1}\cdot\textbf{v}_{2},\textbf{v}_{1}\cdot\textbf{v}_{2},\textbf{v}_{1}\cdot\textbf{v}_{2}$) خواهد بود.
+            توجه کنید که این توابع حتی برای عملیاتی که از نظر ریاضی یک اسکالر را برمی‌گردانند، \texttt{XMVECTOR} برمی‌گردانند (مثلاً ضرب داخلی $k=\textbf{v}_{1}\cdot\textbf{v}_{2}$).
+            نتیجه اسکالر در هر جزء از \texttt{XMVECTOR} تکرار می شود. به عنوان مثال، برای ضرب داخلی، بردار برگشتی ($\textbf{v}_{1}\cdot\textbf{v}_{2},\textbf{v}_{1}\cdot\textbf{v}_{2},\textbf{v}_{1}\cdot\textbf{v}_{2},\textbf{v}_{1}\cdot\textbf{v}_{2}$) خواهد بود.
             یکی از دلایل این امر به حداقل رساندن اختلاط عملیات بردار اسکالر و \lr{SIMD} است.
             کارآمدتر است که همه چیز \lr{SIMD} را تا زمانی که محاسبات خود را تمام کنید حفظ کنید.
         \end{point}
@@ -992,7 +996,7 @@
         در مورد کار با بردارها در کامپیوتر باید به موارد زیر توجه داشته باشیم.
         هنگام مقایسه اعداد ممیز شناور، به دلیل عدم دقت ممیز شناور باید مراقب بود.
         دو عدد ممیز شناور که انتظار داریم برابر باشند ممکن است کمی متفاوت باشند.
-        برای مثال، از نظر ریاضی، انتظار داریم که یک بردار نرمال شده دارای طول 1 باشد، اما در یک برنامه کامپیوتری، طول آن تقریباً $1$ خواهد بود.
+        برای مثال، از نظر ریاضی، انتظار داریم که یک بردار نرمال شده دارای طول $1$ باشد، اما در یک برنامه کامپیوتری، طول آن تقریباً $1$ خواهد بود.
         علاوه بر این، از نظر ریاضی، $1^p=1$ برای هر عدد واقعی $p$، اما زمانی که ما فقط یک تقریب عددی برای $1$ داشته باشید، می بینیم که تقریب افزایش یافته به توان $p$ ام باعث افزایش خطا می شود.
         بنابراین، خطای عددی نیز جمع می شود. برنامه کوتاه زیر این ایده ها را نشان می دهد:
         \textbf{\vspace{6pt}}
@@ -1006,15 +1010,15 @@
             \label{fig:4.Session.1.1.20}
         \end{figure}
 
-        برای جبران عدم دقت نقطه فلور، آزمایش می کنیم که آیا دو عدد نقطه فلور تقریباً برابر هستند یا خیر
+        برای جبران عدم دقت ممیز شناور، آزمایش می کنیم که آیا دو عدد ممیز شناور تقریباً برابر هستند یا خیر
         ما این کار را با تعریف یک ثابت اپسیلون انجام می دهیم، که مقدار بسیار کوچکی است که ما به عنوان بافر استفاده می کنیم.
         می گوییم دو مقدار تقریباً برابر هستند اگر فاصله آنها از اپسیلون کمتر باشد.
-        به عبارت دیگر، اپسیلون مقداری تحمل برای \lr{fl} به ما می دهد.
-        عملکرد زیر نشان می دهد که چگونه می توان از اپسیلون برای آزمایش مساوی بودن دو مقدار نقطه فلور استفاده کرد:
+        به عبارت دیگر، اپسیلون مقداری tolerance برای عدم دقت ممیز شناور به ما می دهد.
+        عملکرد زیر نشان می دهد که چگونه می توان از اپسیلون برای آزمایش مساوی بودن دو مقدار ممیز شناور استفاده کرد:
         \textbf{\vspace{6pt}}
         \lr{\lstinputlisting[language=C++,  firstline=432, lastline=436]{Codes/main.c}}
         \textbf{\vspace{6pt}}
-        کتابخانه ریاضی \lr{DirectX} تابع \lr{XMVector3NearEqual} را هنگام آزمایش برابری بردارها با پارامتر اپسیلون تحمل مجاز ارائه می دهد:
+        کتابخانه ریاضی \lr{DirectX} تابع \lr{XMVector3NearEqual} را هنگام آزمایش برابری بردارها با پارامتر اپسیلون tolerance مجاز ارائه می دهد:
         \textbf{\vspace{6pt}}
         \lr{\lstinputlisting[language=C++,  firstline=440, lastline=447]{Codes/main.c}}
     \end{spacing}
@@ -1025,10 +1029,10 @@
 {
     \Large
     \begin{spacing}{1.5}
-        \begin{enumerate}
-            \item {بردارها برای مدل‌سازی کمیت‌های فیزیکی استفاده می‌شوند که هم قدر و هم جهت دارند.
-            از نظر هندسی، بردار را با یک پاره خط جهت نشان می دهیم.
-            زمانی که یک بردار به موازات خودش ترجمه شود به طوری که دنباله آن با مبدأ سیستم مختصات منطبق باشد در موقعیت استاندارد قرار دارد.
+        \begin{enumerate}[label=\textbf{\arabic*}.]
+            \item {بردارها برای مدل‌سازی کمیت‌های فیزیکی استفاده می‌شوند که هم اندازه و هم جهت دارند.
+            از نظر هندسی، بردار را با یک پاره خط جهتدار نشان می دهیم.
+            زمانی که یک بردار به موازات خودش انتقال یابد به طوری که دم آن با مبدأ سیستم مختصات منطبق باشد در موقعیت استاندارد قرار دارد.
             یک بردار در موقعیت استاندارد را می توان با تعیین مختصات سر آن نسبت به یک سیستم مختصات به صورت عددی توصیف کرد.}
             \\
             \item {اگر $\textbf{u}=(u_{x},u_{y},u_{z})$ و  $\textbf{v}=(v_{x},v_{y},v_{z})$ باشد، عملیات های برداری زیر را داریم:}
@@ -1041,7 +1045,7 @@
                 \item {نرمال کردن: $\hat{\textbf{u}}=\frac{\displaystyle\textbf{u}}{\displaystyle\norm{\textbf{u}}}=\left(\frac{\displaystyle x}{\displaystyle\norm{\textbf{u}}},
                 \frac{\displaystyle y}{\displaystyle\norm{\textbf{u}}}, \frac{\displaystyle z}{\displaystyle\norm{\textbf{u}}}\right)$}
                 \item {ضرب داخلی: $\textbf{u}\cdot\textbf{v}=u_{x}v_{x}+u_{y}v_{y}+u_{z}v_{z}$}
-                \item {ضرب خارجی: $\textbf{w}=\textbf{u}\times\textbf{v}=(u_{y}v_{z}-u_{z}v_{y}, u_{z}v_{x}-u_{x}v_{z}, u_{x}v_{y}-u_{y}v_{z})$}
+                \item {ضرب خارجی: $\textbf{u}\times\textbf{v}=(u_{y}v_{z}-u_{z}v_{y}, u_{z}v_{x}-u_{x}v_{z}, u_{x}v_{y}-u_{y}v_{z})$}
                 \textbf{\vspace{20pt}}
             \end{itemize}
 
@@ -1051,26 +1055,27 @@
             بردارهای ثابتی که به نحو اولیه نیاز دارند باید از نوع \texttt{XMVECTORF32} استفاده کنند.}
             \\
             \item {برای اهداف کارایی، مقادیر \texttt{XMVECTOR} را می توان به عنوان آرگومان به توابع در ثبات های \lr{SSE/SSE2} به جای روی پشته ارسال کرد.
-            برای انجام این کار به صورت مستقل از پلتفرم، از انواع \texttt{FXMVECTOR}، \texttt{GXMVECTOR}، \texttt{HXMVECTOR} و \texttt{CXMVECTOR} برای عبور پارامترهای \texttt{XMVECTOR} استفاده می کنیم.
-            سپس قانون عبور پارامترهای \texttt{XMVECTOR} این است که سه پارامتر اول \texttt{XMVECTOR} باید از نوع \texttt{FXMVECTOR} باشند. \texttt{XMVECTOR} چهارم باید از نوع \texttt{GXMVECTOR} باشد.
+            برای انجام این کار به صورت مستقل از پلتفرم، از انواع \texttt{FXMVECTOR}، \texttt{GXMVECTOR}، \texttt{HXMVECTOR} و \texttt{CXMVECTOR} برای ارسال پارامترهای \texttt{XMVECTOR} استفاده می کنیم.
+            سپس قانون ارسال پارامترهای \texttt{XMVECTOR} این است که سه پارامتر اول \texttt{XMVECTOR} باید از نوع \texttt{FXMVECTOR} باشند. \texttt{XMVECTOR} چهارم باید از نوع \texttt{GXMVECTOR} باشد.
             پنجمین و ششمین پارامتر \texttt{XMVECTOR} باید از نوع \texttt{HXMVECTOR} باشد. و هر پارامتر اضافی \texttt{XMVECTOR} باید از نوع \texttt{CXMVECTOR} باشد.}
             \\
-            \item {کلاس \texttt{XMVECTOR} عملگرهای حسابی را برای انجام جمع برداری، تفریق و ضرب اسکالر بارگذاری می کند.
-            علاوه بر این، کتابخانه ریاضی \lr{DirectX} توابع مفید زیر را برای محاسبه طول یک بردار، مجذور طول یک بردار، محاسبه حاصل ضرب نقطه‌ای دو بردار، محاسبه حاصل ضرب متقاطع دو بردار و نرمال کردن یک بردار ارائه می‌کند:
+            \item {کلاس \texttt{XMVECTOR} عملگرهای حسابی را برای انجام جمع برداری، تفریق و ضرب اسکالر سربارگذاری می کند.
+            علاوه بر این، کتابخانه ریاضی \lr{DirectX} توابع مفید زیر را برای محاسبه طول یک بردار، مجذور طول یک بردار، محاسبه ضرب داخلی دو بردار، محاسبه ضرب خارجی دو بردار و نرمال کردن یک بردار ارائه می‌کند:
             \textbf{\vspace{6pt}}
             \lr{\lstinputlisting[language=C++, firstline=451, lastline=455]{Codes/main.c}}
             }
         \end{enumerate}
     \end{spacing}
 }
+%-----------------------------------------------------------------------------------------------------------%
+\newpage
 
-\textbf{\vspace{20pt}}
 \section{\textbf{تمارین}}
 {
     \Large
     \begin{spacing}{1.5}
-        \begin{enumerate}
-            \item {فرض کنید $\textbf{u}=(1,2)$ و $\textbf{v}=(3,-4)$. محاسبات زیر را انجام دهید و محاسبات زیر را انجام دهید و بردارها را نسبت به یک سیستم مختصات دو بعدی رسم کنید.}
+        \begin{enumerate}[label=\textbf{\arabic*}.]
+            \item {فرض کنید $\textbf{u}=(1,2)$ و $\textbf{v}=(3,-4)$. محاسبات زیر را انجام دهید و بردارها را نسبت به یک سیستم مختصات دو بعدی رسم کنید.}
             \begin{flushleft}
                 \lr{
                         {(a) $\textbf{u}+\textbf{v}$} \\
@@ -1078,28 +1083,25 @@
                     {(c) $2\textbf{u}+\frac{\displaystyle 1}{\displaystyle 2}\textbf{v}$} \\
                     {(d) $-2\textbf{u}+\textbf{v}$}
                 }
-            \end{flushleft}
-            \\
+            \end{flushleft} \textbf{\vspace{-12pt}}
+
             \item {فرض کنید $\textbf{u}=(-1,3,2)$ و $\textbf{v}=(3,-4,1)$. محاسبات زیر را انجام دهید.}
             \begin{flushleft}
-                \lr{
-                        {(a) $\textbf{u}+\textbf{v}$} \\
-                    {(b) $\textbf{u}-\textbf{v}$} \\
-                    {(c) $3\textbf{u}+2\textbf{v}$} \\
-                    {(d) $-2\textbf{u}+\textbf{v}$}
-                }
-            \end{flushleft}
-            \\
+                \lr{{(a) $\textbf{u}+\textbf{v}$} \\
+                {(b) $\textbf{u}-\textbf{v}$} \\
+                {(c) $3\textbf{u}+2\textbf{v}$} \\
+                {(d) $-2\textbf{u}+\textbf{v}$}}
+            \end{flushleft} \textbf{\vspace{-12pt}}
+
             \item {این تمرین نشان می‌دهد که جبر برداری در بسیاری از ویژگی‌های خوب اعداد حقیقی مشترک است (این فهرست جامعی نیست).
                 $\textbf{u}=(u_{x},u_{y},u_{z})$، $\textbf{v}=(v_{x},v_{y},v_{z})$ و $\textbf{w}=(w_{x},w_{y},w_{z})$ را فرض کنید. همچنین فرض کنید که $c$ و $k$ اسکالر هستند. خواص برداری زیر را ثابت کنید.}
             \begin{flushleft}
-                \lr{
-                        {(a) $\textbf{u}+\textbf{v}=\textbf{v}+\textbf{u}$} \\
-                    {(b) $\textbf{u}+(\textbf{v}+\textbf{w})=(\textbf{u}+\textbf{v})+\textbf{w}$} \\
-                    {(c) $(ck)\textbf{u}=c(k\textbf{u})$} \\
-                    {(d) $k(\textbf{u}+\textbf{v})=k\textbf{u}+k\textbf{v}$}
-                    {(e) $\textbf{u}(k+c)=k\textbf{u}+c\textbf{u}$}
-                }
+            (خاصیت جابجایی جمع)
+                \lr{(a) $\textbf{u}+\textbf{v}=\textbf{v}+\textbf{u}$} \\
+                (خاصیت شرکت پذیری جمع) \lr{(b) $\textbf{u}+(\textbf{v}+\textbf{w})=(\textbf{u}+\textbf{v})+\textbf{w}$} \\
+                (خاصیت شرکت پذیری ضرب اسکالر) \lr{(c) $(ck)\textbf{u}=c(k\textbf{u})$} \\
+                (خاصیت توزیع پذیری 1) \lr{(d) $k(\textbf{u}+\textbf{v})=k\textbf{u}+k\textbf{v}$} \\
+                (خاصیت توزیع پذیری 2) \lr{(e) $\textbf{u}(k+c)=k\textbf{u}+c\textbf{u}$}
             \end{flushleft}
             \begin{hint}{hnt:1}
                 \Large
@@ -1116,34 +1118,30 @@
                         &=c(k\textbf{u})
                     \end{split}
                 \end{equation*}
-            \end{hint}
-            \\
-            \item {معادله ی $2((1,2,3)-\textbf{x}=-(-2,0,4)=-2(1,2,3)$ را برای $x$ حل کنید.}
-            \\
-            \item {فرض کنید $\textbf{u}=(-1,3,2)$ و $\textbf{v}=(3,-4,1)$. و را نرمال کنید.}
-            \\
-            \item {فرض کنید $k$ یک اسکالر باشد و $\textbf{u}=(u_x,u_y,u_z)$. ثابت کنید $\norm{k}\textbf{u}=\abs{k}\norm{\textbf{u}}$. }
-            \\
+            \end{hint} \\
+
+            \item {معادله ی $2((1,2,3)-\textbf{x}-(-2,0,4)=-2(1,2,3)$ را برای $x$ حل کنید.}
+
+            \item {فرض کنید $\textbf{u}=(-1,3,2)$ و $\textbf{v}=(3,-4,1)$. $\textbf{u}$ و $\textbf{v}$ را نرمال کنید.}
+
+            \item {فرض کنید $k$ یک اسکالر باشد و $\textbf{u}=(u_x,u_y,u_z)$. ثابت کنید $\norm{k\textbf{u}}=\abs{k}\norm{\textbf{u}}$.}
+
             \item {زاویه بین \textbf{u} و \textbf{v} متعامد(قائم)، تند یا منفرجه(باز) است؟}
             \begin{flushleft}
-                \lr{
-                        {(a) $\textbf{u}=(1,1,1), \textbf{v}=(2,3,4)$} \\
+                \lr{{(a) $\textbf{u}=(1,1,1), \textbf{v}=(2,3,4)$} \\
                     {(b) $\textbf{u}=(1,1,0), \textbf{v}=(-2,2,0)$} \\
-                    {(c) $\textbf{u}=(-1,-1,-1), \textbf{v}=(3,1,0)$}
-                }
-            \end{flushleft}
-            \\
+                    {(c) $\textbf{u}=(-1,-1,-1), \textbf{v}=(3,1,0)$}}
+            \end{flushleft} \textbf{\vspace{-12pt}}
+
             \item {فرض کنید $\textbf{u}=(-1,3,2)$ و $\textbf{v}=(3,-4,1)$. زاویه $\theta$ بین $\textbf{u}$ و $\textbf{v}$ را پیدا کنید.}
-            \\
-            \item {فرض کنید $\textbf{u}=(u_{x},u_{y},u_{z})$، $\textbf{v}=(v_{x},v_{y},v_{z})$ و $\textbf{w}=(w_{x},w_{y},w_{z})$. همچنین c و k اسکالر باشند. ویژگی های ضرب داخلی زیر را ثابت کنید.}
+
+            \item {فرض کنید $\textbf{u}=(u_{x},u_{y},u_{z})$، $\textbf{v}=(v_{x},v_{y},v_{z})$ و $\textbf{w}=(w_{x},w_{y},w_{z})$. همچنین $c$ و $k$ اسکالر باشند. ویژگی های ضرب داخلی زیر را ثابت کنید.}
             \begin{flushleft}
-                \lr{
-                        {(a) $\textbf{u}\cdot\textbf{v}=\textbf{v}\cdot\textbf{u}$} \\
-                    {(b) $\textbf{u}\cdot(\textbf{v}+\textbf{w})=\textbf{u}\cdot\textbf{v}+\textbf{u}\cdot\textbf{w}$} \\
-                    {(c) $k(\textbf{u}\cdot\textbf{v})=(k\textbf{u})\cdot\textbf{v}=\textbf{u}\cdot(k\textbf{v})$}
-                    {(d) $\textbf{v}\cdot\textbf{v}=\norm{\textbf{v}}^2$}
-                    {(e) $\textbf{0}\cdot\textbf{v}=0$}
-                }
+                \lr{{(a) $\textbf{u}\cdot\textbf{v}=\textbf{v}\cdot\textbf{u}$} \\
+                {(b) $\textbf{u}\cdot(\textbf{v}+\textbf{w})=\textbf{u}\cdot\textbf{v}+\textbf{u}\cdot\textbf{w}$} \\
+                {(c) $k(\textbf{u}\cdot\textbf{v})=(k\textbf{u})\cdot\textbf{v}=\textbf{u}\cdot(k\textbf{v})$} \\
+                {(d) $\textbf{v}\cdot\textbf{v}=\norm{\textbf{v}}^2$} \\
+                {(e) $\textbf{0}\cdot\textbf{v}=0$}}
             \end{flushleft}
             \begin{hint}{hnt:2}
                 \Large
@@ -1151,15 +1149,15 @@
                 \begin{equation*}
                     \centering
                     \begin{split}
-                        \textbf{v}\cdot\textbf{v}&=v_{x}v_{x}+v_{y}v_{y}+v_{z}v_{z}) \\
+                        \textbf{v}\cdot\textbf{v}&=v_{x}v_{x}+v_{y}v_{y}+v_{z}v_{z} \\
                         &=v_{x}^2+v_{y}^2+v_{z}^2 \\
-                        &=\left( \sqrt{\displaystyle v_{x}^2+v_{y}^2+v_{z}^2} \right) \\
+                        &=\left( \sqrt{\displaystyle v_{x}^2+v_{y}^2+v_{z}^2} \right)^2 \\
                         &=\norm{\textbf{v}}^2
                     \end{split}
                 \end{equation*}
             \end{hint}
             \\
-            \item {از قانون کسینوس ($c^2=a^2+b^2-2ab\cos\theta$) برای نشان دادن معادله ی زیر استفاده کنید که در آن a، b و c طول اضلاع یک مثلث و  زاویه بین ضلع های a و b است.}
+            \item \label{question10} {از قانون کسینوس ($c^2=a^2+b^2-2ab\cos\theta$) برای نشان دادن معادله ی زیر استفاده کنید که در آن $a$، $b$ و $c$ طول اضلاع یک مثلث و $\theta$ زاویه بین ضلع های $a$ و $b$ است.}
             \begin{center}
                 $u_{x}v_{x}+u_{y}v_{y}+u_{z}v_{z}=\norm{\textbf{u}}\norm{\textbf{v}}\cos\theta$
             \end{center}
@@ -1170,19 +1168,19 @@
             \\
             \item {فرض کنید $\textbf{n}=(-1,2)$. بردار $\textbf{g}=(0,-9.8)$ را به مجموع دو بردار متعامد، یکی موازی با $\textbf{n}$ و دیگری متعامد با $\textbf{n}$، تجزیه کنید. همچنین بردارها را نسبت به یک سیستم مختصات دوبعدی رسم کنید.}
             \\
-            \item {فرض کنید $\textbf{u}=(-2,1,4)$ و $\textbf{v}=(3,-4,1)$. $\textbf{w}=\textbf{u}\times\textbf{v}$ را پیدا کنید و $\textbf{w}\cdot\textbf{u}=0$ و $\textbf{w}\cdot\textbf{v}=0$ را نشان دهید.}
+            \item {فرض کنید $\textbf{u}=(-2,1,4)$ و $\textbf{v}=(3,-4,1)$، $\textbf{w}=\textbf{u}\times\textbf{v}$ را پیدا کنید و $\textbf{w}\cdot\textbf{u}=0$ و $\textbf{w}\cdot\textbf{v}=0$ را نشان دهید.}
             \\
-            \item {فرض کنید نقاط زیر یک مثلث را نسبت به برخی از سیستم مختصات تعریف میکنند:
-                $\textbf{A}=(0,0,0)$، $\textbf{B}=(0,1,3)$، و $\textbf{C}=(5,1,0)$. بردار متعامد این مثلث را پیدا کنید.}
+            \item {فرض کنید نقاط زیر یک مثلث را نسبت به برخی از سیستم مختصات تعریف میکنند:\\
+                $\textbf{A}=(0,0,0)$، $\textbf{B}=(0,1,3)$ و $\textbf{C}=(5,1,0)$. بردار متعامد این مثلث را پیدا کنید.}
             \begin{hint}{hnt:4}
                 \Large
                 دو بردار در دو یال مثلث پیدا کنید و از ضرب خارجی استفاده کنید.
             \end{hint}
             \\
-            \item {ثابت کنید $\norm{\textbf{u}\times\textbf{v}}=\norm{\textbf{u}}\norm{\textbf{v}}\sin\theta$}
+            \item \label{question14} {ثابت کنید $\norm{\textbf{u}\times\textbf{v}}=\norm{\textbf{u}}\norm{\textbf{v}}\sin\theta$.}
             \begin{hint}{hnt:5}
                 \Large
-                با $\norm{\textbf{u}}\norm{\textbf{v}}\abs{\sin\theta}$ شروع کنید و از اتحاد مثلثاتی $\cos^2\theta+\sin^2\theta=1\Longrightarrow\sin\theta=\sqrt{\displaystyle 1-\cos^2\theta}$ استفاده کنید. سپس معادله ی \ref{eqtn:4} را اعمال کنید.
+                با $\norm{\textbf{u}}\norm{\textbf{v}}\sin\theta$ شروع کنید و از اتحاد مثلثاتی $\cos^2\theta+\sin^2\theta=1\Longrightarrow\sin\theta=\sqrt{\displaystyle 1-\cos^2\theta}$ استفاده کنید. سپس معادله ی \ref{eqtn:4} را اعمال کنید.
             \end{hint}
             \\
             \item {ثابت کنید \norm{\textbf{u}\times\textbf{v}} مساحت متوازی الاضلاع که توسط $\textbf{u}$ و $\textbf{v}$ پوشانده شده است را نشان می دهد. شکل \ref{fig:4.Session.1.1.21} را ببینید.}
@@ -1200,7 +1198,7 @@
                 ترکیبی از بردارهای ساده $\textbf{i}=(1,0,0)$، $\textbf{j}=(0,1,0)$ و $\textbf{k}=(0,0,1)$ را در نظر بگیرید.
             \end{hint}
             \\
-            \item {ثابت کنید که ضرب خارجی دو بردار موازی غیر صفر، بردار صفر است. یعنی $\textbf{u}\timesk\textbf{u}=0$.}
+            \item {ثابت کنید که ضرب خارجی دو بردار موازی غیر صفر، بردار صفر است. یعنی $\textbf{u}\times k\textbf{u}=0$.}
             \begin{hint}{hnt:7}
                 \Large
                 فقط از تعریف ضرب خارجی استفاده کنید.
@@ -1212,7 +1210,7 @@
             تخمین بزنید که هر تابع \texttt{XMVector*} چه می کند. سپس هر تابع را در مستندات \lr{DirectXMath} جستجو کنید.}
             \textbf{\vspace{6pt}}
             \lr{\lstinputlisting[language=C++, caption={GITHUB/src/Chapter 1 Vector Algebra/XMVECTOR/VectorOps.cpp}, firstline=459, lastline=506]{Codes/main.c}}
-            \textbf{\vspace{-30pt}}
+            \textbf{\vspace{-40pt}}
             \begin{figure}[H]
                 \centering
                 \setlength{\belowcaptionskip}{-10pt}
