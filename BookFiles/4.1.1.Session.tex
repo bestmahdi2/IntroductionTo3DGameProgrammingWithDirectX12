@@ -75,6 +75,9 @@
 %-----------------------------------------------------------------------------------------------------------%
 \newpage
 
+\setcounter{figure}{0}
+\renewcommand{\thefigure}{\arabic{figure}.\arabic{chapter}}
+
 \section{\textbf{بردار ها}}
 {
     \Large
@@ -901,7 +904,7 @@
 }
 
 \textbf{\vspace{-65pt}}
-\subsection{\textbf{متفرغه}}
+\subsection{\textbf{متفرقه}}
 {
     \Large
     \begin{spacing}{1.5}
@@ -930,7 +933,7 @@
         \textbf{\vspace{6pt}}
         برنامه زیر بیشتر این توابع را نشان می دهد:
         \textbf{\vspace{6pt}}
-        \lr{\lstinputlisting[language=C++, caption={GITHUB/src/Chapter 1 Vector Algebra/XMVECTOR/InitFunctions.cpp}, firstline=224, lastline=262]{Codes/main.c}}
+        \lr{\lstinputlisting[language=C++, caption={d3d12book/Chapter 1 Vector Algebra/XMVECTOR/InitFunctions.cpp}, firstline=224, lastline=262]{Codes/main.c}}
         \textbf{\vspace{-30pt}}
         \begin{figure}[H]
             \centering
@@ -963,7 +966,7 @@
         \textbf{\vspace{6pt}}
         برنامه ی زیر نحوه استفاده از اکثر این توابع و برخی از اپراتورهای بارگذاری شده را نشان می دهد:
         \textbf{\vspace{6pt}}
-        \lr{\lstinputlisting[language=C++, caption={GITHUB/src/Chapter 1 Vector Algebra/XMVECTOR/xmvec3.cpp}, firstline=308, lastline=384]{Codes/main.c}}
+        \lr{\lstinputlisting[language=C++, caption={d3d12book/Chapter 1 Vector Algebra/XMVECTOR/xmvec3.cpp}, firstline=308, lastline=384]{Codes/main.c}}
         \textbf{\vspace{-30pt}}
         \begin{figure}[H]
             \centering
@@ -996,7 +999,7 @@
         علاوه بر این، از نظر ریاضی، $1^p=1$ برای هر عدد واقعی $p$، اما زمانی که ما فقط یک تقریب عددی برای $1$ داشته باشید، می بینیم که تقریب افزایش یافته به توان $p$ ام باعث افزایش خطا می شود.
         بنابراین، خطای عددی نیز جمع می شود. برنامه کوتاه زیر این ایده ها را نشان می دهد:
         \textbf{\vspace{6pt}}
-        \lr{\lstinputlisting[language=C++, caption={GITHUB/src/Chapter 1 Vector Algebra/XMVECTOR/tol.cpp}, firstline=396, lastline=428]{Codes/main.c}}
+        \lr{\lstinputlisting[language=C++, caption={d3d12book/Chapter 1 Vector Algebra/XMVECTOR/tol.cpp}, firstline=396, lastline=428]{Codes/main.c}}
         \textbf{\vspace{-30pt}}
         \begin{figure}[H]
             \centering
@@ -1019,8 +1022,9 @@
         \lr{\lstinputlisting[language=C++,  firstline=440, lastline=447]{Codes/main.c}}
     \end{spacing}
 }
+%-----------------------------------------------------------------------------------------------------------%
+\newpage
 
-\textbf{\vspace{-65pt}}
 \section{\textbf{خلاصه}}
 {
     \Large
@@ -1205,7 +1209,7 @@
             \item {برنامه و خروجی زیر را در نظر بگیرید.
             تخمین بزنید که هر تابع \texttt{XMVector*} چه می کند. سپس هر تابع را در مستندات \lr{DirectXMath} جستجو کنید.}
             \textbf{\vspace{6pt}}
-            \lr{\lstinputlisting[language=C++, caption={GITHUB/src/Chapter 1 Vector Algebra/XMVECTOR/VectorOps.cpp}, firstline=459, lastline=506]{Codes/main.c}}
+            \lr{\lstinputlisting[language=C++, caption={d3d12book/Chapter 1 Vector Algebra/XMVECTOR/VectorOps.cpp}, firstline=459, lastline=506]{Codes/main.c}}
             \textbf{\vspace{-40pt}}
             \begin{figure}[H]
                 \centering

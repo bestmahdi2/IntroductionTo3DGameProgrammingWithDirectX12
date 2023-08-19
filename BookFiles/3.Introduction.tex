@@ -52,12 +52,14 @@
 
 {
     \Large
-    این کتاب با در نظر گرفتن سه مخاطب زیر طراحی شده است:
-    \begin{enumerate}
-        \item {برنامه‌نویسان سطح متوسط \lr{C++} که می‌خواهند مقدمه‌ای بر برنامه‌نویسی سه بعدی با استفاده از آخرین نسخه \lr{Direct3D} داشته باشند}
-        \item {برنامه‌نویسان سه بعدی با تجربه که با \lr{API}‌ای غیر از \lr{DirectX} (به عنوان مثال، \lr{OpenGL}) کار کرده‌اند و می‌خواهند مقدمه‌ای برای \lr{Direct3D 12} داشته باشند}
-        \item {برنامه‌نویسان با تجربه \lr{Direct3D} که مایل به یادگیری آخرین نسخه \lr{Direct3D} هستند}
-    \end{enumerate}
+    \begin{spacing}{1.5}
+        این کتاب با در نظر گرفتن سه مخاطب زیر طراحی شده است:
+        \begin{enumerate}[label=\textbf{\arabic*}.]
+            \item {برنامه‌نویسان سطح متوسط \lr{C++} که می‌خواهند مقدمه‌ای بر برنامه‌نویسی سه بعدی با استفاده از آخرین نسخه \lr{Direct3D} داشته باشند}
+            \item {برنامه‌نویسان سه بعدی با تجربه که با \lr{API}‌ای غیر از \lr{DirectX} (به عنوان مثال، \lr{OpenGL}) کار کرده‌اند و می‌خواهند مقدمه‌ای برای \lr{Direct3D 12} داشته باشند}
+            \item {برنامه‌نویسان با تجربه \lr{Direct3D} که مایل به یادگیری آخرین نسخه \lr{Direct3D} هستند}
+        \end{enumerate}
+    \end{spacing}
 }
 \textbf{\vspace{10pt}}
 
@@ -70,13 +72,15 @@
 
 {
     \Large
-    لازم به ذکر است که این مقدمه‌ای بر \lr{Direct3D 12}، برنامه‌نویسی \lr{shader} و برنامه‌نویسی بازی‌های سه بعدی است و نمی‌توان از آن برای یادگیری برنامه‌نویسی کامپیوتر به صورت کلی استفاده کرد. بنابراین خواننده باید شرایط زیر را رعایت کند:
-    \begin{enumerate}
-        \item {\textbf{ریاضیات دبیرستان: } مثلاً جبر، مثلثات و توابع ریاضی}
-        \item {\textbf{تجربه‌ی کار با \lr{Visual Studio}:} چگونگی ایجاد پروژه‌ها، اضافه کردن فایل‌ها و \lr{link} کردن کتابخانه‌های خارجی}
-        \item {\textbf{\lr{C++} متوسط و مهارت‌های ساختار داده:} به عنوان مثال: تجربه‌ی کار با اشاره گر‌ها، آرایه‌ها، سربار اپراتور‌ها، لیست‌های پیوندی، وراثت و چند ریختی}
-        \item {\textbf{آشنایی با برنامه‌نویسی ویندوز با \lr{Win32 API}} (مفید است اما لازم نیست)}
-    \end{enumerate}
+    \begin{spacing}{1.5}
+        لازم به ذکر است که این مقدمه‌ای بر \lr{Direct3D 12}، برنامه‌نویسی \lr{shader} و برنامه‌نویسی بازی‌های سه بعدی است و نمی‌توان از آن برای یادگیری برنامه‌نویسی کامپیوتر به صورت کلی استفاده کرد. بنابراین خواننده باید شرایط زیر را رعایت کند:
+        \begin{enumerate}[label=\textbf{\arabic*}.]
+            \item {\textbf{ریاضیات دبیرستان: } مثلاً جبر، مثلثات و توابع ریاضی}
+            \item {\textbf{تجربه‌ی کار با \lr{Visual Studio}:} چگونگی ایجاد پروژه‌ها، اضافه کردن فایل‌ها و \lr{link} کردن کتابخانه‌های خارجی}
+            \item {\textbf{\lr{C++} متوسط و مهارت‌های ساختار داده:} به عنوان مثال: تجربه‌ی کار با اشاره گر‌ها، آرایه‌ها، سربار اپراتور‌ها، لیست‌های پیوندی، وراثت و چند ریختی}
+            \item {\textbf{آشنایی با برنامه‌نویسی ویندوز با \lr{Win32 API}} (مفید است اما لازم نیست)}
+        \end{enumerate}
+    \end{spacing}
 }
 \textbf{\vspace{10pt}}
 
@@ -89,31 +93,33 @@
 
 {
     \Large
-    برای برنامه‌نویسی برنامه‌های \lr{Direct3D 12} به حداقل موارد زیر نیاز است:
-    \begin{enumerate}
-        \item {\lr{Windows 10}}
-        \item {\lr{Visual Studio 2015} یا جدیدتر}
-        \item {کارت گرافیکی که از \lr{Direct3D 12} پشتیبانی کند
-            \begin{point}{thm:pythagoras}
-                \Large
-                برای بررسی پشتیبانی کارت گرافیک از \lr{DirectX 12} می‌توانید مدل کارت گرافیک خود را در اینترنت جست و جو کنید یا از برنامه‌ی \lr{GPU-Z} استفاده کنید. عکس زیر نحوه‌ی استفاده از برنامه را نشان می‌دهد.
+    \begin{spacing}{1.5}
+        برای برنامه‌نویسی برنامه‌های \lr{Direct3D 12} به حداقل موارد زیر نیاز است:
+        \begin{enumerate}[label=\textbf{\arabic*}.]
+            \item {\lr{Windows 10}}
+            \item {\lr{Visual Studio 2015} یا جدیدتر}
+            \item {کارت گرافیکی که از \lr{Direct3D 12} پشتیبانی کند
+                \begin{point}{pnt:0.1}
+                    \Large
+                    برای بررسی پشتیبانی کارت گرافیک از \lr{DirectX 12} می‌توانید مدل کارت گرافیک خود را در اینترنت جست و جو کنید یا از برنامه‌ی \lr{GPU-Z} استفاده کنید. عکس زیر نحوه‌ی استفاده از برنامه را نشان می‌دهد.
 
-                \begin{figure}[H]
-                    \centering
-                    \setlength{\belowcaptionskip}{-10pt}
-                    \includegraphics[scale=0.50]{Images/3/3.Intro.0.1}
-                    \caption*{\Large محیط برنامه ی \lr{GPU-Z} \textbf{\vspace{12pt}}}
-                \end{figure}
-            \end{point}
-        }
-    \end{enumerate}
+                    \begin{figure}[H]
+                        \centering
+                        \setlength{\belowcaptionskip}{-10pt}
+                        \includegraphics[scale=0.50]{Images/3/3.Intro.0.1}
+                        \caption*{\Large محیط برنامه ی \lr{GPU-Z} \textbf{\vspace{12pt}}}
+                    \end{figure}
+                \end{point}
+            }
+        \end{enumerate}
+    \end{spacing}
 }
 
-\begin{point}{thm:pythagoras}
+\begin{point}{pnt:0.2}
     \Large
     تمامی کد های کتاب با کانفیگ های زیر تست شده اند:
     \lr{
-        \begin{enumerate}
+        \begin{enumerate}[label=\textbf{\arabic*}.]
             \item {Windows 11 Pro 22H2 Build 22621.1992}
             \item {NVIDIA GeForce GTX 960m}
             \item {Visual Studio 2022 (64-bit) Version 17.1.2}
@@ -169,7 +175,7 @@
             \label{fig:3.Intro.1.2}
         \end{figure}
 
-        \begin{point}{thm:pythagoras}
+        \begin{point}{pnt:0.3}
             در این کتاب هر از گاهی برای جزئیات بیشتر شما را به مستندات راهنمایی می‌کنیم.
         \end{point}
         همچنین برنامه های نمونه \lr{Direct3D 12} که به صورت آنلاین در دسترس هستند را میتوانید در لینک زیر مشاهده کنید:
@@ -259,14 +265,13 @@
         اکنون، در پوشه کد منبع، یک پوشه جدید ایجاد کنید که می‌خواهید آزمایشی‌های خود را در آن ذخیره کنید.
         برای مثال، \grayBox{\lr{C:\symbol{92}d3d12book\symbol{92}MyDemos}}. این پوشه جایی است که می‌توانید پروژه‌های جدید را بر اساس چارچوب نمونه‌ی کتاب ایجاد کنید.
         این ساختار پوشه‌بندی ضروری نیست، اما ساختاری است که آزمایشی‌های کتاب از آن پیروی می‌کنند. اگر با تنظیم مسیر‌های اضافی راحت هستید، می‌توانید پروژه‌های آزمایشی خود را در هر مکانی قرار دهید و \lr{Visual Studio} را تنظیم کنید که کد منبع را در دایرکتوری \grayBox{\lr{Common}} پیدا کند.
+
+        \begin{point}{pnt:0.4}
+            با آمدن \lr{Windows 8}، \lr{DirectX SDK} به عنوان بخشی از \lr{Windows SDK} گنجانده شد ، در صورتی که تا قبل از آن میتوانستید \lr{DirectX SDK} را به صورت جداگانه دانلود و نصب کنید ... .
+            \textbf{برای اطلاعات بیشتر:} \href{https://learn.microsoft.com/en-us/windows/win32/directx-sdk--august-2009-}{\lr{Where is the DirectX SDK?}}
+        \end{point}
     \end{spacing}
 }
-
-\begin{point}{thm:pythagoras}
-    \Large
-    با آمدن \lr{Windows 8}، \lr{DirectX SDK} به عنوان بخشی از \lr{Windows SDK} گنجانده شد ، در صورتی که تا قبل از آن میتوانستید \lr{DirectX SDK} را به صورت جداگانه دانلود و نصب کنید ... .
-    \textbf{برای اطلاعات بیشتر:} \href{https://learn.microsoft.com/en-us/windows/win32/directx-sdk--august-2009-}{\lr{Where is the DirectX SDK?}}
-\end{point}
 
 \textbf{\vspace{-30pt}}
 \title{
@@ -334,7 +339,7 @@
 
         \textbf{روش اول)}
         ابتدا در منوی استارت، \lr{Optional features} را سرچ کرده و آن را باز کنید.
-        اگر \lr{Graphic Tools} بر روی دستگاه نصب باشد، می‌توانید آن را در کادر زرد مشاهده کنید (شکل \ref{fig:3.Intro.4.1})
+        اگر \lr{Graphic Tools} بر روی دستگاه نصب باشد، آن را در کادر زرد مشاهده کنید (شکل \ref{fig:3.Intro.4.1})
 
         \begin{figure}[H]
             \centering
@@ -395,16 +400,12 @@
             \includegraphics[width=\textwidth]{Images/3/3.Intro.4.4}
             \caption*{\lr{Dism /Online /Add-Capability /CapabilityName:Tools.Graphics.DirectX\textasciitilde\textasciitilde\textasciitilde\textasciitilde0.0.1.0}}
         \end{figure}
-    \end{spacing}
-}
-\textbf{\vspace{-10pt}}
 
-\begin{point}{thm:pythagoras}
-{
-    \Large
-    دقت کنید که فرآیند نصب ممکن است زمان بر باشد. همچنین دستورات \lr{Dism} به بزرگ و کوچک بودن حروف حساس نیستند.
-}
-\end{point}
+        \begin{point}{pnt:0.5}
+            دقت کنید که فرآیند نصب ممکن است زمان بر باشد. همچنین دستورات \lr{Dism} به بزرگ و کوچک بودن حروف حساس نیستند.
+        \end{point}
+    \end{spacing}
+} 
 
 \textbf{\vspace{-30pt}}
 \title{
@@ -509,7 +510,7 @@
             \label{fig:3.Intro.5.8.1}
         \end{figure}
 
-        \begin{point}{thm:pythagoras}
+        \begin{point}{pnt:0.6}
         {
             \Large
             در صورتی که هنگام اجرا با ارور زیر مواجه شدید ، موارد بالا را به درستی انجام نداده اید و باید بار دیگر آن ها را بررسی کنید.
@@ -526,7 +527,7 @@
         \textbf{\vspace{6pt}}
         بعد از کپی کردن فایل ها، گام های زیر را برای اضافه کردن کد به پروژه دنبال کنید.
 
-        \begin{enumerate}
+        \begin{enumerate}[label=\textbf{\arabic*}.]
             \item {در قسمت \lr{Solution Explorer} بر روی نام پروژه کلیک راست کنید و \lr{Add->Exiting Item...} را انتخاب کنید.
             از پنجره ی باز شده \lr{BoxApp.cpp} را انتخاب کنید.   }
 
@@ -575,7 +576,7 @@
 }
 \textbf{\vspace{-10pt}}
 
-\begin{point}{thm:pythagoras}
+\begin{point}{pnt:0.7}
 {
     \Large
     \begin{spacing}{1.5}
