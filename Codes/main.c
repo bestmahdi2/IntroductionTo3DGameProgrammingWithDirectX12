@@ -144,21 +144,21 @@ __declspec(align(16)) struct XMVECTORF32 {
         float f[4];
         XMVECTOR v;
     };
-
     inline operator XMVECTOR() const { return v; }
     inline operator const float*() const { return f; }
-
     #if !defined(_XM_NO_INTRINSICS_) && defined(_XM_SSE_INTRINSICS_)
         inline operator __m128i() const { return _mm_castps_si128(v); }
         inline operator __m128d() const { return _mm_castps_pd(v); }
     #endif
 };
 
+
+
 /////////////////////////////////////////////////////////////////////////////
 
-static const XMVECTORU32 vGrabY = {
-    0x00000000,0xFFFFFFFF,0x00000000,0x00000000
-};
+static const XMVECTORU32 vGrabY={0x00000000, 0xFFFFFFFF, 0x00000000, 0x00000000};
+
+
 
 /////////////////////////////////////////////////////////////////////////////
 
@@ -225,7 +225,6 @@ XMVECTOR XM_CALLCONV XMVectorSplatZ(FXMVECTOR V);
 #include <DirectXMath.h>
 #include <DirectXPackedVector.h>
 #include <iostream>
-
 using namespace std;
 using namespace DirectX;
 using namespace DirectX::PackedVector;
@@ -262,18 +261,253 @@ int main() {
     return 0;
 }
 
-/////////////////////////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////////////////////////
 
-/////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////
+XMVECTOR XM_CALLCONV XMVector3Length(          // Returns ||v||
+    FXMVECTOR V);                              // Input v
+
+XMVECTOR XM_CALLCONV XMVector3LengthSq(        // Returns ||v||^2
+    FXMVECTOR V);                              // Input v
+
+XMVECTOR XM_CALLCONV XMVector3Dot(             // Returns v1 . v2
+    FXMVECTOR V1,                              // Input v1
+    FXMVECTOR V2);                             // Input v2
+
+XMVECTOR XM_CALLCONV XMVector3Cross(           // Returns v1 x v2
+    FXMVECTOR V1,                              // Input v1
+    FXMVECTOR V2);                             // Input v2
+
+XMVECTOR XM_CALLCONV XMVector3Normalize(       // Returns v/||v||
+    FXMVECTOR V);                              // Input v
+
+XMVECTOR XM_CALLCONV XMVector3Orthogonal(      // Returns a vector orthogonal to v
+    FXMVECTOR V);                              // Input v
+
+XMVECTOR XM_CALLCONV
+XMVector3AngleBetweenVectors(                  // Returns the angle between v1 & v2
+    FXMVECTOR V1,                              // Input v1
+    FXMVECTOR V2);                             // Input v2
+
+void XM_CALLCONV XMVector3ComponentsFromNormal(
+    XMVECTOR* pParallel,                       // Returns projn(v)
+    XMVECTOR* pPerpendicular,                  // Returns perpn(v)
+    FXMVECTOR V,                               // Input v
+    FXMVECTOR Normal);                         // Input n
+
+bool XM_CALLCONV XMVector3Equal(               // Returns v1 = v2
+    FXMVECTOR V1,                              // Input v1
+    FXMVECTOR V2);                             // Input v2
+
+bool XM_CALLCONV XMVector3NotEqual(            // Returns v1 != v2
+    FXMVECTOR V1,                              // Input v1
+    FXMVECTOR V2);                             // Input v2
 
 /////////////////////////////////////////////////////////////////////////////
 
-/////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////
+#include <windows.h> // for XMVerifyCPUSupport
+#include <DirectXMath.h>
+#include <DirectXPackedVector.h>
+#include <iostream>
+using namespace std;
+using namespace DirectX;
+using namespace DirectX::PackedVector;
+
+// Overload the "<<" operators so that we can use cout to
+// output XMVECTOR objects.
+ostream& XM_CALLCONV operator<<(ostream& os, FXMVECTOR v) {
+    XMFLOAT3 dest;
+    XMStoreFloat3(&dest, v);
+    os << "(" << dest.x << ", " << dest.y << ", " << dest.z << ")";
+    return os;
+}
+
+int main() {
+    cout.setf(ios_base::boolalpha);
+
+    // Check support for SSE2 (Pentium4, AMD K8, and above).
+    if (!XMVerifyCPUSupport()) {
+        cout << "directx math not supported" << endl;
+        return 0;
+    }
+
+    XMVECTOR n = XMVectorSet(1.0f, 0.0f, 0.0f, 0.0f);
+    XMVECTOR u = XMVectorSet(1.0f, 2.0f, 3.0f, 0.0f);
+    XMVECTOR v = XMVectorSet(-2.0f, 1.0f, -3.0f, 0.0f);
+    XMVECTOR w = XMVectorSet(0.707f, 0.707f, 0.0f, 0.0f);
+
+    // Vector addition: XMVECTOR operator +
+    XMVECTOR a = u + v;
+    // Vector subtraction: XMVECTOR operator -
+    XMVECTOR b = u - v;
+    // Scalar multiplication: XMVECTOR operator *
+    XMVECTOR c = 10.0f*u;
+    // ||u||
+    XMVECTOR L = XMVector3Length(u);
+    // d = u / ||u||
+    XMVECTOR d = XMVector3Normalize(u);
+    // s = u dot v
+    XMVECTOR s = XMVector3Dot(u, v);
+    // e = u x v
+    XMVECTOR e = XMVector3Cross(u, v);
+    // Find proj_n(w) and perp_n(w)
+    XMVECTOR projW;
+    XMVECTOR perpW;
+    XMVector3ComponentsFromNormal(&projW, &perpW, w, n);
+
+    // Does projW + perpW == w?
+    bool equal = XMVector3Equal(projW + perpW, w) != 0;
+    bool notEqual = XMVector3NotEqual(projW + perpW, w) != 0;
+
+    // The angle between projW and perpW should be 90 degrees.
+    XMVECTOR angleVec = XMVector3AngleBetweenVectors(projW, perpW);
+    float angleRadians = XMVectorGetX(angleVec);
+    float angleDegrees = XMConvertToDegrees(angleRadians);
+
+    cout << "u             = " << u << endl;
+    cout << "v             = " << v << endl;
+    cout << "w             = " << w << endl;
+    cout << "n             = " << n << endl;
+    cout << "a = u + v     = " << a << endl;
+    cout << "b = u - v     = " << b << endl;
+    cout << "c = 10 * u    = " << c << endl;
+    cout << "d = u / ||u|| = " << d << endl;
+    cout << "e = u x v     = " << e << endl;
+    cout << "L = ||u||     = " << L << endl;
+    cout << "s = u.v       = " << s << endl;
+    cout << "projW         = " << projW << endl;
+    cout << "perpW         = " << perpW << endl;
+    cout << "projW + perpW == w = " << equal << endl;
+    cout << "projW + perpW != w = " << notEqual << endl;
+    cout << "angle         = " << angleDegrees << endl;
+    return 0;
+}
+
 
 /////////////////////////////////////////////////////////////////////////////
 
+XMVECTOR XM_CALLCONV XMVector3LengthEst(       // Returns estimated ||v||
+    FXMVECTOR V);                              // Input v
+XMVECTOR XM_CALLCONV XMVector3NormalizeEst(    // Returns estimated v/||v||
+    FXMVECTOR V);                              // Input v
+
 /////////////////////////////////////////////////////////////////////////////
+
+#include <windows.h> // for XMVerifyCPUSupport
+#include <DirectXMath.h>
+#include <DirectXPackedVector.h>
+#include <iostream>
+using namespace std;
+using namespace DirectX;
+using namespace DirectX::PackedVector;
+
+int main()  {
+    cout.precision(8);
+
+    // Check support for SSE2 (Pentium4, AMD K8, and above).
+    if (!XMVerifyCPUSupport()) {
+        cout << "directx math not supported" << endl;
+        return 0;
+    }
+
+    XMVECTOR u = XMVectorSet(1.0f, 1.0f, 1.0f, 0.0f);
+    XMVECTOR n = XMVector3Normalize(u);
+
+    float LU = XMVectorGetX(XMVector3Length(n));
+
+    // Mathematically, the length should be 1. Is it numerically?
+    cout << LU << endl;
+    if (LU == 1.0f)
+        cout << "Length 1" << endl;
+    else
+        cout << "Length not 1" << endl;
+
+    // Raising 1 to any power should still be 1. Is it?
+    float powLU = powf(LU, 1.0e6f);
+    cout << "LU^(10^6) = " << powLU << endl;
+}
+
+/////////////////////////////////////////////////////////////////////////////
+
+const float Epsilon = 0.001f;
+bool Equals(float lhs, float rhs) {
+    // Is the distance between lhs and rhs less than EPSILON?
+    return fabs(lhs - rhs) < Epsilon ? true : false;
+}
+
+/////////////////////////////////////////////////////////////////////////////
+
+// Returns
+// abs(U.x – V.x) <= Epsilon.x &&
+// abs(U.y – V.y) <= Epsilon.y &&
+// abs(U.z – V.z) <= Epsilon.z
+XMFINLINE bool XM_CALLCONV XMVector3NearEqual(
+    FXMVECTOR U,
+    FXMVECTOR V,
+    FXMVECTOR Epsilon);
+
+/////////////////////////////////////////////////////////////////////////////
+
+XMVECTOR XM_CALLCONV XMVector3Length(FXMVECTOR V);
+XMVECTOR XM_CALLCONV XMVector3LengthSq(FXMVECTOR V);
+XMVECTOR XM_CALLCONV XMVector3Dot(FXMVECTOR V1, FXMVECTOR V2);
+XMVECTOR XM_CALLCONV XMVector3Cross(FXMVECTOR V1, FXMVECTOR V2);
+XMVECTOR XM_CALLCONV XMVector3Normalize(FXMVECTOR V);
+
+/////////////////////////////////////////////////////////////////////////////
+
+#include <windows.h> // for XMVerifyCPUSupport
+#include <DirectXMath.h>
+#include <DirectXPackedVector.h>
+#include <iostream>
+using namespace std;
+using namespace DirectX;
+using namespace DirectX::PackedVector;
+
+// Overload the "<<" operators so that we can use cout to
+// output XMVECTOR objects.
+ostream& XM_CALLCONV operator<<(ostream& os, FXMVECTOR v) {
+    XMFLOAT4 dest;
+    XMStoreFloat4(&dest, v);
+    os << "(" << dest.x << ", " << dest.y << ", "
+    << dest.z << ", " << dest.w << ")";
+    return os;
+}
+
+int main() {
+    cout.setf(ios_base::boolalpha);
+
+    // Check support for SSE2 (Pentium4, AMD K8, and above).
+    if (!XMVerifyCPUSupport()) {
+        cout << "directx math not supported" << endl;
+        return 0;
+    }
+
+    XMVECTOR p = XMVectorSet(2.0f, 2.0f, 1.0f, 0.0f);
+    XMVECTOR q = XMVectorSet(2.0f, -0.5f, 0.5f, 0.1f);
+    XMVECTOR u = XMVectorSet(1.0f, 2.0f, 4.0f, 8.0f);
+    XMVECTOR v = XMVectorSet(-2.0f, 1.0f, -3.0f, 2.5f);
+    XMVECTOR w = XMVectorSet(0.0f, XM_PIDIV4, XM_PIDIV2, XM_PI);
+
+    cout << "XMVectorAbs(v) = " << XMVectorAbs(v) << endl;
+    cout << "XMVectorCos(w) = " << XMVectorCos(w) << endl;
+    cout << "XMVectorLog(u) = " << XMVectorLog(u) << endl;
+    cout << "XMVectorExp(p) = " << XMVectorExp(p) << endl;
+    cout << "XMVectorPow(u, p) = " << XMVectorPow(u, p) << endl;
+    cout << "XMVectorSqrt(u) = " << XMVectorSqrt(u) << endl;
+    cout << "XMVectorSwizzle(u, 2, 2, 1, 3) = " << XMVectorSwizzle(u, 2, 2, 1, 3) << endl;
+    cout << "XMVectorSwizzle(u, 2, 1, 0, 3) = " << XMVectorSwizzle(u, 2, 1, 0, 3) << endl;
+    cout << "XMVectorMultiply(u, v) = " << XMVectorMultiply(u, v) << endl;
+    cout << "XMVectorSaturate(q) = " << XMVectorSaturate(q) << endl;
+    cout << "XMVectorMin(p, v = " << XMVectorMin(p, v) << endl;
+    cout << "XMVectorMax(p, v) = " << XMVectorMax(p, v) << endl;
+
+    return 0;
+}
+
+/////////////////////////////////////////////////////////////////////////////
+
+
+ +
+ =
+

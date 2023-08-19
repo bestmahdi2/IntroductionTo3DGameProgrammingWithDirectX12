@@ -4,20 +4,28 @@
 \part{پیشنیاز های ریاضی}
 {
     \Large
-    \begin{spacing}{1.5}
+    \begin{spacing}{1.4}
+        \textbf{\vspace{3pt}}
+        \begin{displayquote}
+            راجر بیکن: زیرا چیزهای این جهان را نمی توان بدون دانش ریاضیات شناخت.
+            \begin{flushleft}
+                \lr{Opus Majus part 4 Distinctia Prima cap 1, 1267.}
+            \end{flushleft}
+        \end{displayquote}
+        \textbf{\vspace{3pt}}
+
         بازی های ویدیویی سعی در شبیه سازی دنیای مجازی دارند.
-        با این حال، کامپیوترها، به دلیل ماهیت خود، اعداد را محاسبه می کنند. بنابراین مشکل چگونگی انتقال یک جهان به یک کامپیوتر مطرح می شود.
-        پاسخ این مشکل میتواند اینگونه باشد که جهان‌های ما و فعل و انفعالات موجود در آن را کاملاً ریاضی توصیف کنیم.
+        با این حال، کامپیوترها، به دلیل ماهیت خود، اعداد را محاسبه می کنند. بنابراین مشکل چگونگی انتقال جهان به کامپیوتر مطرح می شود.
+        پاسخ این مشکل اینگونه است که جهان‌های ما و فعل و انفعالات موجود در آن را کاملاً ریاضی توصیف کنیم.
         در نتیجه، ریاضیات نقش اساسی در توسعه بازی های ویدیویی ایفا می کند.
 
         در این بخش، ابزارهای ریاضی که در این کتاب مورد استفاده قرار گرفته اند، معرفی می کنیم. تأکید ما بر بردارها، سیستم های مختصات، ماتریس ها و تبدیل ها است، زیرا این ابزارها تقریباً در همه ی برنامه های نمونه این کتاب استفاده شده اند.
-        علاوه بر توضیحات ریاضی، بررسی و نمایش کلاس ها و توابع مربوطه از کتابخانه ریاضی DirectX را نیز ارائه میکنیم.
+        علاوه بر توضیحات ریاضی، بررسی و نمایش کلاس ها و توابع مربوطه از کتابخانه ریاضی \lr{DirectX} را نیز ارائه میکنیم.
 
         توجه داشته باشید که موضوعاتی که در اینجا مورد بررسی قرار می‌گیرند، تنها مواردی هستند که برای درک ادامه ی این کتاب ضروری اند.
         این کتاب به هیچ وجه راه حل جامعی برای ریاضیات بازی های ویدیویی نیست.
 
-        \textbf{\vspace{20pt}}
-        \begin{point}{pnt:1}
+        \begin{point}{point:first}
             \Large
             برای خوانندگانی که مایل به ارجاع کامل تر به ریاضیات بازی های ویدیویی هستند، کتاب های زیر را توصیه می کنیم.
             \lr{
@@ -26,8 +34,8 @@
                     \item {Mathematics for 3D Game Programming and Computer Graphics (Lengyel02)}
                 \end{enumerate}
             }
+            \textbf{\vspace{-20pt}}
         \end{point}
-        \textbf{\vspace{40pt}}
 
         \textbf{فصل 1، جبر برداری:} بردارها اساسی ترین اشیاء ریاضی مورد استفاده در بازی های کامپیوتری هستند.
         ما از بردارها برای نشان دادن موقعیت ها، جابجایی ها، جهت ها، سرعت ها و نیروها استفاده می کنیم.
@@ -47,18 +55,18 @@
 \textbf{\vspace{80pt}}
 
 
-\chapter{\textbf{جبر برداری}}
+%\chapter{{\Large فصل 1}\Huge\\\textbf{\vspace{20pt}}1\textbf{جبر برداری}}
+\chapter{\textbf{1 جبر برداری}}
 \textbf{\vspace{70pt}}
 {
     \Large
     \begin{spacing}{1.5}
         بردارها نقش مهمی در گرافیک کامپیوتری، تشخیص برخورد و شبیه سازی فیزیکی ایفا می کنند که همگی اجزای رایج در بازی های ویدئویی مدرن هستند.
-        رویکرد ما در اینجا غیر تخصصی و عملی است به همین دلیل پیشنهاد ما کتاب \lr{Verth04} (نکته \ref{pnt:1}) است که کتابی اختصاصی برای ریاضیات بازی های سه بعدی/گرافیک است.
+        رویکرد ما در اینجا غیر تخصصی و عملی است به همین دلیل پیشنهاد ما کتاب \lr{Verth04} (نکته \ref{point:first}) است که کتابی اختصاصی برای ریاضیات بازی های سه بعدی/گرافیک است.
         ما بر اهمیت بردارها بسیار تأکید داریم زیرا در بیشتر برنامه های آزمایشی این کتاب استفاده شده اند.
+        \\
 
-        \textbf{\vspace{20pt}}
-        \textbf{\hspace{-40pt}اهداف:}
-
+        \textbf{\LARGE \hspace{-40pt}اهداف:}
         \begin{enumerate}
             \item {یادگیری نحوه نمایش بردارها به صورت هندسی و عددی}
             \item {یادگیری عملیات تعریف شده بر روی بردارها و کاربردهای هندسی آنها}
@@ -803,29 +811,29 @@
     \Large
     \begin{spacing}{1.5}
         ما از روش های زیر برای بارگذاری داده ها از \texttt{XMFLOATn} در \texttt{XMVECTOR} استفاده می کنیم:
-        \textbf{\vspace{6pt}}
-        \lr{\lstinputlisting[language=C++, caption=\rl{بارگیری}, firstline=54, lastline=62]{Codes/main.c}}
-        \textbf{\vspace{6pt}}
+        \textbf{\vspace{4pt}}
+        \lr{\lstinputlisting[language=C++, caption=\rl{بارگیری}, firstline=55, lastline=62]{Codes/main.c}}
+        \textbf{\vspace{3pt}}
         ما از روش های زیر برای ذخیره داده ها از \texttt{XMVECTOR} در \texttt{XMFLOATn} استفاده می کنیم:
-        \textbf{\vspace{6pt}}
-        \lr{\lstinputlisting[language=C++, caption=\rl{ذخیره سازی}, firstline=65, lastline=73]{Codes/main.c}}
-        \textbf{\vspace{6pt}}
-        گاهی اوقات ما فقط می خواهیم یک جزء \texttt{XMVECTOR} را دریافت یا تنظیم کنیم. توابع \lr{getter} و \lr{setter} زیر این امر را تسهیل می کنند:
-        \textbf{\vspace{6pt}}
-        \lr{\lstinputlisting[language=C++, caption={Setter \& Getter}, firstline=76, lastline=84]{Codes/main.c}}
-        \textbf{\vspace{6pt}}
+        \textbf{\vspace{4pt}}
+        \lr{\lstinputlisting[language=C++, caption=\rl{ذخیره سازی}, firstline=66, lastline=73]{Codes/main.c}}
+        \textbf{\vspace{3pt}}
+        توابع \lr{getter} و \lr{setter} برای دریافت یا تنظیم یک جزء \texttt{XMVECTOR} استفاده میشوند:
+        \textbf{\vspace{4pt}}
+        \lr{\lstinputlisting[language=C++, caption={Setter \& Getter}, firstline=77, lastline=84]{Codes/main.c}}
     \end{spacing}
 }
 
+\textbf{\vspace{-65pt}}
 \subsection{\textbf{ارسال پارامتر}}
 {
     \Large
     \begin{spacing}{1.5}
         برای اهداف کارایی، مقادیر \texttt{XMVECTOR} را می توان به عنوان آرگومان به توابع در ثبات های \lr{SSE/SSE2} به جای روی پشته ارسال کرد.
         تعداد آرگومان هایی که می توان از این طریق عبور داد به پلتفرم (به عنوان مثال ویندوز \lr{32} بیتی، ویندوز \lr{64} بیتی و ویندوز \lr{RT}) و کامپایلر بستگی دارد.
-        بنابراین، برای مستقل بودن از پلتفرم/کامپایلر، از انواع \texttt{FXMVECTOR}، \texttt{GXMVECTOR}، \texttt{HXMVECTOR} و \texttt{CXMVECTOR} برای عبور پارامترهای \lr{XMVECTOR} استفاده می‌کنیم.
+        بنابراین، برای مستقل بودن از پلتفرم/کامپایلر، از انواع \texttt{FXMVECTOR}، \texttt{GXMVECTOR}، \texttt{HXMVECTOR} و \texttt{CXMVECTOR} برای عبور پارامترهای \texttt{XMVECTOR} استفاده می‌کنیم.
         اینها بر اساس پلتفرم و کامپایلر به نوع مناسبی تعریف می شوند.
-        علاوه بر این، حاشیه نویسی کنوانسیون فراخوانی \texttt{XM_CALLCONV} باید قبل از نام تابع مشخص شود تا از قرارداد فراخوانی مناسب استفاده شود،
+        علاوه بر این، حاشیه نویسی کنوانسیون فراخوانی \texttt{XM\_CALLCONV} باید قبل از نام تابع مشخص شود تا از قرارداد فراخوانی مناسب استفاده شود،
         که باز هم به نسخه کامپایلر بستگی دارد.
 
         قوانین عبور پارامترهای \texttt{XMVECTOR} به شرح زیر است:
@@ -836,33 +844,27 @@
             \item {هر پارامتر اضافی \texttt{XMVECTOR} باید از نوع \texttt{CXMVECTOR} باشد.}
         \end{enumerate}
 
-        نحوه تعریف این انواع در ویندوز \lr{32} بیتی را با کامپایلری که از قرارداد \texttt{__fastcall} پشتیبانی می کند و
-        کامپایلری که از قرارداد فراخوانی \texttt{__vectorcall} جدیدتر پشتیبانی می کند، توضیح می دهیم:
-
+        نحوه تعریف این انواع در ویندوز \lr{32} بیتی را با کامپایلری که از قرارداد \texttt{\_\_fastcall} پشتیبانی می کند و
+        کامپایلری که از قرارداد فراخوانی \texttt{\_\_vectorcall} جدیدتر پشتیبانی می کند، توضیح می دهیم:
         \textbf{\vspace{6pt}}
-        \lr{\lstinputlisting[language=C++, firstline=87, lastline=100]{Codes/main.c}}
+        \lr{\lstinputlisting[language=C++, firstline=88, lastline=100]{Codes/main.c}}
         \textbf{\vspace{6pt}}
-
         برای جزئیات نحوه تعریف این انواع برای سایر پلتفرم‌ها، به \lr{«Calling Conventions»} در بخش \lr{«Internals Library»} در مستندات \lr{DirectX Math} مراجعه کنید.
         استثنای این قوانین مربوط به متدهای سازنده است. [\lr{DirectXMath}] توصیه می کند هنگام نوشتن سازنده ای که پارامترهای \texttt{XMVECTOR} را می گیرد،
         از \texttt{FXMVECTOR} برای سه پارامتر اول \texttt{XMVECTOR} و \texttt{CXMVECTOR} برای بقیه استفاده کنید.
-        علاوه بر این، از حاشیه نویسی \texttt{XM_CALLCONV} برای سازنده ها استفاده نکنید
+        علاوه بر این، از حاشیه نویسی \texttt{XM\_CALLCONV} برای سازنده ها استفاده نکنید
 
         در اینجا یک مثال از کتابخانه \lr{DirectXMath} آورده شده است:
-
         \textbf{\vspace{6pt}}
-        \lr{\lstinputlisting[language=C++, caption={Parameter Passing}, firstline=103, lastline=110]{Codes/main.c}}
+        \lr{\lstinputlisting[language=C++, caption={Parameter Passing}, firstline=104, lastline=110]{Codes/main.c}}
         \textbf{\vspace{6pt}}
-
-       این تابع 6 پارامتر \texttt{XMVECTOR} را می گیرد، اما با رعایت قوانین عبور پارامتر، از \texttt{FXMVECTOR} برای سه پارامتر اول، \texttt{GXMVECTOR} برای چهارمین و \texttt{HXMVECTOR} برای پنجم و ششم استفاده می کند.
+        این تابع 6 پارامتر \texttt{XMVECTOR} را می گیرد، اما با رعایت قوانین عبور پارامتر، از \texttt{FXMVECTOR} برای سه پارامتر اول، \texttt{GXMVECTOR} برای چهارمین و \texttt{HXMVECTOR} برای پنجم و ششم استفاده می کند.
         شما می توانید پارامترهای غیر \texttt{XMVECTOR} را بین پارامترهای XMVECTOR داشته باشید.
         قوانین مشابهی اعمال می شود و پارامترهای \texttt{XMVECTOR} به گونه ای شمارش می شوند که گویی پارامترهای غیر \texttt{XMVECTOR} وجود ندارند.
         برای مثال، در تابع زیر، اولین سه پارامتر \texttt{XMVECTOR} از نوع \texttt{FXMVECTOR} as و چهارمین پارامتر \texttt{XMVECTOR} از نوع \texttt{GXMVECTOR} است.
-
         \textbf{\vspace{6pt}}
-        \lr{\lstinputlisting[language=C++, caption={Parameter Passing}, firstline=113, lastline=120]{Codes/main.c}}
+        \lr{\lstinputlisting[language=C++, caption={Parameter Passing}, firstline=114, lastline=120]{Codes/main.c}}
         \textbf{\vspace{6pt}}
-
         قوانین ارسال پارامترهای \texttt{XMVECTOR} برای پارامترهای "ورودی" اعمال می شود.
         پارامترهای "خروجی" \texttt{XMVECTOR} (\texttt{XMVECTOR}& یا \texttt{XMVECTOR}*) از ثبات های \lr{SSE/SSE2} استفاده نمی کنند و بنابراین مانند پارامترهای غیر \texttt{XMVECTOR} رفتار می شوند.
     \end{spacing}
@@ -874,68 +876,73 @@
     \begin{spacing}{1.5}
         نمونه های ثابت \texttt{XMVECTOR} باید از نوع \texttt{XMVECTORF32} استفاده کنند. در اینجا چند نمونه از نمونه \lr{CascadedShadowMaps11 DirectX SDK} آورده شده است:
         \textbf{\vspace{6pt}}
-        \lr{\lstinputlisting[language=C++, firstline=123, lastline=137]{Codes/main.c}}
+        \lr{\lstinputlisting[language=C++, firstline=124, lastline=137]{Codes/main.c}}
         \textbf{\vspace{6pt}}
         اساساً هر زمان که بخواهیم از دستور اولیه استفاده کنیم از \texttt{XMVECTORF32} استفاده می کنیم.
         \texttt{XMVECTORF32} یک ساختار تراز شده \lr{16} بایتی با یک عملگر تبدیل \texttt{XMVECTOR} است.
-        به صورت زیر تعریف می شود:
         \textbf{\vspace{6pt}}
-        \lr{\lstinputlisting[language=C++, firstline=140, lastline=155]{Codes/main.c}}
+        \lr{\lstinputlisting[language=C++, firstline=141, lastline=153]{Codes/main.c}}
         \textbf{\vspace{6pt}}
-        همچنین می توانید با استفاده از \texttt{XMVECTORU32} یک \texttt{XMVECTOR} ثابت از داده های عدد صحیح ایجاد کنید:
+        با استفاده از \texttt{XMVECTORU32} یک \texttt{XMVECTOR} ثابت از داده های عدد صحیح ایجاد کنید:
         \textbf{\vspace{6pt}}
-        \lr{\lstinputlisting[language=C++, firstline=158, lastline=161]{Codes/main.c}}
-        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++, firstline=159, lastline=159]{Codes/main.c}}
     \end{spacing}
 }
 
+\textbf{\vspace{-60pt}}
 \subsection{\textbf{اپراتورهای سر بارگذاری شده}}
 {
     \Large
     \begin{spacing}{1.5}
         \texttt{XMVECTOR} چندین عملگر اضافه بار برای انجام جمع برداری، تفریق و ضرب اسکالر دارد.
         \textbf{\vspace{6pt}}
-        \lr{\lstinputlisting[language=C++, caption={Operatings Overloading}, firstline=164, lastline=179]{Codes/main.c}}
-        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++, caption={Operatings Overloading}, firstline=165, lastline=179]{Codes/main.c}}
     \end{spacing}
 }
 
+\textbf{\vspace{-65pt}}
 \subsection{\textbf{متفرغه}}
 {
     \Large
     \begin{spacing}{1.5}
         کتابخانه ریاضی \lr{DirectX} ثابت های زیر را برای تقریب عبارات مختلف شامل $\pi$ تعریف کرده است:
         \textbf{\vspace{6pt}}
-        \lr{\lstinputlisting[language=C++, caption={Constants}, firstline=182, lastline=188]{Codes/main.c}}
+        \lr{\lstinputlisting[language=C++, caption={Constants}, firstline=183, lastline=188]{Codes/main.c}}
         \textbf{\vspace{6pt}}
         علاوه بر این، توابع درون خطی زیر را برای تبدیل بین رادیان و درجه تعریف می کند:
         \textbf{\vspace{6pt}}
-        \lr{\lstinputlisting[language=C++,  firstline=191, lastline=198]{Codes/main.c}}
+        \lr{\lstinputlisting[language=C++,  firstline=192, lastline=198]{Codes/main.c}}
         \textbf{\vspace{6pt}}
         همچنین توابع \lr{min/max} را تعریف می کند:
         \textbf{\vspace{6pt}}
-        \lr{\lstinputlisting[language=C++,  firstline=201, lastline=203]{Codes/main.c}}
-        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++,  firstline=202, lastline=203]{Codes/main.c}}
     \end{spacing}
 }
 
+\textbf{\vspace{-60pt}}
 \subsection{\textbf{توابع setter}}
 {
     \Large
     \begin{spacing}{1.5}
         \lr{DirectX Math} توابع زیر را برای تنظیم محتویات یک \texttt{XMVECTOR} فراهم می کند:
         \textbf{\vspace{6pt}}
-        \lr{\lstinputlisting[language=C++,  firstline=206, lastline=220]{Codes/main.c}}
+        \lr{\lstinputlisting[language=C++, firstline=207, lastline=220]{Codes/main.c}}
         \textbf{\vspace{6pt}}
         برنامه زیر بیشتر این توابع را نشان می دهد:
         \textbf{\vspace{6pt}}
-        \lr{\lstinputlisting[language=C++,  firstline=223, lastline=263]{Codes/main.c}}
-        \textbf{\vspace{6pt}}
-
-        *******
+        \lr{\lstinputlisting[language=C++, caption={GITHUB/src/Chapter 1 Vector Algebra/XMVECTOR/InitFunctions.cpp}, firstline=224, lastline=262]{Codes/main.c}}
+        \textbf{\vspace{-30pt}}
+        \begin{figure}[H]
+            \centering
+            \setlength{\belowcaptionskip}{-10pt}
+            \includegraphics[width=0.8\textwidth]{Images/4/4.Session.1.1.18}
+            \caption {خروجی برنامه ی بالا.}
+            \label{fig:4.Session.1.1.18}
+        \end{figure}
     \end{spacing}
 }
 
+\textbf{\vspace{-10pt}}
 \subsection{\textbf{توابع بردار}}
 {
     \Large
@@ -943,146 +950,38 @@
         \lr{DirectX Math} توابع زیر را برای انجام عملیات برداری مختلف ارائه می دهد.
         ما با نسخه‌های سه‌بعدی نشان می‌دهیم، اما نسخه‌های مشابهی برای دو بعدی و چهار بعدی وجود دارد.
         نسخه های دو بعدی و چهار بعدی همان نام های نسخه های سه بعدی را دارند، به استثنای 2 و 4 که به ترتیب جایگزین 3 شده اند.
-
-        *******
-        \texttt
-        {
-            XMVECTOR XM_CALLCONV XMVector3Length( // Returns ||v||
-        FXMVECTOR V); // Input v
-        XMVECTOR XM_CALLCONV XMVector3LengthSq( // Returns ||v||2
-        FXMVECTOR V); // Input v
-        XMVECTOR XM_CALLCONV XMVector3Dot( // Returns v1v2
-        FXMVECTOR V1, // Input v1
-        FXMVECTOR V2); // Input v2
-        XMVECTOR XM_CALLCONV XMVector3Cross( // Returns v1 × v2
-        FXMVECTOR V1, // Input v1
-        FXMVECTOR V2); // Input v2
-        XMVECTOR XM_CALLCONV XMVector3Normalize( // Returns v/||v||
-        FXMVECTOR V); // Input v
-        XMVECTOR XM_CALLCONV XMVector3Orthogonal(// Returns a vector orthogonal to v
-        FXMVECTOR V); // Input v
-        XMVECTOR XM_CALLCONV
-        XMVector3AngleBetweenVectors( // Returns the angle between v1 and v2
-        FXMVECTOR V1, // Input v1
-        FXMVECTOR V2); // Input v2
-        void XM_CALLCONV XMVector3ComponentsFromNormal(
-            XMVECTOR* pParallel, // Returns projn(v)
-            XMVECTOR* pPerpendicular, // Returns perpn(v)
-            FXMVECTOR V, // Input v
-        FXMVECTOR Normal); // Input n
-        bool XM_CALLCONV XMVector3Equal( // Returns v1 = v2
-        FXMVECTOR V1, // Input v1
-        FXMVECTOR V2); // Input v2
-        bool XM_CALLCONV XMVector3NotEqual( // Returns v1  v2
-        FXMVECTOR V1, // Input v1
-        FXMVECTOR V2); // Input v2
-        }
-
-        *****
+        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++,  firstline=267, lastline=304]{Codes/main.c}}
+        \textbf{\vspace{-20pt}}
         \begin{point}{pnt:7}
             \Large
-            توجه کنید که این توابع حتی برای عملیاتی که از نظر ریاضی یک اسکالر را برمی‌گردانند، XMVECTOR برمی‌گردانند (مثلاً حاصل ضرب نقطه‌ای k =v1 v2). نتیجه اسکالر در هر جزء از XMVECTOR تکرار می شود. به عنوان مثال، برای حاصل ضرب نقطه، بردار برگشتی (v1 v2, v1 v2,v1v2,v1 v2) خواهد بود. یکی از دلایل این امر به حداقل رساندن اختلاط عملیات بردار اسکالر و SIMD است. کارآمدتر است که همه چیز SIMD را تا زمانی که محاسبات خود را تمام کنید حفظ کنید.
+            توجه کنید که این توابع حتی برای عملیاتی که از نظر ریاضی یک اسکالر را برمی‌گردانند، \texttt{XMVECTOR} برمی‌گردانند (مثلاً حاصل ضرب نقطه‌ای $k=\textbf{v}_{1}\cdot\textbf{v}_{2}$).
+            نتیجه اسکالر در هر جزء از \texttt{XMVECTOR} تکرار می شود. به عنوان مثال، برای حاصل ضرب نقطه، بردار برگشتی ($\textbf{v}_{1}\cdot\textbf{v}_{2},\textbf{v}_{1}\cdot\textbf{v}_{2},\textbf{v}_{1}\cdot\textbf{v}_{2},\textbf{v}_{1}\cdot\textbf{v}_{2}$) خواهد بود.
+            یکی از دلایل این امر به حداقل رساندن اختلاط عملیات بردار اسکالر و \lr{SIMD} است.
+            کارآمدتر است که همه چیز \lr{SIMD} را تا زمانی که محاسبات خود را تمام کنید حفظ کنید.
         \end{point}
-
-        برنامه آزمایشی زیر نحوه استفاده از اکثر این توابع و همچنین برخی از اپراتورهای بارگذاری شده را نشان می دهد:
-
-        \texttt
-        {
-            #include <windows.h> // for XMVerifyCPUSupport
-        #include <DirectXMath.h>
-            #include <DirectXPackedVector.h>
-            #include <iostream>
-            using namespace std;
-            using namespace DirectX;
-            using namespace DirectX::PackedVector;
-            // Overload the "<<" operators so that we can use cout to
-        // output XMVECTOR objects.
-        ostream& XM_CALLCONV operator<<(ostream& os, FXMVECTOR v)
-                {
-                XMFLOAT3 dest;
-                XMStoreFloat3(&dest, v);
-                os << "(" << dest.x << ", " << dest.y << ", " << dest.z << ")";
-                return os;
-            }
-            int main()
-                {
-                cout.setf(ios_base::boolalpha);
-                // Check support for SSE2 (Pentium4, AMD K8, and above).
-                if (!XMVerifyCPUSupport())
-                    {
-                    cout << "directx math not supported" << endl;
-                    return 0;
-                }
-                XMVECTOR n = XMVectorSet(1.0f, 0.0f, 0.0f, 0.0f);
-                XMVECTOR u = XMVectorSet(1.0f, 2.0f, 3.0f, 0.0f);
-                XMVECTOR v = XMVectorSet(-2.0f, 1.0f, -3.0f, 0.0f);
-                XMVECTOR w = XMVectorSet(0.707f, 0.707f, 0.0f, 0.0f);
-                // Vector addition: XMVECTOR operator 
-                XMVECTOR a = u  v;
-                // Vector subtraction: XMVECTOR operator -
-                XMVECTOR b = u - v;
-                // Scalar multiplication: XMVECTOR operator *
-                XMVECTOR c = 10.0f*u;
-                // ||u||
-                XMVECTOR L = XMVector3Length(u);
-                // d = u / ||u||
-                XMVECTOR d = XMVector3Normalize(u);
-                // s = u dot v
-                XMVECTOR s = XMVector3Dot(u, v);
-                // e = u x v
-                XMVECTOR e = XMVector3Cross(u, v);
-                // Find proj_n(w) and perp_n(w)
-                XMVECTOR projW;
-                XMVECTOR perpW;
-                XMVector3ComponentsFromNormal(&projW, &perpW, w, n);
-                // Does projW  perpW  w?
-                bool equal = XMVector3Equal(projW  perpW, w) != 0;
-                bool notEqual = XMVector3NotEqual(projW  perpW, w) != 0;
-                // The angle between projW and perpW should be 90 degrees.
-                XMVECTOR angleVec = XMVector3AngleBetweenVectors(projW, perpW);
-                float angleRadians = XMVectorGetX(angleVec);
-                float angleDegrees = XMConvertToDegrees(angleRadians);
-                cout << "u = " << u << endl;
-                cout << "v = " << v << endl;
-                cout << "w = " << w << endl;
-                cout << "n = " << n << endl;
-                cout << "a = u  v = " << a << endl;
-                cout << "b = u - v = " << b << endl;
-                cout << "c = 10 * u = " << c << endl;
-                cout << "d = u / ||u|| = " << d << endl;
-                cout << "e = u x v = " << e << endl;
-                cout << "L = ||u|| = " << L << endl;
-                cout << "s = u.v = " << s << endl;
-                cout << "projW = " << projW << endl;
-                cout << "perpW = " << perpW << endl;
-                cout << "projW  perpW  w = " << equal << endl;
-                cout << "projW  perpW != w = " << notEqual << endl;
-                cout << "angle = " << angleDegrees << endl;
-                return 0;
-            }
-        }
-
-        *******
+        \textbf{\vspace{6pt}}
+        برنامه ی زیر نحوه استفاده از اکثر این توابع و برخی از اپراتورهای بارگذاری شده را نشان می دهد:
+        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++, caption={GITHUB/src/Chapter 1 Vector Algebra/XMVECTOR/xmvec3.cpp}, firstline=308, lastline=384]{Codes/main.c}}
+        \textbf{\vspace{-30pt}}
         \begin{figure}[H]
             \centering
             \setlength{\belowcaptionskip}{-10pt}
-            \includegraphics[width=\textwidth]{Images/4/4.Session.1.1.1}
-            \caption{(الف) بردار هایی که روی صفحه ی دوبعدی کشیده شده اند.
-                (ب) بردار هایی که مورچه ها را برای حرکت 10 متر در جهت شمال راهنمایی میکنند.}
-            \label{fig:4.Session.1.1.1}
+            \includegraphics[width=0.8\textwidth]{Images/4/4.Session.1.1.19}
+            \caption {خروجی برنامه ی بالا.}
+            \label{fig:4.Session.1.1.19}
         \end{figure}
+        \textbf{\vspace{-30pt}}
 
-        point{
-            کتابخانه ریاضی DirectX همچنین شامل برخی از روش‌های تخمینی می‌شود که دقت کمتری دارند اما محاسبه آن سریع‌تر است.
-            اگر مایلید مقداری دقت را فدای سرعت کنید، از روش های برآورد استفاده کنید. در اینجا دو نمونه از توابع برآورد آورده شده است:
-
-            XMVECTOR XM_CALLCONV XMVector3LengthEst( // Returns estimated ||v||
-            FXMVECTOR V); // Input v
-            XMVECTOR XM_CALLCONV XMVector3NormalizeEst( // Returns estimated v/||v||
-            FXMVECTOR V); // Input v
-        }
-
-
+        \begin{point}{pnt:8}
+            \Large
+            کتابخانه DirectX شامل برخی از روش‌های تخمینی می‌شود که دقت کمتری دارند اما محاسبه سریع‌تر است.
+            اگر مایلید کمی دقت را فدای سرعت کنید، از روش‌های برآورد استفاده کنید:
+            \textbf{\vspace{6pt}}
+            \lr{\lstinputlisting[language=C++,  firstline=389, lastline=392]{Codes/main.c}}
+            \textbf{\vspace{-40pt}}
+        \end{point}
     \end{spacing}
 }
 
@@ -1093,79 +992,35 @@
         در مورد کار با بردارها در کامپیوتر باید به موارد زیر توجه داشته باشیم.
         هنگام مقایسه اعداد ممیز شناور، به دلیل عدم دقت ممیز شناور باید مراقب بود.
         دو عدد ممیز شناور که انتظار داریم برابر باشند ممکن است کمی متفاوت باشند.
-        برای مثال، از نظر ریاضی، انتظار داریم که یک بردار نرمال شده دارای طول 1 باشد، اما در یک برنامه کامپیوتری، طول آن تقریباً 1 خواهد بود.
-        علاوه بر این، از نظر ریاضی، 1p= 1 برای هر عدد واقعی p، اما زمانی که ما فقط یک تقریب عددی برای 1 داشته باشید، می بینیم که تقریب افزایش یافته به توان pth باعث افزایش خطا می شود.
+        برای مثال، از نظر ریاضی، انتظار داریم که یک بردار نرمال شده دارای طول 1 باشد، اما در یک برنامه کامپیوتری، طول آن تقریباً $1$ خواهد بود.
+        علاوه بر این، از نظر ریاضی، $1^p=1$ برای هر عدد واقعی $p$، اما زمانی که ما فقط یک تقریب عددی برای $1$ داشته باشید، می بینیم که تقریب افزایش یافته به توان $p$ ام باعث افزایش خطا می شود.
         بنابراین، خطای عددی نیز جمع می شود. برنامه کوتاه زیر این ایده ها را نشان می دهد:
-
-        \texttt
-        {
-            #include <windows.h> // for XMVerifyCPUSupport
-        #include <DirectXMath.h>
-            #include <DirectXPackedVector.h>
-            #include <iostream>
-            using namespace std;
-            using namespace DirectX;
-            using namespace DirectX::PackedVector;
-            int main()
-                {
-                cout.precision(8);
-                // Check support for SSE2 (Pentium4, AMD K8, and above).
-                if (!XMVerifyCPUSupport())
-                    {
-                    cout << "directx math not supported" << endl;
-                    return 0;
-                }
-                XMVECTOR u = XMVectorSet(1.0f, 1.0f, 1.0f, 0.0f);
-                XMVECTOR n = XMVector3Normalize(u);
-                float LU = XMVectorGetX(XMVector3Length(n));
-                // Mathematically, the length should be 1. Is it numerically?
-                cout << LU << endl;
-                if (LU  1.0f)
-                cout << "Length 1" << endl;
-                else
-                cout << "Length not 1" << endl;
-                // Raising 1 to any power should still be 1. Is it?
-                float powLU = powf(LU, 1.0e6f);
-                cout << "LU^(10^6) = " << powLU << endl;
-            }
-        }
-
-        *******
+        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++, caption={GITHUB/src/Chapter 1 Vector Algebra/XMVECTOR/tol.cpp}, firstline=396, lastline=428]{Codes/main.c}}
+        \textbf{\vspace{-30pt}}
         \begin{figure}[H]
             \centering
             \setlength{\belowcaptionskip}{-10pt}
-            \includegraphics[width=\textwidth]{Images/4/4.Session.1.1.1}
-            \caption{(الف) بردار هایی که روی صفحه ی دوبعدی کشیده شده اند.
-                (ب) بردار هایی که مورچه ها را برای حرکت 10 متر در جهت شمال راهنمایی میکنند.}
-            \label{fig:4.Session.1.1.1}
+            \includegraphics[width=0.8\textwidth]{Images/4/4.Session.1.1.20}
+            \caption {خروجی برنامه ی بالا.}
+            \label{fig:4.Session.1.1.20}
         \end{figure}
 
         برای جبران عدم دقت نقطه فلور، آزمایش می کنیم که آیا دو عدد نقطه فلور تقریباً برابر هستند یا خیر
         ما این کار را با تعریف یک ثابت اپسیلون انجام می دهیم، که مقدار بسیار کوچکی است که ما به عنوان بافر استفاده می کنیم.
         می گوییم دو مقدار تقریباً برابر هستند اگر فاصله آنها از اپسیلون کمتر باشد.
-        به عبارت دیگر، اپسیلون مقداری تحمل برای fl به ما می دهد.
+        به عبارت دیگر، اپسیلون مقداری تحمل برای \lr{fl} به ما می دهد.
         عملکرد زیر نشان می دهد که چگونه می توان از اپسیلون برای آزمایش مساوی بودن دو مقدار نقطه فلور استفاده کرد:
-
-        const float Epsilon = 0.001f;
-        bool Equals(float lhs, float rhs)
-            {
-            // Is the distance between lhs and rhs less than EPSILON?
-            return fabs(lhs - rhs) < Epsilon ? true : false;
-        }
-
-        کتابخانه ریاضی DirectX تابع XMVector3NearEqual را هنگام آزمایش برابری بردارها با پارامتر اپسیلون تحمل مجاز ارائه می دهد:
-
-        // Returns
-        // abs(U.x – V.x) <= Epsilon.x &&
-        // abs(U.y – V.y) <= Epsilon.y &&
-        // abs(U.z – V.z) <= Epsilon.z
-        XMFINLINE bool XM_CALLCONV XMVector3NearEqual(
-        FXMVECTOR U,
-        FXMVECTOR V,
-        FXMVECTOR Epsilon);
+        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++,  firstline=432, lastline=436]{Codes/main.c}}
+        \textbf{\vspace{6pt}}
+        کتابخانه ریاضی \lr{DirectX} تابع \lr{XMVector3NearEqual} را هنگام آزمایش برابری بردارها با پارامتر اپسیلون تحمل مجاز ارائه می دهد:
+        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++,  firstline=440, lastline=447]{Codes/main.c}}
     \end{spacing}
 }
 
+\textbf{\vspace{-65pt}}
 \section{\textbf{خلاصه}}
 {
     \Large
@@ -1175,7 +1030,7 @@
             از نظر هندسی، بردار را با یک پاره خط جهت نشان می دهیم.
             زمانی که یک بردار به موازات خودش ترجمه شود به طوری که دنباله آن با مبدأ سیستم مختصات منطبق باشد در موقعیت استاندارد قرار دارد.
             یک بردار در موقعیت استاندارد را می توان با تعیین مختصات سر آن نسبت به یک سیستم مختصات به صورت عددی توصیف کرد.}
-
+            \\
             \item {اگر $\textbf{u}=(u_{x},u_{y},u_{z})$ و  $\textbf{v}=(v_{x},v_{y},v_{z})$ باشد، عملیات های برداری زیر را داریم:}
 
             \begin{itemize}
@@ -1187,32 +1042,184 @@
                 \frac{\displaystyle y}{\displaystyle\norm{\textbf{u}}}, \frac{\displaystyle z}{\displaystyle\norm{\textbf{u}}}\right)$}
                 \item {ضرب داخلی: $\textbf{u}\cdot\textbf{v}=u_{x}v_{x}+u_{y}v_{y}+u_{z}v_{z}$}
                 \item {ضرب خارجی: $\textbf{w}=\textbf{u}\times\textbf{v}=(u_{y}v_{z}-u_{z}v_{y}, u_{z}v_{x}-u_{x}v_{z}, u_{x}v_{y}-u_{y}v_{z})$}
+                \textbf{\vspace{20pt}}
             \end{itemize}
 
             \item {ما از نوع \lr{DirectX Math XMVECTOR} برای توصیف موثر بردارها در کد با استفاده از عملیات \lr{SIMD} استفاده می کنیم.
             برای اعضای داده کلاس، از کلاس‌های \texttt{XMFLOAT2}، \texttt{XMFLOAT3} و \texttt{XMFLOAT4} استفاده می‌کنیم و
             سپس از روش‌های بارگذاری و ذخیره‌سازی برای تبدیل بین \texttt{XMVECTOR} و \texttt{XMFLOATn} به عقب و جلو استفاده می‌کنیم.
             بردارهای ثابتی که به نحو اولیه نیاز دارند باید از نوع \texttt{XMVECTORF32} استفاده کنند.}
-
+            \\
             \item {برای اهداف کارایی، مقادیر \texttt{XMVECTOR} را می توان به عنوان آرگومان به توابع در ثبات های \lr{SSE/SSE2} به جای روی پشته ارسال کرد.
             برای انجام این کار به صورت مستقل از پلتفرم، از انواع \texttt{FXMVECTOR}، \texttt{GXMVECTOR}، \texttt{HXMVECTOR} و \texttt{CXMVECTOR} برای عبور پارامترهای \texttt{XMVECTOR} استفاده می کنیم.
             سپس قانون عبور پارامترهای \texttt{XMVECTOR} این است که سه پارامتر اول \texttt{XMVECTOR} باید از نوع \texttt{FXMVECTOR} باشند. \texttt{XMVECTOR} چهارم باید از نوع \texttt{GXMVECTOR} باشد.
             پنجمین و ششمین پارامتر \texttt{XMVECTOR} باید از نوع \texttt{HXMVECTOR} باشد. و هر پارامتر اضافی \texttt{XMVECTOR} باید از نوع \texttt{CXMVECTOR} باشد.}
-
+            \\
             \item {کلاس \texttt{XMVECTOR} عملگرهای حسابی را برای انجام جمع برداری، تفریق و ضرب اسکالر بارگذاری می کند.
-            علاوه بر این، کتابخانه ریاضی \lr{DirectX} توابع مفید زیر را برای محاسبه طول یک بردار، مجذور طول یک بردار، محاسبه حاصل ضرب نقطه‌ای دو بردار، محاسبه حاصل ضرب متقاطع دو بردار و نرمال کردن یک بردار ارائه می‌کند:}
-            \begin{description}
-                XMVECTOR XM_CALLCONV XMVector3Length(FXMVECTOR V);
-                XMVECTOR XM_CALLCONV XMVector3LengthSq(FXMVECTOR V);
-                XMVECTOR XM_CALLCONV XMVector3Dot(FXMVECTOR V1, FXMVECTOR V2);
-                XMVECTOR XM_CALLCONV XMVector3Cross(FXMVECTOR V1, FXMVECTOR V2);
-                XMVECTOR XM_CALLCONV XMVector3Normalize(FXMVECTOR V);
-            \end{description}
+            علاوه بر این، کتابخانه ریاضی \lr{DirectX} توابع مفید زیر را برای محاسبه طول یک بردار، مجذور طول یک بردار، محاسبه حاصل ضرب نقطه‌ای دو بردار، محاسبه حاصل ضرب متقاطع دو بردار و نرمال کردن یک بردار ارائه می‌کند:
+            \textbf{\vspace{6pt}}
+            \lr{\lstinputlisting[language=C++, firstline=451, lastline=455]{Codes/main.c}}
+            }
         \end{enumerate}
     \end{spacing}
 }
 
+\textbf{\vspace{20pt}}
 \section{\textbf{تمارین}}
 {
-
+    \Large
+    \begin{spacing}{1.5}
+        \begin{enumerate}
+            \item {فرض کنید $\textbf{u}=(1,2)$ و $\textbf{v}=(3,-4)$. محاسبات زیر را انجام دهید و محاسبات زیر را انجام دهید و بردارها را نسبت به یک سیستم مختصات دو بعدی رسم کنید.}
+            \begin{flushleft}
+                \lr{
+                        {(a) $\textbf{u}+\textbf{v}$} \\
+                    {(b) $\textbf{u}-\textbf{v}$} \\
+                    {(c) $2\textbf{u}+\frac{\displaystyle 1}{\displaystyle 2}\textbf{v}$} \\
+                    {(d) $-2\textbf{u}+\textbf{v}$}
+                }
+            \end{flushleft}
+            \\
+            \item {فرض کنید $\textbf{u}=(-1,3,2)$ و $\textbf{v}=(3,-4,1)$. محاسبات زیر را انجام دهید.}
+            \begin{flushleft}
+                \lr{
+                        {(a) $\textbf{u}+\textbf{v}$} \\
+                    {(b) $\textbf{u}-\textbf{v}$} \\
+                    {(c) $3\textbf{u}+2\textbf{v}$} \\
+                    {(d) $-2\textbf{u}+\textbf{v}$}
+                }
+            \end{flushleft}
+            \\
+            \item {این تمرین نشان می‌دهد که جبر برداری در بسیاری از ویژگی‌های خوب اعداد حقیقی مشترک است (این فهرست جامعی نیست).
+                $\textbf{u}=(u_{x},u_{y},u_{z})$، $\textbf{v}=(v_{x},v_{y},v_{z})$ و $\textbf{w}=(w_{x},w_{y},w_{z})$ را فرض کنید. همچنین فرض کنید که $c$ و $k$ اسکالر هستند. خواص برداری زیر را ثابت کنید.}
+            \begin{flushleft}
+                \lr{
+                        {(a) $\textbf{u}+\textbf{v}=\textbf{v}+\textbf{u}$} \\
+                    {(b) $\textbf{u}+(\textbf{v}+\textbf{w})=(\textbf{u}+\textbf{v})+\textbf{w}$} \\
+                    {(c) $(ck)\textbf{u}=c(k\textbf{u})$} \\
+                    {(d) $k(\textbf{u}+\textbf{v})=k\textbf{u}+k\textbf{v}$}
+                    {(e) $\textbf{u}(k+c)=k\textbf{u}+c\textbf{u}$}
+                }
+            \end{flushleft}
+            \begin{hint}{hnt:1}
+                \Large
+                فقط از تعریف عملیات برداری و خصوصیات اعداد حقیقی استفاده کنید.
+                به عنوان مثال،
+                \begin{equation*}
+                    \centering
+                    \begin{split}
+                    (ck)
+                        \textbf{u}&=(ck)(u_x,u_y,u_z)\\
+                        &=((ck)u_x,(ck)u_y,(ck)u_z)\\
+                        &=(c(ku_x),c(ku_y),c(ku_z))\\
+                        &=c(ku_x,ku_y,ku_z)\\
+                        &=c(k\textbf{u})
+                    \end{split}
+                \end{equation*}
+            \end{hint}
+            \\
+            \item {معادله ی $2((1,2,3)-\textbf{x}=-(-2,0,4)=-2(1,2,3)$ را برای $x$ حل کنید.}
+            \\
+            \item {فرض کنید $\textbf{u}=(-1,3,2)$ و $\textbf{v}=(3,-4,1)$. و را نرمال کنید.}
+            \\
+            \item {فرض کنید $k$ یک اسکالر باشد و $\textbf{u}=(u_x,u_y,u_z)$. ثابت کنید $\norm{k}\textbf{u}=\abs{k}\norm{\textbf{u}}$. }
+            \\
+            \item {زاویه بین \textbf{u} و \textbf{v} متعامد(قائم)، تند یا منفرجه(باز) است؟}
+            \begin{flushleft}
+                \lr{
+                        {(a) $\textbf{u}=(1,1,1), \textbf{v}=(2,3,4)$} \\
+                    {(b) $\textbf{u}=(1,1,0), \textbf{v}=(-2,2,0)$} \\
+                    {(c) $\textbf{u}=(-1,-1,-1), \textbf{v}=(3,1,0)$}
+                }
+            \end{flushleft}
+            \\
+            \item {فرض کنید $\textbf{u}=(-1,3,2)$ و $\textbf{v}=(3,-4,1)$. زاویه $\theta$ بین $\textbf{u}$ و $\textbf{v}$ را پیدا کنید.}
+            \\
+            \item {فرض کنید $\textbf{u}=(u_{x},u_{y},u_{z})$، $\textbf{v}=(v_{x},v_{y},v_{z})$ و $\textbf{w}=(w_{x},w_{y},w_{z})$. همچنین c و k اسکالر باشند. ویژگی های ضرب داخلی زیر را ثابت کنید.}
+            \begin{flushleft}
+                \lr{
+                        {(a) $\textbf{u}\cdot\textbf{v}=\textbf{v}\cdot\textbf{u}$} \\
+                    {(b) $\textbf{u}\cdot(\textbf{v}+\textbf{w})=\textbf{u}\cdot\textbf{v}+\textbf{u}\cdot\textbf{w}$} \\
+                    {(c) $k(\textbf{u}\cdot\textbf{v})=(k\textbf{u})\cdot\textbf{v}=\textbf{u}\cdot(k\textbf{v})$}
+                    {(d) $\textbf{v}\cdot\textbf{v}=\norm{\textbf{v}}^2$}
+                    {(e) $\textbf{0}\cdot\textbf{v}=0$}
+                }
+            \end{flushleft}
+            \begin{hint}{hnt:2}
+                \Large
+                فقط از تعاریف استفاده کنید، برای مثال،
+                \begin{equation*}
+                    \centering
+                    \begin{split}
+                        \textbf{v}\cdot\textbf{v}&=v_{x}v_{x}+v_{y}v_{y}+v_{z}v_{z}) \\
+                        &=v_{x}^2+v_{y}^2+v_{z}^2 \\
+                        &=\left( \sqrt{\displaystyle v_{x}^2+v_{y}^2+v_{z}^2} \right) \\
+                        &=\norm{\textbf{v}}^2
+                    \end{split}
+                \end{equation*}
+            \end{hint}
+            \\
+            \item {از قانون کسینوس ($c^2=a^2+b^2-2ab\cos\theta$) برای نشان دادن معادله ی زیر استفاده کنید که در آن a، b و c طول اضلاع یک مثلث و  زاویه بین ضلع های a و b است.}
+            \begin{center}
+                $u_{x}v_{x}+u_{y}v_{y}+u_{z}v_{z}=\norm{\textbf{u}}\norm{\textbf{v}}\cos\theta$
+            \end{center}
+            \begin{hint}{hnt:3}
+                \Large
+                شکل \ref{fig:4.Session.1.1.9} را در نظر بگیرید و $c^2=\norm{\textbf{u}-\textbf{v}}$، $a^2=\norm{\textbf{u}}$ و $b^2=\norm{\textbf{v}}$ را فرض کرده و از ویژگی های ضرب داخلی تمرین قبلی استفاده کنید.
+            \end{hint}
+            \\
+            \item {فرض کنید $\textbf{n}=(-1,2)$. بردار $\textbf{g}=(0,-9.8)$ را به مجموع دو بردار متعامد، یکی موازی با $\textbf{n}$ و دیگری متعامد با $\textbf{n}$، تجزیه کنید. همچنین بردارها را نسبت به یک سیستم مختصات دوبعدی رسم کنید.}
+            \\
+            \item {فرض کنید $\textbf{u}=(-2,1,4)$ و $\textbf{v}=(3,-4,1)$. $\textbf{w}=\textbf{u}\times\textbf{v}$ را پیدا کنید و $\textbf{w}\cdot\textbf{u}=0$ و $\textbf{w}\cdot\textbf{v}=0$ را نشان دهید.}
+            \\
+            \item {فرض کنید نقاط زیر یک مثلث را نسبت به برخی از سیستم مختصات تعریف میکنند:
+                $\textbf{A}=(0,0,0)$، $\textbf{B}=(0,1,3)$، و $\textbf{C}=(5,1,0)$. بردار متعامد این مثلث را پیدا کنید.}
+            \begin{hint}{hnt:4}
+                \Large
+                دو بردار در دو یال مثلث پیدا کنید و از ضرب خارجی استفاده کنید.
+            \end{hint}
+            \\
+            \item {ثابت کنید $\norm{\textbf{u}\times\textbf{v}}=\norm{\textbf{u}}\norm{\textbf{v}}\sin\theta$}
+            \begin{hint}{hnt:5}
+                \Large
+                با $\norm{\textbf{u}}\norm{\textbf{v}}\abs{\sin\theta}$ شروع کنید و از اتحاد مثلثاتی $\cos^2\theta+\sin^2\theta=1\Longrightarrow\sin\theta=\sqrt{\displaystyle 1-\cos^2\theta}$ استفاده کنید. سپس معادله ی \ref{eqtn:4} را اعمال کنید.
+            \end{hint}
+            \\
+            \item {ثابت کنید \norm{\textbf{u}\times\textbf{v}} مساحت متوازی الاضلاع که توسط $\textbf{u}$ و $\textbf{v}$ پوشانده شده است را نشان می دهد. شکل \ref{fig:4.Session.1.1.21} را ببینید.}
+            \begin{figure}[H]
+                \centering
+                \setlength{\belowcaptionskip}{-10pt}
+                \includegraphics[width=0.5\textwidth]{Images/4/4.Session.1.1.21}
+                \caption {متوازی الاضلاع توسط دو بردار سه بعدی $\textbf{u}$ و $\textbf{v}$. متوازی الاضلاع دارای پایه $\norm{\textbf{v}}$ و ارتفاع $\textbf{h}$ است.}
+                \label{fig:4.Session.1.1.21}
+            \end{figure}
+            \\
+            \item {مثالی از بردارهای سه بعدی $\textbf{u}$، $\textbf{v}$ و $\textbf{w}$ را به گونه ای بیاورید که $\textbf{u}\times(\textbf{v}\times\textbf{w})\neq(\textbf{u}\times\textbf{v})\times\textbf{w}$. این نشان می دهد که ضرب خارجی خاصیت شرکت پذیری ندارد.}
+            \begin{hint}{hnt:6}
+                \Large
+                ترکیبی از بردارهای ساده $\textbf{i}=(1,0,0)$، $\textbf{j}=(0,1,0)$ و $\textbf{k}=(0,0,1)$ را در نظر بگیرید.
+            \end{hint}
+            \\
+            \item {ثابت کنید که ضرب خارجی دو بردار موازی غیر صفر، بردار صفر است. یعنی $\textbf{u}\timesk\textbf{u}=0$.}
+            \begin{hint}{hnt:7}
+                \Large
+                فقط از تعریف ضرب خارجی استفاده کنید.
+            \end{hint}
+            \\
+            \item {مجموعه بردارهای $\{(1, 0, 0), (1, 5, 0), (2, 1, -4)\}$ را با استفاده از فرآیند گرام اشمیت، متعارف کنید.}
+            \\
+            \item {برنامه و خروجی زیر را در نظر بگیرید.
+            تخمین بزنید که هر تابع \texttt{XMVector*} چه می کند. سپس هر تابع را در مستندات \lr{DirectXMath} جستجو کنید.}
+            \textbf{\vspace{6pt}}
+            \lr{\lstinputlisting[language=C++, caption={GITHUB/src/Chapter 1 Vector Algebra/XMVECTOR/VectorOps.cpp}, firstline=459, lastline=506]{Codes/main.c}}
+            \textbf{\vspace{-30pt}}
+            \begin{figure}[H]
+                \centering
+                \setlength{\belowcaptionskip}{-10pt}
+                \includegraphics[width=0.8\textwidth]{Images/4/4.Session.1.1.22}
+                \caption {خروجی برنامه ی بالا.}
+                \label{fig:4.Session.1.1.22}
+            \end{figure}
+        \end{enumerate}
+    \end{spacing}
 }
