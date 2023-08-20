@@ -25,7 +25,7 @@
         توجه داشته باشید که موضوعاتی که در اینجا مورد بررسی قرار می‌گیرند، تنها مواردی هستند که برای درک ادامه ی این کتاب ضروری اند.
         این کتاب به هیچ وجه راه حل جامعی برای ریاضیات بازی های ویدیویی نیست.
 
-        \begin{point}{pnt:1}
+        \begin{point}{pnt:1.1}
             \Large
             برای خوانندگانی که مایل به ارجاع کامل تر به ریاضیات بازی های ویدیویی هستند، کتاب های زیر را توصیه می کنیم.
             \lr{
@@ -60,7 +60,7 @@
     \Large
     \begin{spacing}{1.5}
         بردارها نقش مهمی در گرافیک کامپیوتری، تشخیص برخورد و شبیه سازی فیزیکی ایفا می کنند که همگی اجزای رایج در بازی های ویدئویی مدرن هستند.
-        رویکرد ما در اینجا غیر تخصصی و عملی است به همین دلیل پیشنهاد ما کتاب \lr{Verth04} (نکته \ref{pnt:1}) است که کتابی اختصاصی برای ریاضیات بازی های سه بعدی/گرافیک است.
+        رویکرد ما در اینجا غیر تخصصی و عملی است به همین دلیل پیشنهاد ما کتاب \lr{Verth04} (نکته \ref{pnt:1.1}) است که کتابی اختصاصی برای ریاضیات بازی های سه بعدی/گرافیک است.
         ما بر اهمیت بردارها بسیار تأکید داریم زیرا در بیشتر برنامه های آزمایشی این کتاب استفاده شده اند.
         \\
 
@@ -135,7 +135,7 @@
         سپس می‌توانیم یک بردار را با تعیین مختصات سر آن شناسایی کنیم و مانند شکل \ref{fig:4.Session.1.1.3}، \lr{\textbf{v} = (x, y, z)} را بنویسیم.
         اکنون می توانیم یک بردار را با سه \textbf{float} در یک برنامه کامپیوتری نشان دهیم.
         \textbf{\vspace{-10pt}}
-        \begin{point}{pnt:2}
+        \begin{point}{pnt:1.2}
             \Large
             اگر کار به صورت \lr{2D} باشد، فقط از یک سیستم مختصات \lr{2D} استفاده می کنیم و بردار فقط دو مختصات دارد:
             \lr{\textbf{v} = (x, y)} و یک بردار را با دو \textbf{float} در یک برنامه نشان میدهیم.
@@ -170,11 +170,11 @@
         اغلب در گرافیک های کامپیوتری سه بعدی، از بیش از یک سیستم مختصات استفاده می کنیم و بنابراین، باید شناسایی کنیم که مختصات یک بردار نسبت به کدام سیستم مختصات است.
         علاوه بر این، ما باید بدانیم که چگونه مختصات برداری را از یک سیستم مختصات به سیستم مختصات دیگر تبدیل کنیم.
         \textbf{\vspace{-10pt}}
-        \begin{point}{pnt:3}
+        \begin{point}{pnt:1.3}
             \Large
             مشاهده میکنیم که بردارها و نقاط را می توان با مختصات (\lr{x, y, z}) نسبت به یک سیستم مختصات توصیف کرد.
             با این حال، بردارها و نقاط یکسان نیستند؛ یک نقطه نشان دهنده یک مکان در 3 فاصله است، در حالی که یک بردار نشان دهنده یک اندازه و جهت است.
-            در مورد نقاط در بخش \ref{sec:5} بیشتر حرف خواهیم زد.
+            در مورد نقاط در بخش \ref{sec:1.5} بیشتر حرف خواهیم زد.
         \end{point}
         \textbf{\vspace{-50pt}}
     \end{spacing}
@@ -219,7 +219,7 @@
         \end{enumerate}
 
         \textbf{\vspace{-10pt}}
-        \begin{example}{exp:1}
+        \begin{example}{exp:1.1}
             \Large
             فرض کنید $\textbf{u}=(1,2,3), \textbf{v}=(1,2,3), \textbf{w}=(3,0,-2), k=2$
             \lr{
@@ -234,7 +234,7 @@
         \end{example}
 
         \textbf{\vspace{-20pt}}
-        \begin{example}{exp:2}
+        \begin{example}{exp:1.2}
             \Large
             ما این مثال را با بردارهای دوبعدی برای ساده‌تر کردن کار توضیح می‌دهیم. ایده ها مانند فضای سه بعدی هستند، فقط با یک جزء کمتر ، به صورت دو بعدی کار می کنیم.\\
             \begin{enumerate}[label=\textbf{\arabic*}.]
@@ -306,7 +306,7 @@
         از قضیه فیثاغورث، $a=\sqrt{\displaystyle x^2+z^2}$ داریم.
         حالا به مثلث با ضلع های \lr{a}، \lr{y} و وتر $\norm{u}$ نگاه کنید از قضیه فیثاغورث دوباره به فرمول اندازه ی زیر می رسیم:
 
-        \begin{eqtn}{eqtn:1}
+        \begin{eqtn}{eqtn:1.1}
             \centering
             $\norm{\textbf{u}}=\sqrt{\displaystyle y^2+a^2}=\sqrt{\displaystyle y^2+(\sqrt{\displaystyle x^2+z^2})^2}=\sqrt{\displaystyle x^2+y^2+z^2}$
         \end{eqtn}
@@ -316,7 +316,7 @@
         وقتی طول واحد برداری را می سازیم، می گوییم که بردار را نرمال کرده ایم.
         می توانیم یک بردار را با تقسیم هر یک از اجزای بر بزرگی آن ، نرمال کنیم:
 
-        \begin{eqtn}{eqtn:2}
+        \begin{eqtn}{eqtn:1.2}
             \centering
             $\hat{\textbf{u}}=\frac{\displaystyle\textbf{u}}{\displaystyle\norm{\textbf{u}}}=\left(\frac{\displaystyle x}{\displaystyle\norm{\textbf{u}}},
             \frac{\displaystyle y}{\displaystyle\norm{\textbf{u}}}, \frac{\displaystyle z}{\displaystyle\norm{\textbf{u}}}\right)$
@@ -333,7 +333,7 @@
 
         پس $\hat{\textbf{u}}$ در واقع یک بردار واحد است.
 
-        \begin{example}{exp:3}
+        \begin{example}{exp:1.3}
             بردار $\textbf{v}=(-1,3,4)$ را نرمال کنید. داریم $\norm{\textbf{v}}=\sqrt{\displaystyle (-1)^2+3^2+4^2}=\sqrt{\displaystyle 26}$. پس:
 
             \begin{center}
@@ -354,7 +354,7 @@
 
 
 \section{\textbf{ضرب داخلی}}
-\label{sec:3}
+\label{sec:1.3}
 {
     \Large
     \begin{spacing}{1.5}
@@ -363,7 +363,7 @@
         فرض کنید $\textbf{u}=(u_{x},u_{y},u_{z})$ و  $\textbf{v}=(v_{x},v_{y},v_{z})$،
         پس ضرب داخلی به صورت زیر تعریف می‌شود:
 
-        \begin{eqtn}{eqtn:3}
+        \begin{eqtn}{eqtn:1.3}
             \centering
             \LARGE
             $\textbf{u}\cdot\textbf{v}=u_{x}v_{x}+u_{y}v_{y}+u_{z}v_{z}$
@@ -374,16 +374,16 @@
         همچنین تعریف ضرب داخلی معنای هندسی آشکاری ارائه نمی دهد.
         با استفاده از قانون کسینوس (به تمرین \ref{question10} مراجعه کنید)، می توانیم رابطه ای را پیدا کنیم که در آن $\theta$ زاویه بین بردارهای $\textbf{u}$ و $\textbf{v}$ است به طوری که $0\leq\theta\leq\pi$؛ شکل \ref{fig:4.Session.1.1.9} را ببینید.
 
-        \begin{eqtn}{eqtn:4}
+        \begin{eqtn}{eqtn:1.4}
             \centering
             \LARGE
             $\textbf{u}\cdot\textbf{v}=\norm{\textbf{u}}\norm{\textbf{v}}\cos\theta$
         \end{eqtn}
 
-        بنابراین، معادله \ref{eqtn:4} می گوید که حاصلضرب نقطه ای بین دو بردار، کسینوس زاویه بین آنها است که با بزرگی بردارها ضرب شده است.
+        بنابراین، معادله \ref{eqtn:1.4} می گوید که حاصلضرب نقطه ای بین دو بردار، کسینوس زاویه بین آنها است که با بزرگی بردارها ضرب شده است.
         به خصوص، اگر هر دو بردار $\textbf{u}$ و $\textbf{v}$ بردار واحد باشند،
         آنگاه $\textbf{u}\cdot\textbf{v}$ کسینوس زاویه بین آنهاست (یعنی $\textbf{u}\cdot\textbf{v}=\cos\theta$).
-        معادله \ref{eqtn:4} برخی از ویژگی های هندسی مفید ضرب داخلی را در اختیار ما قرار می دهد:
+        معادله \ref{eqtn:1.4} برخی از ویژگی های هندسی مفید ضرب داخلی را در اختیار ما قرار می دهد:
 
         \begin{figure}[H]
             \centering
@@ -402,7 +402,7 @@
             \item {اگر $\textbf{u}\cdot\textbf{v}<0$، در نتیجه زاویه ی بین $\theta$ و دو بردار بیشتر از 90 درجه ست (یعنی بردار ها با هم زاویه ی منفرجه میسازند).}
         \end{enumerate} \\
 
-        \begin{example}{exp:4}
+        \begin{example}{exp:1.4}
             فرض کنید $\textbf{u}=(1,2,3)$ و $\textbf{v}=(-4,0,-1)$ باشند. زوایه ی بین $\textbf{u}$ و $\textbf{v}$ را پیدا کنید. \\
             ابتدا موارد زیر را محاسبه میکنیم:
 
@@ -414,7 +414,7 @@
                 $\norm{\textbf{v}}=\sqrt{\displaystyle (-4)^2+0^2+(-1)^2}=\sqrt{\displaystyle 17}$
             \end{center}
 
-            حالا ، معادله ی \ref{eqtn:4} را برای حل $\theta$ اعمال میکنیم:
+            حالا ، معادله ی \ref{eqtn:1.4} را برای حل $\theta$ اعمال میکنیم:
 
             \begin{center}
                 $\cos\theta=\frac{\displaystyle\textbf{u}\cdot\textbf{v}}{\displaystyle\norm{\textbf{v}}\norm{\textbf{u}}}=\frac{\displaystyle -7}{\displaystyle \sqrt{\displaystyle 14}\sqrt{\displaystyle 17}}$
@@ -424,7 +424,7 @@
         \end{example}
 
         \textbf{\vspace{-20pt}}
-        \begin{example}{exp:5}
+        \begin{example}{exp:1.5}
             شکل \ref{fig:4.Session.1.1.10} را در نظر بگیرید.
             با توجه به $\textbf{v}$ و بردار واحد $\textbf{n}$، فرمولی برای $\textbf{p}$ بر حسب $\textbf{v}$ و $\textbf{n}$ با استفاده از ضرب داخلی پیدا کنید. \\
             ابتدا، از شکل مشاهده کنید که عدد اسکالر $\textbf{k}$ وجود دارد
@@ -471,7 +471,7 @@
 \textbf{\vspace{-10pt}}
 
 \subsection{\textbf{متعامد سازی}}
-\label{sec:3.1}
+\label{sec:1.3.1}
 {
     \Large
     \begin{spacing}{1.5}
@@ -557,12 +557,12 @@
         شکل \ref{fig:4.Session.1.1.13} را ببینید.
         اگر $\textbf{u}=(u_{x},u_{y},u_{z})$ و  $\textbf{v}=(v_{x},v_{y},v_{z})$ باشد، آنگاه ضرب خارجی به این صورت محاسبه می‌شود:
 
-        \begin{eqtn}{eqtn:5}
+        \begin{eqtn}{eqtn:1.5}
             \centering
             $\textbf{w}=\textbf{u}\times\textbf{v}=(u_{y}v_{z}\textbf{-}u_{z}v_{y}, u_{z}v_{x}\textbf{-}u_{x}v_{z}, u_{x}v_{y}\textbf{-}u_{y}v_{z})$
         \end{eqtn}
 
-        \begin{point}{pnt:4}
+        \begin{point}{pnt:1.4}
             \Large
             اگر در سیستم مختصات راستگرد کار می کنید، پس از قانون شست دست راست استفاده می کنید:
             اگر دست راست خود را طوری بگیرید که انگشتان در جهت بردار اول u باشد و سپس انگشتان خود را به سمت v با زاویه ی $0\leq\theta\leq\pi$ خم کنید، انگشت شست شما در جهت $\textbf{w}=\textbf{u}\times\textbf{v}$ قرار می گیرد.
@@ -577,8 +577,8 @@
             \label{fig:4.Session.1.1.13}
         \end{figure}
 
-        \begin{example}{exp:6}
-            فرض کنید $\textbf{u}=(2,1,3)$ و $\textbf{v}=(2,0,0)$ باشد. سپس $\textbf{w}=\textbf{u}\times\textbf{v}$ و $\textbf{z}=\textbf{v}\times\textbf{u}$ را محاسبه کنید و چک کنید که $\textbf{w}$ متعامد به $\textbf{u}$ و $\textbf{v}$ باشد. معادله ی \ref{eqtn:5} را اعمال میکنیم: \\
+        \begin{example}{exp:1.6}
+            فرض کنید $\textbf{u}=(2,1,3)$ و $\textbf{v}=(2,0,0)$ باشد. سپس $\textbf{w}=\textbf{u}\times\textbf{v}$ و $\textbf{z}=\textbf{v}\times\textbf{u}$ را محاسبه کنید و چک کنید که $\textbf{w}$ متعامد به $\textbf{u}$ و $\textbf{v}$ باشد. معادله ی \ref{eqtn:1.5} را اعمال میکنیم: \\
             \begin{equation*}
                 \centering
                 \begin{split}
@@ -604,7 +604,7 @@
             اگر ابتدا انگشتان خود را در جهت بردار اول بگیرید و سپس انگشتان خود را به سمت بردار دوم خم کنید (همیشه مسیر را با کوچکترین زاویه انتخاب کنید)، همانطور که در شکل \ref{fig:4.Session.1.1.11} نشان داده شده است، انگشت شست شما در جهت بردار حاصل قرار می گیرد.
 
             برای نشان دادن اینکه $\textbf{w}$ متعامد به $\textbf{u}$ و $\textbf{w}$ متعامد بر $\textbf{v}$ است،
-            از بخش \ref{sec:3} یادآوری می کنیم که اگر $\textbf{u}\cdot\textbf{v}=0$ باشد،
+            از بخش \ref{sec:1.3} یادآوری می کنیم که اگر $\textbf{u}\cdot\textbf{v}=0$ باشد،
             آنگاه $\textbf{u}\perp\textbf{v}$ است (یعنی بردارها متعامد هستند). زیرا
 
             \begin{center}
@@ -651,7 +651,7 @@
 {
     \Large
     \begin{spacing}{1.5}
-        در بخش \ref{sec:3.1}، ما روشی برای متعامد کردن مجموعه ای از بردارها با استفاده از فرآیند گرام اشمیت را مشاهده کردیم.
+        در بخش \ref{sec:1.3.1}، ما روشی برای متعامد کردن مجموعه ای از بردارها با استفاده از فرآیند گرام اشمیت را مشاهده کردیم.
         برای سه بعدی، استراتژی دیگری برای متعامد کردن مجموعه ای از بردارها $\{\textbf{v}_{0},\textbf{v}_{1},\textbf{v}_{2}\}$ وجود دارد که متعارف هستند،
         اما ممکن است به دلیل خطاهای انباشته شده در دقت عددی با استفاده از ضرب خارجی، غیرمتعارف شوند.
         برای شکل هندسی این فرآیند به شکل \ref{fig:4.Session.1.1.15} مراجعه کنید:
@@ -673,7 +673,7 @@
             \label{fig:4.Session.1.1.15}
         \end{figure}
 
-        \begin{point}{pnt:5}
+        \begin{point}{pnt:1.5}
             \Large
             در مثال بالا، ما با $\textbf{w}_{0}=\frac{\displaystyle\textbf{v}_{0}}{\displaystyle\norm{\textbf{v}_{0}}}$ شروع کردیم، به این معنی که هنگام رفتن از $\textbf{v}_{0}$ به $\textbf{w}_{0}$ جهت را تغییر ندادیم،
             ما فقط طول را تغییر دادیم.
@@ -688,7 +688,7 @@
 
 
 \section{\textbf{نقاط}}
-\label{sec:5}
+\label{sec:1.5}
 {
     \Large
     \begin{spacing}{1.5}
@@ -722,7 +722,7 @@
             \label{fig:4.Session.1.1.17}
         \end{figure}
 
-        \begin{point}{pnt:6}
+        \begin{point}{pnt:1.6}
             \Large
             در واقع یک روش هندسی معنادار برای تعریف یک مجموع ویژه از نقاط وجود دارد که به آن ترکیب وابسته می گویند، که مانند میانگین وزنی نقاط است.
         \end{point}
@@ -956,7 +956,7 @@
         \textbf{\vspace{6pt}}
         \lr{\lstinputlisting[language=C++,  firstline=267, lastline=304]{Codes/main.c}}
         \textbf{\vspace{-20pt}}
-        \begin{point}{pnt:7}
+        \begin{point}{pnt:1.7}
             \Large
             توجه کنید که این توابع حتی برای عملیاتی که از نظر ریاضی یک اسکالر را برمی‌گردانند، \texttt{XMVECTOR} برمی‌گردانند (مثلاً ضرب داخلی $k=\textbf{v}_{1}\cdot\textbf{v}_{2}$).
             نتیجه اسکالر در هر جزء از \texttt{XMVECTOR} تکرار می شود. به عنوان مثال، برای ضرب داخلی، بردار برگشتی ($\textbf{v}_{1}\cdot\textbf{v}_{2},\textbf{v}_{1}\cdot\textbf{v}_{2},\textbf{v}_{1}\cdot\textbf{v}_{2},\textbf{v}_{1}\cdot\textbf{v}_{2}$) خواهد بود.
@@ -977,7 +977,7 @@
         \end{figure}
         \textbf{\vspace{-30pt}}
 
-        \begin{point}{pnt:8}
+        \begin{point}{pnt:1.8}
             \Large
             کتابخانه DirectX شامل برخی از روش‌های تخمینی می‌شود که دقت کمتری دارند اما محاسبه سریع‌تر است.
             اگر مایلید کمی دقت را فدای سرعت کنید، از روش‌های برآورد استفاده کنید:
@@ -1180,7 +1180,7 @@
             \item \label{question14} {ثابت کنید $\norm{\textbf{u}\times\textbf{v}}=\norm{\textbf{u}}\norm{\textbf{v}}\sin\theta$.}
             \begin{hint}{hnt:5}
                 \Large
-                با $\norm{\textbf{u}}\norm{\textbf{v}}\sin\theta$ شروع کنید و از اتحاد مثلثاتی $\cos^2\theta+\sin^2\theta=1\Longrightarrow\sin\theta=\sqrt{\displaystyle 1-\cos^2\theta}$ استفاده کنید. سپس معادله ی \ref{eqtn:4} را اعمال کنید.
+                با $\norm{\textbf{u}}\norm{\textbf{v}}\sin\theta$ شروع کنید و از اتحاد مثلثاتی $\cos^2\theta+\sin^2\theta=1\Longrightarrow\sin\theta=\sqrt{\displaystyle 1-\cos^2\theta}$ استفاده کنید. سپس معادله ی \ref{eqtn:1.4} را اعمال کنید.
             \end{hint}
             \\
             \item {ثابت کنید \norm{\textbf{u}\times\textbf{v}} مساحت متوازی الاضلاع که توسط $\textbf{u}$ و $\textbf{v}$ پوشانده شده است را نشان می دهد. شکل \ref{fig:4.Session.1.1.21} را ببینید.}
