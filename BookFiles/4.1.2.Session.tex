@@ -104,7 +104,7 @@
         \begin{figure}[H]
             \centering
             \setlength{\belowcaptionskip}{-10pt}
-            \includegraphics[width=0.85\textwidth]{Images/4/4.Session.1.1.1}
+            \includegraphics[width=0.85\textwidth]{Images/4/1/4.Session.1.1.1}
             \caption{(الف) بردار هایی که روی صفحه ی دوبعدی کشیده شده اند.
                 (ب) بردار هایی که مورچه ها را برای حرکت 10 متر در جهت شمال راهنمایی میکنند.}
             \label{fig:4.Session.1.1.1}
@@ -185,7 +185,7 @@
             \begin{figure}[H]
                 \centering
                 \setlength{\belowcaptionskip}{-10pt}
-                \includegraphics[width=\textwidth]{Images/4/4.Session.1.1.6}
+                \includegraphics[width=\textwidth]{Images/4/1/4.Session.1.1.6}
                 \caption{(آ) تفسیر هندسی ضرب اسکالر. (ب) تفسیر هندسی جمع بردار. ج) تفسیر هندسی تفریق بردار.}
                 \label{fig:4.Session.1.1.6}
             \end{figure}
@@ -193,7 +193,7 @@
             \begin{figure}[H]
                 \centering
                 \setlength{\belowcaptionskip}{-10pt}
-                \includegraphics[width=\textwidth]{Images/4/4.Session.1.1.7}
+                \includegraphics[width=\textwidth]{Images/4/1/4.Session.1.1.7}
                 \caption{نیروهای اعمال شده به یک توپ. نیروها با استفاده از جمع بردار ترکیب می شوند تا نیروی برآیند به دست آید. \textbf{\vspace{10pt}}}
                 \label{fig:4.Session.1.1.7}
             \end{figure}
@@ -215,7 +215,7 @@
         \begin{figure}[H]
             \centering
             \setlength{\belowcaptionskip}{-10pt}
-            \includegraphics[width=0.5\textwidth]{Images/4/4.Session.1.1.8}
+            \includegraphics[width=0.5\textwidth]{Images/4/1/4.Session.1.1.8}
             \caption{طول سه بعدی یک بردار را می توان با دو بار اعمال قضیه فیثاغورث محاسبه کرد.}
             \label{fig:4.Session.1.1.8}
         \end{figure}
@@ -898,17 +898,120 @@
 {
     \Large
     \begin{spacing}{1.5}
+        دترمینان یک ماتریس به صورت بازگشتی تعریف می شود.
+        به عنوان مثال، دترمینان یک ماتریس $4\times 4$ بر حسب ماتریس $3\times 3$ تعریف می شود و دترمینان یک ماتریس $3\times 3$ بر اساس دترمینان ماتریس $2\times 2$ تعریف می شود.
+        دترمینان یک ماتریس $2\times 2$ بر حسب دترمینان ماتریس $1\times 1$ تعریف می شود
+        (دترمینان ماتریس $1\times 1$ $\textbf{A}=[A_{11}]$ به طور پیش پا افتاده به عنوان \lr{det $[A_{11}]=A_{11}$} تعریف می شود).
+
+        فرض کنید $\textbf{A}$ یک ماتریس $n\times n$ باشد. سپس برای $n>1$ تعریف می کنیم:
 
         \begin{eqtn}{eqtn:2.4}
             \centering
-
+            $det\textbf{A}=\sum\limits_{j=1}^{n}A_{aj}(-1)^{1+j}det\bar{\textbf{A}}_{1j}$
         \end{eqtn}
+
+        با یادآوری تعریف ماتریس کِهاد $\bar{\textbf{A}}_{ij}$، برای ماتریس های $2\times 2$، این فرمول به دست می آید:
+
+        \begin{center}
+            $det\begin{bmatrix}
+                    A_{11} & A_{12} \\
+                    A_{21} & A_{22}
+            \end{bmatrix}=A_{11}det[A_{22}]-A_{12}det[A_{21}]=A_{11}A_{22}-A_{12}A_{21}$
+        \end{center}
+
+        برای ماتریس های $3\times 3$، این فرمول به دست می آید:
+
+        \begin{center}
+            $det\begin{bmatrix}
+                    A_{11} & A_{12} & A_{13} \\
+                    A_{21} & A_{22} & A_{23} \\
+                    A_{31} & A_{32} & A_{33}
+            \end{bmatrix}=A_{11}det\begin{bmatrix}
+                                       A_{22} & A_{23} \\
+                                       A_{32} & A_{33}
+            \end{bmatrix}-A_{12}det\begin{bmatrix}
+                                       A_{21} & A_{23} \\
+                                       A_{31} & A_{33}
+            \end{bmatrix}+A_{13}det\begin{bmatrix}
+                                       A_{21} & A_{22} \\
+                                       A_{31} & A_{32}
+            \end{bmatrix}$
+        \end{center}
+
+        برای ماتریس های $4\times 4$، این فرمول به دست می آید:
+
+        \begin{center}
+            $det\begin{bmatrix}
+                    A_{11} & A_{12} & A_{13} & A_{14} \\
+                    A_{21} & A_{22} & A_{23} & A_{24} \\
+                    A_{31} & A_{32} & A_{33} & A_{34} \\
+                    A_{31} & A_{32} & A_{33} & A_{44}
+            \end{bmatrix}=A_{11}det\begin{bmatrix}
+                                       A_{22} & A_{23} & A_{24} \\
+                                       A_{32} & A_{33} & A_{34} \\
+                                       A_{42} & A_{43} & A_{44}
+            \end{bmatrix}-A_{12}det\begin{bmatrix}
+                                       A_{21} & A_{23} & A_{24} \\
+                                       A_{31} & A_{33} & A_{34} \\
+                                       A_{41} & A_{43} & A_{44}
+            \end{bmatrix}+A_{13}det\begin{bmatrix}
+                                       A_{21} & A_{22} & A_{24} \\
+                                       A_{31} & A_{32} & A_{34} \\
+                                       A_{41} & A_{42} & A_{44}
+            \end{bmatrix}-A_{14}det\begin{bmatrix}
+                                       A_{21} & A_{22} & A_{23} \\
+                                       A_{31} & A_{32} & A_{33} \\
+                                       A_{41} & A_{42} & A_{43}
+            \end{bmatrix}$
+        \end{center}
+
+        در گرافیک سه بعدی، ما در درجه اول با ماتریس های $4\times 4$ کار می کنیم و بنابراین نیازی به تولید فرمول های صریح برای $n>4$ نداریم.
 
         \begin{example}{exp:2.9}
             \Large
+            دترمینان ماتریس را پیدا کنید
 
+            \begin{center}
+                $\begin{bmatrix}
+                     2  & -5 & 3 \\
+                     1  & 3  & 4 \\
+                     -2 & 3  & 7
+                \end{bmatrix}$
+            \end{center}
+
+            داریم که:
+
+            $det\textbf{A}=A_{11}det\begin{bmatrix}
+                                        A_{22} & A_{23} \\
+                                        A_{32} & A_{33}
+            \end{bmatrix}-A_{12}det\begin{bmatrix}
+                                       A_{21} & A_{23} \\
+                                       A_{31} & A_{33}
+            \end{bmatrix}+A_{13}det\begin{bmatrix}
+                                       A_{21} & A_{22} \\
+                                       A_{31} & A_{32}
+            \end{bmatrix}$
+
+            \begin{equation*}
+                \centering
+                \begin{split}
+                    det\textbf{A}&=2det\begin{bmatrix}
+                                           3 & 4 \\
+                                           3 & 7
+                    \end{bmatrix}-(-5)det\begin{bmatrix}
+                                             1  & 4 \\
+                                             -2 & 7
+                    \end{bmatrix}+3det\begin{bmatrix}
+                                          1  & 3 \\
+                                          -2 & 3
+                    \end{bmatrix}\\
+                    &=2(3\cdot 7-4\cdot 3)+5(1\cdot 7-4\cdot(-2))+3(1\cdot 3-3\cdot(-2)) \\
+                    &=2(9)+5(15)+3(9) \\
+                    &=18+75+27 \\
+                    &=120
+                \end{split}
+            \end{equation*}
         \end{example}
-
     \end{spacing}
 }
 
@@ -918,11 +1021,26 @@
 {
     \Large
     \begin{spacing}{1.5}
+        فرض کنید $\textbf{A}$ یک ماتریس $n\times n$ باشد. ضرب $\textbf{C}_{ij}=(-1)^{i+j}det\bar{\textbf{A}}_{ij}$ را کوفاکتور $A_{ij}$ می‌گویند.
+        اگر $C_{ij}$ را محاسبه کرده و آن را در موقعیت $ij$ ام یک ماتریس $\textbf{C}_{\textbf{A}}$ مربوط به هر عنصر در $\textbf{A}$ قرار دهیم، ماتریس کوفاکتور $\textbf{A}$ را به دست می آوریم:
+
+        \begin{center}
+            \begin{bmatrix}
+                C_{11} & C_{12} & \cdots & A_{1n} \\
+                C_{21} & C_{22} & \cdots & A_{1n} \\
+                \vdots & \vdots & \ddots & \vdots \\
+                C_{n1} & C_{n2} & \cdots & C_{nn}
+            \end{bmatrix}
+        \end{center}
+
+        اگر ترانهاده $\textbf{C}_{\textbf{A}}$ را در نظر بگیریم، ماتریسی به دست می‌آید که الحاق $\textbf{A}$ نامیده می‌شود که آن را به شکل زیر نشان می‌دهیم:
 
         \begin{eqtn}{eqtn:2.5}
             \centering
-
+            $\textbf{A}^{*}=\textbf{C}^{T}_{\textbf{A}}$
         \end{eqtn}
+
+        در بخش بعدی، یاد می گیریم که الحاق به ما امکان می دهد یک فرمول صریح برای محاسبه معکوس های ماتریس پیدا کنیم.
     \end{spacing}
 }
 
@@ -932,20 +1050,137 @@
 {
     \Large
     \begin{spacing}{1.5}
+        جبر ماتریسی عملیات تقسیم را تعریف نمی کند، اما یک عملیات معکوس ضربی را تعریف می کند. فهرست زیر اطلاعات مهم در مورد معکوس ها را خلاصه می کند:
+
         \begin{enumerate}[label=\textbf{\arabic*}.]
+            \item {فقط ماتریس های مربعی دارای معکوس هستند.
+            بنابراین، وقتی از معکوس‌های ماتریس صحبت می‌کنیم، فرض می‌کنیم که با یک ماتریس مربعی سروکار داریم.}
+
+            \item {معکوس یک $n\times n$ ماتریس $\textbf{M}$ یک ماتریس $n\times n$ است که با $\textbf{M}_{-1}$ نشان داده می شود.}
+
+            \item {هر ماتریس مربعی معکوس ندارد.
+            به ماتریسی که معکوس دارد معکوس پذیر و به ماتریسی که معکوس ندارد مفرد گفته می شود.}
+
+            \item {معکوس زمانی منحصر به فرد است که وجود داشته باشد.}
+
+            \item {ضرب یک ماتریس با معکوس آن منجر به ماتریس همانی می شود: $\textbf{M}\textbf{M}^{-1}=\textbf{M}^{-1}\textbf{M}=\textbf{I}$.
+            توجه داشته باشید که ضرب یک ماتریس با معکوس خودش حالتی است که ضرب ماتریس جایگزین باشد.}
         \end{enumerate}
+
+        معکوس های ماتریس هنگام حل ماتریس های دیگر در یک معادله ماتریسی مفید هستند.
+        برای مثال، فرض کنید که معادله ماتریسی $\textbf{p}^{\prime}=\textbf{p}\textbf{M}$ به ما داده شده است.
+        بعلاوه فرض کنید که $\textbf{p}^{\prime}$ و $\textbf{M}$ به ما داده می شود و می خواهیم آن را برای $\textbf{p}$ حل کنیم.
+        با فرض اینکه $\textbf{M}$ معکوس پذیر است (یعنی $\textbf{M}^{-1}$ وجود دارد)، می توانیم $\textbf{p}$ را مانند این حل کنیم:
+
+        \begin{center}
+            $\textbf{p}^{\prime}=\textbf{p}\textbf{M}$\\
+            $\textbf{p}^{\prime}\textbf{M}^{-1}=\textbf{p}\textbf{M}\textbf{M}^{-1}$ (ضرب دو طرف معادله در $\textbf{M}^{-1}$)\\
+            $\textbf{p}^{\prime}\textbf{M}^{-1}=\textbf{p}\textbf{I}$ ($\textbf{M}\textbf{M}^{-1}=\textbf{I}$، با تعریف معکوس.)\\
+            $\textbf{p}^{\prime}\textbf{M}^{-1}=\textbf{p}$ ($\textbf{p}\textbf{I}=\textbf{p}$، با تعریف ماتریس همانی.)
+        \end{center}
+
+        فرمولی برای یافتن معکوس‌ها (که در اینجا ثابت نمی‌کنیم، اما باید در هر متن جبر خطی سطح دانشگاه ثابت شود) بر حسب الحاق و تعیین ارائه میکنیم:
+
         \begin{eqtn}{eqtn:2.6}
             \centering
-
+            $\textbf{A}_{-1}=\frac{\displaystyle\textbf{A}^{*}}{\displaystyle det\textbf{A}}$
         \end{eqtn}
+
         \begin{example}{exp:2.10}
             \Large
+            یک فرمول کلی برای معکوس یک ماتریس $2\times 2$ پیدا کنید $\textbf{A}=\begin{bmatrix}
+                                                                                    A_{21} & A_{22} \\
+                                                                                    A_{31} & A_{32}
+            \end{bmatrix}$ و از این فرمول برای پیدا کردن معکوس ماتریس $\textbf{M}=\begin{bmatrix}
+                                                                                      3  & 0 \\
+                                                                                      -1 & 2
+            \end{bmatrix}$ استفاده کنید.
 
-            \begin{point}{pnt:2.1}
-                \Large
+            داریم که
 
-            \end{point}
+            $det \textbf{A}=A_{11}A_{22}-A_{12}A_{21}$
+
+            \begin{center}
+                $\textbf{C}_{\textbf{A}}=\begin{bmatrix}
+                (-1)
+                                             ^{1+1}det\bar{\textbf{A}}_{11}     & (-1)^{1+2}det\bar{\textbf{A}}_{12} \\
+                                             (-1)^{2+1}det\bar{\textbf{A}}_{21} & (-1)^{2+2}det\bar{\textbf{A}}_{22}
+                \end{bmatrix}=\begin{bmatrix}
+                                  A_{22}  & -A_{21} \\
+                                  -A_{12} & A_{11}
+                \end{bmatrix}$
+            \end{center}
+
+            از این رو
+
+            \begin{center}
+                $\textbf{A}_{-1}=\frac{\displaystyle \textbf{A}_{*}}{\displaystyle det\textbf{A}}=\frac{\displaystyle \textbf{C}^{T}_{\textbf{A}}}{\displaystyle det\textbf{A}}=\frac{\displaystyle 1}{\displaystyle A_{11}A_{22}-A_{12}A_{21}}\begin{bmatrix}
+                                                                                                                                                                                                                                                   A_{22}  & -A_{12} \\
+                                                                                                                                                                                                                                                   -A_{21} & A_{11}
+                \end{bmatrix}$
+            \end{center}
+
+            اکنون این فرمول را برای معکوس کردن $\textbf{M}=\begin{bmatrix}
+                                                               3  & 0 \\
+                                                               -1 & 2
+            \end{bmatrix}$ اعمال می کنیم:
+
+            \begin{center}
+                $\textbf{M}_{-1}=\frac{\displaystyle 1}{\displaystyle 3\cdot 2-0\cdot(-1)}\begin{bmatrix}
+                                                                                              2 & 0 \\
+                                                                                              1 & 3
+                \end{bmatrix}=\begin{bmatrix}
+                                  1/3 & 0   \\
+                                  1/6 & 1/2
+                \end{bmatrix}$
+            \end{center}
+
+            برای بررسی کردن درستی کار ، از $\textbf{M}\textbf{M}^{-1}=\textbf{M}^{-1}\textbf{M}=\textbf{I}$ استفاده میکنیم:
+
+            \begin{center}
+                $\begin{bmatrix}
+                     3  & 0 \\
+                     -1 & 2
+                \end{bmatrix}\begin{bmatrix}
+                                 1/3 & 0   \\
+                                 1/6 & 1/2
+                \end{bmatrix}=\begin{bmatrix}
+                                  1 & 0 \\
+                                  0 & 1
+                \end{bmatrix}=\begin{bmatrix}
+                                  1/3 & 0   \\
+                                  1/6 & 1/2
+                \end{bmatrix}\begin{bmatrix}
+                                 3  & 0 \\
+                                 -1 & 2
+                \end{bmatrix}$
+            \end{center}
         \end{example}
+
+        \begin{point}{pnt:2.1}
+            \Large
+            برای ماتریس های کوچک (اندازه های $4\times 4$ و کوچکتر)، روش الحاقی از نظر محاسباتی کارآمد است.
+            برای ماتریس های بزرگتر، روش های دیگری مانند حذف گاوسی استفاده می شود.
+            با این حال، ماتریس‌هایی که در گرافیک‌های کامپیوتری سه‌بعدی مورد توجه ما هستند،
+            اشکال خاصی دارند، که ما را قادر می‌سازد تا فرمول‌های معکوس را سریع تر تعیین کنیم،
+            به طوری که نیازی به هدر دادن سیکل‌های CPU برای یافتن معکوس یک ماتریس کلی نداریم.
+            در نتیجه، ما به ندرت نیاز به اعمال معادله \ref{eqtn:2.6} در کد داریم.
+        \end{point}
+
+        برای نتیجه‌گیری این بخش در مورد معکوس‌ها، ویژگی جبری مفید زیر را برای معکوس یک ضرب ارائه می‌کنیم:
+
+        \begin{center}
+            $(\textbf{AB})^{-1}=\textbf{B}^{-1}\textbf{A}^{-1}$
+        \end{center}
+
+        این ویژگی فرض می کند که هر دو $\textbf{A}$ و $\textbf{B}$ معکوس پذیر هستند و هر دو ماتریس مربعی با یک بعد هستند.
+        برای اثبات اینکه $\textbf{B}^{-1}\textbf{A}^{-1}$ معکوس $\textbf{AB}$ است، باید $(\textbf{AB})(\textbf{B}^{-1}\textbf{A}^{-1})=\textbf{I}$ و $(\textbf{B}^{-1}\textbf{A}^{-1})(\textbf{AB})=\textbf{I}$ را نشان دهیم.
+        این کار به صورت زیر انجام می شود:
+
+        \begin{center}
+            $(\textbf{AB})(\textbf{B}^{-1}\textbf{A}^{-1})=\textbf{A}(\textbf{B}\textbf{B}^{-1})\textbf{A}^{-1}=\textbf{A}\textbf{I}\textbf{A}^{-1}=\textbf{A}\textbf{A}^{-1}=\textbf{I}$\\
+            $(\textbf{B}^{-1}\textbf{A}^{-1})(\textbf{AB})=\textbf{B}(\textbf{A}\textbf{A}^{-1})\textbf{B}^{-1}=\textbf{B}\textbf{I}\textbf{B}^{-1}=\textbf{B}\textbf{B}^{-1}=\textbf{I}$\\
+        \end{center}
     \end{spacing}
 }
 
@@ -955,6 +1190,9 @@
 {
     \Large
     \begin{spacing}{1.5}
+        برای تبدیل نقاط و بردارها از بردارهای ردیفی $1\times 4$ و ماتریس های $4\times 4$ استفاده می کنیم.
+        دلیل این امر در فصل بعدی توضیح داده خواهد شد.
+        در حال حاضر، ما فقط بر روی نوع های \lr{DirectX Math} که برای نمایش ماتریس های $4\times 4$ استفاده می شود تمرکز می کنیم.
     \end{spacing}
 }
 
@@ -962,9 +1200,28 @@
 {
     \Large
     \begin{spacing}{1.5}
+        برای نمایش ماتریس های $1\times 4$ در ریاضی \lr{DirectX}، از کلاس \texttt{XMMATRIX} استفاده می کنیم که در فایل هدر \lr{DirectXMath.h} به صورت زیر تعریف شده است (با برخی تنظیمات جزئی که برای وضوح انجام داده ایم):
         \textbf{\vspace{6pt}}
-        \lr{\lstinputlisting[language=C++,  firstline=389, lastline=392]{Codes/main.c}}
+        \lr{\lstinputlisting[language=C++, firstline=1, lastline=47]{Codes/4.1.2.program.c}}
         \textbf{\vspace{6pt}}
+        همانطور که می بینید، \texttt{XMMATRIX} از چهار نمونه \texttt{XMVECTOR} برای استفاده از \lr{SIMD} استفاده می کند. علاوه بر این، \texttt{XMMATRIX} عملگرهای سربارگذاری شده را برای محاسبات ماتریس فراهم می کند.
+
+        علاوه بر استفاده از سازنده های مختلف، یک نمونه \texttt{XMMATRIX} را می توان با استفاده از تابع \texttt{XMMATRIX} ایجاد کرد:
+        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++, firstline=51, lastline=55]{Codes/4.1.2.program.c}}
+        \textbf{\vspace{6pt}}
+        همانطور که از \lr{\texttt{XMFLOAT2} (2D)}، \lr{\texttt{XMFLOAT3} (3D)} و \lr{\texttt{XMFLOAT4} (4D)} در هنگام ذخیره بردارها در یک کلاس استفاده می کنیم،
+        در مستندات \lr{DirectXMath} توصیه می شود از نوع \texttt{XMFLOAT4X4} برای ذخیره ماتریس ها به عنوان اعضای داده کلاس استفاده شود.
+        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++, firstline=59, lastline=86]{Codes/4.1.2.program.c}}
+        \textbf{\vspace{6pt}}
+        ما از روش زیر برای بارگذاری داده ها از \texttt{XMFLOAT4X4} در \texttt{XMMATRIX} استفاده می کنیم:
+        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++, firstline=90, lastline=91]{Codes/4.1.2.program.c}}
+        \textbf{\vspace{6pt}}
+        ما از روش زیر برای ذخیره داده ها از \texttt{XMMATRIX} در \texttt{XMFLOAT4X4} استفاده می کنیم:
+        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++, firstline=95, lastline=96]{Codes/4.1.2.program.c}}
     \end{spacing}
 }
 
@@ -972,9 +1229,27 @@
 {
     \Large
     \begin{spacing}{1.5}
+        کتابخانه ریاضی \lr{DirectX} شامل توابع مفید مرتبط با ماتریس زیر است:
         \textbf{\vspace{6pt}}
-        \lr{\lstinputlisting[language=C++,  firstline=389, lastline=392]{Codes/main.c}}
+        \lr{\lstinputlisting[language=C++,  firstline=100, lastline=117]{Codes/4.1.2.program.c}}
         \textbf{\vspace{6pt}}
+        هنگامی که یک پارامتر \texttt{XMMATRIX} را به یک تابع اعلام می کنیم، از همان قوانینی استفاده می کنیم که هنگام انتقال پارامترهای \texttt{XMVECTOR} استفاده می کنیم
+        (به \ref{sec:1.6.3} مراجعه کنید)،
+        با این تفاوت که یک \texttt{XMMATRIX} به عنوان چهار پارامتر \texttt{XMVECTOR} محاسبه می شود.
+        با فرض اینکه در مجموع بیش از دو پارامتر اضافی \texttt{FXMVECTOR} برای تابع وجود نداشته باشد،
+        اولین \texttt{XMMATRIX} باید از نوع \texttt{FXMMATRIX} باشد و هر \texttt{XMMATRIX} دیگری باید از نوع \texttt{CXMMATRIX} باشد.
+        نحوه تعریف این انواع در ویندوز $32$ بیتی را با کامپایلری که از قرارداد \texttt{\_\_fastcall} پشتیبانی می کند
+        و کامپایلری که از قرارداد فراخوانی \texttt{\_\_vectorcall} جدیدتر پشتیبانی می کند، توضیح می دهیم:
+        \textbf{\vspace{6pt}}
+        \lr{\lstinputlisting[language=C++,  firstline=121, lastline=129]{Codes/4.1.2.program.c}}
+        \textbf{\vspace{6pt}}
+        توجه داشته باشید که در ویندوز $32$ بیتی با \texttt{\_\_fastcall}، یک \texttt{XMMATRIX} نمی تواند از طریق ثبات های \lr{SSE/SSE2} عبور داده شود،
+        زیرا تنها سه آرگومان \texttt{XMVECTOR} از طریق ثبات ها پشتیبانی می شوند و یک \texttt{XMMATRIX} به چهار آرگومان نیاز دارد.
+        بنابراین ماتریس فقط با مرجع به پشته منتقل می شود.
+        برای جزئیات نحوه تعریف این انواع برای پلتفرم‌های دیگر، به \lr{«Calling Conventions»} در بخش \lr{«Internals Library»} در مستندات \lr{DirectXMath} مراجعه کنید.
+        استثنای این قوانین مربوط به متدهای سازنده است.
+        \lr{[DirectXMath]} توصیه می کند همیشه از \texttt{CXMMATRIX} برای سازنده هایی که پارامترهای \texttt{XMMATRIX} را می گیرند استفاده کنید.
+        علاوه بر این، از حاشیه نویسی \texttt{XM\_CALLCONV} برای سازنده ها استفاده نکنید.
     \end{spacing}
 }
 
@@ -982,26 +1257,18 @@
 {
     \Large
     \begin{spacing}{1.5}
+        کد زیر چند مثال در مورد نحوه استفاده از کلاس \texttt{XMMATRIX} و اکثر توابع ذکر شده در بخش قبل ارائه می دهد.
         \textbf{\vspace{6pt}}
-        \lr{\lstinputlisting[language=C++,  firstline=389, lastline=392]{Codes/main.c}}
+        \lr{\lstinputlisting[language=C++, caption={d3d12book/Chapter 2 Matrix Algebra/XMMATRIX/xmmatrix.cpp}, firstline=133, lastline=194]{Codes/4.1.2.program.c}}
         \textbf{\vspace{6pt}}
-
-%        \begin{figure}[H]
-%            \centering
-%            \setlength{\belowcaptionskip}{-10pt}
-%            \includegraphics[width=0.8\textwidth]{Images/4/4.Session.1.2.1}
-%            \caption {خروجی برنامه ی بالا.}
-%            \label{fig:4.Session.1.2.1}
-%        \end{figure}
 
         \begin{figure}[H]
             \centering
             \setlength{\belowcaptionskip}{-10pt}
-            \includegraphics[width=0.8\textwidth]{Images/4/4.Session.1.1.1}
+            \includegraphics[width=0.8\textwidth]{Images/4/2/4.Session.1.2.1}
             \caption {خروجی برنامه ی بالا.}
-            \label{fig:4.Session.1.1.1}
+            \label{fig:4.Session.1.2.1}
         \end{figure}
-
     \end{spacing}
 }
 %-----------------------------------------------------------------------------------------------------------%
@@ -1014,9 +1281,40 @@
     \Large
     \begin{spacing}{1.5}
         \begin{enumerate}[label=\textbf{\arabic*}.]
+            \item {یک ماتریس $m\times n$ $\textbf{A}$ آرایه مستطیلی از اعداد حقیقی با $m$ ردیف و $n$ ستون است.
+            دو ماتریس با ابعاد یکسان اگر و تنها اگر اجزای متناظر آنها برابر باشند، مساوی هستند.
+            ما دو ماتریس با ابعاد یکسان را با اضافه کردن عناصر متناظر آنها جمع می کنیم.
+            ما یک اسکالر و یک ماتریس را با ضرب اسکالر در هر عنصر در ماتریس ضرب می کنیم.}
+
+            \item {اگر $\textbf{A}$ یک ماتریس $m\times n$ و $\textbf{B}$ یک ماتریس $n\times p$ باشد،
+            حاصلضرب $\textbf{AB}$ تعریف می شود و یک ماتریس $m\times p$ $\textbf{C}$ است
+            که در آن ورودی $ij$مین حاصلضرب $\textbf{C}$ با گرفتن ضرب داخلی بردار ردیف $i$ ام در $\textbf{A}$ با بردار ستون $j$ ام در $\textbf{B}$، یعنی $\textbf{C}^{ij}=\textbf{A}^{i,*}\cdot\textbf{B}^{*,j}$ .}
+
+            \item {ضرب ماتریس جابجایی پذیر نیست (به عنوان مثال، $\textbf{AB}\neq\textbf{BA}$، به طور کلی). ضرب ماتریس شرکت پذیر است: $(\textbf{AB})\textbf{C}=(\textbf{A})\textbf{BC}$.}
+
+            \item {ترانهاده یک ماتریس با تعویض ردیف ها و ستون های ماتریس به دست می آید.
+            بنابراین ترانهاده یک ماتریس $m\times n$ یک ماتریس $n\times m$ است.
+            ترانهاده یک ماتریس $\textbf{M}$ را $\textbf{M}^{T}$ نشان می دهیم.}
+
+            \item {ماتریس همانی یک ماتریس مربعی است که همه عناصر به جز در امتداد قطر اصلی صفر بوده و عناصر در امتداد قطر اصلی همه یک هستند.}
+
+            \item {دترمینان، \lr{det $\textbf{A}$}، یک تابع ویژه است که یک ماتریس مربعی را دریافت و یک عدد حقیقی را خروجی می دهد.
+            یک ماتریس مربعی $\textbf{A}$ معکوس است اگر و تنها اگر $det\textbf{A}\neq 0$ باشد.
+            دترمینان در فرمول برای محاسبه معکوس یک ماتریس استفاده می شود.}
+
+            \item {از ضرب یک ماتریس در معکوس آن، ماتریس همانی حاصل می شود: $\textbf{M}\textbf{M}^{-1}=\textbf{M}^{-1}\textbf{M}=\textbf{I}$.
+            معکوس یک ماتریس، اگر وجود داشته باشد، منحصر به فرد است.
+            فقط ماتریس های مربعی دارای معکوس هستند و حتی در این صورت، ماتریس مربع ممکن است معکوس پذیر نباشد.
+            معکوس یک ماتریس را می توان با فرمول محاسبه کرد: $\textbf{A}_{-1}=\textbf{A}^{*}/det\textbf{A}$، که در آن $\textbf{A}^{*}$ الحاق است (ترانهاده ماتریس کوفاکتور $\textbf{A}$).}
+
+            \item {ما از نوع DirectX Math XMMATRIX برای توصیف ماتریس $4\times 4$ به طور موثر در کد با استفاده از عملیات SIMD استفاده می کنیم.
+            برای اعضای داده کلاس، ما از کلاس XMFLOAT4X4 استفاده می کنیم و
+            سپس از روش های بارگذاری (XMLoadFloat4x4) و ذخیره سازی (XMStoreFloat4x4) برای تبدیل بین XMMATRIX و XMFLOAT4X4 به عقب و جلو استفاده می کنیم.
+            کلاس XMMATRIX عملگرهای حسابی را برای انجام جمع، تفریق، ضرب ماتریس و ضرب اسکالر بارگذاری می کند.
+            علاوه بر این، کتابخانه ریاضی DirectX توابع ماتریس مفید زیر را برای محاسبه ماتریس همانی، ضرب، ترانهاده، دترمینان و معکوس ارائه می کند:
             \textbf{\vspace{6pt}}
-            \lr{\lstinputlisting[language=C++,  firstline=389, lastline=392]{Codes/main.c}}
-            \textbf{\vspace{6pt}}
+            \lr{\lstinputlisting[language=C++, firstline=198, lastline=203]{Codes/4.1.2.program.c}}
+            }
         \end{enumerate}
     \end{spacing}
 }
@@ -1030,6 +1328,206 @@
     \Large
     \begin{spacing}{1.5}
         \begin{enumerate}[label=\textbf{\arabic*}.]
+            \item {معادله ماتریسی روبرو را برای $\textbf{X}$ حل کنید: $\left( \begin{bmatrix}
+                                                                                  -2 & 0 \\
+                                                                                  1  & 3
+            \end{bmatrix}-2\textbf{X}=2\begin{bmatrix}
+                                           -2 & 0 \\
+                                           1  & 3
+            \end{bmatrix} \right)$.}
+
+            \item {ضرب های ماتریس زیر را محاسبه کنید: \\
+            \lr{
+                \begin{flushleft}
+                (a)
+                    $\begin{bmatrix}
+                         -2 & 0 & 3  \\
+                         4  & 1 & -1
+                    \end{bmatrix}\textbf{X}\begin{bmatrix}
+                                               -2 & 1  \\
+                                               0  & 6  \\
+                                               2  & -3
+                    \end{bmatrix}$ \\
+                    (b) $\begin{bmatrix}
+                             1 & 2 \\
+                             3 & 4
+                    \end{bmatrix}\textbf{X}\begin{bmatrix}
+                                               -2 & 0 \\
+                                               1  & 1
+                    \end{bmatrix}$ \\
+                    (c) $\begin{bmatrix}
+                             2 & 0  & 2  \\
+                             0 & -1 & -3 \\
+                             0 & 0  & 1
+                    \end{bmatrix}\textbf{X}\begin{bmatrix}
+                                               1 \\
+                                               2 \\
+                                               1
+                    \end{bmatrix}$
+                \end{flushleft}
+            }
+            }
+
+            \item {ترانهاده ماتریس های زیر را محاسبه کنید: \\
+            \lr{
+                \begin{flushleft}
+                (a)
+                    $[1, 2, 3]$ \\
+                    (b) $\begin{bmatrix}
+                             x & y \\
+                             z & w
+                    \end{bmatrix}$ \\
+                    (c) $\begin{bmatrix}
+                             1 & 2 \\
+                             3 & 4 \\
+                             5 & 6 \\
+                             7 & 8
+                    \end{bmatrix}$
+                \end{flushleft}
+            }
+            }
+
+            \item {نشان دهید: \\
+                \begin{center}
+                    $\textbf{AB}=\begin{bmatrix}
+                                     A_{11} & A_{12} & A_{13} \\
+                                     A_{21} & A_{22} & A_{23} \\
+                                     A_{31} & A_{32} & A_{33}
+                    \end{bmatrix}\begin{bmatrix}
+                                     B_{11} & B_{12} \\
+                                     B_{21} & B_{22} \\
+                                     B_{31} & B_{32}
+                    \end{bmatrix}=\begin{bmatrix}
+                                      \leftarrow & \textbf{A}_{1,*}\textbf{B} & \rightarrow \\
+                                      \leftarrow & \textbf{A}_{2,*}\textbf{B} & \rightarrow \\
+                                      \leftarrow & \textbf{A}_{3,*}\textbf{B} & \rightarrow
+                    \end{bmatrix}$
+                \end{center}
+            }
+
+            \item {نشان دهید: \\
+                \begin{center}
+                    $\textbf{Au}=\begin{bmatrix}
+                                     A_{11} & A_{12} & A_{13} \\
+                                     A_{21} & A_{22} & A_{23} \\
+                                     A_{31} & A_{32} & A_{33}
+                    \end{bmatrix}\begin{bmatrix}
+                                     x \\
+                                     y \\
+                                     z
+                    \end{bmatrix}=x\textbf{A}_{*,1}+y\textbf{A}_{*,2}+z\textbf{A}_{*,3}$
+                \end{center}
+            }
+
+            \item {ثابت کنید که ضرب خارجی را می توان با ضرب ماتریس بیان کرد:
+                \begin{center}
+                    $\textbf{u}\times\textbf{v}=\begin{bmatrix}
+                                                    v_{x} & v_{y} & v_{z}
+                    \end{bmatrix}\begin{bmatrix}
+                                     0      & u_{z}  & -u_{y} \\
+                                     -u_{z} & 0      & u_{x}  \\
+                                     u_{y}  & -u_{x} & 0
+                    \end{bmatrix}$
+                \end{center}
+            }
+
+            \item {فرض کنید $\textbf{A}=\begin{bmatrix}
+                                            2 & 0  & 1  \\
+                                            0 & -1 & -3 \\
+                                            0 & 0  & 1
+            \end{bmatrix}$. آیا $\textbf{B}=\begin{bmatrix}
+                                                1/2 & 0  & -1/2 \\
+                                                0   & -1 & -3   \\
+                                                0   & 0  & 1
+            \end{bmatrix}$ ترانهاده ی $\textbf{A}$ است؟
+            }
+
+            \item {فرض کنید $\textbf{A}=\begin{bmatrix}
+                                            1 & 2 \\
+                                            3 & 4
+            \end{bmatrix}$. آیا $\textbf{B}=\begin{bmatrix}
+                                                -2  & 1   \\
+                                                3/2 & 1/2
+            \end{bmatrix}$ ترانهاده ی $\textbf{A}$ است؟
+            }
+
+            \item {دترمینان های ماتریس های زیر را بیابید:
+                $\begin{bmatrix}
+                     21 & -4 \\
+                     10 & 7
+                \end{bmatrix}$,
+                $\begin{bmatrix}
+                     2 & 0 & 0 \\
+                     0 & 3 & 0 \\
+                     0 & 0 & 7
+                \end{bmatrix}$
+            }
+
+            \item {معکوس ماتریس های زیر را بیابید:
+                $\begin{bmatrix}
+                     21 & -4 \\
+                     10 & 7
+                \end{bmatrix}$,
+                $\begin{bmatrix}
+                     2 & 0 & 0 \\
+                     0 & 3 & 0 \\
+                     0 & 0 & 7
+                \end{bmatrix}$
+            }
+
+            \item {آیا ماتریس زیر معکوس پذیر است؟
+                \begin{center}
+                    $\begin{bmatrix}
+                         1 & 2 & 3 \\
+                         0 & 4 & 5 \\
+                         0 & 0 & 0
+                    \end{bmatrix}$
+                \end{center}
+            }
+
+            \item {نشان دهید که $(\textbf{A}^{-1})^{T}=(\textbf{A}^{T})^{-1}$، با فرض اینکه $\textbf{A}$ معکوس پذیر است.}
+
+            \item {فرض کنید $\textbf{A}$ و $\textbf{B}$ ماتریس $n\times n$ باشند.
+            ک واقعیت ثابت شده در کتاب های جبر خطی این است که $det\textbf{AB}=det\textbf{A}\cdot\textbf{B}$.
+            از این واقعیت به همراه این واقعیت که $det\textbf{I}=1$ برای اثبات $\textbf{A}^{-1}=\frac{\displaystyle 1}{\displaystyle det\textbf{A}}$ استفاده کنید،
+            با فرض اینکه $\textbf{A}$ معکوس پذیر است.}
+
+            \item {ثابت کنید که دترمینان دوبعدی  $\begin{bmatrix}
+                                                      u_{x} & u_{y} \\
+                                                      v_{x} & v_{y}
+            \end{bmatrix}$ مساحت علامت متوازی الاضلاع را می دهد که با $\textbf{u}=(u_{x},u_{y})$ و $\textbf{v}=(v_{x},v_{y})$ پوشیده شده است.
+            نتیجه مثبت است اگر $\textbf{u}$ را بتوان در خلاف جهت عقربه های ساعت بچرخانیم تا با $\textbf{v}$ با زاویه $\theta\in(0,\pi)$ منطبق شود، و در غیر این صورت منفی است.
+                \begin{figure}[H]
+                    \centering
+                    \setlength{\belowcaptionskip}{-10pt}
+                    \includegraphics[width=0.5\textwidth]{Images/4/2/4.Session.1.2.2}
+                    \label{fig:4.Session.1.2.2}
+                \end{figure}
+            }
+
+            \item {مساحت متوازی الاضلاع را بیابید که با موارد زیر پوشیده شده باشد: \\
+            \lr{(a) $\textbf{u}=(3,0), \textbf{v}=(1,1)$}
+            \lr{(b) $\textbf{u}=(-1,-1), \textbf{v}=(0,1)$}
+            }
+
+            \item {فرض کنید $\textbf{A}=\begin{bmatrix}
+                                            A_{11} & A_{12} \\
+                                            A_{21} & A_{22}
+            \end{bmatrix}$، $\textbf{B}=\begin{bmatrix}
+                                            B_{11} & B_{12} \\
+                                            B_{21} & B_{22}
+            \end{bmatrix}$ و $\textbf{C}=\begin{bmatrix}
+                                             C_{11} & C_{12} \\
+                                             C_{21} & C_{22}
+            \end{bmatrix}$ نشان دهید که $\textbf{A}(\textbf{BC})=(\textbf{AB})\textbf{C}$.
+            این نشان می دهد که ضرب ماتریس برای ماتریس های $2\times 2$ شرکت پذیر است.
+                (در واقع، هر زمان که ضرب تعریف شود، ضرب ماتریس برای ماتریس‌های با اندازه عمومی شرکت پذیر است.)}
+
+            \item {یک برنامه کامپیوتری بنویسید که ترانهاده یک ماتریس $m\times n$ را بدون استفاده از \lr{DirectX Math} محاسبه کند
+                (فقط از آرایه ای از آرایه ها در \lr{C++} استفاده کنید).}
+
+            \item {یک برنامه کامپیوتری بنویسید که دترمینان و معکوس ماتریس های $4\times 4$ را بدون استفاده از \lr{DirectX Math} محاسبه کند
+                (فقط از آرایه ای از آرایه ها در \lr{C++} استفاده کنید).}
         \end{enumerate}
     \end{spacing}
 }
