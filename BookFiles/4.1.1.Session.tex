@@ -52,15 +52,21 @@
 
 \setcounter{chapter}{1}
 
-\textbf{\vspace{80pt}}
 
-\chapter{\textbf{1 جبر برداری}}
-\textbf{\vspace{70pt}}
+\chapter{\lr{\textbf{جبر برداری}}}
+\textbf{\vspace{-140pt}}
+\begin{figure}[H]
+    \centering
+    \setlength{\belowcaptionskip}{-10pt}
+    \includegraphics[width=0.8\textwidth]{Images/4/1/4.Session.1.1.0}
+    \label{fig:4.Session.1.2.0}
+\end{figure}
+\textbf{\vspace{20pt}}
 {
     \Large
     \begin{spacing}{1.5}
         بردارها نقش مهمی در گرافیک کامپیوتری، تشخیص برخورد و شبیه سازی فیزیکی ایفا می کنند که همگی اجزای رایج در بازی های ویدئویی مدرن هستند.
-        رویکرد ما در اینجا غیر تخصصی و عملی است به همین دلیل پیشنهاد ما کتاب \lr{Verth04} (نکته \ref{pnt:1.1}) است که کتابی اختصاصی برای ریاضیات بازی های سه بعدی/گرافیک است.
+        رویکرد ما در اینجا غیر تخصصی و عملی است به همین دلیل پیشنهاد ما کتاب \lr{Verth04} (نکته \hyperref[pnt:1.1]{\ref{pnt:1.1}.\arabic{chapter}}) است که کتابی اختصاصی برای ریاضیات بازی های سه بعدی/گرافیک است.
         ما بر اهمیت بردارها بسیار تأکید داریم زیرا در بیشتر برنامه های آزمایشی این کتاب استفاده شده اند.
         \\
 
@@ -380,10 +386,10 @@
             $\textbf{u}\cdot\textbf{v}=\norm{\textbf{u}}\norm{\textbf{v}}\cos\theta$
         \end{eqtn}
 
-        بنابراین، معادله \ref{eqtn:1.4} می گوید که حاصلضرب نقطه ای بین دو بردار، کسینوس زاویه بین آنها است که با بزرگی بردارها ضرب شده است.
+        بنابراین، معادله \hyperref[eqtn:1.4]{\ref{eqtn:1.4}.\arabic{chapter}} می گوید که حاصلضرب نقطه ای بین دو بردار، کسینوس زاویه بین آنها است که با بزرگی بردارها ضرب شده است.
         به خصوص، اگر هر دو بردار $\textbf{u}$ و $\textbf{v}$ بردار واحد باشند،
         آنگاه $\textbf{u}\cdot\textbf{v}$ کسینوس زاویه بین آنهاست (یعنی $\textbf{u}\cdot\textbf{v}=\cos\theta$).
-        معادله \ref{eqtn:1.4} برخی از ویژگی های هندسی مفید ضرب داخلی را در اختیار ما قرار می دهد:
+        معادله \hyperref[eqtn:1.4]{\ref{eqtn:1.4}.\arabic{chapter}} برخی از ویژگی های هندسی مفید ضرب داخلی را در اختیار ما قرار می دهد:
 
         \begin{figure}[H]
             \centering
@@ -414,7 +420,7 @@
                 $\norm{\textbf{v}}=\sqrt{\displaystyle (-4)^2+0^2+(-1)^2}=\sqrt{\displaystyle 17}$
             \end{center}
 
-            حالا ، معادله ی \ref{eqtn:1.4} را برای حل $\theta$ اعمال میکنیم:
+            حالا ، معادله ی \hyperref[eqtn:1.4]{\ref{eqtn:1.4}.\arabic{chapter}} را برای حل $\theta$ اعمال میکنیم:
 
             \begin{center}
                 $\cos\theta=\frac{\displaystyle\textbf{u}\cdot\textbf{v}}{\displaystyle\norm{\textbf{v}}\norm{\textbf{u}}}=\frac{\displaystyle -7}{\displaystyle \sqrt{\displaystyle 14}\sqrt{\displaystyle 17}}$
@@ -578,7 +584,7 @@
         \end{figure}
 
         \begin{example}{exp:1.6}
-            فرض کنید $\textbf{u}=(2,1,3)$ و $\textbf{v}=(2,0,0)$ باشد. سپس $\textbf{w}=\textbf{u}\times\textbf{v}$ و $\textbf{z}=\textbf{v}\times\textbf{u}$ را محاسبه کنید و چک کنید که $\textbf{w}$ متعامد به $\textbf{u}$ و $\textbf{v}$ باشد. معادله ی \ref{eqtn:1.5} را اعمال میکنیم: \\
+            فرض کنید $\textbf{u}=(2,1,3)$ و $\textbf{v}=(2,0,0)$ باشد. سپس $\textbf{w}=\textbf{u}\times\textbf{v}$ و $\textbf{z}=\textbf{v}\times\textbf{u}$ را محاسبه کنید و چک کنید که $\textbf{w}$ متعامد به $\textbf{u}$ و $\textbf{v}$ باشد. معادله ی \hyperref[eqtn:1.5]{\ref{eqtn:1.5}.\arabic{chapter}} را اعمال میکنیم: \\
             \begin{equation*}
                 \centering
                 \begin{split}
@@ -828,6 +834,7 @@
 }
 
 \textbf{\vspace{-65pt}}
+
 \subsection{\textbf{ارسال پارامتر}}
 \label{sec:1.6.3}
 {
@@ -1181,7 +1188,7 @@
             \item \label{question14} {ثابت کنید $\norm{\textbf{u}\times\textbf{v}}=\norm{\textbf{u}}\norm{\textbf{v}}\sin\theta$.}
             \begin{hint}{hnt:5}
                 \Large
-                با $\norm{\textbf{u}}\norm{\textbf{v}}\sin\theta$ شروع کنید و از اتحاد مثلثاتی $\cos^2\theta+\sin^2\theta=1\Longrightarrow\sin\theta=\sqrt{\displaystyle 1-\cos^2\theta}$ استفاده کنید. سپس معادله ی \ref{eqtn:1.4} را اعمال کنید.
+                با $\norm{\textbf{u}}\norm{\textbf{v}}\sin\theta$ شروع کنید و از اتحاد مثلثاتی $\cos^2\theta+\sin^2\theta=1\Longrightarrow\sin\theta=\sqrt{\displaystyle 1-\cos^2\theta}$ استفاده کنید. سپس معادله ی \hyperref[eqtn:1.4]{\ref{eqtn:1.4}.\arabic{chapter}} را اعمال کنید.
             \end{hint}
             \\
             \item {ثابت کنید \norm{\textbf{u}\times\textbf{v}} مساحت متوازی الاضلاع که توسط $\textbf{u}$ و $\textbf{v}$ پوشانده شده است را نشان می دهد. شکل \ref{fig:4.Session.1.1.21} را ببینید.}

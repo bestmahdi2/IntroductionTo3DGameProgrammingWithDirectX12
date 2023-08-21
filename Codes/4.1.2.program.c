@@ -59,12 +59,10 @@ XMMATRIX XM_CALLCONV XMMatrixSet(
 struct XMFLOAT4X4
 {
     union {
-        struct {
-            float _11, _12, _13, _14;
-            float _21, _22, _23, _24;
-            float _31, _32, _33, _34;
-            float _41, _42, _43, _44;
-        };
+        struct {float _11, _12, _13, _14;
+                float _21, _22, _23, _24;
+                float _31, _32, _33, _34;
+                float _41, _42, _43, _44;};
         float m[4][4];
     };
     
@@ -84,6 +82,8 @@ struct XMFLOAT4X4
     
     XMFLOAT4X4& operator= (const XMFLOAT4X4& Float4x4);
 };
+
+
 
 /////////////////////////////////////////////////////////////////////////////
 
@@ -150,7 +150,7 @@ ostream& XM_CALLCONV operator << (ostream& os, FXMVECTOR v) {
 
 ostream& XM_CALLCONV operator << (ostream& os, FXMMATRIX m) {
     for (int i = 0; i < 4; ++i) {
-        os << XMVectorGetX(m.r[i]) << ″\t";
+        os << XMVectorGetX(m.r[i]) << "\t";
         os << XMVectorGetY(m.r[i]) << "\t";
         os << XMVectorGetZ(m.r[i]) << "\t";
         os << XMVectorGetW(m.r[i]);
