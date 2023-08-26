@@ -8,32 +8,32 @@
 
 
 \chapter{\lr{\textbf{تبدیل ها}}}
-\textbf{\vspace{-140pt}}
+\textbf{\vspace{-150pt}}
 \begin{figure}[H]
     \centering
     \setlength{\belowcaptionskip}{-10pt}
     \includegraphics[width=0.8\textwidth]{Images/4/3/4.Session.1.3.0}
     \label{fig:4.Session.1.3.0}
 \end{figure}
-\textbf{\vspace{20pt}}
+\textbf{\vspace{10pt}}
 {
     \Large
     \begin{spacing}{1.5}
         ما اشیاء موجود در جهان های سه بعدی خود را به صورت هندسی توصیف می کنیم.
         یعنی به صورت مجموعه ای از مثلث هایی که با سطوح بیرونی اجسام تقریب دارند.
         اگر اشیاء ما بی حرکت بمانند، دنیای غیر جالبی خواهیم داشت.
-        بنابراین ما به روش هایی برای تبدیل هندسی علاقه مند هستیم.
+        ما به روش هایی برای تبدیل هندسی علاقه مند هستیم.
         نمونه‌هایی از تبدیل‌های هندسی عبارتند از: انتقال، دوران و مقیاس‌بندی.
-        در این فصل، معادلات ماتریسی را توسعه می‌دهیم که می‌توان از آنها برای تبدیل نقاط و بردارها در فضای سه‌بعدی استفاده کرد.
+        در این فصل، معادلات ماتریسی را توسعه داده و از آنها برای تبدیل نقاط و بردارها در فضای سه‌بعدی استفاده میکنیم.
         \\
 
         \textbf{\LARGE \hspace{-40pt}اهداف:}
         \begin{enumerate}[label=\textbf{\arabic*}.]
             \item {درک چگونگی نشان دادن تبدیل های خطی و وابسته با ماتریس ها.}
             \item {یادگیری تبدیل مختصات برای مقیاس بندی، دوران و انتقال هندسی.}
-            \item {کشف چگونگی ترکیب کردن چندین ماتریس تبدیل به یک ماتریس تبدیل خالص از طریق ضرب ماتریس-ماتریس.}
-            \item {فهمیدن چگونگی تبدیل سیستم مختصات به سیستم مختصات دیگر و چگونگی نشان دادن این تغییر تبدیل مختصات با یک ماتریس.}
-            \item {آشنایی با زیر مجموعه توابع ارائه شده توسط کتابخانه ریاضی \lr{DirectX} که برای ساخت ماتریس های تبدیل استفاده می شوند.}
+            \item {چگونگی ترکیب چندین ماتریس تبدیل به یک ماتریس تبدیل خالص از طریق ضرب ماتریس-ماتریس.}
+            \item {چگونگی تبدیل سیستم مختصات به سیستم مختصات دیگر و چگونگی نشان دادن این تغییر تبدیل مختصات با یک ماتریس.}
+            \item {آشنایی با توابع کتابخانه ریاضی \lr{DirectX} که برای ساخت ماتریس های تبدیل استفاده می شوند.}
         \end{enumerate}
     \end{spacing}
 }
@@ -46,11 +46,13 @@
 
 \section{\textbf{تبدیلات خطی}}
 \label{sec:3.1}
+
 \subsection{\textbf{تعریف}}
+\label{subsec:3.1.1}
 {
     \Large
     \begin{spacing}{1.5}
-        تابع ریاضی $\tau(\textbf{v})=\tau(x,y,z)=(x\prime,y\prime,z\prime)$ را در نظر بگیرید.
+        تابع ریاضی $\tau(\textbf{v})=\tau(x,y,z)=(x^\prime,y^\prime,z^\prime)$ را در نظر بگیرید.
         این تابع یک بردار سه بعدی را دریافت کرده و یک بردار سه بعدی را خروجی می دهد.
         می گوییم که $\tau$ یک تبدیل خطی است اگر و تنها اگر که ویژگی های زیر برقرار باشد:
 
@@ -103,6 +105,7 @@
 }
 
 \subsection{\textbf{نمایش ماتریسی}}
+\label{subsec:3.1.2}
 {
     \Large
     \begin{spacing}{1.5}
@@ -160,6 +163,7 @@
 }
 
 \subsection{\textbf{مقیاس بندی}}
+\label{subsec:3.1.3}
 {
     \Large
     \begin{spacing}{1.5}
@@ -192,9 +196,9 @@
         و سپس بردارهای حاصل را در ردیف های یک ماتریس قرار می دهیم (مانند معادله \ref{eqtn:3.4}):
 
         \begin{center}
-            $S(\textbf{i})=(s_x\cdot 1,s_y\cdot 0,s_z\cdot 0)=(s_x,0,0) \\
-            S(\textbf{j})=(s_x\cdot 0,s_y\cdot 1,s_z\cdot 0)=(0,s_y,0) \\
-            S(\textbf{k})=(s_x\cdot 0,s_y\cdot 0,s_z\cdot 1)=(0,0,s_z)$
+            $S(\textbf{i})=(s_x\cdot 1,s_y\cdot 0,s_z\cdot 0)=(s_x,0,0)$ \\
+            $S(\textbf{j})=(s_x\cdot 0,s_y\cdot 1,s_z\cdot 0)=(0,s_y,0)$ \\
+            $S(\textbf{k})=(s_x\cdot 0,s_y\cdot 0,s_z\cdot 1)=(0,0,s_z)$
         \end{center}
 
         بنابراین نمایش ماتریسی $S$ به صورت زیر است:
@@ -247,10 +251,10 @@
                               0.5 & 0 & 0 \\
                               0   & 2 & 0 \\
                               0   & 0 & 1
-                \end{bmatrix}=[-2,-8,0]$\hspace{5 mm}$[4,4,0]=\begin{bmatrix}
-                                                                  0.5 & 0 & 0 \\
-                                                                  0   & 2 & 0 \\
-                                                                  0   & 0 & 1
+                \end{bmatrix}=[-2,-8,0]$\\$[4,4,0]=\begin{bmatrix}
+                                                       0.5 & 0 & 0 \\
+                                                       0   & 2 & 0 \\
+                                                       0   & 0 & 1
                 \end{bmatrix}=[2,8,0]$
             \end{center}
 
@@ -260,6 +264,7 @@
 }
 
 \subsection{\textbf{دوران}}
+\label{subsec:3.1.4}
 {
     \Large
     \begin{spacing}{1.5}
@@ -278,7 +283,7 @@
 
         ابتدا $\textbf{v}$ را به دو قسمت تجزیه کنید:
         یک قسمت موازی با $\textbf{n}$ و قسمت دیگر متعامد با $\textbf{n}$.
-        قسمت موازی فقط projn(v) است (مثال \ref{exp:1.5} را به خاطر بیاورید).
+        قسمت موازی فقط $proj_{n}(\textbf{v})$ است (مثال \ref{exp:1.5} را به خاطر بیاورید).
         قسمت متعامد با $\textbf{v}_{\perp}=perp_{n}(\textbf{v})=\textbf{v}-proj_{n}(\textbf{v})$ داده می شود.
         (همچنین از مثال \ref{exp:1.5} به یاد بیاورید که از آنجایی که $\textbf{n}$ یک بردار واحد است، ما $proj_{n}(\textbf{v})= (\textbf{n}\cdot\textbf{v})\textbf{n}$ را داریم.)
         مشاهدات کلیدی این است که بخشی $proj_{n}(\textbf{v})$ که موازی با $\textbf{n}$ است ، تحت دوران ثابت است.
@@ -286,7 +291,7 @@
         برای یافتن $R_{n}(\textbf{v}_{\perp})$، یک سیستم مختصات دوبعدی را در صفحه دوران تنظیم کردیم.
         ما از $\textbf{v}_{\perp}$ به عنوان یک بردار مرجع استفاده خواهیم کرد.
         برای به دست آوردن یک بردار مرجع دوم متعامد به $\textbf{v}_{\perp}$ و $\textbf{n}$،
-        حاصل ضرب متقاطع $\textbf{n}\times\textbf{v}$ (قانون شست دست چپ) را می گیریم. از مثلثات شکل \ref{fig:4.Session.1.3.3} و تمرین \ref{question14} از فصل 1، می بینیم که
+        حاصل ضرب متقاطع $\textbf{n}\times\textbf{v}$ (قانون شست دست چپ) را می گیریم. از مثلثات شکل \ref{fig:4.Session.1.3.3} و تمرین \ref{question.1.14} از فصل 1، می بینیم که
 
         \begin{center}
             $\norm{\textbf{n}\times\textbf{v}}=\norm{\textbf{n}}\norm{\textbf{v}}\sin\alpha=\norm{\textbf{v}}\sin\alpha=\norm{\textbf{v}_{\perp}}$
@@ -356,11 +361,11 @@
                                               0          & 1 & 0           & 0 \\
                                               \sin\theta & 0 & \cos\theta  & 0 \\
                                               0          & 0 & 0           & 1
-            \end{bmatrix}, \textbf{R}_{z}=\begin{bmatrix}
-                                              \cos\theta  & \sin\theta & 0 & 0 \\
-                                              -\sin\theta & \cos\theta & 0 & 0 \\
-                                              0           & 0          & 1 & 0 \\
-                                              0           & 0          & 0 & 1
+            \end{bmatrix},$\\$\textbf{R}_{z}=\begin{bmatrix}
+                                                 \cos\theta  & \sin\theta & 0 & 0 \\
+                                                 -\sin\theta & \cos\theta & 0 & 0 \\
+                                                 0           & 0          & 1 & 0 \\
+                                                 0           & 0          & 0 & 1
             \end{bmatrix}$
         \end{center}
 
@@ -394,10 +399,11 @@
                               \frac{\displaystyle \sqrt{\displaystyle 3}}{\displaystyle 2} & 0 & \frac{\displaystyle 1}{\displaystyle 2}                      \\
                               0                                                            & 1 & 0                                                            \\
                               \frac{\displaystyle 1}{\displaystyle 2}                      & 0 & \frac{\displaystyle \sqrt{\displaystyle 3}}{\displaystyle 2}
-                \end{bmatrix}\approx[-0.36,0,-1.36]\hspace{5 mm}[1,0,1]\begin{bmatrix}
-                                                                           \frac{\displaystyle \sqrt{\displaystyle 3}}{\displaystyle 2} & 0 & \frac{\displaystyle 1}{\displaystyle 2}                      \\
-                                                                           0                                                            & 1 & 0                                                            \\
-                                                                           \frac{\displaystyle 1}{\displaystyle 2}                      & 0 & \frac{\displaystyle \sqrt{\displaystyle 3}}{\displaystyle 2}
+                \end{bmatrix}\approx[-0.36,0,-1.36]$\\
+                $[1,0,1]\begin{bmatrix}
+                            \frac{\displaystyle \sqrt{\displaystyle 3}}{\displaystyle 2} & 0 & \frac{\displaystyle 1}{\displaystyle 2}                      \\
+                            0                                                            & 1 & 0                                                            \\
+                            \frac{\displaystyle 1}{\displaystyle 2}                      & 0 & \frac{\displaystyle \sqrt{\displaystyle 3}}{\displaystyle 2}
                 \end{bmatrix}\approx[0.36,0,1.36]$
             \end{center}
 
@@ -408,7 +414,7 @@
                 \setlength{\belowcaptionskip}{-10pt}
                 \includegraphics[width=0.8\textwidth]{Images/4/3/4.Session.1.3.4}
                 \caption {دوران $-30^\circ$ در جهت عقربه های ساعت حول محور $y$.
-                توجه داشته باشید که هنگام نگاه کردن به محور مثبت $y$، هندسه اساساً 2 بعدی است زیرا $y=0$ است.}
+                توجه داشته باشید که هنگام نگاه کردن به محور مثبت $y$، هندسه اساساً 2 بعدی است زیرا $y=0$ است. \textbf{\vspace{20pt}}}
                 \label{fig:4.Session.1.3.4}
             \end{figure}
         \end{example}
@@ -418,17 +424,20 @@
 
 \section{\textbf{تبدیلات آفین}}
 \label{sec:3.2}
+
 \subsection{\textbf{مختصات همگن}}
+\label{subsec:3.2.1}
 {
     \Large
-    در بخش بعدی خواهیم دید که تبدیل آفین یک تبدیل خطی همراه با انتقال است.
-    با این حال، انتقال برای بردارها معنی ندارد زیرا یک بردار فقط جهت و اندازه را، مستقل از مکان، توصیف می کند.
-    به عبارت دیگر، بردارها باید تحت انتقال بدون تغییر باشند.
-    انتقال ها فقط باید برای نقاط (به عنوان مثال، بردارهای موقعیت) اعمال شوند.
-مختصات همگن مکانیسم نمادگذاری مناسبی را فراهم می کند که ما را قادر می سازد نقاط و بردارها را به طور یکنواخت مدیریت کنیم.
-با مختصات همگن، ما به تاپل $4$ تایی منتقل میشویم و آنچه را که در چهارمین مختصات $w$ قرار می دهیم بستگی به این دارد که یک نقطه یا بردار را توصیف کنیم.
-به طور خاص می نویسیم:
     \begin{spacing}{1.5}
+        در بخش بعدی خواهیم دید که تبدیل آفین یک تبدیل خطی همراه با انتقال است.
+        با این حال، انتقال برای بردارها معنی ندارد زیرا یک بردار فقط جهت و اندازه را، مستقل از مکان، توصیف می کند.
+        به عبارت دیگر، بردارها باید تحت انتقال بدون تغییر باشند.
+        انتقال ها فقط باید برای نقاط (به عنوان مثال، بردارهای موقعیت) اعمال شوند.
+        مختصات همگن مکانیسم نمادگذاری مناسبی را فراهم می کند که ما را قادر می سازد نقاط و بردارها را به طور یکنواخت مدیریت کنیم.
+        با مختصات همگن، ما به تاپل $4$ تایی منتقل میشویم و آنچه را که در چهارمین مختصات $w$ قرار می دهیم بستگی به این دارد که یک نقطه یا بردار را توصیف کنیم.
+        به طور خاص می نویسیم:
+
         \lr{
             \begin{enumerate}[label=\textbf{\arabic*}.]
                 \item {(x,y,z,0) \rl{برای بردار ها}}
@@ -440,7 +449,7 @@
         و تنظیم $w=0$  برای بردارها از تغییر مختصات بردارها توسط انتقال ها جلوگیری می کند
         (ما نمی خواهیم مختصات یک بردار را انتقال دهیم که جهت و بزرگی آن را تغییر دهد - انتقال ها نباید خواص بردارها را تغییر دهند).
 
-        \begin{point}{pnt:3.1}
+        \begin{point}{pnt:3.2}
             \Large
             علامت گذاری مختصات همگن با ایده های نشان داده شده در شکل \label{fig:4.Session.1.1.17} مطابقت دارد.
             یعنی تفاوت بین دو نقطه $\textbf{q-p}=(q_{x},q_{y},q_{z},1)\textbf{-}(p_{x},p_{y},p_{z},1)=(q_{x}-p_{x},q_{y}-p_{y},q_{z}-p_{z},0)$ منجر به بردار،
@@ -450,6 +459,7 @@
 }
 
 \subsection{\textbf{تعریف و نمایش ماتریس}}
+\label{subsec:3.2.2}
 {
     \Large
     \begin{spacing}{1.5}
@@ -468,7 +478,7 @@
                                                                     A_{11} & A_{12} & A_{13} \\
                                                                     A_{21} & A_{22} & A_{23} \\
                                                                     A_{31} & A_{32} & A_{33}
-            \end{bmatrix}+[b_{x},b_{y},b_{z}]=[x\prime,y\prime,z\prime]$
+            \end{bmatrix}+[b_{x},b_{y},b_{z}]=[x^\prime,y^\prime,z^\prime]$
         \end{center}
 
         که در آن $\textbf{A}$ نمایش ماتریسی یک تبدیل خطی است.
@@ -480,9 +490,9 @@
             $[x, y, z, 1]\begin{bmatrix}
                              A_{11} & A_{12} & A_{13} & 0 \\
                              A_{21} & A_{22} & A_{23} & 0 \\
-                             A_{31} & A_{32} & A_{33} & 0
-                             b_{x} & b_{y} & b_{y} & 1
-            \end{bmatrix}=[x\prime, y\prime, z\prime,1]$
+                             A_{31} & A_{32} & A_{33} & 0 \\
+                             b_{x}  & b_{y}  & b_{y}  & 1
+            \end{bmatrix}=[x^\prime, y^\prime, z^\prime,1]$
         \end{eqtn}
 
         ماتریس $4\times 4$ در معادله \ref{eqtn:3.6} نمایش ماتریسی تبدیل آفین نامیده می شود.
@@ -491,7 +501,7 @@
         با این حال، ما هنوز هم می خواهیم قسمت خطی تبدیل آفین را به بردارها اعمال کنیم.
         اگر $w=1$ را در جزء چهارم برای بردارها قرار دهیم، انتقال $\textbf{b}$ اعمال نمی شود (با انجام ضرب ماتریس بررسی کنید).
 
-        \begin{point}{pnt:3.1}
+        \begin{point}{pnt:3.3}
             \Large
             از آنجا که ضرب داخلی بردار ردیف با ستون چهارم ماتریس تبدیل آفین $4\times 4$ فوق ، برابر است با:
             $[x, y, z, w]\cdot[0,0,0,1]=w$، این ماتریس مختصات $w$ بردار ورودی را تغییر نمی دهد.
@@ -500,6 +510,7 @@
 }
 
 \subsection{\textbf{انتقال}}
+\label{subsec:3.2.3}
 {
     \Large
     \begin{spacing}{1.5}
@@ -540,9 +551,9 @@
 
         \begin{center}
             $\textbf{T}^{-1}=\begin{bmatrix}
-                                 1 & 0 & 0 & 0 \\
-                                 0 & 1 & 0 & 0 \\
-                                 0 & 0 & 1 & 0
+                                 1      & 0      & 0      & 0 \\
+                                 0      & 1      & 0      & 0 \\
+                                 0      & 0      & 1      & 0 \\
                                  -b_{x} & -b_{y} & -b_{y} & 1
             \end{bmatrix}$
         \end{center}
@@ -556,9 +567,9 @@
 
             \begin{center}
                 $\textbf{T}^{-1}=\begin{bmatrix}
-                                     1 & 0 & 0 & 0 \\
-                                     0 & 1 & 0 & 0 \\
-                                     0 & 0 & 1 & 0
+                                     1  & 0   & 0 & 0 \\
+                                     0  & 1   & 0 & 0 \\
+                                     0  & 0   & 1 & 0 \\
                                      12 & -10 & 0 & 1
                 \end{bmatrix}$
             \end{center}
@@ -567,15 +578,15 @@
 
             \begin{center}
                 $[-8, 2, 0, 1]\begin{bmatrix}
-                                  1 & 0 & 0 & 0 \\
-                                  0 & 1 & 0 & 0 \\
-                                  0 & 0 & 1 & 0
+                                  1  & 0   & 0 & 0 \\
+                                  0  & 1   & 0 & 0 \\
+                                  0  & 0   & 1 & 0 \\
                                   12 & -10 & 0 & 1
                 \end{bmatrix}=[4, -8, 0, 1]$ \\
                 $[-2, 8, 0, 1]\begin{bmatrix}
-                                  1 & 0 & 0 & 0 \\
-                                  0 & 1 & 0 & 0 \\
-                                  0 & 0 & 1 & 0
+                                  1  & 0   & 0 & 0 \\
+                                  0  & 1   & 0 & 0 \\
+                                  0  & 0   & 1 & 0 \\
                                   12 & -10 & 0 & 1
                 \end{bmatrix}=[10, -2, 0, 1]$
             \end{center}
@@ -587,16 +598,16 @@
                 \setlength{\belowcaptionskip}{-10pt}
                 \includegraphics[width=0.8\textwidth]{Images/4/3/4.Session.1.3.6}
                 \caption {انتقال $12$ واحد در محور $x$ و $-10$ واحد در محور $y$.
-                توجه داشته باشید که هنگام نگاه کردن به محور $z$ منفی، هندسه اساساً 2 بعدی است زیرا $z=0$ است.}
+                توجه داشته باشید که هنگام نگاه کردن به محور $z$ منفی، هندسه اساساً 2 بعدی است زیرا $z=0$ است. \textbf{\vspace{20pt}}}
                 \label{fig:4.Session.1.3.6}
             \end{figure}
         \end{example}
 
-        \begin{point}{pnt:3.1}
+        \begin{point}{pnt:3.4}
             \Large
-            بگذارید $\textbf{T}$ یک ماتریس تبدیل باشد و به یاد بیاورید که با محاسبه حاصلضرب $\textbf{vT=v\prime}$ یک نقطه/بردار را تبدیل می کنیم.
+            بگذارید $\textbf{T}$ یک ماتریس تبدیل باشد و به یاد بیاورید که با محاسبه حاصلضرب $\textbf{vT}=\textbf{v}^\prime$ یک نقطه/بردار را تبدیل می کنیم.
             توجه کنید که اگر یک نقطه/بردار را با $\textbf{T}$ تبدیل کنیم و سپس دوباره آن را با $\textbf{T}^{-1}$ معکوس تبدیل کنیم،
-            به بردار اصلی می‌رسیم: $\textbf{vTT^{-1}=vI=v}$.
+            به بردار اصلی می‌رسیم: $\textbf{vT}\textbf{T}^{-1}=\textbf{vI}=\textbf{v}$.
             به عبارت دیگر، تبدیل معکوس ، تبدیل را خنثی می کند.
             به عنوان مثال، اگر یک نقطه را $5$ واحد در محور $x$ انتقال داده، و سپس برعکس $-5$ واحد در محور $x$ انتقال دهیم، به جایی می رسیم که شروع کرده ایم.
             به همین ترتیب، اگر نقطه ای را $30^\circ$ درجه حول محور $y$ دوران دهیم، و سپس برعکس $-30^\circ$ درجه حول محور $y$ دوران دهیم، در نهایت به نقطه اصلی خود می رسیم.
@@ -606,6 +617,7 @@
 }
 
 \subsection{\textbf{ماتریس های وابسته برای مقیاس بندی و دوران}}
+\label{subsec:3.2.4}
 {
     \Large
     \begin{spacing}{1.5}
@@ -621,12 +633,12 @@
                             0   & 0   & s_z & 0 \\
                             0   & 0   & 0   & 1
             \end{bmatrix}$ \\
-            \begin{bmatrix}
-                c+(1-c)x^{2} & (1-c)xy+sz & (1-c)xz-sy & 0\\
-                (1-c)xy-sz & c+(1-c)y^{2} & (1-c)yz+sx & 0\\
-                (1-c)xz+sy & (1-c)yz-sx & c+(1-c)z^{2} & 0
-                0 & 0 & 0 & 1
-            \end{bmatrix}
+            $\textbf{R}_{n}=\begin{bmatrix}
+                                c+(1-c)x^{2} & (1-c)xy+sz   & (1-c)xz-sy   & 0 \\
+                                (1-c)xy-sz   & c+(1-c)y^{2} & (1-c)yz+sx   & 0 \\
+                                (1-c)xz+sy   & (1-c)yz-sx   & c+(1-c)z^{2} & 0 \\
+                                0            & 0            & 0            & 1
+            \end{bmatrix}$
         \end{center}
 
         به این ترتیب، می‌توانیم تمام تبدیل‌های خود را با استفاده از ماتریس $4\times 4$ و نقطه و بردار با استفاده از بردار ردیف همگن $4\times 1$ بیان کنیم.
@@ -634,6 +646,7 @@
 }
 
 \subsection{\textbf{تفسیر هندسی یک ماتریس تبدیل وابسته}}
+\label{subsec:3.2.5}
 {
     \Large
     \begin{spacing}{1.5}
@@ -656,7 +669,7 @@
                           \leftarrow & \tau(\textbf{j}) & \rightarrow \\
                           \leftarrow & \tau(\textbf{k}) & \rightarrow \\
                           \leftarrow & \textbf{b}       & \rightarrow
-            \end{bmatrix}=[x\prime,y\prime,z\prime,w\prime]$
+            \end{bmatrix}=[x^\prime,y^\prime,z^\prime,w^\prime]$
         \end{eqtn}
 
         اکنون، برای اینکه ببینیم این معادله از نظر هندسی چه کاری انجام می دهد، تنها کاری که باید انجام دهیم این است که بردارهای ردیف را در ماتریس نمودار کنیم (شکل \ref{fig:4.Session.1.3.7} را ببینید).
@@ -672,7 +685,7 @@
             \centering
             \setlength{\belowcaptionskip}{-10pt}
             \includegraphics[width=\textwidth]{Images/4/3/4.Session.1.3.7}
-            \caption {هندسه سطرهای یک ماتریس تبدیل آفین. نقطه تبدیل شده، $\alpha(\textbf{p})$)، به صورت ترکیبی خطی از بردارهای مبنا تبدیل شده \tau(\textbf{i})، \tau(\textbf{j}) و \tau(\textbf{k}) و آفست $\textbf{b}$ داده می شود.}
+            \caption {هندسه سطرهای یک ماتریس تبدیل آفین. نقطه تبدیل شده، $\alpha(\textbf{p})$)، به صورت ترکیبی خطی از بردارهای مبنا تبدیل شده $\tau(\textbf{i})$، $\tau(\textbf{j})$ و $\tau(\textbf{k})$ و آفست $\textbf{b}$ داده می شود.}
             \label{fig:4.Session.1.3.7}
         \end{figure}
 
@@ -680,7 +693,7 @@
             \centering
             \setlength{\belowcaptionskip}{-10pt}
             \includegraphics[width=0.8\textwidth]{Images/4/3/4.Session.1.3.8}
-            \caption {برای تبدیل خطی که مربع را به متوازی الاضلاع می پیچد، نقطه تبدیل شده $\alpha(\textbf{p})=(x,y)$ به صورت ترکیبی خطی از بردارهای مبنا تبدیل شده \tau(\textbf{i}) و \tau(\textbf{j}) داده می شود.}
+            \caption {برای تبدیل خطی که مربع را به متوازی الاضلاع می پیچد، نقطه تبدیل شده $\alpha(\textbf{p})=(x,y)$ به صورت ترکیبی خطی از بردارهای مبنا تبدیل شده $\tau(\textbf{i})$ و $\tau(\textbf{j})$ داده می شود.}
             \label{fig:4.Session.1.3.8}
         \end{figure}
     \end{spacing}
@@ -697,13 +710,13 @@
         می‌خواهیم این سه تبدیل را به صورت متوالی در هر راس اعمال کنیم. روش واضح برای انجام این کار گام به گام است:
 
         \begin{center}
-            $((\textbf{v}_{i}\textbf{S})\textbf{R})\textbf{T}=(\textbf{v}\prime_{i}\textbf{R})\textbf{T}=\textbf{v}\prime\prime_{i}\textbf{T}=\textbf{v}\prime\prime\prime_{i}\hspace(5 mm)for i=0,1,\dots,7$
+            \lr{$((\textbf{v}_{i}\textbf{S})\textbf{R})\textbf{T}=(\textbf{v}^\prime_{i}\textbf{R})\textbf{T}=\textbf{v}^\prime^\prime_{i}\textbf{T}=\textbf{v}^\prime^\prime^\prime_{i}$ \hspace{5 mm} for $i=0,1,\dots,7$}
         \end{center}
 
         با این حال، از آنجایی که ضرب ماتریس شرکت پذیر است، در عوض می‌توانیم آن را به صورت معادل بنویسیم:
 
         \begin{center}
-            $\textbf{v}_{i}(\textbf{SRT})=\textbf{v}\prime\prime\prime_{i}\hspace(5 mm)for i=0,1,\dots,7$
+            \lr{$\textbf{v}_{i}(\textbf{SRT})=\textbf{v}^\prime^\prime^\prime_{i}$\hspace{5 mm} for $i=0,1,\dots,7$}
         \end{center}
 
         ما می توانیم ماتریس $\textbf{C}=\textbf{SRT}$ را به عنوان ماتریسی در نظر بگیریم که هر سه تبدیل را در یک ماتریس تبدیل خالص محصور می کند.
@@ -713,7 +726,7 @@
         با استفاده از روش گام به گام، به $20000\times 3$ ضرب ماتریس برداری نیاز داریم.
         از سوی دیگر، استفاده از رویکرد ماتریس ترکیبی به $20000$ ضرب بردار-ماتریس و $2$ ضرب ماتریس-ماتریس نیاز دارد. واضح است که دو ضرب اضافی ماتریس-ماتریس هزینه ارزانی برای صرفه جویی زیاد در ضرب ماتریس بردار است.
 
-        \begin{point}{pnt:3.1}
+        \begin{point}{pnt:3.5}
             \Large
             مجدداً اشاره می کنیم که ضرب ماتریس جابجایی پذیر نیست. این حتی به صورت هندسی نیز دیده می شود.
             به عنوان مثال، یک دوران و سپس یک انتقال، که می‌توانیم آن را با حاصلضرب ماتریس $\textbf{RT}$ توصیف کنیم، به همان تبدیلی که همان انتقال به دنبال آن دوران یکسان است، یعنی $\textbf{TR}$، منجر نمی‌شود. شکل \ref{fig:4.Session.1.3.9} این را نشان می دهد.
@@ -722,7 +735,7 @@
         \begin{figure}[H]
             \centering
             \setlength{\belowcaptionskip}{-10pt}
-            \includegraphics[width=0.8\textwidth]{Images/4/3/4.Session.1.3.9}
+            \includegraphics[width=0.4\textwidth]{Images/4/3/4.Session.1.3.9}
             \caption {(آ) ابتدا دوران و سپس انتقال. (ب) ابتدا انتقال و سپس دوران.}
             \label{fig:4.Session.1.3.9}
         \end{figure}
@@ -742,7 +755,7 @@
         $T_{F}=\frac{\displaystyle 9}{\displaystyle 5}T_{C}+32^\circ$. بنابراین دمای آب در حال جوش نسبت به مقیاس فارنهایت با$T_{F}=\frac{\displaystyle 9}{\displaystyle 5}(100)^\circ+32^\circ=212^\circ F$ به دست می آید.
 
         این مثال نشان می‌دهد که ما می‌توانیم یک اسکالر $k$ که مقداری را نسبت به یک سیستم مختصات $A$ توصیف می‌کند،
-        به یک اسکالر جدید $k\prime$ تبدیل کنیم که همان کمیت را نسبت به یک سیستم مختصات دیگر $B$ توصیف می‌کند،
+        به یک اسکالر جدید $k^\prime$ تبدیل کنیم که همان کمیت را نسبت به یک سیستم مختصات دیگر $B$ توصیف می‌کند،
         مشروط بر اینکه بدانیم سیستم مختصات $A$ و  $B$ چگونه به هم مرتبط هستند.
         در بخش‌های فرعی بعدی، ما به یک مشکل مشابه نگاه می‌کنیم، اما به جای اسکالرها، به چگونگی تبدیل مختصات یک نقطه/بردار نسبت به یک سیستم مختصات به مختصات نسبت به یک سیستم مختصات متفاوت علاقه‌مندیم (شکل \ref{fig:4.Session.1.3.10} را ببینید).
         تبدیل مختصات را از یک سیستم مختصات به مختصات سیستم مختصات دیگر را تبدیل مختصات می نامیم.
@@ -755,19 +768,20 @@
             \centering
             \setlength{\belowcaptionskip}{-10pt}
             \includegraphics[width=0.8\textwidth]{Images/4/3/4.Session.1.3.10}
-            \caption {همان بردار $\textbf{v}$ زمانی که نسبت به سیستم متخصات های مختلف توضیح داده می شود مختصات متفاوتی دارد. مختصات $(x, y)$ نسبت به سیستم متخصات $A$ و مختصات $(x\prime, y\prime)$ نسبت به سیستم متخصات $B$ دارد.}
+            \caption {همان بردار $\textbf{v}$ زمانی که نسبت به سیستم متخصات های مختلف توضیح داده می شود مختصات متفاوتی دارد. مختصات $(x, y)$ نسبت به سیستم متخصات $A$ و مختصات $(x^\prime, y^\prime)$ نسبت به سیستم متخصات $B$ دارد.}
             \label{fig:4.Session.1.3.10}
         \end{figure}
     \end{spacing}
 }
 
 \subsection{\textbf{بردار ها}}
+\label{subsec:3.4.1}
 {
     \Large
     \begin{spacing}{1.5}
         شکل \ref{fig:4.Session.1.3.11} را در نظر بگیرید که در آن دو سیستم مختصات $A$ و $B$ و یک بردار $\textbf{p}$ داریم.
         فرض کنید مختصات $\textbf{p}$، $\textbf{p}_{B}=(x, y)$ نسبت به سیستم مختصات $A$ به ما داده شده است
-        و می خواهیم مختصات $\textbf{p}$، $\textbf{p}_{B}=(x\prime, y\prime)$ را نسبت به سیستم مختصات $B$ پیدا کنیم.
+        و می خواهیم مختصات $\textbf{p}$، $\textbf{p}_{B}=(x^\prime, y^\prime)$ را نسبت به سیستم مختصات $B$ پیدا کنیم.
         به عبارت دیگر، با توجه به مختصات با شناسایی یک بردار نسبت به یک سیستم مختصات، چگونه مختصاتی را پیدا کنیم که همان بردار را نسبت به یک سیستم مختصات دیگر مشخص می کند؟
 
         \begin{figure}[H]
@@ -792,7 +806,7 @@
         \end{center}
 
         بنابراین، اگر $\textbf{p}_{A}=(x, y)$ به ما داده شود و مختصات بردارهای $\textbf{u}$ و $\textbf{v}$ را نسبت به سیستم مختصات $B$ بدانیم،
-        یعنی اگر $\textbf{u}_{B}=(u_{x}, u_{y})$ و $\textbf{v}_{B}=(v_{x}, v_{y})$ را بدانیم، سپس ما همیشه می توانیم $\textbf{p}_{B}=(x\prime, y\prime)$ را پیدا کنیم.
+        یعنی اگر $\textbf{u}_{B}=(u_{x}, u_{y})$ و $\textbf{v}_{B}=(v_{x}, v_{y})$ را بدانیم، سپس ما همیشه می توانیم $\textbf{p}_{B}=(x^\prime, y^\prime)$ را پیدا کنیم.
 
         تعمیم به سه بعدی، اگر $\textbf{p}_{A}=(x, y, z)$، پس
 
@@ -805,6 +819,7 @@
 }
 
 \subsection{\textbf{نقاط}}
+\label{subsec:3.4.2}
 {
     \Large
     \begin{spacing}{1.5}
@@ -832,7 +847,7 @@
             $\textbf{p}_{B}=x\textbf{u}_{B}+y\textbf{v}_{B}+\textbf{Q}_{B}$
         \end{center}
 
-        بنابراین، اگر $\textbf{p}_{A}=(x, y)$ به ما داده شود و مختصات بردارهای $\textbf{u}$ و $\textbf{v}$ و مبدأ $\textbf{Q}$ را نسبت به سیستم مختصات $B$ بدانیم، یعنی اگر $\textbf{u}_{B}=(u_{x}, u_{y})$ ، $\textbf{v}_{B}=(v_{x}, v_{y})$ و $\textbf{Q}_{B}=(Q_{x}, Q_{y})$ را بدانیم، سپس ما همیشه می توانیم $\textbf{p}_{B}=(x\prime, y\prime)$ را پیدا کنیم.
+        بنابراین، اگر $\textbf{p}_{A}=(x, y)$ به ما داده شود و مختصات بردارهای $\textbf{u}$ و $\textbf{v}$ و مبدأ $\textbf{Q}$ را نسبت به سیستم مختصات $B$ بدانیم، یعنی اگر $\textbf{u}_{B}=(u_{x}, u_{y})$ ، $\textbf{v}_{B}=(v_{x}, v_{y})$ و $\textbf{Q}_{B}=(Q_{x}, Q_{y})$ را بدانیم، سپس ما همیشه می توانیم $\textbf{p}_{B}=(x^\prime, y^\prime)$ را پیدا کنیم.
 
         تعمیم به سه بعدی، اگر $\textbf{p}_{A}=(x, y, z)$، پس
 
@@ -845,13 +860,14 @@
 }
 
 \subsection{\textbf{نمایش ماتریسی}}
+\label{subsec:3.4.3}
 {
     \Large
     \begin{spacing}{1.5}
         برای بازبینی، بردار و تغییر نقطه تبدیل مختصات عبارتند از:
 
         \begin{flushleft}
-            $(x\prime,y\prime,z\prime)=x\textbf{u}_{B}+y\textbf{v}_{B}+z\textbf{w}_{B}$ \rl{برای بردار ها}\\
+            $(x^\prime,y^\prime,z^\prime)=x\textbf{u}_{B}+y\textbf{v}_{B}+z\textbf{w}_{B}$ \rl{برای بردار ها}\\
             $\textbf{p}_{B}=x\textbf{u}_{B}+y\textbf{v}_{B}+z\textbf{w}_{B}+\textbf{Q}_{B}$ \rl{برای نقطه ها}
         \end{flushleft}
 
@@ -859,7 +875,7 @@
 
         \begin{eqtn}{eqtn:3.8}
             \centering
-            $(x\prime,y\prime,z\prime,w)=x\textbf{u}_{B}+y\textbf{v}_{B}+z\textbf{w}_{B}+w\textbf{Q}_{B}$
+            $(x^\prime,y^\prime,z^\prime,w)=x\textbf{u}_{B}+y\textbf{v}_{B}+z\textbf{w}_{B}+w\textbf{Q}_{B}$
         \end{eqtn}
 
         اگر $w=0$ باشد، این معادله به تغییر تبدیل مختصات برای بردارها کاهش می یابد.
@@ -871,7 +887,7 @@
             \begin{equation*}
                 \centering
                 \begin{split}
-                [x\prime,y\prime,z\prime,w]
+                [x^\prime,y^\prime,z^\prime,w]
                     &=[x,y,z,w]\begin{bmatrix}
                                    \leftarrow & \textbf{u}_{B} & \rightarrow \\
                                    \leftarrow & \textbf{v}_{B} & \rightarrow \\
@@ -890,12 +906,13 @@
             \centering
         \end{eqtn}
 
-        جایی که $\textbf{Q}_{B}=(Q_{x}, Q_{y}, Q_{z}, 1)$، $\textbf{u}_{B}=(u_{x}, u_{y}, u_{z}, 0)$، $\textbf{v}_{B}=(v_{x}, v_{y}, v_{z}, 0)$، و $\textbf{Q}_{B}=(w_{x}, w_{y}, w_{z}, 0)$ مبدا و محورهای سیستم مختصات A با مختصات همگن نسبت به سیستم مختصات B را توصیف می‌کند.
+        جایی که $\textbf{Q}_{B}=(Q_{x}, Q_{y}, Q_{z}, 1)$، $\textbf{u}_{B}=(u_{x}, u_{y}, u_{z}, 0)$، $\textbf{v}_{B}=(v_{x}, v_{y}, v_{z}, 0)$، و $\textbf{Q}_{B}=(w_{x}, w_{y}, w_{z}, 0)$ مبدا و محورهای سیستم مختصات $A$ با مختصات همگن نسبت به سیستم مختصات $B$ را توصیف می‌کند.
         ماتریس $4\times 4$ را در معادله \ref{eqtn:3.9} تغییر ماتریس مختصات یا تغییر ماتریس سیستم مختصات می نامیم و می گوییم مختصات سیستم مختصات $A$ را به مختصات سیستم مختصات $B$ تبدیل می کند (یا نقشه میکند).
     \end{spacing}
 }
 
 \subsection{\textbf{شرکت پذیری و تغییر ماتریس مختصات}}
+\label{subsec:3.4.4}
 {
     \Large
     \begin{spacing}{1.5}
@@ -923,23 +940,23 @@
         با استفاده از رویکرد گام به گام، به $20000\times 2$ ضرب ماتریس برداری نیاز داریم. از سوی دیگر، استفاده از رویکرد ماتریس ترکیبی به $20000$ ضرب بردار-ماتریس و $1$ ضرب ماتریس-ماتریس برای ترکیب دو تغییر ماتریس سیستم مختصات نیاز دارد.
         واضح است که یک ضرب ماتریس-ماتریس اضافی قیمت ارزانی برای صرفه جویی زیاد در ضرب ماتریس بردار است.
 
-        \begin{point}{pnt:3.1}
+        \begin{point}{pnt:3.6}
             \Large
             باز هم، ضرب ماتریس جابجایی پذیر نیست، بنابراین انتظار داریم که AB و BA تبدیل ترکیبی یکسانی را نشان ندهند.
             به طور دقیق تر، ترتیبی که در آن ماتریس ها را ضرب می کنید، ترتیبی است که در آن تبدیل ها اعمال می شود و به طور کلی، این یک فرآیند جابجایی پذیر نیست.
         \end{point}
-
     \end{spacing}
 }
 
 \subsection{\textbf{معکوس ها و تغییر ماتریس های مختصات}}
+\label{subsec:3.4.5}
 {
     \Large
     \begin{spacing}{1.5}
         فرض کنید که $\textbf{p}_{B}$ (مختصات یک بردار $\textbf{p}$ نسبت به سیستم مختصات $B$) به ما داده می شود، و ماتریس مختصات $\textbf{M}$ از سیستم مختصات $A$ به سیستم مختصات $B$ به ما داده می شود.
         یعنی$\textbf{p}_{B}=\textbf{p}_{A}\textbf{M}$. ما می خواهیم برای $\textbf{p}_{A}$ حل کنیم.
         به عبارت دیگر، به جای نگاشت از سیستم مختصات $A$ به سیستم مختصات $B$، ماتریس مختصاتی را می خواهیم که ما را از $B$ به $A$ نگاشت می کند.
-        برای یافتن این ماتریس، فرض کنید $\textbf{M}$ معکوس پذیر است (یعنی $\textbf{M}^{-1}$ وجود دارد). ما میتوانیم برای \textbf{p}_{A} مانند این حل کنیم:
+        برای یافتن این ماتریس، فرض کنید $\textbf{M}$ معکوس پذیر است (یعنی $\textbf{M}^{-1}$ وجود دارد). ما میتوانیم برای $\textbf{p}_{A}$ مانند این حل کنیم:
 
         \begin{flushleft}
             \lr{$\textbf{p}_{B}=\textbf{p}_{A}\textbf{M}$\\
@@ -971,11 +988,12 @@
             \caption {نقشه های $\textbf{A}$ از $F$ به $G$، $\textbf{B}$ از $G$ به $H$، و $\textbf{AB}$ از $F$ به طور مستقیم به $H$ نقشه میکند. $\textbf{B}^{-1}$ از $H$ به $G$، $\textbf{A}^{-1}$ از $G$ به $F$ و $\textbf{B}^{-1}\textbf{A}^{-1}$ به طور مستقیم از $H$ به $F$ نقشه میکند.}
             \label{fig:4.Session.1.3.14}
         \end{figure}
-
     \end{spacing}
 }
 
-\subsection{\textbf{معکوس ها در مقابل تغییر ماتریس های مختصات}}
+
+\section{\textbf{معکوس ها در مقابل تغییر ماتریس های مختصات}}
+\label{sec:3.5}
 {
     \Large
     \begin{spacing}{1.5}
@@ -992,7 +1010,7 @@
                 تا موقعیت و جهت آن را نسبت به سیستم مختصات $B$ تغییر دهیم: $\alpha(x,y,z,w)=x\tau(\textbf{i})+y\tau(\textbf{j})+z\tau(\textbf{k})+w\textbf{b}$.
                 (ب) ما دو سیستم مختصات به نام‌های سیستم مختصات $A$ و سیستم مختصات $B$ داریم.
                 نقاط مکعب نسبت به سیستم مختصات $A$ را می‌توان با فرمول $\textbf{p}_{B}=x\textbf{u}_{B}+y\textbf{v}_{B}+z\textbf{w}_{B}+w\textbf{Q}_{B}$ به مختصات سیستم مختصات $B$ تبدیل کرد، که در آن $\textbf{p}_{A}=(x,y,z,w)$.
-                در هر دو حالت، $\alpha(\textbf{p})=(x\prime,y\prime,z\prime,w)=\textbf{p}_{B}$ با مختصاتی نسبت به سیستم مختصات $B$ داریم.}
+                در هر دو حالت، $\alpha(\textbf{p})=(x^\prime,y^\prime,z^\prime,w)=\textbf{p}_{B}$ با مختصاتی نسبت به سیستم مختصات $B$ داریم.}
             \label{fig:4.Session.1.3.15}
         \end{figure}
 
@@ -1003,7 +1021,7 @@
         اما از آنجایی که نسبت به چارچوب مرجع متفاوتی توضیح داده می‌شود، نمایش مختصات آن تغییر می‌کند (این وضعیت با قسمت ب شکل \ref{fig:4.Session.1.3.15} مطابقت دارد. ).
         مواقع دیگر، ما می خواهیم یک شی را در داخل یک سیستم مختصات بدون تغییر چارچوب مرجع خود تبدیل کنیم (این وضعیت با قسمت الف شکل \ref{fig:4.Session.1.3.15} مطابقت دارد).
 
-        \begin{point}{pnt:3.1}
+        \begin{point}{pnt:3.7}
             \Large
             به طور خاص، این بحث نشان می دهد که ما می توانیم ترکیبی از تبدیل های فعال (مقیاس بندی، دوران، انتقال) را به عنوان تغییر تبدیل مختصات تفسیر کنیم.
             این مهم است زیرا ما اغلب فضای جهانی خود را (فصل 5) تغییر ماتریس مختصات را به عنوان ترکیبی از تغییر مقیاس، دوران و انتقال تعریف می کنیم.
@@ -1013,7 +1031,7 @@
 
 
 \section{\textbf{توابع تبدیل ریاضی \lr{DirectX}}}
-\label{sec:3.5}
+\label{sec:3.6}
 {
     \Large
     \begin{spacing}{1.5}
@@ -1023,8 +1041,8 @@
         \lr{\lstinputlisting[language=C++, firstline=50, lastline=95]{Codes/4.1.3.program.c}}
         \textbf{\vspace{6pt}}
 
-        برای دو تابع آخر \texttt{XMVector3TransformCoord} و \texttt{XMVector3TransformNormal}، نیازی به تنظیم مختصات $w$ ندارید.
-        توابع همیشه از $v_{w}=1$ و $v_{w}=0$ برای \texttt{XMVector3TransformCoord} و \texttt{XMVector3TransformNormal} استفاده به ترتیب می کنند.
+        برای دو تابع آخر \texttt{XMVector3TransformCoord} و \texttt{XMVector3TransformNormal}، نیازی به تنظیم مختصات $w$ ندارید.\\
+        توابع همیشه از $v_{w}=1$ و $v_{w}=0$ به ترتیب برای \texttt{XMVector3TransformCoord} و \texttt{XMVector3TransformNormal} استفاده می کنند.
     \end{spacing}
 }
 %-----------------------------------------------------------------------------------------------------------%
@@ -1032,27 +1050,31 @@
 
 
 \section{\textbf{خلاصه}}
-\label{sec:3.6}
+\label{sec:3.7}
 {
     \Large
     \begin{spacing}{1.5}
         \begin{enumerate}[label=\textbf{\arabic*}.]
             \item {ماتریس‌های بنیادی تبدیل - مقیاس‌بندی، دوران و انتقال - به صورت زیر هستند:
-                $\textbf{S}=\begin{bmatrix}
-                                s_x & 0   & 0   & 0 \\
-                                0   & s_y & 0   & 0 \\
-                                0   & 0   & s_z & 0 \\
-                                0   & 0   & 0   & 1
-                \end{bmatrix}\hspace{5 mm}\textbf{T}=\begin{bmatrix}
-                                                         1     & 0     & 0     & 0 \\
-                                                         0     & 1     & 0     & 0 \\
-                                                         0     & 0     & 1     & 0 \\
-                                                         b_{x} & b_{y} & b_{z} & 1
-                \end{bmatrix}\hspace{5 mm}\textbf{R}_{n}=\begin{bmatrix}
-                                                             c+(1-c)x^{2} & (1-c)xy+sz & (1-c)xz-sy & 0\\
-                                                             (1-c)xy-sz & c+(1-c)y^{2} & (1-c)yz+sx & 0\\
-                                                             (1-c)xz+sy & (1-c)yz-sx & c+(1-c)z^{2} & 0
-                                                             0 & 0 & 0 & 1
+                \begin{center}
+                    $\textbf{S}=\begin{bmatrix}
+                                    s_x & 0   & 0   & 0 \\
+                                    0   & s_y & 0   & 0 \\
+                                    0   & 0   & s_z & 0 \\
+                                    0   & 0   & 0   & 1
+                    \end{bmatrix},\textbf{T}=\begin{bmatrix}
+                                                 1     & 0     & 0     & 0 \\
+                                                 0     & 1     & 0     & 0 \\
+                                                 0     & 0     & 1     & 0 \\
+                                                 b_{x} & b_{y} & b_{z} & 1
+                    \end{bmatrix},$
+                \end{center}
+
+                $\textbf{R}_{n}=\begin{bmatrix}
+                                    c+(1-c)x^{2} & (1-c)xy+sz & (1-c)xz-sy & 0\\
+                                    (1-c)xy-sz & c+(1-c)y^{2} & (1-c)yz+sx & 0\\
+                                    (1-c)xz+sy & (1-c)yz-sx & c+(1-c)z^{2} & 0
+                                    0 & 0 & 0 & 1
                 \end{bmatrix}$
             }
 
@@ -1069,8 +1091,8 @@
             \item {فرض کنید $\textbf{Q}_{B}$، $\textbf{u}_{B}$، $\textbf{v}_{B}$، و $\textbf{w}_{B}$ مبدا، محورهای $x$، $y$ و $z$ سیستم مختصات $A$ را با مختصاتی نسبت به سیستم مختصات $B$ به ترتیب توصیف کنند.
             اگر یک بردار/نقطه $\textbf{p}$ مختصات $\textbf{p}_{A}=(x,y,z)$ نسبت به سیستم مختصات $A$ داشته باشد، همان بردار/نقطه نسبت به سیستم مختصات $B$ مختصاتی دارد:
                 \begin{flushleft}
-                    \lr{$\textbf{p}_{B}=(x\prime,z\prime,y\prime)=x\textbf{u}_{B}+y\textbf{v}_{B}+z\textbf{w}_{B}$\hspace{19 mm} \rl{(برای بردارها (جهت و اندازه))}\\
-                        $\textbf{p}_{B}=(x\prime,z\prime,y\prime)=\textbf{Q}_{B}+x\textbf{u}_{B}+y\textbf{v}_{B}+z\textbf{w}_{B}$\hspace{35 mm} \rl{(برای بردارهای موقعیت (نقاط))}
+                    \lr{$\textbf{p}_{B}=(x^\prime,z^\prime,y^\prime)=x\textbf{u}_{B}+y\textbf{v}_{B}+z\textbf{w}_{B}$\hspace{19 mm} \rl{(برای بردارها (جهت و اندازه))}\\
+                        $\textbf{p}_{B}=(x^\prime,z^\prime,y^\prime)=\textbf{Q}_{B}+x\textbf{u}_{B}+y\textbf{v}_{B}+z\textbf{w}_{B}$\hspace{35 mm} \rl{(برای بردارهای موقعیت (نقاط))}
                     }
                 \end{flushleft}
                 این تغییر تبدیل مختصات را می توان بر حسب ماتریس با استفاده از مختصات همگن نوشت.
@@ -1096,7 +1118,7 @@
 
 
 \section{\textbf{تمارین}}
-\label{sec:3.7}
+\label{sec:3.8}
 {
     \Large
     \begin{spacing}{1.5}
@@ -1138,17 +1160,17 @@
             \item { محاسبه کنید:
                 \begin{center}
                     $[x, y, z, 1]\begin{bmatrix}
-                                     1 & 0 & 0 & 0 \\
-                                     0 & 1 & 0 & 0 \\
-                                     0 & 0 & 1 & 0
+                                     1     & 0     & 0     & 0 \\
+                                     0     & 1     & 0     & 0 \\
+                                     0     & 0     & 1     & 0 \\
                                      b_{x} & b_{y} & b_{y} & 1
-                    \end{bmatrix}=[x\prime, y\prime, z\prime,1]$ \hspace{5 mm}
+                    \end{bmatrix}=[x^\prime, y^\prime, z^\prime,1]$ \hspace{5 mm}
                     $[x, y, z, 0]\begin{bmatrix}
-                                     1 & 0 & 0 & 0 \\
-                                     0 & 1 & 0 & 0 \\
-                                     0 & 0 & 1 & 0
+                                     1     & 0     & 0     & 0 \\
+                                     0     & 1     & 0     & 0 \\
+                                     0     & 0     & 1     & 0 \\
                                      b_{x} & b_{y} & b_{y} & 1
-                    \end{bmatrix}=[x\prime, y\prime, z\prime,1]$
+                    \end{bmatrix}=[x^\prime, y^\prime, z^\prime,1]$
                 \end{center}
                 آیا انتقال نقاط را منتقل می کند؟ آیا انتقال بردارها را منتقل می کند؟ چرا انتقال مختصات یک بردار در موقعیت استاندارد منطقی نیست؟
             }
@@ -1188,8 +1210,9 @@
                         (e) $0.6\textbf{p}_{1}+0.5\textbf{p}_{2}-0.1\textbf{p}_{3}$ \\
                         (f) $0.8\textbf{p}_{1}-0.3\textbf{p}_{2}+0.5\textbf{p}_{3}$ \\
                     \end{flushleft}
-                    نقطه در قسمت (\lr{a}) چیست؟ مختصات باریسنتریک $\textbf{p}_{2}$ و نقطه $(1,0,0)$ بر حسب $\textbf{p}_{1}$، $\textbf{p}_{2}$ و ​​$\textbf{p}_{3}$ چه خواهد بود؟ آیا می توانید حدس بزنید که اگر یکی از مختصات باری مرکزی منفی باشد، نقطه $\textbf{p}$ نسبت به مثلث در کجا قرار می گیرد؟
                 } \textbf{\vspace{-6pt}}
+
+                نقطه در قسمت (\lr{a}) چیست؟ مختصات باریسنتریک $\textbf{p}_{2}$ و نقطه $(1,0,0)$ بر حسب $\textbf{p}_{1}$، $\textbf{p}_{2}$ و $\textbf{p}_{3}$ چه خواهد بود؟ آیا می توانید حدس بزنید که اگر یکی از مختصات باری مرکزی منفی باشد، نقطه $\textbf{p}$ نسبت به مثلث در کجا قرار می گیرد؟
             }
 
             \item {یکی از عوامل تعیین کننده تبدیل آفین این است که ترکیبات آفین را حفظ می کند.
@@ -1205,9 +1228,9 @@
                     $[x, y, 0, 1]\begin{bmatrix}
                                      0.5 & 0 & 0 & 0 \\
                                      0 & -0.5 & 0 & 0 \\
-                                     0 & 0 & 1 & 0
+                                     0 & 0 & 1 & 0 \\
                                      0.5 & 0.5 & 0 & 1
-                    \end{bmatrix}=[x\prime, y\prime, 0, 1]$
+                    \end{bmatrix}=[x^\prime, y^\prime, 0, 1]$
                 \end{center}
 
                 \begin{figure}[H]
@@ -1234,9 +1257,9 @@
                 \begin{figure}[H]
                     \centering
                     \setlength{\belowcaptionskip}{-10pt}
-                    \includegraphics[width=0.8\textwidth]{Images/4/3/4.Session.1.3.16}
+                    \includegraphics[width=0.8\textwidth]{Images/4/3/4.Session.1.3.17}
                     \caption {تبدیلی که مربع را به متوازی الاضلاع ترسیم می کند.}
-                    \label{fig:4.Session.1.3.16}
+                    \label{fig:4.Session.1.3.17}
                 \end{figure}
             }
 
@@ -1257,8 +1280,6 @@
                         (b) $\norm{\textbf{uR}}=\norm{\textbf{u}}$\hspace{19 mm} \rl{حفظ اندازه} \\
                         (c) $\theta(\textbf{uR},\textbf{vR})=\theta(\textbf{u},\textbf{v})$ \hspace{19 mm} \rl{حفظ زاویه، که در آن $\theta(x,y)$ به زاویه بین $\textbf{x}$ و $\textbf{y}$ ارزیابی می کند: $\theta(\textbf{x},\textbf{x})=\cos^{-1}\frac{\displaystyle x\cdot y}{\displaystyle \norm{x}\norm{y}}$}
                     \end{flushleft}
-                    \begin{center}
-                    \end{center}
                 } \textbf{\vspace{-6pt}}
             }
 
@@ -1279,7 +1300,7 @@
                     \setlength{\belowcaptionskip}{-10pt}
                     \includegraphics[width=0.8\textwidth]{Images/4/3/4.Session.1.3.18}
                     \caption {(آ) مقیاس $2$ واحد در محور $x$ نسبت به مبدا منجر به انتقال مستطیل می شود.
-(ب) مقیاس $2$ واحد در محور $x$ نسبت به مرکز مستطیل منجر به انتقال نمی شود (مستطیل نقطه مرکزی اصلی خود را حفظ می کند).}
+                        (ب) مقیاس $2$ واحد در محور $x$ نسبت به مرکز مستطیل منجر به انتقال نمی شود (مستطیل نقطه مرکزی اصلی خود را حفظ می کند).}
                     \label{fig:4.Session.1.3.18}
                 \end{figure}
             }
