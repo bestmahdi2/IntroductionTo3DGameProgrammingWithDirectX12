@@ -2,7 +2,7 @@
 \documentclass{book}
 
 % ----- Defines ----- %
-\def \CourseName {مقدمه ای بر برنامه نویسی بازی های سه بعدی با \\ \lr{Direct3D 12}}
+\def \CourseName {\begin{spacing}{1.5}مقدمه‌ای بر برنامه نویسی بازی‌های سه‌بعدی با \\ \lr{Direct3D 12}\end{spacing}}
 \def \CourseNameEng {\lr{Introdution To 3D Game Programming With DirectX 12}}
 \def \Instructor {دکتر رضا روحانی}
 \def \Translator {علی بدیعی}
@@ -24,7 +24,9 @@
 
     \pagestyle{fancy}
     \fancyhead{} % clear all header fields
-    \fancyhead[RO,LE]{مقدمه ای بر برنامه نویسی بازی های سه بعدی با \lr{Direct3D 12}}
+    \fancyhead[RO]{\BYas \rightmark}
+    \fancyhead[LE]{مقدمه‌ای بر برنامه نویسی بازی‌های سه‌بعدی با \lr{Direct3D 12}}
+
     \fancyhead[RE,LO]{\thepage}
     \fancyfoot{}
     \setlength{\headheight}{13pt}

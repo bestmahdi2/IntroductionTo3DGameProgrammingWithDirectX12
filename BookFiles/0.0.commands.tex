@@ -8,13 +8,14 @@
 
 % ----- Costume Font ----- %
 
+\defpersianfont\BYas[Path=./Fonts/, BoldFont={XB Yas Bd}, ItalicFont={XB Yas It}, BoldItalicFont={XB Yas BdIt}, Extension = .ttf]{XB Yas}
 \defpersianfont\BTitr[Path=./Fonts/, Extension = .ttf]{BTitr}
 \defpersianfont\BNazanin[Path=./Fonts/, Extension = .ttf]{BNAZANIN}
 
 % ----- Points ----- %
 
 \newcounter{point}[chapter]\setcounter{point}{0}
-%\renewcommand{\thepoint}{\arabic{chapter}.\arabic{point}}
+\renewcommand{\thepoint}{\arabic{chapter}.\arabic{point}}
 %\newenvironment{name}[args]{begin_def}{end_def}
 
 \newenvironment{point}[2][]{%
@@ -45,7 +46,7 @@
 % ----- Equation ----- %
 
 \newcounter{eqtn}[chapter]\setcounter{eqtn}{0}
-\renewcommand{\theequ}{\arabic{eqtn}.\arabic{chapter}}
+\renewcommand{\theeqtn}{\arabic{eqtn}.\arabic{chapter}}
 
 \newenvironment{eqtn}[2][]{
     \refstepcounter{eqtn}
@@ -54,7 +55,7 @@
         frametitle={
             \tikz[baseline=(current bounding box.east),outer sep=0pt]
             \node[anchor=east,rectangle,fill=green!40]
-            {\strut معادله~\theequ};
+            {\strut معادله~\theeqtn};
         }
     }
     }
@@ -62,7 +63,7 @@
         frametitle={
             \tikz[baseline=(current bounding box.east),outer sep=0pt]
             \node[anchor=east,rectangle,fill=green!40]
-            {\strut معادله~\theequ:~#1};
+            {\strut معادله~\theeqtn:~#1};
         }
     }
     }
@@ -112,7 +113,7 @@
 % ----- Hints ----- %
 
 \newcounter{hint}[chapter]\setcounter{hint}{0}
-\renewcommand{\thehnt}{\arabic{hint}.\arabic{chapter}}
+\renewcommand{\thehint}{\arabic{hint}.\arabic{chapter}}
 
 \newenvironment{hint}[2][]{
     \refstepcounter{hint}
@@ -228,7 +229,7 @@
     showstringspaces=false,
     showtabs=false,
     tabsize=2,
-    captiondirection=RTL,
+    captiondirection=LTR,
     fontadjust=true
 }
 
@@ -240,10 +241,8 @@
 \def\lstlistingname{Code}
 
 \renewcommand{\thefigure}{\arabic{figure}.\arabic{chapter}}
+\renewcommand{\figurename}{شکل:}
 \renewcommand{\thesection}{\arabic{section}.\arabic{chapter}}
 \renewcommand{\thesubsection}{\arabic{subsection}.\arabic{section}.\arabic{chapter}}
-
-\newcounter{quest}[chapter]\setcounter{quest}{0}
-\renewcommand{\thequest}{\arabic{quest}.\arabic{chapter}}
 
 \chapterfont{\color{white}}
