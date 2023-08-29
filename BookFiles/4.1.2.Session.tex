@@ -2,9 +2,11 @@
 \newpage
 
 \setcounter{chapter}{2}
-\setcounter{example}{0}
-\setcounter{eqtn}{0}
 \setcounter{section}{0}
+\setcounter{point}{0}
+\setcounter{eqtn}{0}
+\setcounter{exmp}{0}
+\setcounter{hint}{0}
 
 
 \chapter{\lr{\textbf{جبر ماتریسی}}}
@@ -50,7 +52,7 @@
         ما یک عنصر ماتریسی را با مشخص کردن سطر و ستون عنصر با استفاده از نماد دوگانه $\textbf{M}_{ij}$ شناسایی می‌کنیم،
         جایی که زیرنویس اول ردیف و زیرنویس دوم ستون را مشخص می‌کند.
 
-        \begin{example}{exp:2.1}
+        \begin{exmp}{exmp:2.1}
             \Large
             ماتریس‌های زیر را در نظر بگیرید:\\\\
             $\textbf{A}=\begin{bmatrix}
@@ -141,9 +143,9 @@
                 \item {ما یک اسکالر و یک ماتریس را با ضرب اسکالر در هر عنصر ماتریس ضرب می‌کنیم.}
                 \item {ما تفریق را بر حسب جمع ماتریس و ضرب اسکالر تعریف می‌کنیم. یعنی \\ $\textbf{A}-\textbf{B}=\textbf{A}+(-1\cdot\textbf{B})=\textbf{A}+(-\textbf{B})$.}
             \end{enumerate}
-        \end{example}
+        \end{exmp}
 
-        \begin{example}{exp:2.2}
+        \begin{exmp}{exmp:2.2}
             \Large
             فرض کنید
             \begin{center}
@@ -223,13 +225,14 @@
                     \item {$(r+s)\textbf{A}=r\textbf{A}+s\textbf{A}$\hspace{26 mm} \rl{\textbf{(}خاصیت تویع پذیری ماتریس روی اسکالر\textbf{)}}}
                 \end{enumerate}
             }
-        \end{example}
+        \end{exmp}
     \end{spacing}
 }
 
 
 \section{\textbf{ضرب ماتریس}}
 \label{sec:2.2}
+
 \subsection{\textbf{تعریف}}
 \label{subsec:2.2.1}
 {
@@ -248,7 +251,7 @@
         به این معنا که باید بُعد بردارهای ردیف در $\textbf{A}$ با بُعد بردارهای ستون در $\textbf{B}$ برابر باشد.
         اگر این ابعاد مطابقت نداشتند، آنگاه ضرب داخلی در معادله \ref{eqtn:2.1} معنی نخواهد داشت.
 
-        \begin{example}{exp:2.3}
+        \begin{exmp}{exmp:2.3}
             \Large
             فرض کنید
 
@@ -265,9 +268,9 @@
 
             حاصلضرب $\textbf{AB}$ تعریف نشده است زیرا بردارهای ردیف در $\textbf{A}$ دارای بُعد $2$ و بردارهای ستون در $\textbf{B}$ دارای بُعد $3$ هستند.
             همچنین نمیتوان بردار ردیف اول $\textbf{A}$ را با بردار ستون اول $\textbf{B}$  ضرب داخلی کرد زیرا نمیتوان ضرب داخلی بردار دو‌بعدی با بردار سه‌بعدی را گرفت.
-        \end{example}
+        \end{exmp}
 
-        \begin{example}{exp:2.4}
+        \begin{exmp}{exmp:2.4}
             \Large
             فرض کنید
 
@@ -307,7 +310,7 @@
             \end{equation*}
 
             توجه کنید که حاصلضرب $\textbf{BA}$ تعریف نشده است زیرا تعداد ستون‌های $\textbf{B}$ با تعداد ردیف‌های $\textbf{A}$ برابر نیست. یعنی $\textbf{AB}\neq\textbf{BA}$.
-        \end{example}
+        \end{exmp}
 
     \end{spacing}
 }
@@ -393,7 +396,7 @@
         بنابراین ترانهاده یک ماتریس $m\times n$ یک ماتریس $n\times m$ است.
         جابجایی یک ماتریس $\textbf{M}$ را $\textbf{M}^T$ نشان می‌دهیم.
 
-        \begin{example}{exp:2.5}
+        \begin{exmp}{exmp:2.5}
             \Large
             ترانهاده سه ماتریس زیر را بیابید:\\
 
@@ -439,7 +442,7 @@
                     \item {$(\textbf{A}^{-1})^T=(\textbf{A}^T)^{-1}$}
                 \end{enumerate}
             } \textbf{\vspace{-30pt}}
-        \end{example}
+        \end{exmp}
     \end{spacing}
 }
 
@@ -484,7 +487,7 @@
             $\textbf{MI}=\textbf{IM}=\textbf{M}$
         \end{center}
 
-        \begin{example}{exp:2.6}
+        \begin{exmp}{exmp:2.6}
             \Large
             فرض کنید
             $\textbf{M}=\begin{bmatrix}
@@ -532,9 +535,9 @@
             \end{center}
 
             بنابراین $\textbf{MI}=\textbf{IM}=\textbf{M}$ درست است.
-        \end{example}
+        \end{exmp}
 
-        \begin{example}{exp:2.7}
+        \begin{exmp}{exmp:2.7}
             \Large
             فرض کنید
             $\textbf{u}=[-1,2], \textbf{I}=\begin{bmatrix}
@@ -551,7 +554,7 @@
             \end{bmatrix}=\left[ (-1,2)\cdot(1,0), (-1,2)\cdot(1,0) \right]=[-1, 2]$
 
             توجه داشته باشید که ما نمی‌توانیم حاصل ضرب \textbf{Iu} را بگیریم زیرا ضرب ماتریس تعریف نشده است.
-        \end{example}
+        \end{exmp}
     \end{spacing}
 }
 
@@ -580,7 +583,7 @@
         اگر $\textbf{A}$ ماتریس $n\times n$ باشد، ماتریس کِهاد $\bar{\textbf{A}}_{ij}$ ماتریس $(n-1)\times (n-1)$ است که با حذف ردیف i ام و ستون j ام از $\textbf{A}$ یافت می‌شود.
 
 %        \\\textbf{\vspace{10pt}}
-        \begin{example}{exp:2.8}
+        \begin{exmp}{exmp:2.8}
             \Large
             ماتریس‌های کِهاد $\bar{\textbf{A}}_{11}$، $\bar{\textbf{A}}_{22}$ و $\bar{\textbf{A}}_{13}$ از ماتریس زیر را بیابید:
 
@@ -618,7 +621,7 @@
                                 A_{31} & A_{32}
                 \end{bmatrix}$
             \end{center}
-        \end{example}
+        \end{exmp}
     \end{spacing}
 }
 
@@ -695,7 +698,7 @@
 
         در گرافیک سه‌بعدی، ما در درجه اول با ماتریس‌های $4\times 4$ کار می‌کنیم و بنابراین نیازی به تولید فرمول‌های صریح برای $n>4$ نداریم.
 
-        \begin{example}{exp:2.9}
+        \begin{exmp}{exmp:2.9}
             \Large
             دترمینان ماتریس $\textbf{A}=\begin{bmatrix}
                                             2  & -5 & 3 \\
@@ -735,7 +738,7 @@
                     &=120
                 \end{split}
             \end{equation*}
-        \end{example}
+        \end{exmp}
     \end{spacing}
 }
 
@@ -811,7 +814,7 @@
             $\textbf{A}^{-1}=\frac{\displaystyle\textbf{A}^{*}}{\displaystyle det\textbf{A}}$
         \end{eqtn}
 
-        \begin{example}{exp:2.10}
+        \begin{exmp}{exmp:2.10}
             \Large
             یک فرمول کلی برای معکوس یک ماتریس $2\times 2$ پیدا کنید $\textbf{A}=\begin{bmatrix}
                                                                                     A_{11} & A_{12} \\
@@ -878,7 +881,7 @@
                                  -1 & 2
                 \end{bmatrix}$
             \end{center}
-        \end{example}
+        \end{exmp}
 
         \begin{point}{pnt:2.1}
             \Large
@@ -950,6 +953,7 @@
 }
 
 \textbf{\vspace{-60pt}}
+
 \subsection{\textbf{توابع ماتریس}}
 \label{subsec:2.8.2}
 {

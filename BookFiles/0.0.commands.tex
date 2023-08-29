@@ -79,11 +79,11 @@
 
 % ----- Examples ----- %
 
-\newcounter{example}[chapter]\setcounter{example}{0}
-\renewcommand{\theexmp}{\arabic{example}.\arabic{chapter}}
+\newcounter{exmp}[chapter]\setcounter{exmp}{0}
+\renewcommand{\theexmp}{\arabic{exmp}.\arabic{chapter}}
 
-\newenvironment{example}[2][]{
-    \refstepcounter{example}
+\newenvironment{exmp}[2][]{
+    \refstepcounter{exmp}
     \ifstrempty{#1}
     {\mdfsetup{
         frametitle={

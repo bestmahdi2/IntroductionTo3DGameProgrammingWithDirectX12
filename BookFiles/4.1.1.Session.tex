@@ -51,6 +51,11 @@
 }
 
 \setcounter{chapter}{1}
+\setcounter{section}{0}
+\setcounter{point}{0}
+\setcounter{eqtn}{0}
+\setcounter{exmp}{0}
+\setcounter{hint}{0}
 
 
 \chapter{\lr{\textbf{جبر برداری}}}
@@ -230,7 +235,7 @@
         \end{enumerate}
 
         \textbf{\vspace{-10pt}}
-        \begin{example}{exp:1.1}
+        \begin{exmp}{exmp:1.1}
             \Large
             فرض کنید $\textbf{u}=(1,2,3), \textbf{v}=(1,2,3), \textbf{w}=(3,0,-2), k=2$
             \lr{
@@ -242,10 +247,10 @@
                 \end{enumerate}
             }
             تفاوتی که در مورد سوم هست، یک بردار خاص به نام بردار صفر را نشان می‌دهد که همه اجزای آن صفر است و با $\textbf{0}$ نشان داده می‌شود.
-        \end{example}
+        \end{exmp}
 
         \textbf{\vspace{-20pt}}
-        \begin{example}{exp:1.2}
+        \begin{exmp}{exmp:1.2}
             \Large
             ما این مثال را با بردارهای دوبعدی برای ساده‌تر کردن کار توضیح می‌دهیم. ایده‌ها مانند فضای سه‌بعدی هستند، فقط با یک جزء کمتر، به صورت دو‌بعدی کار می‌کنیم.\\
             \begin{enumerate}[label=\textbf{\arabic*}.]
@@ -290,7 +295,7 @@
                 \caption{نیروهای اعمال شده به یک توپ. نیروها با استفاده از جمع بردار ترکیب می‌شوند تا نیروی برآیند به دست آید. \textbf{\vspace{10pt}}}
                 \label{fig:4.Session.1.1.7}
             \end{figure}
-        \end{example}
+        \end{exmp}
     \end{spacing}
 }
 
@@ -345,7 +350,7 @@
 
         پس $\hat{\textbf{u}}$ در واقع یک بردار واحد است.
 
-        \begin{example}{exp:1.3}
+        \begin{exmp}{exmp:1.3}
             بردار $\textbf{v}=(-1,3,4)$ را نرمال کنید. داریم $\norm{\textbf{v}}=\sqrt{\displaystyle (-1)^2+3^2+4^2}=\sqrt{\displaystyle 26}$. پس:
 
             \begin{center}
@@ -360,7 +365,7 @@
                     \left(\frac{\displaystyle 3}{\displaystyle\sqrt{\displaystyle 26}}\right)^2, \left(\frac{\displaystyle 4}{\displaystyle\sqrt{\displaystyle 26}}\right)^2}=
                 \sqrt{\displaystyle\frac{\displaystyle 1}{\displaystyle 26}+\frac{\displaystyle 9}{\displaystyle 26}+\frac{\displaystyle 16}{\displaystyle 26}}=\sqrt{\displaystyle 1}=1$
             \end{center}
-        \end{example}
+        \end{exmp}
     \end{spacing}
 }
 
@@ -384,7 +389,7 @@
         به عبارت دیگر، ضرب داخلی مجموع ضرب‌های اجزای مربوطه ست.
 
         همچنین تعریف ضرب داخلی معنای هندسی آشکاری ارائه نمی‌دهد.
-        با استفاده از قانون کسینوس (به تمرین \hyperref[question:1.10]{\ref{question:1.10}.1} مراجعه کنید)، می‌توانیم رابطه‌ای را پیدا کنیم که در آن $\theta$ زاویه بین بردارهای $\textbf{u}$ و $\textbf{v}$ است به طوری که $0\leq\theta\leq\pi$؛ شکل \ref{fig:4.Session.1.1.9} را ببینید.
+        با استفاده از قانون کسینوس (به تمرین \hyperref[question:1.10]{\ref{question:1.10}1} مراجعه کنید)، می‌توانیم رابطه‌ای را پیدا کنیم که در آن $\theta$ زاویه بین بردارهای $\textbf{u}$ و $\textbf{v}$ است به طوری که $0\leq\theta\leq\pi$؛ شکل \ref{fig:4.Session.1.1.9} را ببینید.
 
         \begin{eqtn}{eqtn:1.4}
             \centering
@@ -414,7 +419,7 @@
             \item {اگر $\textbf{u}\cdot\textbf{v}<0$، در نتیجه زاویه‌ی بین $\theta$ و دو بردار بیشتر از 90 درجه ست (یعنی بردار‌ها با هم زاویه‌ی منفرجه میسازند).}
         \end{enumerate} \\
 
-        \begin{example}{exp:1.4}
+        \begin{exmp}{exmp:1.4}
             فرض کنید $\textbf{u}=(1,2,3)$ و $\textbf{v}=(-4,0,-1)$ باشند. زوایه‌ی بین $\textbf{u}$ و $\textbf{v}$ را پیدا کنید. \\
             ابتدا موارد زیر را محاسبه می‌کنیم:
 
@@ -433,10 +438,10 @@
 
                 $\theta=\cos^{-1}\frac{\displaystyle -7}{\displaystyle \sqrt{\displaystyle 14}\sqrt{\displaystyle 17}}\thickapprox 117^\circ$
             \end{center}
-        \end{example}
+        \end{exmp}
 
         \textbf{\vspace{-20pt}}
-        \begin{example}{exp:1.5}
+        \begin{exmp}{exmp:1.5}
             شکل \ref{fig:4.Session.1.1.10} را در نظر بگیرید.
             با توجه به $\textbf{v}$ و بردار واحد $\textbf{n}$، فرمولی برای $\textbf{p}$ بر حسب $\textbf{v}$ و $\textbf{n}$ با استفاده از ضرب داخلی پیدا کنید. \\
             ابتدا، از شکل مشاهده کنید که عدد اسکالر $\textbf{k}$ وجود دارد
@@ -476,7 +481,7 @@
                 \caption{تصویر متعامد/قائم $\textbf{v}$ روی $\textbf{n}$. \textbf{\vspace{10pt}}}
                 \label{fig:4.Session.1.1.10}
             \end{figure}
-        \end{example}
+        \end{exmp}
     \end{spacing}
 }
 
@@ -590,7 +595,7 @@
             \label{fig:4.Session.1.1.13}
         \end{figure}
 
-        \begin{example}{exp:1.6}
+        \begin{exmp}{exmp:1.6}
             فرض کنید $\textbf{u}=(2,1,3)$ و $\textbf{v}=(2,0,0)$ باشد. سپس $\textbf{w}=\textbf{u}\times\textbf{v}$ و $\textbf{z}=\textbf{v}\times\textbf{u}$ را محاسبه کنید و چک کنید که $\textbf{w}$ متعامد به $\textbf{u}$ و $\textbf{v}$ باشد. معادله‌ی \ref{eqtn:1.5} را اعمال می‌کنیم: \\
             \begin{equation*}
                 \centering
@@ -629,7 +634,7 @@
             \end{center}
 
             نتیجه می‌گیریم که $\textbf{w}$ متعامد به $\textbf{u}$ و $\textbf{w}$ متعامد بر $\textbf{v}$ است.
-        \end{example}
+        \end{exmp}
     \end{spacing}
 }
 
@@ -674,7 +679,7 @@
         \begin{enumerate}[label=\textbf{\arabic*}.]
             \item {$\textbf{w}_{0}=\frac{\displaystyle\textbf{v}_{0}}{\displaystyle\norm{\textbf{v}_{0}}}$ قرار میدهیم}
             \item {$\textbf{w}_{2}=\frac{\displaystyle\textbf{w}_{0}\times\textbf{v}_{1}}{\displaystyle\norm{\textbf{w}_{0}\times\textbf{v}_{1}}}$ قرار میدهیم}
-            \item {با قرار دادن $\textbf{w}_{1}=\textbf{w}_{2}\times\textbf{w}_{0}$ توسط تمرین \hyperref[question:1.14]{\ref{question:1.14}.1}، $\norm{\textbf{w}_{2}\times\textbf{w}_{0}}=1$ زیرا $\textbf{w}_{2}\perp\textbf{w}_{0}$ و $\norm{\textbf{w}_{2}}=\norm{\textbf{w}_{0}}=1$،
+            \item {با قرار دادن $\textbf{w}_{1}=\textbf{w}_{2}\times\textbf{w}_{0}$ توسط تمرین \hyperref[question:1.14]{\ref{question:1.14}1}، $\norm{\textbf{w}_{2}\times\textbf{w}_{0}}=1$ زیرا $\textbf{w}_{2}\perp\textbf{w}_{0}$ و $\norm{\textbf{w}_{2}}=\norm{\textbf{w}_{0}}=1$،
             بنابراین در این مرحله آخر نیازی به نرمال سازی نداریم.}
         \end{enumerate}
 
